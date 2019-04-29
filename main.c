@@ -6,18 +6,18 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/04/29 06:03:06 by kmills           ###   ########.fr       */
+/*   Updated: 2019/04/29 07:46:20 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	s_flag(va_list *vl, char **buf, int *ib,\
+void	s_flag(va_list vl, char **buf, int *ib,\
 const char *restrict *format)
 {
 	char	*str;
 
-	str = va_arg(*vl, char *);
+	str = va_arg(vl, char *);
 	*format += 2;
 	while (*str)
 	{
@@ -28,7 +28,7 @@ const char *restrict *format)
 	}
 }
 
-void	check_after_perc(va_list *vl, char **buf, int *ib,\
+void	check_after_perc(va_list vl, char **buf, int *ib,\
 const char *restrict *format)
 {
 	if ((*format)[1] == '%')
@@ -60,9 +60,9 @@ int		ft_printf(const char *restrict format, ...)
 	{
 		if (*format == '%')
 		{
-			check_after_perc(&vl, &buf, &ib, &format);
+			check_after_perc(vl, &buf, &ib, &format);
 		}
-		if (*format)
+		if (*format && *format != '%')
 		{
 			*buf = *format;
 			format++;
@@ -72,13 +72,14 @@ int		ft_printf(const char *restrict format, ...)
 	}
 	*buf = '\0';
 	buf -= ib;
-	ft_putstr(buf);
+	write(1, buf, ft_strlen(buf) + 1);
 	va_end(vl);
 	return (ib);
 }
 
 int		main(int argc, char **argv)
 {
-	printf("\nThe number of c's in string is: %i\n", ft_printf("%s00001234%%56789%s", "12345", "abcdef"));
+	printf("%%%%%s00001234%%56789%%%s%%\n", "12345", "abcdef");
+	ft_printf("%%%%%s00001234%%56789%%%s%%\n", "12345", "abcdef");
 	return (0);
 }
