@@ -8,7 +8,7 @@ LIBFT = ./libft/libft.a
 all: $(NAME)
 
 $(NAME): $(LIBFT)
-	@gcc ./libft/libft.a $(SRCS) -o $(NAME)
+	@gcc ./libft/libft.a $(SRCS) -g -o $(NAME)
 
 g:
 	@gcc -g $(SRCS) -o $(NAME)
