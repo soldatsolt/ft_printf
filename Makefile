@@ -28,3 +28,6 @@ git:
 	git add .
 	git commit -am "$(G)"
 	git push
+
+rerun: re
+	@./ft_printf

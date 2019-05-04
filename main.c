@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/04/29 07:46:20 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/04 12:35:11 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ const char *restrict *format)
 	char	*str;
 
 	str = va_arg(vl, char *);
-	*format += 2;
+	*format += 1;
 	while (*str)
 	{
 		**buf = *str;
@@ -28,10 +28,48 @@ const char *restrict *format)
 	}
 }
 
+void	make_t_flags(t_flags *fl)
+{
+	fl->dash = 0;
+	fl->minus = 0;
+	fl->plus = 0;
+	fl->space = 0;
+	fl->zero = 0;
+}
+
+void	turbo_parser(va_list vl, char **buf, int *ib,\
+const char *restrict *format)
+{
+	t_flags	fl;
+	
+	make_t_flags(&fl);
+	(*format)++; // теперь указатель не на проценте, а на флаге
+	while ((**format) == ' ' || (**format) == '-' || (**format) == '+' || \
+	((**format) >= '0' && (**format) <= '9') || (**format) == '#')
+	{
+		if ((**format) == ' ')
+			fl.space = 1;
+		if ((**format) == '#')
+			fl.dash = 1;
+		if ((**format) == '-')
+			fl.minus = 1;
+		if ((**format) == '+')
+			fl.plus = 1;
+		if ((**format) == '0')
+			fl.zero = 1;
+		(*format)++;
+	}
+	if ((**format) == 's')
+		s_flag(vl, buf, ib, format);
+}
+
 void	check_after_perc(va_list vl, char **buf, int *ib,\
 const char *restrict *format)
 {
-	if ((*format)[1] == '%')
+	char	c; 
+
+	c = (*format)[1];
+	if (c == '%')
 	{
 		*format += 2;
 		**buf = '%';
@@ -39,8 +77,11 @@ const char *restrict *format)
 		(*ib)++;
 		return ;
 	}
-	else if ((*format)[1] == 's')
-		s_flag(vl, buf, ib, format);
+	if (c == ' ' || c == '-' || c == '+' || (c >= '0' && c <= '9') || c == '#'\
+	|| c == 's')
+		turbo_parser(vl, buf, ib, format);
+	// if ((*format)[1] == 's')
+	// 	s_flag(vl, buf, ib, format);
 }
 
 int		ft_printf(const char *restrict format, ...)
@@ -74,12 +115,13 @@ int		ft_printf(const char *restrict format, ...)
 	buf -= ib;
 	write(1, buf, ft_strlen(buf) + 1);
 	va_end(vl);
+	free(buf);
 	return (ib);
 }
 
 int		main(int argc, char **argv)
 {
-	printf("%%%%%s00001234%%56789%%%s%%\n", "12345", "abcdef");
-	ft_printf("%%%%%s00001234%%56789%%%s%%\n", "12345", "abcdef");
+	printf("%%%%%s00001234%%56789%%%-s%%%s\n", "12345", "abcdef", "iop");
+	ft_printf("%%%%%s00001234%%56789%%%-s%%%s\n", "12345", "abcdef", "iop");
 	return (0);
 }
