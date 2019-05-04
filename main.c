@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/04 13:13:08 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/04 13:27:30 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,24 +17,37 @@ t_flags fl)
 {
 	char	*str;
 	int		i;
+	int		l;
 
 	i = 0;
 	str = va_arg(vl, char *);
+	l = (int)(ft_strlen(str));
 	// printf("WID = %i\n", fl.width);
 	// printf("LEN = %i\n", ft_strlen(str));
-	while (fl.width > (int)(ft_strlen(str) + i))
-	{
-		**buf = ' ';
-		(*buf)++;
-		(*ib)++;
-		i++;
-	}
+	if (fl.minus == 0)
+		while (fl.width > l + i)
+		{
+			**buf = ' ';
+			(*buf)++;
+			(*ib)++;
+			i++;
+		}
 	while (*str)
 	{
 		**buf = *str;
 		str++;
 		(*buf)++;
 		(*ib)++;
+	}
+	if (fl.minus != 0)
+	{
+		while (fl.width > l + i)
+		{
+			**buf = ' ';
+			(*buf)++;
+			(*ib)++;
+			i++;
+		}
 	}
 }
 
@@ -145,7 +158,7 @@ int		ft_printf(const char *restrict format, ...)
 
 int		main(int argc, char **argv)
 {
-	printf("%%%%%10s00001234%%56789%%%18s%%%18s\n", "12345", "abcdef", "iop");
-	ft_printf("%%%%%10s00001234%%56789%%%18s%%%18s\n", "12345", "abcdef", "iop");
+	printf("%%%%%-11s00001234%%56789%%%18s%%%18s\n", "12345", "abcdef", "iop");
+	ft_printf("%%%%%-11s00001234%%56789%%%18s%%%18s\n", "12345", "abcdef", "iop");
 	return (0);
 }
