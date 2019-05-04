@@ -6,24 +6,20 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/04 13:31:05 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/04 15:05:52 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	s_flag(va_list vl, char **buf, int *ib,\
+void	s_flag(char *str, char **buf, int *ib,\
 t_flags fl)
 {
-	char	*str;
 	int		i;
 	int		l;
 
 	i = 0;
-	str = va_arg(vl, char *);
 	l = (int)(ft_strlen(str));
-	// printf("WID = %i\n", fl.width);
-	// printf("LEN = %i\n", ft_strlen(str));
 	if (fl.minus == 0)
 		while (fl.width > l + i)
 		{
@@ -51,6 +47,34 @@ t_flags fl)
 	}
 }
 
+int		razrydnost(int n)
+{
+	int r;
+	int i;
+
+	i = 10;
+	r = 1;
+	while (n / i > 0)
+	{
+		i *= 10;
+		r++;
+	}
+	return (r);
+}
+
+void	i_flag(va_list vl, char **buf, int *ib,\
+t_flags fl)
+{
+	int		num;
+	char	*str;
+
+	num = va_arg(vl, int);
+	str = (char *)malloc(sizeof(char) * (razrydnost(num) + 1));
+	str = ft_itoa(num);
+	str[ft_strlen(str)] = '\0';
+	s_flag(str, buf, ib, fl);
+}
+
 void	make_t_flags(t_flags *fl)
 {
 	fl->dash = 0;
@@ -59,11 +83,21 @@ void	make_t_flags(t_flags *fl)
 	fl->space = 0;
 	fl->zero = 0;
 	fl->width = 0;
+	fl->precision = 0;
 }
 
 void	make_t_width(t_flags *fl, const char *restrict *format)
 {
 	(*fl).width = ft_atoi(*format);
+	while ((**format) >= '0' && (**format) <= '9')
+		(*format)++;
+	(*format)--;
+}
+
+void	make_t_precision(t_flags *fl, const char *restrict *format)
+{
+	(*format)++;
+	(*fl).precision = ft_atoi(*format);
 	while ((**format) >= '0' && (**format) <= '9')
 		(*format)++;
 	(*format)--;
@@ -77,7 +111,8 @@ const char *restrict *format)
 	make_t_flags(&fl);
 	(*format)++; // теперь указатель не на проценте, а на флаге
 	while ((**format) == ' ' || (**format) == '-' || (**format) == '+' || \
-	((**format) >= '0' && (**format) <= '9') || (**format) == '#')
+	((**format) >= '0' && (**format) <= '9') || (**format) == '#' || \
+	(**format) == '.')
 	{
 		if ((**format) == ' ')
 			fl.space = 1;
@@ -91,11 +126,18 @@ const char *restrict *format)
 			fl.zero = 1;
 		if	((**format) > '0' && (**format) <= '9')
 			make_t_width(&fl, format);
+		if ((**format) == '.')
+			make_t_precision(&fl, format);
 		(*format)++;
 	}
 	if ((**format) == 's')
 	{
-		s_flag(vl, buf, ib, fl);
+		s_flag(va_arg(vl, char *), buf, ib, fl);
+		(*format)++;
+	}
+	if ((**format) == 'i' || (**format) == 'd')
+	{
+		i_flag(vl, buf, ib, fl);
 		(*format)++;
 	}
 }
@@ -115,7 +157,7 @@ const char *restrict *format)
 		return ;
 	}
 	if (c == ' ' || c == '-' || c == '+' || (c >= '0' && c <= '9') || c == '#'\
-	|| c == 's')
+	|| c == 's' || c == 'i' || c == 'd')
 		turbo_parser(vl, buf, ib, format);
 	// if ((*format)[1] == 's')
 	// 	s_flag(vl, buf, ib, format);
@@ -158,7 +200,7 @@ int		ft_printf(const char *restrict format, ...)
 
 int		main(int argc, char **argv)
 {
-	printf("%%%%%-10s00001234%%56789%%%-18s%%%18s\n", "12345", "abcdef", "iop");
-	ft_printf("%%%%%-10s00001234%%56789%%%-18s%%%18s\n", "12345", "abcdef", "iop");
+	printf("%12i\n", 12345678);
+	ft_printf("%12i\n", 12345678);
 	return (0);
 }
