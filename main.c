@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/04 16:04:02 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/04 16:04:35 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -224,7 +224,7 @@ int		ft_printf(const char *restrict format, ...)
 
 int		main(int argc, char **argv)
 {
-	printf("%36.4i%36.14i\n", 12345, 12345);
-	ft_printf("%36.4i%36.14i\n", 12345, 12345);
+	printf("%036.4i%36.14i\n", 12345, 12345);
+	ft_printf("%036.4i%36.14i\n", 12345, 12345);
 	return (0);
 }
