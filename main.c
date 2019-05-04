@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/04 16:04:35 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/04 20:54:22 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,19 +72,33 @@ t_flags fl)
 
 	i = 0;
 	num = va_arg(vl, int);
-	str = (char *)malloc(sizeof(char) * (razrydnost(num) + 1 + fl.precision));
+	str = (char *)malloc(sizeof(char) * (razrydnost(num) + 1 + fl.precision + fl.width));
 	s = str;
-	while (fl.precision - i)
-	{
-		*str = '0';
-		str++;
-		i++;
-	}
+	if (fl.zero)
+		while (fl.width - i)
+		{
+			*str = '0';
+			str++;
+			i++;
+		}
+	else
+		while (fl.precision - i)
+		{
+			*str = '0';
+			str++;
+			i++;
+		}
 	*str = '\0';
 	i = 0;
 	str = ft_itoa(num);
 	str[razrydnost(num)] = '\0';
-	if (fl.precision > razrydnost(num))
+	if (fl.zero)
+		while (str[i])
+		{
+			s[fl.width - razrydnost(num) + i] = str[i];
+			i++;
+		}
+	else if (fl.precision > razrydnost(num))
 		while (str[i])
 		{
 			s[fl.precision - razrydnost(num) + i] = str[i];
@@ -224,7 +238,7 @@ int		ft_printf(const char *restrict format, ...)
 
 int		main(int argc, char **argv)
 {
-	printf("%036.4i%36.14i\n", 12345, 12345);
-	ft_printf("%036.4i%36.14i\n", 12345, 12345);
+	printf("%015i%36.14i\n", 12345, 12345);
+	ft_printf("%015i%36.14i\n", 12345, 12345);
 	return (0);
 }
