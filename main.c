@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/04 15:52:51 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/04 16:04:02 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,12 +84,18 @@ t_flags fl)
 	i = 0;
 	str = ft_itoa(num);
 	str[razrydnost(num)] = '\0';
-	while (str[i])
-	{
-		s[fl.precision - razrydnost(num) + i] = str[i];
-		i++;
-	}
-	str -= (fl.precision - razrydnost(num));
+	if (fl.precision > razrydnost(num))
+		while (str[i])
+		{
+			s[fl.precision - razrydnost(num) + i] = str[i];
+			i++;
+		}
+	else
+		while (str[i])
+		{
+			s[i] = str[i];
+			i++;
+		}
 	s_flag(s, buf, ib, fl);
 }
 
@@ -218,7 +224,7 @@ int		ft_printf(const char *restrict format, ...)
 
 int		main(int argc, char **argv)
 {
-	printf("%36.18i\n", 12345);
-	ft_printf("%36.18i\n", 12345);
+	printf("%36.4i%36.14i\n", 12345, 12345);
+	ft_printf("%36.4i%36.14i\n", 12345, 12345);
 	return (0);
 }
