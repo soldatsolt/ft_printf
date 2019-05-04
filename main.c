@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/04 15:05:52 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/04 15:52:51 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,12 +67,30 @@ t_flags fl)
 {
 	int		num;
 	char	*str;
+	int		i;
+	char	*s;
 
+	i = 0;
 	num = va_arg(vl, int);
-	str = (char *)malloc(sizeof(char) * (razrydnost(num) + 1));
+	str = (char *)malloc(sizeof(char) * (razrydnost(num) + 1 + fl.precision));
+	s = str;
+	while (fl.precision - i)
+	{
+		*str = '0';
+		str++;
+		i++;
+	}
+	*str = '\0';
+	i = 0;
 	str = ft_itoa(num);
-	str[ft_strlen(str)] = '\0';
-	s_flag(str, buf, ib, fl);
+	str[razrydnost(num)] = '\0';
+	while (str[i])
+	{
+		s[fl.precision - razrydnost(num) + i] = str[i];
+		i++;
+	}
+	str -= (fl.precision - razrydnost(num));
+	s_flag(s, buf, ib, fl);
 }
 
 void	make_t_flags(t_flags *fl)
@@ -200,7 +218,7 @@ int		ft_printf(const char *restrict format, ...)
 
 int		main(int argc, char **argv)
 {
-	printf("%12i\n", 12345678);
-	ft_printf("%12i\n", 12345678);
+	printf("%36.18i\n", 12345);
+	ft_printf("%36.18i\n", 12345);
 	return (0);
 }
