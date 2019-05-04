@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/04 13:27:30 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/04 13:31:05 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ void	make_t_flags(t_flags *fl)
 void	make_t_width(t_flags *fl, const char *restrict *format)
 {
 	(*fl).width = ft_atoi(*format);
-	while ((**format) > '0' && (**format) <= '9')
+	while ((**format) >= '0' && (**format) <= '9')
 		(*format)++;
 	(*format)--;
 }
@@ -158,7 +158,7 @@ int		ft_printf(const char *restrict format, ...)
 
 int		main(int argc, char **argv)
 {
-	printf("%%%%%-11s00001234%%56789%%%18s%%%18s\n", "12345", "abcdef", "iop");
-	ft_printf("%%%%%-11s00001234%%56789%%%18s%%%18s\n", "12345", "abcdef", "iop");
+	printf("%%%%%-10s00001234%%56789%%%-18s%%%18s\n", "12345", "abcdef", "iop");
+	ft_printf("%%%%%-10s00001234%%56789%%%-18s%%%18s\n", "12345", "abcdef", "iop");
 	return (0);
 }
