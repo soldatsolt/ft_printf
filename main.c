@@ -6,19 +6,29 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/04 12:35:11 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/04 13:13:08 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
 void	s_flag(va_list vl, char **buf, int *ib,\
-const char *restrict *format)
+t_flags fl)
 {
 	char	*str;
+	int		i;
 
+	i = 0;
 	str = va_arg(vl, char *);
-	*format += 1;
+	// printf("WID = %i\n", fl.width);
+	// printf("LEN = %i\n", ft_strlen(str));
+	while (fl.width > (int)(ft_strlen(str) + i))
+	{
+		**buf = ' ';
+		(*buf)++;
+		(*ib)++;
+		i++;
+	}
 	while (*str)
 	{
 		**buf = *str;
@@ -35,6 +45,15 @@ void	make_t_flags(t_flags *fl)
 	fl->plus = 0;
 	fl->space = 0;
 	fl->zero = 0;
+	fl->width = 0;
+}
+
+void	make_t_width(t_flags *fl, const char *restrict *format)
+{
+	(*fl).width = ft_atoi(*format);
+	while ((**format) > '0' && (**format) <= '9')
+		(*format)++;
+	(*format)--;
 }
 
 void	turbo_parser(va_list vl, char **buf, int *ib,\
@@ -57,10 +76,15 @@ const char *restrict *format)
 			fl.plus = 1;
 		if ((**format) == '0')
 			fl.zero = 1;
+		if	((**format) > '0' && (**format) <= '9')
+			make_t_width(&fl, format);
 		(*format)++;
 	}
 	if ((**format) == 's')
-		s_flag(vl, buf, ib, format);
+	{
+		s_flag(vl, buf, ib, fl);
+		(*format)++;
+	}
 }
 
 void	check_after_perc(va_list vl, char **buf, int *ib,\
@@ -121,7 +145,7 @@ int		ft_printf(const char *restrict format, ...)
 
 int		main(int argc, char **argv)
 {
-	printf("%%%%%s00001234%%56789%%%-s%%%s\n", "12345", "abcdef", "iop");
-	ft_printf("%%%%%s00001234%%56789%%%-s%%%s\n", "12345", "abcdef", "iop");
+	printf("%%%%%10s00001234%%56789%%%18s%%%18s\n", "12345", "abcdef", "iop");
+	ft_printf("%%%%%10s00001234%%56789%%%18s%%%18s\n", "12345", "abcdef", "iop");
 	return (0);
 }
