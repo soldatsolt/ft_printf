@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/06 19:32:33 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/06 20:06:58 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -238,7 +238,8 @@ int		ft_printf(const char *restrict format, ...)
 
 int		main(int argc, char **argv)
 {
-	printf("%05.15i\n", 4587 + 45);
-	ft_printf("%.15i\n", 4587 + 45);
+	printf("%f\n", 340282366920938463463174607431768.0);
+	printf("%llu\n", 340282366920938463463174607431768);
+	// ft_printf("%.15i\n", 4587 + 45);
 	return (0);
 }
