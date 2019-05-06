@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/06 22:30:22 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/06 23:05:15 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -236,6 +236,23 @@ int		ft_printf(const char *restrict format, ...)
 	return (ib);
 }
 
+int		pow2(int n)
+{
+	int i;
+	int rez;
+
+	rez = 1;
+	if (n == 0)
+		return (1);
+	i = 0;
+	while (i < n)
+	{
+		rez *= 2;
+		i++;
+	}
+	return (rez);
+}
+
 int		main(int argc, char **argv)
 {
 	double			d;
@@ -243,8 +260,11 @@ int		main(int argc, char **argv)
 	unsigned char	*c;
 	int				ic;
 	int				i;
+	double			n;
+	unsigned char	exp[12];
+	unsigned char	mantissa[53];
 
-	d = 1.0000000000000004;
+	d = 6,0;
 	c = (unsigned char *)&d;
 	i = 0;
 	ic = 7;
@@ -260,7 +280,30 @@ int		main(int argc, char **argv)
 		i = 0;
 	}
 	s[64] = '\0';
+	printf("DOUBLE = %.16lf\n", d);
 	printf("%s\n", s);
+	i = 1;
+	ic = 0;
+	while (i < 12)
+	{
+		exp[ic] = s[i];
+		i++;
+		ic++;
+	}
+	exp[11] = '\0';
+	printf("EXP = %s\n", exp);
+	i = 12;
+	ic = 0;
+	while (i < 64)
+	{
+		mantissa[ic] = s[i];
+		i++;
+		ic++;
+	}
+	mantissa[52] = '\0';
+	printf("MAN = %s\n", mantissa);
+	i = 0;
+	ic = 0;
 	// printf("%llu\n", 340282366920938463463174607431768);
 	// ft_printf("%.15i\n", 4587 + 45);
 	return (0);
