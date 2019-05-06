@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/06 23:05:15 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/06 23:20:07 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -236,10 +236,10 @@ int		ft_printf(const char *restrict format, ...)
 	return (ib);
 }
 
-int		pow2(int n)
+long long int		pow2(int n)
 {
-	int i;
-	int rez;
+	int				i;
+	long long int	rez;
 
 	rez = 1;
 	if (n == 0)
@@ -263,7 +263,9 @@ int		main(int argc, char **argv)
 	double			n;
 	unsigned char	exp[12];
 	unsigned char	mantissa[53];
-
+	int				step_exp;
+	double			step_man;
+	
 	d = 6,0;
 	c = (unsigned char *)&d;
 	i = 0;
@@ -302,8 +304,28 @@ int		main(int argc, char **argv)
 	}
 	mantissa[52] = '\0';
 	printf("MAN = %s\n", mantissa);
-	i = 0;
+	i = 10;
 	ic = 0;
+	step_exp = 0;
+	while (i + 1)
+	{
+		if (exp[i] == '1')
+			step_exp += pow2(i);
+		i--;
+	}
+	step_exp -= 1023;
+	printf("STE = %i\n", step_exp);
+	step_man = 1;
+	i = 51;
+	while (i + 1)
+	{
+		if (mantissa[i] == '1')
+			step_man += (double)(1 / pow2(i));
+		i--;
+	}
+	step_man += 1;
+	n = step_exp * step_man;
+	printf("RESULT DOUBLE = %.16lf\n", n);
 	// printf("%llu\n", 340282366920938463463174607431768);
 	// ft_printf("%.15i\n", 4587 + 45);
 	return (0);
