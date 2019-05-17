@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/17 06:11:49 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/17 06:13:33 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -271,7 +271,7 @@ int		main(int argc, char **argv)
 	mantissa = (unsigned char *)malloc(sizeof(unsigned char) * 53);
 	s = (unsigned char *)malloc(sizeof(unsigned char) * 65);
 	exp = (unsigned char *)malloc(sizeof(unsigned char) * 12);
-	d = 3.5789651;
+	d = -3.5789651;
 	c = (unsigned char *)&d;
 	i = 0;
 	ic = 7;
@@ -342,7 +342,7 @@ int		main(int argc, char **argv)
 	if (step_exp >= 0)
 		d_step_exp = (double)step_exp;
 	n = d_step_exp * step_man;
-	if (s[0] == 1)
+	if (s[0] == '1')
 		n = -n;
 	printf("RESULT DOUBLE = %.16lf\n", n);
 	return (0);
