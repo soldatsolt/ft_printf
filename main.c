@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/17 06:13:33 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/17 06:33:16 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -266,16 +266,20 @@ int		main(int argc, char **argv)
 	int				step_exp;
 	double			d_step_exp;
 	double			step_man;
+	unsigned char	*result_double;
 
-
+	result_double = (unsigned char *)malloc(sizeof(unsigned char) * 60);
 	mantissa = (unsigned char *)malloc(sizeof(unsigned char) * 53);
 	s = (unsigned char *)malloc(sizeof(unsigned char) * 65);
 	exp = (unsigned char *)malloc(sizeof(unsigned char) * 12);
-	d = -3.5789651;
+	ft_bzero(result_double, 60);
+	ft_bzero(mantissa, 53);
+	ft_bzero(s, 65);
+	ft_bzero(exp, 12);
+	d = 0.5789651;
 	c = (unsigned char *)&d;
 	i = 0;
 	ic = 7;
-	// n = n >> 1;
 	while (ic + 1)
 	{
 		while (i < 8)
@@ -287,7 +291,7 @@ int		main(int argc, char **argv)
 		i = 0;
 	}
 	s[64] = '\0';
-	printf("DOUBLE = %.16lf\n", d);
+	printf("DOUBLE  = %.16lf\n", d);
 	printf("%s\n", s);
 	i = 1;
 	ic = 0;
@@ -322,11 +326,13 @@ int		main(int argc, char **argv)
 	if (step_exp < 0)
 	{
 		d_step_exp = (double)((double)1 / (double)pow2(-step_exp));
+		printf("EXP STE = %.16lf\n", d_step_exp);
 	}
 	else
+	{
 		step_exp = pow2(step_exp);
-	// mantissa = &mantissa[1];
-	printf("EXP STE = %i\n", step_exp);
+		printf("EXP STE = %i\n", step_exp);
+	}
 	step_man = 0;
 	i = 51;
 	while (i + 1)
@@ -344,6 +350,6 @@ int		main(int argc, char **argv)
 	n = d_step_exp * step_man;
 	if (s[0] == '1')
 		n = -n;
-	printf("RESULT DOUBLE = %.16lf\n", n);
+	printf("RES DBL = %.16lf\n", n);
 	return (0);
 }
