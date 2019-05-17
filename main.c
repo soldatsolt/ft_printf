@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/06 23:41:07 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/17 06:11:49 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -256,17 +256,22 @@ long long int		pow2(int n)
 int		main(int argc, char **argv)
 {
 	double			d;
-	unsigned char	s[65];
+	unsigned char	*s;
 	unsigned char	*c;
 	int				ic;
 	int				i;
 	double			n;
-	unsigned char	exp[12];
-	unsigned char	mantissa[53];
+	unsigned char	*exp;
+	unsigned char	*mantissa;
 	int				step_exp;
+	double			d_step_exp;
 	double			step_man;
-	
-	d = 32.54;
+
+
+	mantissa = (unsigned char *)malloc(sizeof(unsigned char) * 53);
+	s = (unsigned char *)malloc(sizeof(unsigned char) * 65);
+	exp = (unsigned char *)malloc(sizeof(unsigned char) * 12);
+	d = 3.5789651;
 	c = (unsigned char *)&d;
 	i = 0;
 	ic = 7;
@@ -314,7 +319,13 @@ int		main(int argc, char **argv)
 		i--;
 	}
 	step_exp -= 1023;
-	step_exp = pow2(step_exp);
+	if (step_exp < 0)
+	{
+		d_step_exp = (double)((double)1 / (double)pow2(-step_exp));
+	}
+	else
+		step_exp = pow2(step_exp);
+	// mantissa = &mantissa[1];
 	printf("EXP STE = %i\n", step_exp);
 	step_man = 0;
 	i = 51;
@@ -328,8 +339,11 @@ int		main(int argc, char **argv)
 	step_man += 1;
 
 	printf("MAN STE = %.16lf\n", step_man);
-
-	n = (double)step_exp * step_man;
+	if (step_exp >= 0)
+		d_step_exp = (double)step_exp;
+	n = d_step_exp * step_man;
+	if (s[0] == 1)
+		n = -n;
 	printf("RESULT DOUBLE = %.16lf\n", n);
 	return (0);
 }
