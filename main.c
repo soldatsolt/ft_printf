@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/21 02:24:44 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/21 02:41:17 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -236,23 +236,6 @@ int		ft_printf(const char *restrict format, ...)
 	return (ib);
 }
 
-long long int		pow2(int n)
-{
-	int				i;
-	long long int	rez;
-
-	rez = 1;
-	if (n == 0)
-		return (1);
-	i = 0;
-	while (i < n)
-	{
-		rez *= 2;
-		i++;
-	}
-	return (rez);
-}
-
 int		main(int argc, char **argv)
 {
 	double			d;
@@ -276,7 +259,7 @@ int		main(int argc, char **argv)
 	ft_bzero(mantissa, 53);
 	ft_bzero(s, 65);
 	ft_bzero(exp, 12);
-	d = 12345678910110111213141516171819202122.5789651;
+	d = 123456789.5789651;
 	c = (unsigned char *)&d;
 	i = 0;
 	ic = 7;
@@ -319,18 +302,18 @@ int		main(int argc, char **argv)
 	while (i + 1)
 	{
 		if (exp[i] == '1')
-			step_exp += pow2(10 - i);
+			step_exp += (1 << (10 - i));
 		i--;
 	}
 	step_exp -= 1023;
 	if (step_exp < 0)
 	{
-		d_step_exp = (double)((double)1 / (double)pow2(-step_exp));
+		d_step_exp = (double)((double)1 / (double)(1 << (-step_exp)));
 		printf("EXP STE = %.16lf\n", d_step_exp);
 	}
 	else
 	{
-		step_exp = pow2(step_exp);
+		step_exp = (1 << (step_exp));
 		printf("EXP STE = %i\n", step_exp);
 	}
 	step_man = 0;
@@ -338,7 +321,7 @@ int		main(int argc, char **argv)
 	while (i + 1)
 	{
 		if (mantissa[i] == '1')
-			step_man += (double)((double)1 / (double)pow2(i + 1));
+			step_man += (double)((double)1 / (double)((int64_t)1 << (i + 1)));
 		i--;
 	}
 
