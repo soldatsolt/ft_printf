@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/21 02:41:17 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/21 03:09:17 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -251,6 +251,7 @@ int		main(int argc, char **argv)
 	double			step_man;
 	unsigned char	*result_double;
 
+	d_step_exp = 1;
 	result_double = (unsigned char *)malloc(sizeof(unsigned char) * 60);
 	mantissa = (unsigned char *)malloc(sizeof(unsigned char) * 53);
 	s = (unsigned char *)malloc(sizeof(unsigned char) * 65);
@@ -259,7 +260,7 @@ int		main(int argc, char **argv)
 	ft_bzero(mantissa, 53);
 	ft_bzero(s, 65);
 	ft_bzero(exp, 12);
-	d = 123456789.5789651;
+	d = 123456789101112131415161718192021222324252627282930.123456789;
 	c = (unsigned char *)&d;
 	i = 0;
 	ic = 7;
@@ -306,6 +307,7 @@ int		main(int argc, char **argv)
 		i--;
 	}
 	step_exp -= 1023;
+	printf("VOT ETA = %i\n", step_exp);
 	if (step_exp < 0)
 	{
 		d_step_exp = (double)((double)1 / (double)(1 << (-step_exp)));
@@ -313,8 +315,13 @@ int		main(int argc, char **argv)
 	}
 	else
 	{
-		step_exp = (1 << (step_exp));
-		printf("EXP STE = %i\n", step_exp);
+		i = 0;
+		while (i < step_exp)
+		{
+			d_step_exp *= 2;
+			i++;
+		}
+		printf("EXP STE = %.16lf\n", d_step_exp);
 	}
 	step_man = 0;
 	i = 51;
@@ -328,8 +335,6 @@ int		main(int argc, char **argv)
 	step_man += 1;
 
 	printf("MAN STE = %.16lf\n", step_man);
-	if (step_exp >= 0)
-		d_step_exp = (double)step_exp;
 	n = d_step_exp * step_man;
 	if (s[0] == '1')
 		n = -n;
