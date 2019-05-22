@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/22 06:54:36 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/22 07:27:31 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -373,8 +373,8 @@ int		main(int argc, char **argv)
 	str1 = (char *)malloc(sizeof(char) * 500);
 	str2 = (char *)malloc(sizeof(char) * 500);
 
-	ft_strcpy(str1, "1234");
-	ft_strcpy(str2, "1234");
+	ft_strcpy(str1, "999999");
+	ft_strcpy(str2, "999999");
 
 	summ = strplus(str1, str2);
 	free(str1);
