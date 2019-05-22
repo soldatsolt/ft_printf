@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/22 12:21:41 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/22 12:29:38 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -375,7 +375,7 @@ int		main(int argc, char **argv)
 	str1 = (char *)malloc(sizeof(char) * 500);
 	str2 = (char *)malloc(sizeof(char) * 500);
 
-	ft_strcpy(str1, "370");
+	ft_strcpy(str1, "999");
 	ft_strcpy(str2, "1000");
 
 	printf("NUM1 = %s\nNUM2 = %s\n", str1, str2);
