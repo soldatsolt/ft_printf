@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 06:34:21 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/22 09:57:56 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/22 12:18:42 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,10 +84,18 @@ char	*strminus(char *str1, char *str2)
 	int		i;
 	int		ost;
 	int		l;
+	int		f;
 
+	f = 0;
 	i = 0;
 	ost = 0;
 	razn = (char *)malloc(sizeof(char) * 500);
+	ft_bzero(razn, 500);
+	if (!srav_nums(str1, str2))
+	{
+		replace_strings(&str1, &str2);
+		f = 1;
+	}
 	str1 = ft_strrev(str1);
 	str2 = ft_strrev(str2);
 	if (ft_strlen(str1) < ft_strlen(str2))
@@ -108,7 +116,10 @@ char	*strminus(char *str1, char *str2)
 			i++;
 		}
 	}
-	i = 0;
+	if (f)
+		i = 1;
+	else
+		i = 0;
 	while (i < ft_strlen(str1)) // ZDES' NUZHO USNAT' KAKYA DLINA BOL'SHE
 	{
 		if (str1[i] - str2[i] + '0' >= '0' && !ost)
