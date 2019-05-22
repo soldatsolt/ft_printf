@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/05 10:18:18 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/22 07:01:20 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/22 08:17:47 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ typedef struct	s_flags
 
 char	*strplus(char *str1, char *str2);
 int		ft_printf(const char *restrict format, ...);
+char	*charumn(char c1, char c2);
 
 #endif

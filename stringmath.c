@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 06:34:21 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/22 08:10:48 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/22 08:50:09 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,8 @@ char *strplus(char *str1, char *str2)
 	char	*summ;
 	int		i;
 	int		ost;
-	int		k1;
-	int		k2;
 	int		l;
 
-	k1 = ft_atoi(str1);
-	k2 = ft_atoi(str2);
-	printf("%i\n", k1 + k2);
 	i = 0;
 	ost = 0;
 	summ = (char *)malloc(sizeof(char) * 500);
@@ -66,7 +61,27 @@ char *strplus(char *str1, char *str2)
 			summ[i + 1] = '1';
 		i++;
 	}
+	str1 = ft_strrev(str1);
+	str2 = ft_strrev(str2);
 	summ = ft_strrev(summ);
-	ft_printf("%s\n", summ);
 	return (summ);
+}
+
+char	*charumn(char c1, char c2)
+{
+	char	*rez;
+	int		i;
+	char	*cc1;
+
+	i = 0;
+	cc1 = (char *)malloc(sizeof(char) * 2);
+	rez = (char *)malloc(sizeof(char) * 500);
+	cc1[0] = c1;
+	ft_bzero(rez, 500);
+	while (i < ((int)c2 - '0'))
+	{
+		rez = strplus(rez, cc1);
+		i++;
+	}
+	return (rez);
 }
