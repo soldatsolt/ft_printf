@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 06:34:21 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/22 12:18:42 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/22 12:21:33 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,10 +116,7 @@ char	*strminus(char *str1, char *str2)
 			i++;
 		}
 	}
-	if (f)
-		i = 1;
-	else
-		i = 0;
+	i = 0;
 	while (i < ft_strlen(str1)) // ZDES' NUZHO USNAT' KAKYA DLINA BOL'SHE
 	{
 		if (str1[i] - str2[i] + '0' >= '0' && !ost)
@@ -138,6 +135,8 @@ char	*strminus(char *str1, char *str2)
 			razn[i + 1] = '1';
 		i++;
 	}
+	if (f)
+		razn[i] = '-';
 	str1 = ft_strrev(str1);
 	str2 = ft_strrev(str2);
 	razn = ft_strrev(razn);
