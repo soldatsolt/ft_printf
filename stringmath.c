@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 06:34:21 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/22 09:36:10 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/22 09:44:57 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,6 +120,29 @@ char	*strminus(char *str1, char *str2)
 	str2 = ft_strrev(str2);
 	razn = ft_strrev(razn);
 	return (razn);
+}
+
+int		srav_nums(char *str1, char *str2)
+{
+	int	i;
+
+	i = 0;
+	if (ft_strlen(str1) > ft_strlen(str2))
+		return (1);
+	else if (ft_strlen(str1) < ft_strlen(str2))
+		return (0);
+	else
+	{
+		while (str1[i])
+		{
+			if (str1[i] > str2[i])
+				return (1);
+			else if (str2[i] > str1[i])
+				return (0);
+			i++;
+		}
+	}
+	return (-1);
 }
 
 char	*charumn(char c1, char c2)
