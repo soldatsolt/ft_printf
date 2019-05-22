@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 06:34:21 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/22 07:29:33 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/22 08:10:48 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ char *strplus(char *str1, char *str2)
 	int		ost;
 	int		k1;
 	int		k2;
+	int		l;
 
 	k1 = ft_atoi(str1);
 	k2 = ft_atoi(str2);
@@ -28,6 +29,25 @@ char *strplus(char *str1, char *str2)
 	summ = (char *)malloc(sizeof(char) * 500);
 	str1 = ft_strrev(str1);
 	str2 = ft_strrev(str2);
+	if (ft_strlen(str1) < ft_strlen(str2))
+	{
+		l = ft_strlen(str1);
+		while (i + l < ft_strlen(str2))
+		{
+			str1[i + l] = '0';
+			i++;
+		}
+	}
+	else
+	{
+		l = ft_strlen(str2);
+		while (i + l < ft_strlen(str1))
+		{
+			str2[i + l] = '0';
+			i++;
+		}
+	}
+	i = 0;
 	while (i < ft_strlen(str1)) // ZDES' NUZHO USNAT' KAKYA DLINA BOL'SHE
 	{
 		if (str1[i] + str2[i] - '0' <= '9' && !ost)
