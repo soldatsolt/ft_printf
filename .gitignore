@@ -1,2 +1,2 @@
-./.vscode/
-./ft_printf.dSYM
+./.vscode/*
+./ft_printf.dSYM/*

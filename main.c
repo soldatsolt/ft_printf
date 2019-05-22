@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/21 06:58:48 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/22 03:30:30 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -343,10 +343,10 @@ int		main(int argc, char **argv)
 
 	result_double = (unsigned char *)malloc(sizeof(unsigned char) * 100);
 	ft_bzero(result_double, 100);
-	d = 12345.1234;
+	d = 0.00000000001234;
 	printf("DOUBLE  = %.16lf\n", d);
 
-	
+
 	make_double_bits_str(&s, d);
 	make_exp_mantissa_bits_str(s, &exp, &mantissa);
 	make_d_exp(exp, &d_step_exp);
@@ -354,14 +354,14 @@ int		main(int argc, char **argv)
 		d_step_exp = -d_step_exp;
 	make_rez_d(d_step_exp, mantissa, &step_man, &n);
 
-/*
+
 	//       DEBUG
 	printf("STR = %s\n", s);
 	printf("EXP = %s\n", exp);
 	printf("MAN = %s\n", mantissa);
 	printf("EXP STE = %.16lf\n", d_step_exp);
 	printf("MAN STE = %.16lf\n", step_man);
-*/
+
 
 	return (0);
 }
