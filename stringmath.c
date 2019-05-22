@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   stringmath.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/05 10:18:18 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/22 07:01:20 by kmills           ###   ########.fr       */
+/*   Created: 2019/05/22 06:34:21 by kmills            #+#    #+#             */
+/*   Updated: 2019/05/22 07:01:53 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINT_H
-# define FT_PRINT_H
-# include "./libft/libft.h"
+#include "ft_printf.h"
 
-typedef struct	s_flags
+char *strplus(char *str1, char *str2)
 {
-	int			dash;
-	int			minus;
-	int			plus;
-	int			space;
-	int			zero;
-	int			width;
-	int			precision;
-}				t_flags;
+	char	*summ;
+	int		i;
 
-char	*strplus(char *str1, char *str2);
-int		ft_printf(const char *restrict format, ...);
-
-#endif
+	i = 0;
+	summ = (char *)malloc(sizeof(char) * 500);
+	str1 = ft_strrev(str1);
+	str2 = ft_strrev(str2);
+	while (i < ft_strlen(str1))
+	{
+		summ[i] = str1[i] + str2[i] - '0';
+		i++;
+	}
+	ft_printf("%s\n", summ);
+	return (summ);
+}

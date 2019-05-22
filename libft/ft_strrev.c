@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/05 10:18:18 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/22 07:01:20 by kmills           ###   ########.fr       */
+/*   Created: 2018/10/19 20:19:28 by kmills            #+#    #+#             */
+/*   Updated: 2019/05/22 06:53:07 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINT_H
-# define FT_PRINT_H
-# include "./libft/libft.h"
-
-typedef struct	s_flags
+char	*ft_strrev(char *str)
 {
-	int			dash;
-	int			minus;
-	int			plus;
-	int			space;
-	int			zero;
-	int			width;
-	int			precision;
-}				t_flags;
+	int		i;
+	int		s;
+	char	t;
 
-char	*strplus(char *str1, char *str2);
-int		ft_printf(const char *restrict format, ...);
-
-#endif
+	i = 0;
+	s = 0;
+	while (str[i] != '\0')
+		i++;
+	while (s < i / 2)
+	{
+		t = str[s];
+		str[s] = str[i - s - 1];
+		str[i - s - 1] = t;
+		s++;
+	}
+	return (str);
+}

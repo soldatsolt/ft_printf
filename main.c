@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/22 03:32:59 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/22 06:54:36 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -332,6 +332,7 @@ void	make_rez_d(double d_step_exp, unsigned char *mantissa, double *step_man, do
 
 int		main(int argc, char **argv)
 {
+	/*
 	double			d;
 	unsigned char	*s;
 	double			n;
@@ -343,8 +344,8 @@ int		main(int argc, char **argv)
 
 	result_double = (unsigned char *)malloc(sizeof(unsigned char) * 100);
 	ft_bzero(result_double, 100);
-	d = 0.0000000000000000000000000001234;
-	printf("DOUBLE  = %.16lf\n", d);
+	d = 13.0;
+	printf("DEF DBL = %.16lf\n", d);
 
 
 	make_double_bits_str(&s, d);
@@ -361,7 +362,22 @@ int		main(int argc, char **argv)
 	printf("MAN = %s\n", mantissa);
 	printf("EXP STE = %.16lf\n", d_step_exp);
 	printf("MAN STE = %.16lf\n", step_man);
+	*/
 
 
+
+	char *str1;
+	char *str2;
+	char *summ;
+
+	str1 = (char *)malloc(sizeof(char) * 500);
+	str2 = (char *)malloc(sizeof(char) * 500);
+
+	ft_strcpy(str1, "1234");
+	ft_strcpy(str2, "1234");
+
+	summ = strplus(str1, str2);
+	free(str1);
+	free(str2);
 	return (0);
 }

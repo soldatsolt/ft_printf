@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/20 20:27:38 by kmills            #+#    #+#             */
-/*   Updated: 2019/04/28 07:50:29 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/22 06:53:05 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,5 +98,6 @@ int				ft_fibonacci(int index);
 int				ft_sqrt(int nb);
 int				get_next_line(const int fd, char **line);
 int				ft_atoi_base(const char *str, int str_base);
+char			*ft_strrev(char *str);
 
 #endif

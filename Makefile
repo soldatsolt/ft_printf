@@ -2,7 +2,7 @@ NAME = ft_printf
 MAKE = make
 override G += 
 FLAGS = -Wall -Wextra -Werror
-SRCS = main.c
+SRCS = main.c stringmath.c
 OBJS = $(SRCS:.c=.o)
 LIBFT = ./libft/libft.a
 all: $(NAME)
