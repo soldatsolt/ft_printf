@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/05 10:18:18 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/22 09:39:47 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/22 09:49:13 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ int		ft_printf(const char *restrict format, ...);
 char	*charumn(char c1, char c2);
 char	*strminus(char *str1, char *str2);
 int		srav_nums(char *str1, char *str2);
+void	replace_strings(char **str1, char **str2);
 
 #endif

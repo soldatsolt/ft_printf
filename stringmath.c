@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 06:34:21 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/22 09:44:57 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/22 09:57:56 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,17 @@ char *strplus(char *str1, char *str2)
 	str2 = ft_strrev(str2);
 	summ = ft_strrev(summ);
 	return (summ);
+}
+
+void	replace_strings(char **str1, char **str2)
+{
+	char *tmp;
+
+	tmp = (char *)malloc(sizeof(char) * 500);
+	ft_strcpy(tmp, (*str1));
+	ft_strcpy((*str1), (*str2));
+	ft_strcpy((*str2), tmp);
+	free(tmp);
 }
 
 char	*strminus(char *str1, char *str2)
