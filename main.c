@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/22 03:30:30 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/22 03:32:59 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -301,7 +301,7 @@ void	make_d_exp(unsigned char *exp, double *d_step_exp)
 	step_exp -= 1023;
 	if (step_exp < 0)
 	{
-		*(d_step_exp) = (double)((double)1 / (double)(1 << (-step_exp)));
+		*(d_step_exp) = (double)((double)1 / (double)((int64_t)1 << (-step_exp)));
 	}
 	else
 	{
@@ -343,7 +343,7 @@ int		main(int argc, char **argv)
 
 	result_double = (unsigned char *)malloc(sizeof(unsigned char) * 100);
 	ft_bzero(result_double, 100);
-	d = 0.00000000001234;
+	d = 0.0000000000000000000000000001234;
 	printf("DOUBLE  = %.16lf\n", d);
 
 
