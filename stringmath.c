@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 06:34:21 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/22 08:50:09 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/22 09:07:52 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,8 @@ char	*charumn(char c1, char c2)
 	int		i;
 	char	*cc1;
 
+	if (c1 == '0' || c2 == '0')
+		return ("0");
 	i = 0;
 	cc1 = (char *)malloc(sizeof(char) * 2);
 	rez = (char *)malloc(sizeof(char) * 500);
@@ -83,5 +85,6 @@ char	*charumn(char c1, char c2)
 		rez = strplus(rez, cc1);
 		i++;
 	}
+	free(cc1);
 	return (rez);
 }
