@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 06:34:21 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/23 09:21:20 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/23 10:27:43 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,11 @@ char *strplus(char *str1, char *str2)
 		if (!(str1[i + 1]) && ost)
 			summ[i + 1] = '1';
 		i++;
+	}
+	while (summ[i - 1] == '0')
+	{
+		summ[i - 1] = '\0';
+		i--;
 	}
 	str1 = ft_strrev(str1);
 	str2 = ft_strrev(str2);
@@ -144,7 +149,8 @@ char	*strminus(char *str1, char *str2)
 		razn[i] = '-';
 	str1 = ft_strrev(str1);
 	str2 = ft_strrev(str2);
-	replace_strings(&str1, &str2);
+	if (f)
+		replace_strings(&str1, &str2);
 	razn = ft_strrev(razn);
 	return (razn);
 }
@@ -182,14 +188,15 @@ char	*charumn(char c1, char c2)
 		return ("0");
 	i = 0;
 	cc1 = (char *)malloc(sizeof(char) * 2);
-	rez = (char *)malloc(sizeof(char) * 500);
+	rez = (char *)malloc(sizeof(char) * 4);
 	cc1[0] = c1;
-	ft_bzero(rez, 500);
+	ft_bzero(rez, 4);
 	while (i < ((int)c2 - '0'))
 	{
 		rez = strplus(rez, cc1);
 		i++;
 	}
+	rez[i] = '\0';
 	free(cc1);
 	return (rez);
 }
@@ -208,5 +215,25 @@ char	*des(int step)
 		i++;
 	}
 	rez[step + 1] = '\0';
+	return (rez);
+}
+
+char	*partumn(char *str1, char c2)
+{
+	int		i;
+	char	*rez;
+	char	*zero;
+
+	zero = (char *)malloc(sizeof(char) * 2);
+	zero[0] = '0';
+	zero[1] = '\0';
+	rez = strplus(zero, str1);
+	i = 1;
+	while (i < (int)c2 - '0')
+	{
+		rez = strplus(rez, str1);
+		i++;
+	}
+	
 	return (rez);
 }
