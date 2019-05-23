@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 06:34:21 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/22 12:29:26 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/23 08:48:54 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -144,6 +144,7 @@ char	*strminus(char *str1, char *str2)
 		razn[i] = '-';
 	str1 = ft_strrev(str1);
 	str2 = ft_strrev(str2);
+	replace_strings(&str1, &str2);
 	razn = ft_strrev(razn);
 	return (razn);
 }
