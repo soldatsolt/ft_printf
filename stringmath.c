@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 06:34:21 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/23 10:27:43 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/23 10:34:29 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ char *strplus(char *str1, char *str2)
 	{
 		if (str1[i] + str2[i] - '0' <= '9' && !ost)
 			summ[i] = str1[i] + str2[i] - '0';
-		else if (str1[i] + str2[i] - '0' <= '9' && ost)
+		else if (str1[i] + str2[i] - '0' < '9' && ost)
 		{
 			summ[i] = str1[i] + str2[i] - '0' + ost;	// TYT TOZHE MB PEREPOLNENIE - ETO RABOTAET
 			ost = 0;									// HZ KAK ))))
@@ -126,7 +126,7 @@ char	*strminus(char *str1, char *str2)
 	{
 		if (str1[i] - str2[i] + '0' >= '0' && !ost)
 			razn[i] = str1[i] - str2[i] + '0';
-		else if (str1[i] - str2[i] + '0' >= '0' && ost)
+		else if (str1[i] - str2[i] + '0' > '0' && ost)
 		{
 			razn[i] = str1[i] - str2[i] + '0' - ost;	// TYT TOZHE MB PEREPOLNENIE - ETO RABOTAET
 			ost = 0;									// HZ KAK ))))
