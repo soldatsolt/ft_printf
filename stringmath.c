@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 06:34:21 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/23 15:38:50 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/23 15:48:01 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,9 +69,9 @@ char *strplus(char *s1, char *s2)
 			summ[i + 1] = '1';
 		i++;
 	}
-	while (summ[i - 1] == '0')
+	while (summ[i] == '0')
 	{
-		summ[i - 1] = '\0';
+		summ[i] = '\0';
 		i--;
 	}
 	str1 = ft_strrev(str1);

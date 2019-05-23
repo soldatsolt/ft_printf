@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/23 15:38:04 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/23 15:48:16 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -380,8 +380,8 @@ int		main(int argc, char **argv)
 
 	// printf("NUM1 = %s\nNUM2 = %s\n", str1, str2);
 	
-	summ = strplus(str1, str2);
-	printf("SUMM = %s\n", summ);
+	// summ = strplus(str1, str2);
+	// printf("SUMM = %s\n", summ);
 
 	// razn = strminus(str1, str2);
 	// printf("RAZN = %s\n", razn);
@@ -392,7 +392,7 @@ int		main(int argc, char **argv)
 	// umn = charumn(str1[0], str2[0]);
 	// ft_printf("UMNE = %s\n", umn);
 
-	// ft_printf("%s\n", umnoz(str1, str2));
+	ft_printf("%s\n", umnoz(str1, str2));
 
 	free(str1);
 	free(str2);
