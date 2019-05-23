@@ -6,19 +6,27 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 06:34:21 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/23 10:34:29 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/23 15:38:50 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char *strplus(char *str1, char *str2)
+char *strplus(char *s1, char *s2)
 {
 	char	*summ;
 	int		i;
 	int		ost;
 	int		l;
+	char	*str1;
+	char	*str2;
 
+	str1 = (char *)malloc(sizeof(char) * 500);
+	str2 = (char *)malloc(sizeof(char) * 500);
+	ft_bzero(str1, 500);
+	ft_bzero(str2, 500);
+	ft_strcpy(str1, s1);
+	ft_strcpy(str2, s2);
 	i = 0;
 	ost = 0;
 	summ = (char *)malloc(sizeof(char) * 500);
@@ -83,14 +91,22 @@ void	replace_strings(char **str1, char **str2)
 	free(tmp);
 }
 
-char	*strminus(char *str1, char *str2)
+char	*strminus(char *s1, char *s2)
 {
 	char	*razn;
 	int		i;
 	int		ost;
 	int		l;
 	int		f;
+	char	*str1;
+	char	*str2;
 
+	str1 = (char *)malloc(sizeof(char) * 500);
+	str2 = (char *)malloc(sizeof(char) * 500);
+	ft_bzero(str1, 500);
+	ft_bzero(str2, 500);
+	ft_strcpy(str1, s1);
+	ft_strcpy(str2, s2);
 	f = 0;
 	i = 0;
 	ost = 0;
@@ -235,5 +251,38 @@ char	*partumn(char *str1, char c2)
 		i++;
 	}
 	
+	return (rez);
+}
+
+char	*umnoz(char *s1, char *s2)
+{
+	char	*rez;
+	char	*i;
+	char	*str1;
+	char	*str2;
+	char	*zero;
+	char	*one;
+	
+	zero = (char *)malloc(sizeof(char) * 2);
+	zero[0] = '0';
+	zero[1] = '\0';
+	one = (char *)malloc(sizeof(char) * 2);
+	one[0] = '1';
+	one[1] = '\0';
+	str1 = (char *)malloc(sizeof(char) * 500);
+	str2 = (char *)malloc(sizeof(char) * 500);
+	i = (char *)malloc(sizeof(char) * 500);
+	ft_bzero(str1, 500);
+	ft_bzero(str2, 500);
+	ft_strcpy(str1, s1);
+	ft_strcpy(str2, s2);
+	ft_strcpy(i, s2);
+	rez = strplus(zero, str1);
+	i = strminus(i, one);
+	while (srav_nums(i, "0") == 1)
+	{
+		rez = strplus(rez, str1);
+		i = strminus(i, one);
+	}
 	return (rez);
 }
