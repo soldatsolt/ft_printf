@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/23 08:48:32 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/23 09:22:15 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -391,6 +391,8 @@ int		main(int argc, char **argv)
 
 	umn = charumn(str1[0], str2[0]);
 	ft_printf("UMNE = %s\n", umn);
+
+	ft_printf("%s\n", des(3));
 
 	free(str1);
 	free(str2);

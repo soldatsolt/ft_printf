@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 06:34:21 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/23 08:48:54 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/23 09:21:20 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -191,5 +191,22 @@ char	*charumn(char c1, char c2)
 		i++;
 	}
 	free(cc1);
+	return (rez);
+}
+
+char	*des(int step)
+{
+	char	*rez;
+	int		i;
+
+	i = 1;
+	rez = (char *)malloc(sizeof(char) * step + 2);
+	rez[0] = '1';
+	while (i < step + 1)
+	{
+		rez[i] = '0';
+		i++;
+	}
+	rez[step + 1] = '\0';
 	return (rez);
 }
