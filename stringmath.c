@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 06:34:21 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/23 15:48:01 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/23 15:58:37 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,8 +74,6 @@ char *strplus(char *s1, char *s2)
 		summ[i] = '\0';
 		i--;
 	}
-	str1 = ft_strrev(str1);
-	str2 = ft_strrev(str2);
 	summ = ft_strrev(summ);
 	return (summ);
 }
@@ -163,10 +161,6 @@ char	*strminus(char *s1, char *s2)
 	}
 	if (f)
 		razn[i] = '-';
-	str1 = ft_strrev(str1);
-	str2 = ft_strrev(str2);
-	if (f)
-		replace_strings(&str1, &str2);
 	razn = ft_strrev(razn);
 	return (razn);
 }
@@ -254,7 +248,7 @@ char	*partumn(char *str1, char c2)
 	return (rez);
 }
 
-char	*umnoz(char *s1, char *s2)
+char	*umno(char *s1, char *s2)
 {
 	char	*rez;
 	char	*i;
@@ -262,7 +256,7 @@ char	*umnoz(char *s1, char *s2)
 	char	*str2;
 	char	*zero;
 	char	*one;
-	
+
 	zero = (char *)malloc(sizeof(char) * 2);
 	zero[0] = '0';
 	zero[1] = '\0';

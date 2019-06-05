@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/23 15:48:16 by kmills           ###   ########.fr       */
+/*   Updated: 2019/06/06 02:14:53 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -195,7 +195,7 @@ const char *restrict *format)
 		return ;
 	}
 	if (c == ' ' || c == '-' || c == '+' || (c >= '0' && c <= '9') || c == '#'\
-	|| c == 's' || c == 'i' || c == 'd')
+	|| c == 's' || c == 'i' || c == 'd'|| c == '.')
 		turbo_parser(vl, buf, ib, format);
 	// if ((*format)[1] == 's')
 	// 	s_flag(vl, buf, ib, format);
@@ -332,6 +332,7 @@ void	make_rez_d(double d_step_exp, unsigned char *mantissa, double *step_man, do
 
 int		main(int argc, char **argv)
 {
+	ft_printf("%.5i\n", 232);
 	/*
 	double			d;
 	unsigned char	*s;
@@ -364,19 +365,17 @@ int		main(int argc, char **argv)
 	printf("MAN STE = %.16lf\n", step_man);
 	*/
 
+	// char	*str1;
+	// char	*str2;
+	// char	*summ;
+	// char	*umn;
+	// char	*razn;
 
+	// str1 = (char *)malloc(sizeof(char) * 500);
+	// str2 = (char *)malloc(sizeof(char) * 500);
 
-	char	*str1;
-	char	*str2;
-	char	*summ;
-	char	*umn;
-	char	*razn;
-
-	str1 = (char *)malloc(sizeof(char) * 500);
-	str2 = (char *)malloc(sizeof(char) * 500);
-
-	ft_strcpy(str1, "90");
-	ft_strcpy(str2, "10");
+	// ft_strcpy(str1, "123456");
+	// ft_strcpy(str2, "1234567");
 
 	// printf("NUM1 = %s\nNUM2 = %s\n", str1, str2);
 	
@@ -392,9 +391,9 @@ int		main(int argc, char **argv)
 	// umn = charumn(str1[0], str2[0]);
 	// ft_printf("UMNE = %s\n", umn);
 
-	ft_printf("%s\n", umnoz(str1, str2));
+	// ft_printf("%s\n", umno(str1, str2));
 
-	free(str1);
-	free(str2);
+	// free(str1);
+	// free(str2);
 	return (0);
 }

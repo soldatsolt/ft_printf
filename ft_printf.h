@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/05 10:18:18 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/23 15:38:01 by kmills           ###   ########.fr       */
+/*   Updated: 2019/05/23 15:53:19 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,6 @@ int		srav_nums(char *str1, char *str2);
 void	replace_strings(char **str1, char **str2);
 char	*des(int step);
 char	*partumn(char *str1, char c2);
-char	*umnoz(char *s1, char *s2);
+char	*umno(char *s1, char *s2);
 
 #endif
