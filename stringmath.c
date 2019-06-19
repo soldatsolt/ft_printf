@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 06:34:21 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/23 15:58:37 by kmills           ###   ########.fr       */
+/*   Updated: 2019/06/19 13:09:18 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,8 @@ char *strplus(char *s1, char *s2)
 		i--;
 	}
 	summ = ft_strrev(summ);
+	free(str1);
+	free(str2);
 	return (summ);
 }
 

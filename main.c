@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/06/06 02:14:53 by kmills           ###   ########.fr       */
+/*   Updated: 2019/06/19 13:16:34 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -332,7 +332,10 @@ void	make_rez_d(double d_step_exp, unsigned char *mantissa, double *step_man, do
 
 int		main(int argc, char **argv)
 {
-	ft_printf("%.5i\n", 232);
+	// ft_printf("% 8.5i\n", 232);
+	// printf("% 8.5i\n", 232);
+
+
 	/*
 	double			d;
 	unsigned char	*s;
@@ -345,7 +348,7 @@ int		main(int argc, char **argv)
 
 	result_double = (unsigned char *)malloc(sizeof(unsigned char) * 100);
 	ft_bzero(result_double, 100);
-	d = 13.0;
+	d = 6.4546468465684;
 	printf("DEF DBL = %.16lf\n", d);
 
 
@@ -363,24 +366,27 @@ int		main(int argc, char **argv)
 	printf("MAN = %s\n", mantissa);
 	printf("EXP STE = %.16lf\n", d_step_exp);
 	printf("MAN STE = %.16lf\n", step_man);
+	
+	ft_printf("___________________________\n");
 	*/
 
-	// char	*str1;
-	// char	*str2;
-	// char	*summ;
-	// char	*umn;
-	// char	*razn;
 
-	// str1 = (char *)malloc(sizeof(char) * 500);
-	// str2 = (char *)malloc(sizeof(char) * 500);
+	char	*str1;
+	char	*str2;
+	char	*summ;
+	char	*umn;
+	char	*razn;
 
-	// ft_strcpy(str1, "123456");
-	// ft_strcpy(str2, "1234567");
+	str1 = (char *)malloc(sizeof(char) * 500);
+	str2 = (char *)malloc(sizeof(char) * 500);
 
-	// printf("NUM1 = %s\nNUM2 = %s\n", str1, str2);
+	ft_strcpy(str1, "100");
+	ft_strcpy(str2, "10");
+
+	printf("NUM1 = %s\nNUM2 = %s\n", str1, str2);
 	
-	// summ = strplus(str1, str2);
-	// printf("SUMM = %s\n", summ);
+	summ = strplus(str1, str2);
+	printf("SUMM = %s\n", summ);
 
 	// razn = strminus(str1, str2);
 	// printf("RAZN = %s\n", razn);
@@ -388,12 +394,10 @@ int		main(int argc, char **argv)
 	// razn = strminus(str1, str2);
 	// printf("RAZN = %s\n", razn);
 
-	// umn = charumn(str1[0], str2[0]);
-	// ft_printf("UMNE = %s\n", umn);
+	// ft_printf("UMNE = %s\n", umno(str1, str2));
 
-	// ft_printf("%s\n", umno(str1, str2));
-
-	// free(str1);
-	// free(str2);
+	free(str1);
+	free(str2);
+	free(summ);
 	return (0);
 }
