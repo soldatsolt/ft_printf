@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 06:34:21 by kmills            #+#    #+#             */
-/*   Updated: 2019/06/20 20:02:15 by kmills           ###   ########.fr       */
+/*   Updated: 2019/06/20 22:23:47 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ char *strplus(char *s1, char *s2)
 	str2 = (char *)malloc(sizeof(char) * 500);
 	ft_bzero(str1, 500);
 	ft_bzero(str2, 500);
-	ft_strcpy(str1, s1);
-	ft_strcpy(str2, s2);
+	ft_strcpy(str1, ft_strtrim(s1));
+	ft_strcpy(str2, ft_strtrim(s2));
 	i = 0;
 	ost = 0;
 	summ = (char *)malloc(sizeof(char) * 500);
@@ -69,7 +69,7 @@ char *strplus(char *s1, char *s2)
 			summ[i + 1] = '1';
 		i++;
 	}
-	while (summ[i] == '0')
+	while (summ[i] == '0' || !ft_isdigit(summ[i]))
 	{
 		summ[i] = '\0';
 		i--;
@@ -85,8 +85,8 @@ void	replace_strings(char **str1, char **str2)
 	char *tmp;
 
 	tmp = (char *)malloc(sizeof(char) * 500);
-	ft_strcpy(tmp, (*str1));
-	ft_strcpy((*str1), (*str2));
+	ft_strcpy(tmp, ft_strtrim((*str1)));
+	ft_strcpy((*str1), ft_strtrim((*str2)));
 	ft_strcpy((*str2), tmp);
 	free(tmp);
 }
@@ -105,8 +105,8 @@ char	*strminus(char *s1, char *s2)
 	str2 = (char *)malloc(sizeof(char) * 500);
 	ft_bzero(str1, 500);
 	ft_bzero(str2, 500);
-	ft_strcpy(str1, s1);
-	ft_strcpy(str2, s2);
+	ft_strcpy(str1, ft_strtrim(s1));
+	ft_strcpy(str2, ft_strtrim(s2));
 	f = 0;
 	i = 0;
 	ost = 0;
@@ -251,7 +251,7 @@ char	*partumn(char *str1, char c2)
 	
 	return (rez);
 }
-// TODO: Зафришить нормально тут всё
+
 char	*umno(char *s1, char *s2)
 {
 	char	*rez;
@@ -260,6 +260,7 @@ char	*umno(char *s1, char *s2)
 	char	*str2;
 	char	*zero;
 	char	*one;
+	char	*buf;
 
 	zero = (char *)malloc(sizeof(char) * 2);
 	zero[0] = '0';
@@ -272,11 +273,17 @@ char	*umno(char *s1, char *s2)
 	i = (char *)malloc(sizeof(char) * 500);
 	ft_bzero(str1, 500);
 	ft_bzero(str2, 500);
-	ft_strcpy(str1, s1);
-	ft_strcpy(str2, s2);
+	if (ft_strcmp(s1, s2) > 0)
+	{
+		buf = s1;
+		s1 = s2;
+		s2 = buf;
+	}
+	ft_strcpy(str1, ft_strtrim(s1));
+	ft_strcpy(str2, ft_strtrim(s2));
 	free(str2);
-	ft_strcpy(i, s2);
-	rez = strplus(zero, str1);
+	ft_strcpy(i, ft_strtrim(s2));
+	rez = strplus(ft_strtrim(zero), str1);
 	str2 = i;
 	i = strminus(i, one);
 	free(str2);
@@ -286,7 +293,7 @@ char	*umno(char *s1, char *s2)
 		rez = strplus(rez, str1);
 		free(str2);
 		str2 = i;
-		i = strminus(i, one);
+		i = strminus(i, ft_strtrim(one));
 		free(str2);
 	}
 	free(zero);

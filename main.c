@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/06/20 20:01:54 by kmills           ###   ########.fr       */
+/*   Updated: 2019/06/20 22:22:08 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -376,25 +376,34 @@ int		main(int argc, char **argv)
 	char	*summ;
 	char	*umn;
 	char	*razn;
+	// char	*ch;
 
-	str1 = (char *)malloc(sizeof(char) * 500);
-	str2 = (char *)malloc(sizeof(char) * 500);
+	// ch = ft_strdup("5000000");
 
-	ft_strcpy(str1, "2");
-	ft_strcpy(str2, "10");
-
+	str1 = ft_strdup("50000");
+	str2 = ft_strdup("50000");
+	
+	// for(int i = 0; i < 1000000; i++)
+	// {
+	// 	str1 = strplus(str1, ch);
+	// 	printf("SUMM = %s\n", str1);
+	// }
+	
 	printf("NUM1 = %s\nNUM2 = %s\n", str1, str2);
 	
 	summ = strplus(str1, str2);
 	printf("SUMM = %s\n", summ);
+
 	umn = umno(str1, str2);
-	// razn = strminus(str1, str2);
-	// printf("RAZN = %s\n", razn);
-
-	// razn = strminus(str1, str2);
-	// printf("RAZN = %s\n", razn);
-
 	ft_printf("UMNE = %s\n", umn);
+
+	// razn = strminus(str1, str2);
+	// printf("RAZN = %s\n", razn);
+
+	// razn = strminus(str1, str2);
+	// printf("RAZN = %s\n", razn);
+
+
 
 	free(str1);
 	free(str2);
