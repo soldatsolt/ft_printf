@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 06:34:21 by kmills            #+#    #+#             */
-/*   Updated: 2019/06/19 13:09:18 by kmills           ###   ########.fr       */
+/*   Updated: 2019/06/20 20:02:15 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -164,6 +164,8 @@ char	*strminus(char *s1, char *s2)
 	if (f)
 		razn[i] = '-';
 	razn = ft_strrev(razn);
+	free(str1);
+	free(str2);
 	return (razn);
 }
 
@@ -249,7 +251,7 @@ char	*partumn(char *str1, char c2)
 	
 	return (rez);
 }
-
+// TODO: Зафришить нормально тут всё
 char	*umno(char *s1, char *s2)
 {
 	char	*rez;
@@ -272,13 +274,24 @@ char	*umno(char *s1, char *s2)
 	ft_bzero(str2, 500);
 	ft_strcpy(str1, s1);
 	ft_strcpy(str2, s2);
+	free(str2);
 	ft_strcpy(i, s2);
 	rez = strplus(zero, str1);
+	str2 = i;
 	i = strminus(i, one);
+	free(str2);
 	while (srav_nums(i, "0") == 1)
 	{
+		str2 = rez;
 		rez = strplus(rez, str1);
+		free(str2);
+		str2 = i;
 		i = strminus(i, one);
+		free(str2);
 	}
+	free(zero);
+	free(one);
+	free(str1);
+	free(i);
 	return (rez);
 }

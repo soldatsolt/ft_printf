@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/06/19 13:16:34 by kmills           ###   ########.fr       */
+/*   Updated: 2019/06/20 20:01:54 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -380,24 +380,25 @@ int		main(int argc, char **argv)
 	str1 = (char *)malloc(sizeof(char) * 500);
 	str2 = (char *)malloc(sizeof(char) * 500);
 
-	ft_strcpy(str1, "100");
+	ft_strcpy(str1, "2");
 	ft_strcpy(str2, "10");
 
 	printf("NUM1 = %s\nNUM2 = %s\n", str1, str2);
 	
 	summ = strplus(str1, str2);
 	printf("SUMM = %s\n", summ);
-
+	umn = umno(str1, str2);
 	// razn = strminus(str1, str2);
 	// printf("RAZN = %s\n", razn);
 
 	// razn = strminus(str1, str2);
 	// printf("RAZN = %s\n", razn);
 
-	// ft_printf("UMNE = %s\n", umno(str1, str2));
+	ft_printf("UMNE = %s\n", umn);
 
 	free(str1);
 	free(str2);
 	free(summ);
+	free(umn);
 	return (0);
 }
