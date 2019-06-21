@@ -6,13 +6,61 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 06:34:21 by kmills            #+#    #+#             */
-/*   Updated: 2019/06/21 14:49:50 by kmills           ###   ########.fr       */
+/*   Updated: 2019/06/21 17:44:58 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char *strplus(char *s1, char *s2)
+int		find_dot(char *s1, char *s2)
+{
+	int		i;
+	int 	d1;
+	int		d2;
+
+	d1 = 0;
+	d2 = 0;
+	i = ft_strlen(s1) - 1;
+	while (s1 && s1[i] != '.')
+	{
+		i--;
+	}
+	if (s1[i] == '.')
+		d1 = i;
+	i = ft_strlen(s2) - 1;
+	while (s2 && s2[i] != '.')
+	{
+		i--;
+	}
+	if (s2[i] == '.')
+		d2 = i;
+	return ((d1 > d2) ? d1 : d2);
+}
+
+
+//TODO: Умножение на 2 сделать! А отсюда несложно сделать умножение на пять! (Ну через 10)
+char	*umwn2(char *s1)
+{
+	char	*str1;
+	char	*str2;
+	int		dot;
+	char	*rez;
+
+	rez = ft_strnew((size_t)(ft_strlen(s1) + 2));
+	dot = 0;
+	if (ft_strchr(ft_strtrim(s1), '.'))
+		dot = find_dot(ft_strtrim(s1), ft_strtrim(s1));
+	if (dot)
+	{
+		
+	}
+	else
+		str1 = ft_strdup(ft_strtrim(s1));
+	
+	return (rez);
+}
+
+char	*strplus(char *s1, char *s2)
 {
 	char	*summ;
 	int		i;
@@ -20,7 +68,15 @@ char *strplus(char *s1, char *s2)
 	int		l;
 	char	*str1;
 	char	*str2;
+	int		dot;
 
+	dot = 0;
+	if (ft_strchr(ft_strtrim(s1), '.') || ft_strchr(ft_strtrim(s2), '.'))
+		dot = find_dot(ft_strtrim(s1), ft_strtrim(s2));
+	if (dot)
+	{
+
+	}
 	str1 = ft_strdup(ft_strtrim(s1));
 	str2 = ft_strdup(ft_strtrim(s2));
 	i = 0;
@@ -97,16 +153,12 @@ char	*strminus(char *s1, char *s2)
 	char	*str1;
 	char	*str2;
 
-	str1 = (char *)malloc(sizeof(char) * 500);
-	str2 = (char *)malloc(sizeof(char) * 500);
-	ft_bzero(str1, 500);
-	ft_bzero(str2, 500);
-	ft_strcpy(str1, ft_strtrim(s1));
-	ft_strcpy(str2, ft_strtrim(s2));
+	str1 = ft_strdup(ft_strtrim(s1));
+	str2 = ft_strdup(ft_strtrim(s2));
 	f = 0;
 	i = 0;
 	ost = 0;
-	razn = (char *)malloc(sizeof(char) * 500);
+	razn = ft_strnew(500);
 	ft_bzero(razn, 500);
 	if (!srav_nums(str1, str2))
 	{

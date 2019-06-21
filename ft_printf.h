@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/05 10:18:18 by kmills            #+#    #+#             */
-/*   Updated: 2019/06/21 14:31:39 by kmills           ###   ########.fr       */
+/*   Updated: 2019/06/21 17:38:50 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,6 @@ void	replace_strings(char **str1, char **str2);
 char	*des(int step);
 char	*partumn(char *str1, char c2);
 char	*umno(char *s1, char *s2);
+char	*umwn2(char *s1);
 
 #endif

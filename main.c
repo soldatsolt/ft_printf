@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/06/21 14:50:05 by kmills           ###   ########.fr       */
+/*   Updated: 2019/06/21 17:38:52 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -380,8 +380,8 @@ int		main(int argc, char **argv)
 
 	// ch = ft_strdup("5000000");
 
-	str1 = ft_strdup("500000");
-	str2 = ft_strdup("500000");
+	str1 = ft_strdup("50000");
+	str2 = ft_strdup("50000");
 	
 	// for(int i = 0; i < 1000000; i++)
 	// {
