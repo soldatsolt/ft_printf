@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 06:34:21 by kmills            #+#    #+#             */
-/*   Updated: 2019/06/20 22:23:47 by kmills           ###   ########.fr       */
+/*   Updated: 2019/06/21 14:49:50 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,11 @@ char *strplus(char *s1, char *s2)
 	char	*str1;
 	char	*str2;
 
-	str1 = (char *)malloc(sizeof(char) * 500);
-	str2 = (char *)malloc(sizeof(char) * 500);
-	ft_bzero(str1, 500);
-	ft_bzero(str2, 500);
-	ft_strcpy(str1, ft_strtrim(s1));
-	ft_strcpy(str2, ft_strtrim(s2));
+	str1 = ft_strdup(ft_strtrim(s1));
+	str2 = ft_strdup(ft_strtrim(s2));
 	i = 0;
 	ost = 0;
-	summ = (char *)malloc(sizeof(char) * 500);
+	summ = ft_strnew(500);
 	str1 = ft_strrev(str1);
 	str2 = ft_strrev(str2);
 	if (ft_strlen(str1) < ft_strlen(str2))

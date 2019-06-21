@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/06/20 22:22:08 by kmills           ###   ########.fr       */
+/*   Updated: 2019/06/21 14:50:05 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -380,16 +380,19 @@ int		main(int argc, char **argv)
 
 	// ch = ft_strdup("5000000");
 
-	str1 = ft_strdup("50000");
-	str2 = ft_strdup("50000");
+	str1 = ft_strdup("500000");
+	str2 = ft_strdup("500000");
 	
 	// for(int i = 0; i < 1000000; i++)
 	// {
-	// 	str1 = strplus(str1, ch);
-	// 	printf("SUMM = %s\n", str1);
+	// 	str1 = strplus("8888888889", "1111111111");
+	// 	if (ft_strcmp(str1,"10000000000"))
+	// 		printf("i = %i %s\n", i, str1);
+	// 	free(str1);
+	// 	str1 = NULL;
 	// }
 	
-	printf("NUM1 = %s\nNUM2 = %s\n", str1, str2);
+	// printf("NUM1 = %s\nNUM2 = %s\n", str1, str2);
 	
 	summ = strplus(str1, str2);
 	printf("SUMM = %s\n", summ);
