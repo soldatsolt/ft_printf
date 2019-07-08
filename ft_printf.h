@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/05 10:18:18 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/09 02:06:27 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/09 02:22:01 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,7 @@ void	printf_buf(t_buf *buf);
 t_buf	*put_str_to_buf(t_buf *buf, char *str);
 void	check_after_perc(va_list vl, char **buf, int *ib,\
 const char *restrict *format);
+int		returned_printf(t_buf *buf);
+void	free_all_buff(t_buf *start);
 
 #endif

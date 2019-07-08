@@ -40,3 +40,30 @@ void	printf_buf(t_buf *buf)
 		buf = buf->next;
 	}
 }
+
+int		returned_printf(t_buf *buf)
+{
+	int	i;
+
+	i = 1;
+	while(buf->next)
+	{
+		i++;
+		buf = buf->next;
+	}
+	return (i);
+}
+
+void	free_all_buff(t_buf *start)
+{
+	t_buf	*tmp;
+	t_buf	*store;
+
+	tmp = start;
+	while (tmp)
+	{
+		store = tmp->next;
+		free(tmp);
+		tmp = store;
+	}
+}
