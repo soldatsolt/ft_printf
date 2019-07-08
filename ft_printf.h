@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/05 10:18:18 by kmills            #+#    #+#             */
-/*   Updated: 2019/06/21 17:38:50 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/09 01:57:39 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,12 @@ typedef struct	s_flags
 	int			precision;
 }				t_flags;
 
+typedef struct	s_buf
+{
+	char			c;
+	struct s_buf	*next;
+}				t_buf;
+
 char	*strplus(char *s1, char *s2);
 int		ft_printf(const char *restrict format, ...);
 char	*charumn(char c1, char c2);
@@ -35,5 +41,9 @@ char	*des(int step);
 char	*partumn(char *str1, char c2);
 char	*umno(char *s1, char *s2);
 char	*umwn2(char *s1);
+t_buf	*create_buf();
+t_buf	*put_char_to_buf(t_buf *buf, char c);
+void	printf_buf(t_buf *buf);
+t_buf	*put_str_to_buf(t_buf *buf, char *str);
 
 #endif

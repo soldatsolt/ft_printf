@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/06/21 17:38:52 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/09 01:58:23 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -332,85 +332,19 @@ void	make_rez_d(double d_step_exp, unsigned char *mantissa, double *step_man, do
 
 int		main(int argc, char **argv)
 {
-	// ft_printf("% 8.5i\n", 232);
-	// printf("% 8.5i\n", 232);
+	t_buf	*buf;
+	t_buf	*start;
+	char	c;
 
-
-	/*
-	double			d;
-	unsigned char	*s;
-	double			n;
-	unsigned char	*exp;
-	unsigned char	*mantissa;
-	double			d_step_exp;
-	double			step_man;
-	unsigned char	*result_double;
-
-	result_double = (unsigned char *)malloc(sizeof(unsigned char) * 100);
-	ft_bzero(result_double, 100);
-	d = 6.4546468465684;
-	printf("DEF DBL = %.16lf\n", d);
-
-
-	make_double_bits_str(&s, d);
-	make_exp_mantissa_bits_str(s, &exp, &mantissa);
-	make_d_exp(exp, &d_step_exp);
-	if (s[0] == '1')
-		d_step_exp = -d_step_exp;
-	make_rez_d(d_step_exp, mantissa, &step_man, &n);
-
-
-	//       DEBUG
-	printf("STR = %s\n", s);
-	printf("EXP = %s\n", exp);
-	printf("MAN = %s\n", mantissa);
-	printf("EXP STE = %.16lf\n", d_step_exp);
-	printf("MAN STE = %.16lf\n", step_man);
-	
-	ft_printf("___________________________\n");
-	*/
-
-
-	char	*str1;
-	char	*str2;
-	char	*summ;
-	char	*umn;
-	char	*razn;
-	// char	*ch;
-
-	// ch = ft_strdup("5000000");
-
-	str1 = ft_strdup("50000");
-	str2 = ft_strdup("50000");
-	
-	// for(int i = 0; i < 1000000; i++)
-	// {
-	// 	str1 = strplus("8888888889", "1111111111");
-	// 	if (ft_strcmp(str1,"10000000000"))
-	// 		printf("i = %i %s\n", i, str1);
-	// 	free(str1);
-	// 	str1 = NULL;
-	// }
-	
-	// printf("NUM1 = %s\nNUM2 = %s\n", str1, str2);
-	
-	summ = strplus(str1, str2);
-	printf("SUMM = %s\n", summ);
-
-	umn = umno(str1, str2);
-	ft_printf("UMNE = %s\n", umn);
-
-	// razn = strminus(str1, str2);
-	// printf("RAZN = %s\n", razn);
-
-	// razn = strminus(str1, str2);
-	// printf("RAZN = %s\n", razn);
-
-
-
-	free(str1);
-	free(str2);
-	free(summ);
-	free(umn);
+	c = 'a';
+	buf = create_buf();
+	start = buf;
+	while (c <= 'z')
+	{
+		buf = put_char_to_buf(buf, c);
+		c++;
+	}
+	put_str_to_buf(buf, "1234567890\n\nasdfghjkl\n");
+	printf_buf(start);
 	return (0);
 }
