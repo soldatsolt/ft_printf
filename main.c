@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/09 06:39:37 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/09 07:37:33 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,42 @@
 
 t_buf *g_start;
 
+void	put_some_chars_to_buf(t_buf **buf, char c, int n)
+{
+	int	i;
+
+	i = 0;
+	while (i < n)
+	{
+		put_char_to_buf(buf, c);
+		i++;
+	}
+}
+
+void	stuff_for_s_flag(t_buf **buf, t_flags fl, int n)
+{
+	
+}
+
 void	s_flag(va_list vl, t_buf **buf, const char *restrict format, t_flags fl)
 {
 	char	*str;
+	int		n;
 
 	str = va_arg(vl, char *);
+	n = fl.width - ft_strlen(str);
+	if (n > 0 && !fl.minus)
+	{
+		if (fl.zero)
+			put_some_chars_to_buf(buf, '0', n);
+		else
+			put_some_chars_to_buf(buf, ' ', n);
+	}
 	put_str_to_buf(buf, str);
+	if (n > 0 && fl.minus)
+	{
+		put_some_chars_to_buf(buf, ' ', n);
+	}
 }
 
 void	make_t_flags0(t_flags *fl)
@@ -123,12 +153,12 @@ int		ft_printf(const char *restrict format, ...)
 	va_end(vl);
 	n = returned_printf(buf_start);
 	free_all_buff(buf_start);
-	ft_putnbr(n);
 	return (n);
 }
 
 int		main(int argc, char **argv)
 {
-	ft_printf("123542% s%%i6rere%%", "==ETA STROKA==");
+	 ft_printf("qqq%-20sqqq\n", "123456789");
+		printf("qqq%-20sqqq\n", "123456789");
 	return (0);
 }
