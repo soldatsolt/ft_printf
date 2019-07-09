@@ -129,62 +129,62 @@ void	make_t_precision(t_flags *fl, const char *restrict *format)
 	(*format)--;
 }
 
-void	turbo_parser(va_list vl, char **buf, int *ib,\
-const char *restrict *format)
-{
-	t_flags	fl;
+// void	turbo_parser(va_list vl, char **buf, int *ib,\
+// const char *restrict *format)
+// {
+// 	t_flags	fl;
 	
-	make_t_flags(&fl);
-	(*format)++; // теперь указатель не на проценте, а на флаге
-	while ((**format) == ' ' || (**format) == '-' || (**format) == '+' || \
-	((**format) >= '0' && (**format) <= '9') || (**format) == '#' || \
-	(**format) == '.')
-	{
-		if ((**format) == ' ')
-			fl.space = 1;
-		if ((**format) == '#')
-			fl.dash = 1;
-		if ((**format) == '-')
-			fl.minus = 1;
-		if ((**format) == '+')
-			fl.plus = 1;
-		if ((**format) == '0')
-			fl.zero = 1;
-		if	((**format) > '0' && (**format) <= '9')
-			make_t_width(&fl, format);
-		if ((**format) == '.')
-			make_t_precision(&fl, format);
-		(*format)++;
-	}
-	if ((**format) == 's')
-	{
-		s_flag(va_arg(vl, char *), buf, ib, fl);
-		(*format)++;
-	}
-	if ((**format) == 'i' || (**format) == 'd')
-	{
-		i_flag(vl, buf, ib, fl);
-		(*format)++;
-	}
-}
+// 	make_t_flags(&fl);
+// 	(*format)++; // теперь указатель не на проценте, а на флаге
+// 	while ((**format) == ' ' || (**format) == '-' || (**format) == '+' || \
+// 	((**format) >= '0' && (**format) <= '9') || (**format) == '#' || \
+// 	(**format) == '.')
+// 	{
+// 		if ((**format) == ' ')
+// 			fl.space = 1;
+// 		if ((**format) == '#')
+// 			fl.dash = 1;
+// 		if ((**format) == '-')
+// 			fl.minus = 1;
+// 		if ((**format) == '+')
+// 			fl.plus = 1;
+// 		if ((**format) == '0')
+// 			fl.zero = 1;
+// 		if	((**format) > '0' && (**format) <= '9')
+// 			make_t_width(&fl, format);
+// 		if ((**format) == '.')
+// 			make_t_precision(&fl, format);
+// 		(*format)++;
+// 	}
+// 	if ((**format) == 's')
+// 	{
+// 		s_flag(va_arg(vl, char *), buf, ib, fl);
+// 		(*format)++;
+// 	}
+// 	if ((**format) == 'i' || (**format) == 'd')
+// 	{
+// 		i_flag(vl, buf, ib, fl);
+// 		(*format)++;
+// 	}
+// }
 
-void	check_after_perc(va_list vl, char **buf, int *ib,\
-const char *restrict *format)
-{
-	char	c; 
+// void	check_after_perc(va_list vl, char **buf, int *ib,\
+// const char *restrict *format)
+// {
+// 	char	c; 
 
-	c = (*format)[1];
-	if (c == '%')
-	{
-		*format += 2;
-		**buf = '%';
-		(*buf)++;
-		(*ib)++;
-		return ;
-	}
-	if (c == ' ' || c == '-' || c == '+' || (c >= '0' && c <= '9') || c == '#'\
-	|| c == 's' || c == 'i' || c == 'd'|| c == '.')
-		turbo_parser(vl, buf, ib, format);
+// 	c = (*format)[1];
+// 	if (c == '%')
+// 	{
+// 		*format += 2;
+// 		**buf = '%';
+// 		(*buf)++;
+// 		(*ib)++;
+// 		return ;
+// 	}
+// 	if (c == ' ' || c == '-' || c == '+' || (c >= '0' && c <= '9') || c == '#'\
+// 	|| c == 's' || c == 'i' || c == 'd'|| c == '.')
+// 		turbo_parser(vl, buf, ib, format);
 	// if ((*format)[1] == 's')
 	// 	s_flag(vl, buf, ib, format);
-}
+// }

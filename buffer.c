@@ -34,7 +34,7 @@ t_buf	*put_str_to_buf(t_buf *buf, char *str)
 
 void	printf_buf(t_buf *buf)
 {
-	while(buf->next)
+	while(buf)
 	{
 		write(1, &(buf->c), 1);
 		buf = buf->next;
@@ -46,7 +46,7 @@ int		returned_printf(t_buf *buf)
 	int	i;
 
 	i = 1;
-	while(buf->next)
+	while(buf)
 	{
 		i++;
 		buf = buf->next;
