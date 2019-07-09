@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/05 10:18:18 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/09 02:22:01 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/09 06:07:06 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,9 @@ char	*partumn(char *str1, char c2);
 char	*umno(char *s1, char *s2);
 char	*umwn2(char *s1);
 t_buf	*create_buf();
-t_buf	*put_char_to_buf(t_buf *buf, char c);
+void	put_char_to_buf(t_buf **buf, char c);
 void	printf_buf(t_buf *buf);
-t_buf	*put_str_to_buf(t_buf *buf, char *str);
+void	put_str_to_buf(t_buf **buf, char *str);
 void	check_after_perc(va_list vl, char **buf, int *ib,\
 const char *restrict *format);
 int		returned_printf(t_buf *buf);

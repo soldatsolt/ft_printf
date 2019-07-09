@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/09 04:47:10 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/09 06:12:52 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	s_flag(va_list vl, t_buf **buf, const char *restrict format, t_flags fl)
 	char	*str; // TODO: мб ****** эти лишние
 
 	str = va_arg(vl, char *);
-	*buf = put_str_to_buf(*buf, str);
+	put_str_to_buf(buf, str);
 }
 
 void	make_t_flags0(t_flags *fl)
@@ -91,7 +91,7 @@ void	ft_printf2(va_list vl, t_buf *buf, const char *restrict format)
 	{
 		if (*format == '%' && format[1] == '%')
 		{
-			buf = put_char_to_buf(buf, '%');
+			put_char_to_buf(&buf, '%');
 			format += 2;
 		}
 		else if (*format == '%' && format[1] != '%')
@@ -101,28 +101,31 @@ void	ft_printf2(va_list vl, t_buf *buf, const char *restrict format)
 		}
 		else
 		{
-			buf = put_char_to_buf(buf, *format);
+			put_char_to_buf(&buf, *format);
 			format++;
 		}
 	}
+	put_str_to_buf(&buf, "QQQQQQQQQQQQQ");
 }
 
 int		ft_printf(const char *restrict format, ...)
 {
 	va_list	vl;
 	t_buf	*buf;
-	t_buf	*start;
+	t_buf	*buf_start;
 	int		n;
 
 	buf = create_buf();
-	start = buf;
-	g_start = start;
+	buf_start = buf;
+	g_start = buf_start;
 	va_start(vl, format);
 	ft_printf2(vl, buf, format);
-	printf_buf(start);
+	// put_str_to_buf(&buf, "SSSSSSSS"); FIXME: ПОЧЕМУ В С:108 можно дописывать в буффер,
+	printf_buf(buf_start);			//   а здесь уже нельзя и буффер обнуляется??
 	va_end(vl);
-	n = returned_printf(start);
-	free_all_buff(start);
+	n = returned_printf(buf_start);
+	free_all_buff(buf_start);
+	ft_putnbr(n);
 	return (n);
 }
 
