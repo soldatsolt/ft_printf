@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/09 08:29:51 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/09 08:52:16 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,10 +52,14 @@ void	i_flag(va_list vl, t_buf **buf, const char *restrict format, t_flags fl)
 	char	*str;
 	int		n;
 	int		k;
+	char	z;
 	
 	k = va_arg(vl, int);
+	z = (k >= 0) ? '+' : '-';
 	str = ft_itoa(k);
 	n = fl.width - ft_strlen(str);
+	if (fl.plus && k >= 0)
+		n--;
 	if (n > 0 && !fl.minus)
 	{
 		if (fl.zero)
@@ -63,13 +67,15 @@ void	i_flag(va_list vl, t_buf **buf, const char *restrict format, t_flags fl)
 		else
 			put_some_chars_to_buf(buf, ' ', n);
 	}
+	if (fl.plus)
+		put_char_to_buf(buf, z);
 	put_str_to_buf(buf, str);
 	if (n > 0 && fl.minus)
 	{
 		put_some_chars_to_buf(buf, ' ', n);
 	}
 	// free(str); //FIXME: ПОЧЕМУ, ЕСЛИ Я ЗАФРИШУ, ПОЯВЛЯЕТСЯ БАГ ?????
-	// str = NULL;  FIXME: С ПЕРЕВОДОМ СТРОКИ И ПЕРВЫМ СИМВОЛОМ   ?????
+	// str = NULL;//FIXME: С ПЕРЕВОДОМ СТРОКИ И ПЕРВЫМ СИМВОЛОМ   ?????
 }
 
 void	make_t_flags0(t_flags *fl)
@@ -180,7 +186,7 @@ int		ft_printf(const char *restrict format, ...)
 
 int		main(int argc, char **argv)
 {
-	 ft_printf("%i\n", 465);
-		// printf("%i\n", 123456);
+	 ft_printf("%014.10i\n", 123456);
+		printf("%014.10i\n", 123456);
 	return (0);
 }
