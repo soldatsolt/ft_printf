@@ -11,12 +11,12 @@ t_buf	*create_buf(void)
 
 void	put_char_to_buf(t_buf **buf, char c)
 {
-	t_buf	*buf1;
+	t_buf	*tmp;
 
-	buf1 = create_buf();
-	(*buf)->c = c;
-	(*buf)->next = buf1;
-	(*buf) = buf1;
+	tmp = *buf;
+	(*buf) = create_buf();
+	tmp->c = c;
+	tmp->next = (*buf);
 }
 
 void	put_str_to_buf(t_buf **buf, char *str)

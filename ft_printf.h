@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/05 10:18:18 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/09 06:26:46 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/09 08:26:38 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,11 @@ typedef struct	s_buf
 	struct s_buf	*next;
 }				t_buf;
 
+typedef struct	s_tofree
+{
+	void			*data;
+	struct s_tofree	*next;
+}				t_tofree;
 char	*strplus(char *s1, char *s2);
 int		ft_printf(const char *restrict format, ...);
 char	*charumn(char c1, char c2);

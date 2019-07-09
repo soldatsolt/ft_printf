@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/09 07:37:33 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/09 08:29:51 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,6 @@ void	put_some_chars_to_buf(t_buf **buf, char c, int n)
 		put_char_to_buf(buf, c);
 		i++;
 	}
-}
-
-void	stuff_for_s_flag(t_buf **buf, t_flags fl, int n)
-{
-	
 }
 
 void	s_flag(va_list vl, t_buf **buf, const char *restrict format, t_flags fl)
@@ -50,6 +45,31 @@ void	s_flag(va_list vl, t_buf **buf, const char *restrict format, t_flags fl)
 	{
 		put_some_chars_to_buf(buf, ' ', n);
 	}
+}
+
+void	i_flag(va_list vl, t_buf **buf, const char *restrict format, t_flags fl)
+{
+	char	*str;
+	int		n;
+	int		k;
+	
+	k = va_arg(vl, int);
+	str = ft_itoa(k);
+	n = fl.width - ft_strlen(str);
+	if (n > 0 && !fl.minus)
+	{
+		if (fl.zero)
+			put_some_chars_to_buf(buf, '0', n);
+		else
+			put_some_chars_to_buf(buf, ' ', n);
+	}
+	put_str_to_buf(buf, str);
+	if (n > 0 && fl.minus)
+	{
+		put_some_chars_to_buf(buf, ' ', n);
+	}
+	// free(str); //FIXME: ПОЧЕМУ, ЕСЛИ Я ЗАФРИШУ, ПОЯВЛЯЕТСЯ БАГ ?????
+	// str = NULL;  FIXME: С ПЕРЕВОДОМ СТРОКИ И ПЕРВЫМ СИМВОЛОМ   ?????
 }
 
 void	make_t_flags0(t_flags *fl)
@@ -112,6 +132,8 @@ void	turbo_parser(va_list vl, t_buf **buf, const char *restrict *format)
 	preparcing(&fl, format);
 	if (**format == 's')
 		s_flag(vl, buf, *format, fl);
+	else if (**format == 'i' || **format == 'd')
+		i_flag(vl, buf, *format, fl);
 	(*format)++;
 }
 
@@ -158,7 +180,7 @@ int		ft_printf(const char *restrict format, ...)
 
 int		main(int argc, char **argv)
 {
-	 ft_printf("qqq%-20sqqq\n", "123456789");
-		printf("qqq%-20sqqq\n", "123456789");
+	 ft_printf("%i\n", 465);
+		// printf("%i\n", 123456);
 	return (0);
 }
