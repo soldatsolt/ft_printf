@@ -31,7 +31,7 @@ void	put_str_to_buf(t_buf **buf, char *str)
 	}
 }
 
-void	printf_buf(t_buf *buf)
+void	print_buf(t_buf *buf)
 {
 	while (buf)
 	{

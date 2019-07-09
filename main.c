@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/09 06:12:52 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/09 06:39:37 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_buf *g_start;
 
 void	s_flag(va_list vl, t_buf **buf, const char *restrict format, t_flags fl)
 {
-	char	*str; // TODO: мб ****** эти лишние
+	char	*str;
 
 	str = va_arg(vl, char *);
 	put_str_to_buf(buf, str);
@@ -85,27 +85,26 @@ void	turbo_parser(va_list vl, t_buf **buf, const char *restrict *format)
 	(*format)++;
 }
 
-void	ft_printf2(va_list vl, t_buf *buf, const char *restrict format)
+void	ft_printf2(va_list vl, t_buf **buf, const char *restrict format)
 {
 	while (*format)
 	{
 		if (*format == '%' && format[1] == '%')
 		{
-			put_char_to_buf(&buf, '%');
+			put_char_to_buf(buf, '%');
 			format += 2;
 		}
 		else if (*format == '%' && format[1] != '%')
 		{
 			format++; // теперь в ф-ии парсера сразу идёт флаг (без %)
-			turbo_parser(vl, &buf, &format);
+			turbo_parser(vl, buf, &format);
 		}
 		else
 		{
-			put_char_to_buf(&buf, *format);
+			put_char_to_buf(buf, *format);
 			format++;
 		}
 	}
-	put_str_to_buf(&buf, "QQQQQQQQQQQQQ");
 }
 
 int		ft_printf(const char *restrict format, ...)
@@ -119,9 +118,8 @@ int		ft_printf(const char *restrict format, ...)
 	buf_start = buf;
 	g_start = buf_start;
 	va_start(vl, format);
-	ft_printf2(vl, buf, format);
-	// put_str_to_buf(&buf, "SSSSSSSS"); FIXME: ПОЧЕМУ В С:108 можно дописывать в буффер,
-	printf_buf(buf_start);			//   а здесь уже нельзя и буффер обнуляется??
+	ft_printf2(vl, &buf, format);
+	print_buf(buf_start);
 	va_end(vl);
 	n = returned_printf(buf_start);
 	free_all_buff(buf_start);
