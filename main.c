@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/09 08:52:16 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/10 04:19:12 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,19 +47,54 @@ void	s_flag(va_list vl, t_buf **buf, const char *restrict format, t_flags fl)
 	}
 }
 
+char	*make_str_with_precision(char *str, int precision)
+{
+	char	*s;
+	int		i;
+
+	i = 0;
+	s = ft_strnew(sizeof(char) * (precision + 1));
+	while (i < precision - ft_strlen(str))
+	{
+		s[i] = '0';
+		i++;
+	}
+	s = ft_strcpy(&(s[i]), str);
+	s = s - i;
+	free(str);
+	str = NULL;
+	s[precision] = '\0';
+	return (s);
+}
+
 void	i_flag(va_list vl, t_buf **buf, const char *restrict format, t_flags fl)
 {
 	char	*str;
 	int		n;
 	int		k;
 	char	z;
-	
+
 	k = va_arg(vl, int);
 	z = (k >= 0) ? '+' : '-';
 	str = ft_itoa(k);
-	n = fl.width - ft_strlen(str);
+	if (fl.precision)
+	{
+		if (k >= 0 && ft_strlen(str) > fl.precision)
+		{
+			;// str не нуждается в модификации
+		}
+		else if (k < 0 && ft_strlen(str) > fl.precision - 1)
+		{
+			;// str не нуждается в модификации
+		}
+		else
+		{
+			str = make_str_with_precision(str, fl.precision);
+		}
+	}
 	if (fl.plus && k >= 0)
 		n--;
+	n = fl.width - ft_strlen(str);
 	if (n > 0 && !fl.minus)
 	{
 		if (fl.zero)
@@ -101,6 +136,7 @@ void	make_t_precision(t_flags *fl, const char *restrict *format)
 {
 	(*format)++;
 	fl->precision = ft_atoi(*format);
+	fl->zero = 0;
 	while ((**format) >= '0' && (**format) <= '9')
 		(*format)++;
 	(*format)--;
@@ -120,7 +156,7 @@ void	preparcing(t_flags *fl, const char *restrict *format)
 			fl->minus = 1;
 		if ((**format) == '+')
 			fl->plus = 1;
-		if ((**format) == '0')
+		if ((**format) == '0' && !fl->precision)
 			fl->zero = 1;
 		if	((**format) > '0' && (**format) <= '9')
 			make_t_width(fl, format);
@@ -186,7 +222,8 @@ int		ft_printf(const char *restrict format, ...)
 
 int		main(int argc, char **argv)
 {
-	 ft_printf("%014.10i\n", 123456);
-		printf("%014.10i\n", 123456);
+	printf ("%6d\n",123);
+	ft_printf ("%6d\n",123);
+	
 	return (0);
 }
