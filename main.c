@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/10 10:56:09 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/10 15:21:14 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,12 @@ int		ft_printf(const char *restrict format, ...)
 	n = returned_printf(buf_start);
 	free_all_buff(buf_start);
 	return (n);
+}
+
+int		main()
+{
+	ft_printf("%s\n", ft_itoa_base_big(1023, 16));
+	printf("%s\n", ft_itoa_base_big(1023, 16));
+	ft_printf("%s\n", ft_itoa_base_small(1023, 16));
+	printf("%s\n", ft_itoa_base_small(1023, 16));
 }
