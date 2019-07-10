@@ -5,9 +5,11 @@ void	s_flag(va_list vl, t_buf **buf, t_flags fl)
 	char	*str;
 	int		n;
 
-	str = va_arg(vl, char *);
-	if (str)
+	if ((str = va_arg(vl, char *)))
 	{
+		str = ft_strdup(str);
+		if (fl.precision - 1 < ft_strlen(str))
+			str[fl.precision] = '\0';
 		n = fl.width - ft_strlen(str);
 		if (n > 0 && !fl.minus)
 		{
@@ -23,7 +25,7 @@ void	s_flag(va_list vl, t_buf **buf, t_flags fl)
 		}
 	}
 	else
-		put_str_to_buf(buf, "(null)");
+		put_str_to_buf(buf, "(null)"); // тут тоже фришить нужно
 }
 
 char	*make_str_with_precision_for_i(t_flags fl, int k)

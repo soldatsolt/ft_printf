@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/10 09:30:11 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/10 10:16:53 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,6 @@ int		ft_printf(const char *restrict format, ...)
 
 int main()
 {
-	printf("%04%\n");
-	ft_printf("%04%\n");
+	printf("%.0s\n", "123456789");
+	ft_printf("%.0s\n", "123456789");
 }

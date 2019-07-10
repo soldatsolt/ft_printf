@@ -1034,11 +1034,7 @@ TEST : %.15s, "coco"
 [OK]
 -------------------------------------
 TEST : %.5s, "coco et titi"
-ft_printf  --> coco et titi
-ret = 12
-printf     --> coco 
-ret = 5
-[KO]
+[OK]
 -------------------------------------
 TEST : %.0s, "coco et ti"
 ft_printf  --> coco et ti
@@ -1087,8 +1083,8 @@ ret = 24
 [KO]
 -------------------------------------
 TEST : u%4.2ss %-1.s\n %---5.3s , "coco", NULL, "yooo"
-ft_printf  --> ucocos (null)
- yooo  
+ft_printf  --> u  cos (null)
+ yoo   y
 ret = 21
 printf     --> u  cos  
  yoo   
@@ -1261,42 +1257,42 @@ ret = 3
 TEST : %p, &data
 ft_printf  --> 
 ret = 0
-printf     --> 0x7fff5152e818
+printf     --> 0x7fff5de86818
 ret = 14
 [KO]
 -------------------------------------
 TEST : %p, &p_basic_02
 ft_printf  --> 
 ret = 0
-printf     --> 0x10e6d5af0
+printf     --> 0x101d7d9e0
 ret = 11
 [KO]
 -------------------------------------
 TEST : %20p, &data
 ft_printf  --> 
 ret = 0
-printf     -->       0x7fff5152e818
+printf     -->       0x7fff5de86818
 ret = 20
 [KO]
 -------------------------------------
 TEST : %-25p, &data
 ft_printf  --> 
 ret = 0
-printf     --> 0x7fff5152e818           
+printf     --> 0x7fff5de86818           
 ret = 25
 [KO]
 -------------------------------------
 TEST : %2p, &data
 ft_printf  --> 
 ret = 0
-printf     --> 0x7fff5152e818
+printf     --> 0x7fff5de86818
 ret = 14
 [KO]
 -------------------------------------
 TEST : %----24p et hello %2p %12p, &ret, &p_all_01, NULL
 ft_printf  -->  et hello  
 ret = 11
-printf     --> 0x7fff5152e814           et hello 0x10e6d60f0          0x0
+printf     --> 0x7fff5de86814           et hello 0x101d7dfe0          0x0
 ret = 58
 [KO]
 -------------------------------------
@@ -1364,7 +1360,7 @@ ret = -1
 TEST : test%-8p %---32p %#5.3x%#024X, &ret, &tret, 0x25, 0
 ft_printf  --> test  
 ret = 6
-printf     --> test0x7fff5152e814 0x7fff5152e814                   0x025000000000000000000000000
+printf     --> test0x7fff5de86814 0x7fff5de86814                   0x025000000000000000000000000
 ret = 81
 [KO]
 -------------------------------------
