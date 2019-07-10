@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/20 20:27:38 by kmills            #+#    #+#             */
-/*   Updated: 2019/05/22 06:53:05 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/10 05:13:54 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,5 +99,6 @@ int				ft_sqrt(int nb);
 int				get_next_line(const int fd, char **line);
 int				ft_atoi_base(const char *str, int str_base);
 char			*ft_strrev(char *str);
+char			*ft_utoa(unsigned int n);
 
 #endif

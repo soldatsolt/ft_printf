@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/10 04:36:08 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/10 05:22:27 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_buf *g_start;
 
-void	s_flag(va_list vl, t_buf **buf, const char *restrict format, t_flags fl)
+void	s_flag(va_list vl, t_buf **buf, t_flags fl)
 {
 	char	*str;
 	int		n;
@@ -35,7 +35,7 @@ void	s_flag(va_list vl, t_buf **buf, const char *restrict format, t_flags fl)
 	}
 }
 
-char	*make_str_with_precision(t_flags fl, int k)
+char	*make_str_with_precision_for_i(t_flags fl, int k)
 {
 	char	*s;
 	int		i;
@@ -45,25 +45,52 @@ char	*make_str_with_precision(t_flags fl, int k)
 	if (fl.precision && !((k >= 0 && ft_strlen(str) > fl.precision)\
 	 || (k < 0 && ft_strlen(str) > fl.precision - 1)))
 	{
-	i = 0;
-	s = ft_strnew(sizeof(char) * (fl.precision + 1));
-	while (i < fl.precision - ft_strlen(str))
-	{
-		s[i] = '0';
-		i++;
-	}
-	s = ft_strcpy(&(s[i]), str);
-	s = s - i;
-	free(str);
-	str = NULL;
-	s[fl.precision] = '\0';
+		i = 0;
+		s = ft_strnew(sizeof(char) * (fl.precision + 1));
+		while (i < fl.precision - ft_strlen(str))
+		{
+			s[i] = '0';
+			i++;
+		}
+		s = ft_strcpy(&(s[i]), str);
+		s = s - i;
+		free(str);
+		str = NULL;
+		s[fl.precision] = '\0';
 	}
 	else
 		s = str;
 	return (s);
 }
 
-void	i_flag(va_list vl, t_buf **buf, const char *restrict format, t_flags fl)
+char	*make_str_with_precision_for_u(t_flags fl, unsigned int k)
+{
+	char	*s;
+	int		i;
+	char	*str;
+
+	str = ft_utoa(k);
+	if (fl.precision && !((ft_strlen(str) > fl.precision)))
+	{
+		i = 0;
+		s = ft_strnew(sizeof(char) * (fl.precision + 1));
+		while (i < fl.precision - ft_strlen(str))
+		{
+			s[i] = '0';
+			i++;
+		}
+		s = ft_strcpy(&(s[i]), str);
+		s = s - i;
+		free(str);
+		str = NULL;
+		s[fl.precision] = '\0';
+	}
+	else
+		s = str;
+	return (s);
+}
+
+void	i_flag(va_list vl, t_buf **buf, t_flags fl)
 {
 	char	*str;
 	int		n;
@@ -72,7 +99,7 @@ void	i_flag(va_list vl, t_buf **buf, const char *restrict format, t_flags fl)
 
 	k = va_arg(vl, int);
 	z = (k >= 0) ? '+' : '-';
-	str = make_str_with_precision(fl, k);
+	str = make_str_with_precision_for_i(fl, k);
 	n = fl.width - ft_strlen(str);
 	if (fl.plus && k >= 0)
 		n--;
@@ -88,8 +115,27 @@ void	i_flag(va_list vl, t_buf **buf, const char *restrict format, t_flags fl)
 	put_str_to_buf(buf, str);
 	if (n > 0 && fl.minus)
 		put_some_chars_to_buf(buf, ' ', n);
-	// free(str); //FIXME: ПОЧЕМУ, ЕСЛИ Я ЗАФРИШУ, ПОЯВЛЯЕТСЯ БАГ ?????
-	// str = NULL;//FIXME: С ПЕРЕВОДОМ СТРОКИ И ПЕРВЫМ СИМВОЛОМ   ?????
+}
+
+void	u_flag(va_list vl, t_buf **buf, t_flags fl)
+{
+	char			*str;
+	int				n;
+	unsigned int	k;
+
+	k = va_arg(vl, unsigned int);
+	str = make_str_with_precision_for_u(fl, k);
+	n = fl.width - ft_strlen(str);
+	if (n > 0 && !fl.minus)
+	{
+		if (fl.zero)
+			put_some_chars_to_buf(buf, '0', n);
+		else
+			put_some_chars_to_buf(buf, ' ', n);
+	}
+	put_str_to_buf(buf, str);
+	if (n > 0 && fl.minus)
+		put_some_chars_to_buf(buf, ' ', n);
 }
 
 void	make_t_flags0(t_flags *fl)
@@ -152,9 +198,11 @@ void	turbo_parser(va_list vl, t_buf **buf, const char *restrict *format)
 	make_t_flags0(&fl);
 	preparcing(&fl, format);
 	if (**format == 's')
-		s_flag(vl, buf, *format, fl);
+		s_flag(vl, buf, fl);
 	else if (**format == 'i' || **format == 'd')
-		i_flag(vl, buf, *format, fl);
+		i_flag(vl, buf, fl);
+	else if (**format == 'u')
+		u_flag(vl, buf, fl);
 	(*format)++;
 }
 
@@ -201,8 +249,9 @@ int		ft_printf(const char *restrict format, ...)
 
 int		main(int argc, char **argv)
 {
+	printf ("%+024.12u\n",123);
+	ft_printf ("%+024.12u\n",123);
 	printf ("%+024.12d\n",123);
 	ft_printf ("%+024.12d\n",123);
-	
 	return (0);
 }
