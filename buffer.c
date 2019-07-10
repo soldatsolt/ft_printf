@@ -66,3 +66,15 @@ void	free_all_buff(t_buf *start)
 		tmp = store;
 	}
 }
+
+void	put_some_chars_to_buf(t_buf **buf, char c, int n)
+{
+	int	i;
+
+	i = 0;
+	while (i < n)
+	{
+		put_char_to_buf(buf, c);
+		i++;
+	}
+}

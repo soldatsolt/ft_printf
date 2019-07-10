@@ -6,25 +6,13 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/10 04:19:12 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/10 04:36:08 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
 t_buf *g_start;
-
-void	put_some_chars_to_buf(t_buf **buf, char c, int n)
-{
-	int	i;
-
-	i = 0;
-	while (i < n)
-	{
-		put_char_to_buf(buf, c);
-		i++;
-	}
-}
 
 void	s_flag(va_list vl, t_buf **buf, const char *restrict format, t_flags fl)
 {
@@ -47,14 +35,19 @@ void	s_flag(va_list vl, t_buf **buf, const char *restrict format, t_flags fl)
 	}
 }
 
-char	*make_str_with_precision(char *str, int precision)
+char	*make_str_with_precision(t_flags fl, int k)
 {
 	char	*s;
 	int		i;
+	char	*str;
 
+	str = ft_itoa(k);
+	if (fl.precision && !((k >= 0 && ft_strlen(str) > fl.precision)\
+	 || (k < 0 && ft_strlen(str) > fl.precision - 1)))
+	{
 	i = 0;
-	s = ft_strnew(sizeof(char) * (precision + 1));
-	while (i < precision - ft_strlen(str))
+	s = ft_strnew(sizeof(char) * (fl.precision + 1));
+	while (i < fl.precision - ft_strlen(str))
 	{
 		s[i] = '0';
 		i++;
@@ -63,7 +56,10 @@ char	*make_str_with_precision(char *str, int precision)
 	s = s - i;
 	free(str);
 	str = NULL;
-	s[precision] = '\0';
+	s[fl.precision] = '\0';
+	}
+	else
+		s = str;
 	return (s);
 }
 
@@ -76,25 +72,10 @@ void	i_flag(va_list vl, t_buf **buf, const char *restrict format, t_flags fl)
 
 	k = va_arg(vl, int);
 	z = (k >= 0) ? '+' : '-';
-	str = ft_itoa(k);
-	if (fl.precision)
-	{
-		if (k >= 0 && ft_strlen(str) > fl.precision)
-		{
-			;// str не нуждается в модификации
-		}
-		else if (k < 0 && ft_strlen(str) > fl.precision - 1)
-		{
-			;// str не нуждается в модификации
-		}
-		else
-		{
-			str = make_str_with_precision(str, fl.precision);
-		}
-	}
+	str = make_str_with_precision(fl, k);
+	n = fl.width - ft_strlen(str);
 	if (fl.plus && k >= 0)
 		n--;
-	n = fl.width - ft_strlen(str);
 	if (n > 0 && !fl.minus)
 	{
 		if (fl.zero)
@@ -106,9 +87,7 @@ void	i_flag(va_list vl, t_buf **buf, const char *restrict format, t_flags fl)
 		put_char_to_buf(buf, z);
 	put_str_to_buf(buf, str);
 	if (n > 0 && fl.minus)
-	{
 		put_some_chars_to_buf(buf, ' ', n);
-	}
 	// free(str); //FIXME: ПОЧЕМУ, ЕСЛИ Я ЗАФРИШУ, ПОЯВЛЯЕТСЯ БАГ ?????
 	// str = NULL;//FIXME: С ПЕРЕВОДОМ СТРОКИ И ПЕРВЫМ СИМВОЛОМ   ?????
 }
@@ -222,8 +201,8 @@ int		ft_printf(const char *restrict format, ...)
 
 int		main(int argc, char **argv)
 {
-	printf ("%6d\n",123);
-	ft_printf ("%6d\n",123);
+	printf ("%+024.12d\n",123);
+	ft_printf ("%+024.12d\n",123);
 	
 	return (0);
 }
