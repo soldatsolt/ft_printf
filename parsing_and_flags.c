@@ -8,7 +8,7 @@ void	s_flag(va_list vl, t_buf **buf, t_flags fl)
 	if ((str = va_arg(vl, char *)))
 	{
 		str = ft_strdup(str);
-		if (fl.precision - 1 < ft_strlen(str))
+		if (fl.precision != -1 && fl.precision - 1 < (int)ft_strlen(str))
 			str[fl.precision] = '\0';
 		n = fl.width - ft_strlen(str);
 		if (n > 0 && !fl.minus)
@@ -35,7 +35,7 @@ char	*make_str_with_precision_for_i(t_flags fl, int k)
 	char	*str;
 
 	str = ft_itoa(k);
-	if (fl.precision && !((k >= 0 && ft_strlen(str) > fl.precision) \
+	if (fl.precision != -1 && !((k >= 0 && ft_strlen(str) > fl.precision) \
 	|| (k < 0 && ft_strlen(str) > fl.precision - 1)))
 	{
 		i = 0;
@@ -73,7 +73,7 @@ char	*make_str_with_precision_for_u(t_flags fl, unsigned int k)
 	char	*str;
 
 	str = ft_utoa(k);
-	if (fl.precision && !((ft_strlen(str) > fl.precision)))
+	if (fl.precision != -1 && !((ft_strlen(str) > fl.precision)))
 	{
 		i = 0;
 		s = ft_strnew(sizeof(char) * (fl.precision + 1));
@@ -168,7 +168,7 @@ void	make_t_flags0(t_flags *fl)
 	fl->space = 0;
 	fl->zero = 0;
 	fl->width = 0;
-	fl->precision = 0;
+	fl->precision = -1;
 }
 
 void	make_t_width(t_flags *fl, const char *restrict *format)
