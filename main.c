@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/10 05:22:27 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/10 05:40:04 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,14 @@ char	*make_str_with_precision_for_i(t_flags fl, int k)
 			s[i] = '0';
 			i++;
 		}
-		s = ft_strcpy(&(s[i]), str);
+		if (k < 0)
+		{
+			s[i] = '0';
+			i++;
+			s = ft_strcpy(&(s[i]), &str[1]);
+		}
+		else
+			s = ft_strcpy(&(s[i]), str);
 		s = s - i;
 		free(str);
 		str = NULL;
@@ -110,7 +117,7 @@ void	i_flag(va_list vl, t_buf **buf, t_flags fl)
 		else
 			put_some_chars_to_buf(buf, ' ', n);
 	}
-	if (fl.plus)
+	if (fl.plus || k < 0)
 		put_char_to_buf(buf, z);
 	put_str_to_buf(buf, str);
 	if (n > 0 && fl.minus)
@@ -249,9 +256,7 @@ int		ft_printf(const char *restrict format, ...)
 
 int		main(int argc, char **argv)
 {
-	printf ("%+024.12u\n",123);
-	ft_printf ("%+024.12u\n",123);
-	printf ("%+024.12d\n",123);
-	ft_printf ("%+024.12d\n",123);
+	printf ("%+0-24.12d\n",-123);
+	ft_printf ("%+0-24.12d\n",-123);
 	return (0);
 }
