@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/10 05:59:04 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/10 06:10:47 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,15 +42,15 @@ char	*make_str_with_precision_for_i(t_flags fl, int k)
 	char	*str;
 
 	str = ft_itoa(k);
-	if (fl.precision && !((k >= 0 && ft_strlen(str) > fl.precision)\
-	 || (k < 0 && ft_strlen(str) > fl.precision - 1)))
+	if (fl.precision && !((k >= 0 && ft_strlen(str) > fl.precision) \
+	|| (k < 0 && ft_strlen(str) > fl.precision - 1)))
 	{
 		i = 0;
 		s = ft_strnew(sizeof(char) * (fl.precision + 2));
 		if (k < 0)
 			s[i++] = '-';
-		while ((k >= 0)?(i < fl.precision - ft_strlen(str)):(i < fl.precision \
-		- ft_strlen(str) + 1))
+		while ((k >= 0) ? (i < fl.precision - ft_strlen(str)) : (i < \
+		fl.precision - ft_strlen(str) + 1))
 		{
 			s[i] = '0';
 			i++;
@@ -66,7 +66,7 @@ char	*make_str_with_precision_for_i(t_flags fl, int k)
 		s = s - i;
 		free(str);
 		str = NULL;
-		s[(k >= 0)?(fl.precision):(fl.precision + 1)] = '\0';
+		s[(k >= 0) ? (fl.precision) : (fl.precision + 1)] = '\0';
 	}
 	else
 		s = str;
@@ -193,7 +193,7 @@ void	preparcing(t_flags *fl, const char *restrict *format)
 			fl->plus = 1;
 		if ((**format) == '0' && !fl->precision)
 			fl->zero = 1;
-		if	((**format) > '0' && (**format) <= '9')
+		if ((**format) > '0' && (**format) <= '9')
 			make_t_width(fl, format);
 		if ((**format) == '.')
 			make_t_precision(fl, format);
@@ -204,7 +204,7 @@ void	preparcing(t_flags *fl, const char *restrict *format)
 void	turbo_parser(va_list vl, t_buf **buf, const char *restrict *format)
 {
 	t_flags	fl;
-	
+
 	make_t_flags0(&fl);
 	preparcing(&fl, format);
 	if (**format == 's')
@@ -255,11 +255,4 @@ int		ft_printf(const char *restrict format, ...)
 	n = returned_printf(buf_start);
 	free_all_buff(buf_start);
 	return (n);
-}
-
-int		main(int argc, char **argv)
-{
-	printf ("111%24d\n",-123);
-	ft_printf ("111%24d\n",-123);
-	return (0);
 }
