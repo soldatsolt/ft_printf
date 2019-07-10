@@ -1,11 +1,10 @@
 #include "ft_printf.h"
 
-void	s_flag(va_list vl, t_buf **buf, t_flags fl)
+void	s_flag(char *str, t_buf **buf, t_flags fl)
 {
-	char	*str;
 	int		n;
 
-	if ((str = va_arg(vl, char *)))
+	if (str)
 	{
 		str = ft_strdup(str);
 		if (fl.precision != -1 && fl.precision - 1 < (int)ft_strlen(str))
@@ -25,7 +24,7 @@ void	s_flag(va_list vl, t_buf **buf, t_flags fl)
 		}
 	}
 	else
-		put_str_to_buf(buf, "(null)"); // тут тоже фришить нужно
+		s_flag("(null)", buf, fl); // тут тоже фришить нужно
 }
 
 char	*make_str_with_precision_for_i(t_flags fl, int k)
@@ -236,7 +235,7 @@ void	turbo_parser(va_list vl, t_buf **buf, const char *restrict *format)
 	make_t_flags0(&fl);
 	preparcing(buf, &fl, format);
 	if (**format == 's')
-		s_flag(vl, buf, fl);
+		s_flag(va_arg(vl, char *), buf, fl);
 	else if (**format == 'i' || **format == 'd')
 		i_flag(vl, buf, fl);
 	else if (**format == 'u')
