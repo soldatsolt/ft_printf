@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/10 05:40:04 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/10 05:59:04 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,11 @@ char	*make_str_with_precision_for_i(t_flags fl, int k)
 	 || (k < 0 && ft_strlen(str) > fl.precision - 1)))
 	{
 		i = 0;
-		s = ft_strnew(sizeof(char) * (fl.precision + 1));
-		while (i < fl.precision - ft_strlen(str))
+		s = ft_strnew(sizeof(char) * (fl.precision + 2));
+		if (k < 0)
+			s[i++] = '-';
+		while ((k >= 0)?(i < fl.precision - ft_strlen(str)):(i < fl.precision \
+		- ft_strlen(str) + 1))
 		{
 			s[i] = '0';
 			i++;
@@ -63,7 +66,7 @@ char	*make_str_with_precision_for_i(t_flags fl, int k)
 		s = s - i;
 		free(str);
 		str = NULL;
-		s[fl.precision] = '\0';
+		s[(k >= 0)?(fl.precision):(fl.precision + 1)] = '\0';
 	}
 	else
 		s = str;
@@ -117,7 +120,7 @@ void	i_flag(va_list vl, t_buf **buf, t_flags fl)
 		else
 			put_some_chars_to_buf(buf, ' ', n);
 	}
-	if (fl.plus || k < 0)
+	if (fl.plus && k >= 0)
 		put_char_to_buf(buf, z);
 	put_str_to_buf(buf, str);
 	if (n > 0 && fl.minus)
@@ -256,7 +259,7 @@ int		ft_printf(const char *restrict format, ...)
 
 int		main(int argc, char **argv)
 {
-	printf ("%+0-24.12d\n",-123);
-	ft_printf ("%+0-24.12d\n",-123);
+	printf ("111%24d\n",-123);
+	ft_printf ("111%24d\n",-123);
 	return (0);
 }
