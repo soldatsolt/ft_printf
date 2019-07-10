@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/05 10:18:18 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/10 04:19:54 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/10 09:21:50 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,6 @@ const char *restrict *format);
 int		returned_printf(t_buf *buf);
 void	free_all_buff(t_buf *start);
 void	put_some_chars_to_buf(t_buf **buf, char c, int n);
+void	turbo_parser(va_list vl, t_buf **buf, const char *restrict *format);
 
 #endif

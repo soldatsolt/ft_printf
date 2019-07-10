@@ -2,7 +2,7 @@ NAME = ft_printf
 MAKE = make
 override G += 
 FLAGS = -Wall -Wextra -Werror
-SRCS = main.c stringmath.c buffer.c double_float.c
+SRCS = main.c stringmath.c buffer.c double_float.c parsing_and_flags.c
 OBJS = $(SRCS:.c=.o)
 LIBFT = ./libft/libft.a
 INCLUDE = ./ft_printf.h
