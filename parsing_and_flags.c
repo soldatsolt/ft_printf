@@ -216,7 +216,7 @@ void	preparcing(t_buf **buf, t_flags *fl, const char *restrict *format)
 			fl->minus = 1;
 		if ((**format) == '+')
 			fl->plus = 1;
-		if ((**format) == '0' && !fl->precision)
+		if ((**format) == '0' && fl->precision == -1)
 			fl->zero = 1;
 		if ((**format) > '0' && (**format) <= '9')
 			make_t_width(fl, format);
