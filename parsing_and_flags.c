@@ -168,6 +168,8 @@ void	make_t_flags0(t_flags *fl)
 	fl->zero = 0;
 	fl->width = 0;
 	fl->precision = -1;
+	fl->h = 0;
+	fl->l = 0;
 }
 
 void	make_t_width(t_flags *fl, const char *restrict *format)
@@ -206,7 +208,7 @@ void	preparcing(t_buf **buf, t_flags *fl, const char *restrict *format)
 {
 	while ((**format) == ' ' || (**format) == '-' || (**format) == '+' || \
 	((**format) >= '0' && (**format) <= '9') || (**format) == '#' || \
-	(**format) == '.')
+	(**format) == '.' || (**format) == 'h' || (**format) == 'l')
 	{
 		if ((**format) == ' ')
 			fl->space = 1;
@@ -222,6 +224,10 @@ void	preparcing(t_buf **buf, t_flags *fl, const char *restrict *format)
 			make_t_width(fl, format);
 		if ((**format) == '.')
 			make_t_precision(fl, format);
+		if ((**format) == 'l' && !fl->h && fl->l < 2)
+			fl->l++;
+		if ((**format) == 'h' && !fl->l && fl->h < 2)
+			fl->h++;
 		(*format)++;
 	}
 	if ((**format) == '%')

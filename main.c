@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/11 07:48:18 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/11 09:03:44 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,10 @@ int		ft_printf(const char *restrict format, ...)
 	n = returned_printf(buf_start);
 	free_all_buff(buf_start);
 	return (n);
+}
+
+int		main()
+{
+	printf("%l20i\n", 128);
+	// ft_printf("%04%\n");
 }

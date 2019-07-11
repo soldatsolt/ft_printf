@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/05 10:18:18 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/10 09:21:50 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/11 08:55:07 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ typedef struct	s_flags
 	int			zero;
 	int			width;
 	int			precision;
+	int			l;
+	int			h;
 }				t_flags;
 
 typedef struct	s_buf
