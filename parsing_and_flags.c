@@ -1,5 +1,7 @@
 #include "ft_printf.h"
 
+
+
 void	s_flag(char *str, t_buf **buf, t_flags fl)
 {
 	int		n;
@@ -9,7 +11,7 @@ void	s_flag(char *str, t_buf **buf, t_flags fl)
 		str = ft_strdup(str);
 		if (fl.precision != -1 && fl.precision - 1 < (int)ft_strlen(str))
 			str[fl.precision] = '\0';
-		n = fl.width - ft_strlen(str);
+		n = fl.width - (int)ft_strlen(str);
 		if (n > 0 && !fl.minus)
 		{
 			if (fl.zero)
@@ -72,7 +74,7 @@ char	*make_str_with_precision_for_u(t_flags fl, unsigned int k)
 	char	*str;
 
 	str = ft_utoa(k);
-	if (fl.precision != -1 && !((ft_strlen(str) > fl.precision)))
+	if (fl.precision != -1 && (((int)ft_strlen(str) <= fl.precision)))
 	{
 		i = 0;
 		s = ft_strnew(sizeof(char) * (fl.precision + 1));
@@ -102,7 +104,7 @@ void	i_flag(va_list vl, t_buf **buf, t_flags fl)
 	k = va_arg(vl, int);
 	z = (k >= 0) ? '+' : '-';
 	str = make_str_with_precision_for_i(fl, k);
-	n = fl.width - ft_strlen(str);
+	n = fl.width - (int)ft_strlen(str);
 	if (fl.plus && k >= 0)
 		n--;
 	if (n > 0 && !fl.minus)
@@ -132,7 +134,7 @@ void	c_flag(va_list vl, t_buf **buf, t_flags fl)
 		else
 			put_some_chars_to_buf(buf, ' ', fl.width - 1);
 	}
-	c = va_arg(vl, int);
+	c = (char)va_arg(vl, int);
 	put_char_to_buf(buf, c);
 	if (fl.minus && fl.width > 1)
 		put_some_chars_to_buf(buf, ' ', fl.width - 1);
@@ -146,7 +148,7 @@ void	u_flag(va_list vl, t_buf **buf, t_flags fl)
 
 	k = va_arg(vl, unsigned int);
 	str = make_str_with_precision_for_u(fl, k);
-	n = fl.width - ft_strlen(str);
+	n = fl.width - (int)ft_strlen(str);
 	if (n > 0 && !fl.minus)
 	{
 		if (fl.zero)
@@ -248,5 +250,7 @@ void	turbo_parser(va_list vl, t_buf **buf, const char *restrict *format)
 		u_flag(vl, buf, fl);
 	else if (**format == 'c')
 		c_flag(vl, buf, fl);
+	else if (**format == 'f')
+		f_flag(vl, buf, fl);
 	(*format)++;
 }

@@ -58,5 +58,7 @@ int		returned_printf(t_buf *buf);
 void	free_all_buff(t_buf *start);
 void	put_some_chars_to_buf(t_buf **buf, char c, int n);
 void	turbo_parser(va_list vl, t_buf **buf, const char *restrict *format);
+void	f_flag(va_list vl, t_buf **buf, t_flags fl);
+
 
 #endif
