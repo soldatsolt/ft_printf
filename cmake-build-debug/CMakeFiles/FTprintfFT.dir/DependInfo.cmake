@@ -4,10 +4,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/vbharbo/Documents/42/FTprintfFT/buffer.c" "/Users/vbharbo/Documents/42/FTprintfFT/cmake-build-debug/CMakeFiles/FTprintfFT.dir/buffer.c.o"
-  "/Users/vbharbo/Documents/42/FTprintfFT/double_float.c" "/Users/vbharbo/Documents/42/FTprintfFT/cmake-build-debug/CMakeFiles/FTprintfFT.dir/double_float.c.o"
-  "/Users/vbharbo/Documents/42/FTprintfFT/libft/ft_atoi.c" "/Users/vbharbo/Documents/42/FTprintfFT/cmake-build-debug/CMakeFiles/FTprintfFT.dir/libft/ft_atoi.c.o"
-  "/Users/vbharbo/Documents/42/FTprintfFT/libft/ft_atoi_base.c" "/Users/vbharbo/Documents/42/FTprintfFT/cmake-build-debug/CMakeFiles/FTprintfFT.dir/libft/ft_atoi_base.c.o"
   "/Users/vbharbo/Documents/42/FTprintfFT/libft/ft_bzero.c" "/Users/vbharbo/Documents/42/FTprintfFT/cmake-build-debug/CMakeFiles/FTprintfFT.dir/libft/ft_bzero.c.o"
   "/Users/vbharbo/Documents/42/FTprintfFT/libft/ft_fibonacci.c" "/Users/vbharbo/Documents/42/FTprintfFT/cmake-build-debug/CMakeFiles/FTprintfFT.dir/libft/ft_fibonacci.c.o"
   "/Users/vbharbo/Documents/42/FTprintfFT/libft/ft_is_sort.c" "/Users/vbharbo/Documents/42/FTprintfFT/cmake-build-debug/CMakeFiles/FTprintfFT.dir/libft/ft_is_sort.c.o"
@@ -77,9 +73,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/vbharbo/Documents/42/FTprintfFT/libft/ft_toupper.c" "/Users/vbharbo/Documents/42/FTprintfFT/cmake-build-debug/CMakeFiles/FTprintfFT.dir/libft/ft_toupper.c.o"
   "/Users/vbharbo/Documents/42/FTprintfFT/libft/ft_utoa.c" "/Users/vbharbo/Documents/42/FTprintfFT/cmake-build-debug/CMakeFiles/FTprintfFT.dir/libft/ft_utoa.c.o"
   "/Users/vbharbo/Documents/42/FTprintfFT/libft/get_next_line.c" "/Users/vbharbo/Documents/42/FTprintfFT/cmake-build-debug/CMakeFiles/FTprintfFT.dir/libft/get_next_line.c.o"
-  "/Users/vbharbo/Documents/42/FTprintfFT/main.c" "/Users/vbharbo/Documents/42/FTprintfFT/cmake-build-debug/CMakeFiles/FTprintfFT.dir/main.c.o"
-  "/Users/vbharbo/Documents/42/FTprintfFT/parsing_and_flags.c" "/Users/vbharbo/Documents/42/FTprintfFT/cmake-build-debug/CMakeFiles/FTprintfFT.dir/parsing_and_flags.c.o"
-  "/Users/vbharbo/Documents/42/FTprintfFT/stringmath.c" "/Users/vbharbo/Documents/42/FTprintfFT/cmake-build-debug/CMakeFiles/FTprintfFT.dir/stringmath.c.o"
+  "/Users/vbharbo/Documents/42/FTprintfFT/manman.c" "/Users/vbharbo/Documents/42/FTprintfFT/cmake-build-debug/CMakeFiles/FTprintfFT.dir/manman.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

@@ -7,8 +7,6 @@ include_directories(.)
 include_directories(libft)
 
 add_executable(FTprintfFT
-        libft/ft_atoi.c
-        libft/ft_atoi_base.c
         libft/ft_bzero.c
         libft/ft_fibonacci.c
         libft/ft_is_sort.c
@@ -79,9 +77,5 @@ add_executable(FTprintfFT
         libft/ft_utoa.c
         libft/get_next_line.c
         libft/libft.h
-        buffer.c
-        double_float.c
         ft_printf.h
-        main.c
-        parsing_and_flags.c
-        stringmath.c)
+        manman.c)

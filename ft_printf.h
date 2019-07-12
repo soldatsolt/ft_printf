@@ -14,6 +14,21 @@
 # define FT_PRINT_H
 # include "./libft/libft.h"
 
+
+typedef struct	s_double
+{
+	double 			w;
+	int 			len;
+	int 			strlen;
+	unsigned char	*s;
+	char 			*str;
+	int 			i;
+	int 			pow;
+	char 			c;
+	int 			exp;
+	char			*mantissa;
+}				t_double;
+
 typedef struct	s_flags
 {
 	int			dash;
@@ -59,6 +74,7 @@ void	free_all_buff(t_buf *start);
 void	put_some_chars_to_buf(t_buf **buf, char c, int n);
 void	turbo_parser(va_list vl, t_buf **buf, const char *restrict *format);
 void	f_flag(va_list vl, t_buf **buf, t_flags fl);
+//int		ft_double_in_str(t_double *dd, t_flags *fl);
 
 
 #endif

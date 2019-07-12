@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/FTprintfFT.dir/libft/ft_atoi.c.o"
-  "CMakeFiles/FTprintfFT.dir/libft/ft_atoi_base.c.o"
   "CMakeFiles/FTprintfFT.dir/libft/ft_bzero.c.o"
   "CMakeFiles/FTprintfFT.dir/libft/ft_fibonacci.c.o"
   "CMakeFiles/FTprintfFT.dir/libft/ft_is_sort.c.o"
@@ -70,11 +68,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/FTprintfFT.dir/libft/ft_toupper.c.o"
   "CMakeFiles/FTprintfFT.dir/libft/ft_utoa.c.o"
   "CMakeFiles/FTprintfFT.dir/libft/get_next_line.c.o"
-  "CMakeFiles/FTprintfFT.dir/buffer.c.o"
-  "CMakeFiles/FTprintfFT.dir/double_float.c.o"
-  "CMakeFiles/FTprintfFT.dir/main.c.o"
-  "CMakeFiles/FTprintfFT.dir/parsing_and_flags.c.o"
-  "CMakeFiles/FTprintfFT.dir/stringmath.c.o"
+  "CMakeFiles/FTprintfFT.dir/manman.c.o"
   "FTprintfFT.pdb"
   "FTprintfFT"
 )
