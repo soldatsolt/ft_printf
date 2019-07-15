@@ -123,6 +123,87 @@ FTprintfFT/fast:
 	$(MAKE) -f CMakeFiles/FTprintfFT.dir/build.make CMakeFiles/FTprintfFT.dir/build
 .PHONY : FTprintfFT/fast
 
+buffer.o: buffer.c.o
+
+.PHONY : buffer.o
+
+# target to build an object file
+buffer.c.o:
+	$(MAKE) -f CMakeFiles/FTprintfFT.dir/build.make CMakeFiles/FTprintfFT.dir/buffer.c.o
+.PHONY : buffer.c.o
+
+buffer.i: buffer.c.i
+
+.PHONY : buffer.i
+
+# target to preprocess a source file
+buffer.c.i:
+	$(MAKE) -f CMakeFiles/FTprintfFT.dir/build.make CMakeFiles/FTprintfFT.dir/buffer.c.i
+.PHONY : buffer.c.i
+
+buffer.s: buffer.c.s
+
+.PHONY : buffer.s
+
+# target to generate assembly for a file
+buffer.c.s:
+	$(MAKE) -f CMakeFiles/FTprintfFT.dir/build.make CMakeFiles/FTprintfFT.dir/buffer.c.s
+.PHONY : buffer.c.s
+
+libft/ft_atoi.o: libft/ft_atoi.c.o
+
+.PHONY : libft/ft_atoi.o
+
+# target to build an object file
+libft/ft_atoi.c.o:
+	$(MAKE) -f CMakeFiles/FTprintfFT.dir/build.make CMakeFiles/FTprintfFT.dir/libft/ft_atoi.c.o
+.PHONY : libft/ft_atoi.c.o
+
+libft/ft_atoi.i: libft/ft_atoi.c.i
+
+.PHONY : libft/ft_atoi.i
+
+# target to preprocess a source file
+libft/ft_atoi.c.i:
+	$(MAKE) -f CMakeFiles/FTprintfFT.dir/build.make CMakeFiles/FTprintfFT.dir/libft/ft_atoi.c.i
+.PHONY : libft/ft_atoi.c.i
+
+libft/ft_atoi.s: libft/ft_atoi.c.s
+
+.PHONY : libft/ft_atoi.s
+
+# target to generate assembly for a file
+libft/ft_atoi.c.s:
+	$(MAKE) -f CMakeFiles/FTprintfFT.dir/build.make CMakeFiles/FTprintfFT.dir/libft/ft_atoi.c.s
+.PHONY : libft/ft_atoi.c.s
+
+libft/ft_atoi_base.o: libft/ft_atoi_base.c.o
+
+.PHONY : libft/ft_atoi_base.o
+
+# target to build an object file
+libft/ft_atoi_base.c.o:
+	$(MAKE) -f CMakeFiles/FTprintfFT.dir/build.make CMakeFiles/FTprintfFT.dir/libft/ft_atoi_base.c.o
+.PHONY : libft/ft_atoi_base.c.o
+
+libft/ft_atoi_base.i: libft/ft_atoi_base.c.i
+
+.PHONY : libft/ft_atoi_base.i
+
+# target to preprocess a source file
+libft/ft_atoi_base.c.i:
+	$(MAKE) -f CMakeFiles/FTprintfFT.dir/build.make CMakeFiles/FTprintfFT.dir/libft/ft_atoi_base.c.i
+.PHONY : libft/ft_atoi_base.c.i
+
+libft/ft_atoi_base.s: libft/ft_atoi_base.c.s
+
+.PHONY : libft/ft_atoi_base.s
+
+# target to generate assembly for a file
+libft/ft_atoi_base.c.s:
+	$(MAKE) -f CMakeFiles/FTprintfFT.dir/build.make CMakeFiles/FTprintfFT.dir/libft/ft_atoi_base.c.s
+.PHONY : libft/ft_atoi_base.c.s
+
 libft/ft_bzero.o: libft/ft_bzero.c.o
 
 .PHONY : libft/ft_bzero.o
@@ -1986,32 +2067,113 @@ libft/get_next_line.c.s:
 	$(MAKE) -f CMakeFiles/FTprintfFT.dir/build.make CMakeFiles/FTprintfFT.dir/libft/get_next_line.c.s
 .PHONY : libft/get_next_line.c.s
 
-manman.o: manman.c.o
+main.o: main.c.o
 
-.PHONY : manman.o
+.PHONY : main.o
 
 # target to build an object file
-manman.c.o:
-	$(MAKE) -f CMakeFiles/FTprintfFT.dir/build.make CMakeFiles/FTprintfFT.dir/manman.c.o
-.PHONY : manman.c.o
+main.c.o:
+	$(MAKE) -f CMakeFiles/FTprintfFT.dir/build.make CMakeFiles/FTprintfFT.dir/main.c.o
+.PHONY : main.c.o
 
-manman.i: manman.c.i
+main.i: main.c.i
 
-.PHONY : manman.i
+.PHONY : main.i
 
 # target to preprocess a source file
-manman.c.i:
-	$(MAKE) -f CMakeFiles/FTprintfFT.dir/build.make CMakeFiles/FTprintfFT.dir/manman.c.i
-.PHONY : manman.c.i
+main.c.i:
+	$(MAKE) -f CMakeFiles/FTprintfFT.dir/build.make CMakeFiles/FTprintfFT.dir/main.c.i
+.PHONY : main.c.i
 
-manman.s: manman.c.s
+main.s: main.c.s
 
-.PHONY : manman.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-manman.c.s:
-	$(MAKE) -f CMakeFiles/FTprintfFT.dir/build.make CMakeFiles/FTprintfFT.dir/manman.c.s
-.PHONY : manman.c.s
+main.c.s:
+	$(MAKE) -f CMakeFiles/FTprintfFT.dir/build.make CMakeFiles/FTprintfFT.dir/main.c.s
+.PHONY : main.c.s
+
+parsing_and_flags.o: parsing_and_flags.c.o
+
+.PHONY : parsing_and_flags.o
+
+# target to build an object file
+parsing_and_flags.c.o:
+	$(MAKE) -f CMakeFiles/FTprintfFT.dir/build.make CMakeFiles/FTprintfFT.dir/parsing_and_flags.c.o
+.PHONY : parsing_and_flags.c.o
+
+parsing_and_flags.i: parsing_and_flags.c.i
+
+.PHONY : parsing_and_flags.i
+
+# target to preprocess a source file
+parsing_and_flags.c.i:
+	$(MAKE) -f CMakeFiles/FTprintfFT.dir/build.make CMakeFiles/FTprintfFT.dir/parsing_and_flags.c.i
+.PHONY : parsing_and_flags.c.i
+
+parsing_and_flags.s: parsing_and_flags.c.s
+
+.PHONY : parsing_and_flags.s
+
+# target to generate assembly for a file
+parsing_and_flags.c.s:
+	$(MAKE) -f CMakeFiles/FTprintfFT.dir/build.make CMakeFiles/FTprintfFT.dir/parsing_and_flags.c.s
+.PHONY : parsing_and_flags.c.s
+
+print_float.o: print_float.c.o
+
+.PHONY : print_float.o
+
+# target to build an object file
+print_float.c.o:
+	$(MAKE) -f CMakeFiles/FTprintfFT.dir/build.make CMakeFiles/FTprintfFT.dir/print_float.c.o
+.PHONY : print_float.c.o
+
+print_float.i: print_float.c.i
+
+.PHONY : print_float.i
+
+# target to preprocess a source file
+print_float.c.i:
+	$(MAKE) -f CMakeFiles/FTprintfFT.dir/build.make CMakeFiles/FTprintfFT.dir/print_float.c.i
+.PHONY : print_float.c.i
+
+print_float.s: print_float.c.s
+
+.PHONY : print_float.s
+
+# target to generate assembly for a file
+print_float.c.s:
+	$(MAKE) -f CMakeFiles/FTprintfFT.dir/build.make CMakeFiles/FTprintfFT.dir/print_float.c.s
+.PHONY : print_float.c.s
+
+str_calc.o: str_calc.c.o
+
+.PHONY : str_calc.o
+
+# target to build an object file
+str_calc.c.o:
+	$(MAKE) -f CMakeFiles/FTprintfFT.dir/build.make CMakeFiles/FTprintfFT.dir/str_calc.c.o
+.PHONY : str_calc.c.o
+
+str_calc.i: str_calc.c.i
+
+.PHONY : str_calc.i
+
+# target to preprocess a source file
+str_calc.c.i:
+	$(MAKE) -f CMakeFiles/FTprintfFT.dir/build.make CMakeFiles/FTprintfFT.dir/str_calc.c.i
+.PHONY : str_calc.c.i
+
+str_calc.s: str_calc.c.s
+
+.PHONY : str_calc.s
+
+# target to generate assembly for a file
+str_calc.c.s:
+	$(MAKE) -f CMakeFiles/FTprintfFT.dir/build.make CMakeFiles/FTprintfFT.dir/str_calc.c.s
+.PHONY : str_calc.c.s
 
 # Help Target
 help:
@@ -2022,6 +2184,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... FTprintfFT"
+	@echo "... buffer.o"
+	@echo "... buffer.i"
+	@echo "... buffer.s"
+	@echo "... libft/ft_atoi.o"
+	@echo "... libft/ft_atoi.i"
+	@echo "... libft/ft_atoi.s"
+	@echo "... libft/ft_atoi_base.o"
+	@echo "... libft/ft_atoi_base.i"
+	@echo "... libft/ft_atoi_base.s"
 	@echo "... libft/ft_bzero.o"
 	@echo "... libft/ft_bzero.i"
 	@echo "... libft/ft_bzero.s"
@@ -2229,9 +2400,18 @@ help:
 	@echo "... libft/get_next_line.o"
 	@echo "... libft/get_next_line.i"
 	@echo "... libft/get_next_line.s"
-	@echo "... manman.o"
-	@echo "... manman.i"
-	@echo "... manman.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
+	@echo "... parsing_and_flags.o"
+	@echo "... parsing_and_flags.i"
+	@echo "... parsing_and_flags.s"
+	@echo "... print_float.o"
+	@echo "... print_float.i"
+	@echo "... print_float.s"
+	@echo "... str_calc.o"
+	@echo "... str_calc.i"
+	@echo "... str_calc.s"
 .PHONY : help
 
 

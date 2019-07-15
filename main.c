@@ -52,8 +52,11 @@ int		ft_printf(const char *restrict format, ...)
 	return (n);
 }
 
-int		main()
+int main()
 {
-	printf("%l20i\n", 128);
+	double	w = 123.111111111111111111111111111;
+	int 	i = 123;
+	printf("%# 018.70f\n", w);
+	ft_printf("%# 018.70f\n", w);
 	// ft_printf("%04%\n");
 }

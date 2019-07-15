@@ -53,6 +53,7 @@ typedef struct	s_tofree
 	void			*data;
 	struct s_tofree	*next;
 }				t_tofree;
+
 char	*strplus(char *s1, char *s2);
 int		ft_printf(const char *restrict format, ...);
 char	*charumn(char c1, char c2);
@@ -74,7 +75,19 @@ void	free_all_buff(t_buf *start);
 void	put_some_chars_to_buf(t_buf **buf, char c, int n);
 void	turbo_parser(va_list vl, t_buf **buf, const char *restrict *format);
 void	f_flag(va_list vl, t_buf **buf, t_flags fl);
-//int		ft_double_in_str(t_double *dd, t_flags *fl);
-
+int		ft_double_in_str(t_double *dd, t_flags *fl);
+void 	double_flag(va_list vl, t_buf **buf, t_flags *fl);
+void	double_minus(t_double *dd, t_buf **buf, t_flags *fl);
+void	double_just(t_double *dd, t_buf **buf, t_flags *fl);
+void	double_zero(t_double *dd, t_buf **buf, t_flags *fl);
+void	ft_itoa_double(double n, t_double *dd, t_flags *fl);
+int		ft_len_exp(double w);
+void 	make_exp(t_double *dd);
+void	make_double_bits_str(t_double *dd);
+void	ft_exp_str(t_double *dd, char **man, char *tmp);
+void	ft_mantissa_str(char **man, char **tmp, t_double *dd);
+void	ft_strsum(char **man, char **tmp);
+void	ft_divstr(char **tmp);
+void	ft_put_precision(t_double *dd, t_buf **buf, t_flags *fl);
 
 #endif

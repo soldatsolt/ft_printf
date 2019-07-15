@@ -84,7 +84,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/vbharbo/Documents/42/FTprintfFT/buffer.c">
+			<Option target="FTprintfFT"/>
+		</Unit>
 		<Unit filename="/Users/vbharbo/Documents/42/FTprintfFT/ft_printf.h">
+			<Option target="FTprintfFT"/>
+		</Unit>
+		<Unit filename="/Users/vbharbo/Documents/42/FTprintfFT/libft/ft_atoi.c">
+			<Option target="FTprintfFT"/>
+		</Unit>
+		<Unit filename="/Users/vbharbo/Documents/42/FTprintfFT/libft/ft_atoi_base.c">
 			<Option target="FTprintfFT"/>
 		</Unit>
 		<Unit filename="/Users/vbharbo/Documents/42/FTprintfFT/libft/ft_bzero.c">
@@ -297,7 +306,16 @@
 		<Unit filename="/Users/vbharbo/Documents/42/FTprintfFT/libft/libft.h">
 			<Option target="FTprintfFT"/>
 		</Unit>
-		<Unit filename="/Users/vbharbo/Documents/42/FTprintfFT/manman.c">
+		<Unit filename="/Users/vbharbo/Documents/42/FTprintfFT/main.c">
+			<Option target="FTprintfFT"/>
+		</Unit>
+		<Unit filename="/Users/vbharbo/Documents/42/FTprintfFT/parsing_and_flags.c">
+			<Option target="FTprintfFT"/>
+		</Unit>
+		<Unit filename="/Users/vbharbo/Documents/42/FTprintfFT/print_float.c">
+			<Option target="FTprintfFT"/>
+		</Unit>
+		<Unit filename="/Users/vbharbo/Documents/42/FTprintfFT/str_calc.c">
 			<Option target="FTprintfFT"/>
 		</Unit>
 		<Unit filename="/Users/vbharbo/Documents/42/FTprintfFT/CMakeLists.txt">

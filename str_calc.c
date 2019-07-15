@@ -27,11 +27,17 @@ void	ft_strsum(char **man, char **tmp)
 	static int	i;
 	static int	ten;
 
-	i = 0;
-	while	(tmp[0][i])
-		i++;
+	i = -1;
+	while	(tmp[0][++i])
+		if (man[0][i] == '\0')
+			man[0][i] = '0';
 	while (--i >= 0)
 	{
+		if (man[0][i] == '9' + 1)
+		{
+			man[0][i] = '0';
+			man[0][i - 1]++;
+		}
 		ten = tmp[0][i] + man[0][i] - '0' - '0';
 		if (ten >= 10)
 			man[0][i - 1] += 1;
@@ -39,7 +45,7 @@ void	ft_strsum(char **man, char **tmp)
 	}
 }
 
-void	ft_mantissa_str(char **man, char **tmp)
+void	ft_mantissa_str(char **man, char **tmp, t_double *dd)
 {
 	man[0][11] = '1';
 	tmp[0][12] = '5';
@@ -47,38 +53,79 @@ void	ft_mantissa_str(char **man, char **tmp)
 	{
 		if (dd->s[dd->i++] == '1')
 			ft_strsum(&man[0], &tmp[0]);
-		ft_strdiv(&tmp[0]);
+		ft_divstr(&tmp[0]);
 	}
 }
 
 void	ft_exp_str(t_double *dd, char **man, char *tmp)
 {
-	while (dd->exp--)
+	if (tmp)
 	{
-		strcpy(tmp, man[0]);
-		ft_strsum(&man[0],&tmp);
+		free(tmp);
+		tmp = NULL;
+	}
+	if (dd->exp >= 0)
+		while (dd->exp-- > 0)
+		{
+			tmp = strdup(man[0]);
+			ft_strsum(&man[0],&tmp);
+			free(tmp);
+			tmp = NULL;
+		}
+	else
+		while (dd->exp++ <= 0)
+		{
+			ft_divstr(&man[0]);
+		}
+	if (tmp)
+	{
+		free(tmp);
+		tmp = NULL;
 	}
 }
 
-int		ft_double_in_str(t_double *dd)
+void	ft_mantissa_correct(char **man, t_flags *fl)
 {
-		char	*man;
-		char	*tmp;
+	int i;
 
-		if (!(man = ft_srnew(300)))
-			return (0);
-		if (!(tmp = ft_strnew(300)))
-			return (0);
-		dd->i = -1;
-		while (++dd->i < 12)
+	i = (fl->precision > 0) ? 11 + fl->precision : 12;
+	if (man[0][i + 1] >= '5')
+		man[0][i]++;
+	while (i)
+	{
+		if (man[0][i] > '9')
 		{
-			man[dd->i] = '0';
-			tmp[dd->i] = '0';
+			man[0][i] = '0';
+			man[0][i - 1]++;
 		}
-		ft_mantissa_str(( &man, &tmp));
-		ft_exp_str(dd, &man, tmp);
-		free(tmp);
-		tmp = NULL;
-		dd->mantissa = man;
-		return (1);
+		i--;
+	}
+}
+
+int		ft_double_in_str(t_double *dd, t_flags *fl)
+{
+	char	*man;
+	char	*tmp;
+
+	if (!(man = ft_strnew(300)))
+		return (0);
+	if (!(tmp = ft_strnew(300)))
+		return (0);
+	dd->i = -1;
+	while (++dd->i < 12)
+	{
+		man[dd->i] = '0';
+		tmp[dd->i] = '0';
+	}
+	ft_mantissa_str( &man, &tmp, dd);
+	ft_exp_str(dd, &man, tmp);
+	ft_mantissa_correct(&man, fl);
+//	if (tmp)
+//	{
+//		write(1, "hillo\n", 6);
+//		free(tmp);
+//		tmp = NULL;
+//	}
+	dd->mantissa = man;
+	return (1);
 }
