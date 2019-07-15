@@ -1,28 +1,28 @@
 #include "ft_printf.h"
 
-void	make_double_bits_str(unsigned char **s, double d)
-{
-	int				i;
-	int				ic;
-	unsigned char	*c;
+// void	make_double_bits_str(unsigned char **s, double d)
+// {
+// 	int				i;
+// 	int				ic;
+// 	unsigned char	*c;
 
-	*s = (unsigned char *)malloc(sizeof(unsigned char) * 65);
-	c = (unsigned char *)&d;
-	ft_bzero(*s, 65);
-	ic = 7;
-	i = 0;
-	while (ic + 1)
-	{
-		while (i < 8)
-		{
-			(*s)[8 * (7 - ic) + i] = ((c[ic] & (128 >> i)) ? '1' : '0');
-			i++;
-		}
-		ic--;
-		i = 0;
-	}
-	(*s)[64] = '\0';
-}
+// 	*s = (unsigned char *)malloc(sizeof(unsigned char) * 65);
+// 	c = (unsigned char *)&d;
+// 	ft_bzero(*s, 65);
+// 	ic = 7;
+// 	i = 0;
+// 	while (ic + 1)
+// 	{
+// 		while (i < 8)
+// 		{
+// 			(*s)[8 * (7 - ic) + i] = ((c[ic] & (128 >> i)) ? '1' : '0');
+// 			i++;
+// 		}
+// 		ic--;
+// 		i = 0;
+// 	}
+// 	(*s)[64] = '\0';
+// }
 
 void	make_exp_mantissa_bits_str(unsigned char *s, unsigned char **exp, \
 unsigned char **mantissa)
