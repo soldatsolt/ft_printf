@@ -33,7 +33,7 @@ void	put_str_to_buf(t_buf **buf, char *str)
 
 void	print_buf(t_buf *buf)
 {
-	while (buf)
+	while (buf->next)
 	{
 		write(1, &(buf->c), 1);
 		buf = buf->next;

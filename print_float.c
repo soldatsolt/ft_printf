@@ -89,7 +89,7 @@ void	double_zero(t_double *dd, t_buf **buf, t_flags *fl)
 	while (dd->mantissa[++dd->i] == '0');
 	while (fl->width-- > 0)
 		put_char_to_buf(buf, '0');
-	while (dd->i < 12)
+	while (dd->i < 13)
 		put_char_to_buf(buf, dd->mantissa[dd->i++]);
 	if ((fl->dash && !fl->precision) || fl->precision)
 		put_char_to_buf(buf, '.');
@@ -109,7 +109,7 @@ void	double_just(t_double *dd, t_buf **buf, t_flags *fl)
 		put_char_to_buf(buf, ' ');
 	dd->i = -1;
 	while (dd->mantissa[++dd->i] == '0');
-	while (dd->i < 12)
+	while (dd->i < 13)
 		put_char_to_buf(buf, dd->mantissa[dd->i++]);
 	if ((fl->dash && !fl->precision) || fl->precision)
 		put_char_to_buf(buf, '.');
@@ -126,7 +126,7 @@ void	double_minus(t_double *dd, t_buf **buf, t_flags *fl)
 		put_char_to_buf(buf, ' ');
 	dd->i = -1;
 	while (dd->mantissa[++dd->i] == '0');
-	while (dd->i < 12)
+	while (dd->i < 13)
 		put_char_to_buf(buf, dd->mantissa[dd->i++]);
 	if ((fl->dash && !fl->precision) || fl->precision)
 		put_char_to_buf(buf, '.');

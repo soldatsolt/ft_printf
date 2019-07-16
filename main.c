@@ -54,9 +54,10 @@ int		ft_printf(const char *restrict format, ...)
 
 int main()
 {
-	double	w = 123.111111111111111111111111111;
+	float	w = 1444565483520.0;
 	int 	i = 123;
-    printf ("%+024.24d\n", i);
-	ft_printf ("%+024.24d\n", i);
-	// ft_printf("%04%\n");
+
+	int a = printf ("%f\n", -1.4199999570846558);
+	int b = ft_printf ("%f\n", -1.4199999570846558);
+	printf("\n%d --- %d\n", a, b);
 }

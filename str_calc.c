@@ -41,14 +41,15 @@ void	ft_strsum(char **man, char **tmp)
 		ten = tmp[0][i] + man[0][i] - '0' - '0';
 		if (ten >= 10)
 			man[0][i - 1] += 1;
-		man[0][i] = ten % 10 + '0';
+		man[0][i] = (char)(ten % 10 + '0');
 	}
 }
 
 void	ft_mantissa_str(char **man, char **tmp, t_double *dd)
 {
-	man[0][11] = '1';
-	tmp[0][12] = '5';
+	man[0][12] = '1';
+	tmp[0][13] = '5';
+	--dd->i;
 	while (dd->i < 65)
 	{
 		if (dd->s[dd->i++] == '1')
@@ -88,7 +89,7 @@ void	ft_mantissa_correct(char **man, t_flags *fl)
 {
 	int i;
 
-	i = (fl->precision > 0) ? 11 + fl->precision : 12;
+	i = (fl->precision > 0) ? 12 + fl->precision : 13;
 	if (man[0][i + 1] >= '5')
 		man[0][i]++;
 	while (i)
@@ -112,7 +113,7 @@ int		ft_double_in_str(t_double *dd, t_flags *fl)
 	if (!(tmp = ft_strnew(300)))
 		return (0);
 	dd->i = -1;
-	while (++dd->i < 12)
+	while (++dd->i < 13)
 	{
 		man[dd->i] = '0';
 		tmp[dd->i] = '0';

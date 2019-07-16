@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.13)
-project(FTprintfFT C)
+project(printf_ft C)
 
 set(CMAKE_C_STANDARD 11)
 
 include_directories(.)
 include_directories(libft)
 
-add_executable(FTprintfFT
+add_executable(printf_ft
         libft/ft_atoi.c
         libft/ft_atoi_base.c
         libft/ft_bzero.c
@@ -80,8 +80,11 @@ add_executable(FTprintfFT
         libft/get_next_line.c
         libft/libft.h
         buffer.c
+        double_float.c
         ft_printf.h
         main.c
+        manman.c
         parsing_and_flags.c
         print_float.c
-        str_calc.c)
+        str_calc.c
+        stringmath.c)
