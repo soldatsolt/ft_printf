@@ -149,7 +149,7 @@ void 	double_flag(va_list vl, t_buf **buf, t_flags *fl)
 		fl->width--;
 //	printf("\n----%d\n",fl->width);
 //	printf("\n----%d\n",fl->width);
-	printf("%d\n",fl->zero);
+	// printf("%d\n",fl->zero);
 	if (fl->minus)
 		double_minus(&dd, buf, fl);
 	else if (fl->zero)

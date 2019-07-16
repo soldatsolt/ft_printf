@@ -6,6 +6,8 @@ void	s_flag(char *str, t_buf **buf, t_flags fl)
 {
 	int		n;
 
+    if (fl.precision != -1)
+        fl.zero = 0;
 	if (str)
 	{
 		str = ft_strdup(str);
@@ -101,6 +103,8 @@ void	i_flag(va_list vl, t_buf **buf, t_flags fl)
 	int		k;
 	char	z;
 
+    if (fl.precision != -1)
+        fl.zero = 0;
 	k = va_arg(vl, int);
 	z = (k >= 0) ? '+' : '-';
 	str = make_str_with_precision_for_i(fl, k);
@@ -146,6 +150,8 @@ void	u_flag(va_list vl, t_buf **buf, t_flags fl)
 	int				n;
 	unsigned int	k;
 
+    if (fl.precision != -1)
+        fl.zero = 0;
 	k = va_arg(vl, unsigned int);
 	str = make_str_with_precision_for_u(fl, k);
 	n = fl.width - (int)ft_strlen(str);
@@ -186,7 +192,6 @@ void	make_t_precision(t_flags *fl, const char *restrict *format)
 {
 	(*format)++;
 	fl->precision = ft_atoi(*format);
-	fl->zero = 0;
 	while ((**format) >= '0' && (**format) <= '9')
 		(*format)++;
 	(*format)--;
@@ -220,7 +225,7 @@ void	preparcing(t_buf **buf, t_flags *fl, const char *restrict *format)
 			fl->minus = 1;
 		if ((**format) == '+')
 			fl->plus = 1;
-		if ((**format) == '0' && fl->precision == -1)
+		if ((**format) == '0')
 			fl->zero = 1;
 		if ((**format) > '0' && (**format) <= '9')
 			make_t_width(fl, format);

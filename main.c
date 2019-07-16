@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/15 21:03:29 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/16 15:03:22 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,8 @@ int		ft_printf(const char *restrict format, ...)
 int main()
 {
 	double	w = 123.111111111111111111111111111;
-	int 	i = 123;
-	printf("%# 018.70f\n", w);
-	ft_printf("%# 018.70f\n", w);
+	int 	i = -123;
+    printf ("%024d\n", -123);
+	ft_printf ("%024d\n", -123);
 	// ft_printf("%04%\n");
 }
