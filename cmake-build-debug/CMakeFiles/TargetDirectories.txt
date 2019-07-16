@@ -1,3 +1,0 @@
-/Users/vbharbo/Documents/42/printf_ft/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/vbharbo/Documents/42/printf_ft/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/vbharbo/Documents/42/printf_ft/cmake-build-debug/CMakeFiles/printf_ft.dir
