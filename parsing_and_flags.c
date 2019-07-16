@@ -31,6 +31,17 @@ void	s_flag(char *str, t_buf **buf, t_flags fl)
 		s_flag("(null)", buf, fl); // тут тоже фришить нужно
 }
 
+void	p_flag(va_list vl, t_buf **buf, t_flags fl)
+{
+	u_int64_t	ptr;
+	char		*str;
+	char		*s;
+
+	ptr = (uint64_t)(va_arg(vl, void*));
+	s = ft_itoa_base_small(ptr, 16);
+
+}
+
 char	*make_str_with_precision_for_i(t_flags fl, int k)
 {
 	char	*s;
@@ -279,5 +290,7 @@ void	turbo_parser(va_list vl, t_buf **buf, const char *restrict *format)
 		c_flag(vl, buf, fl);
 	else if (**format == 'f')
 		f_flag(vl, buf, fl);
+	else if (**format == 'p')
+		p_flag(vl, buf, fl);
 	(*format)++;
 }

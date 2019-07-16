@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/16 15:19:23 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/16 16:41:56 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,9 +54,11 @@ int		ft_printf(const char *restrict format, ...)
 
 int main()
 {
-	double	w = 123.111111111111111111111111111;
-	int 	i = 123;
-    printf ("%+024.24d\n", i);
-	ft_printf ("%+024.24d\n", i);
+	int 		i = 123;
+	uint64_t	ptr;
+	
+	ptr = (uint64_t)&i;
+    printf ("%16p\n", &i);
+	ft_printf ("%024.16s\n", ft_itoa_base_small(ptr, 16));
 	// ft_printf("%04%\n");
 }
