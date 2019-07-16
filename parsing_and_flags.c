@@ -39,7 +39,11 @@ void	p_flag(va_list vl, t_buf **buf, t_flags fl)
 
 	ptr = (uint64_t)(va_arg(vl, void*));
 	s = ft_itoa_base_small(ptr, 16);
-
+	str = ft_strnew(ft_strlen(s) + 3);
+	str = ft_catstr("0x", s);
+	s_flag(str, buf, fl);
+	// free(s); - фришить точно нужно, но он говорит, что s не замолочена или что-то вроде
+	free(str);
 }
 
 char	*make_str_with_precision_for_i(t_flags fl, int k)
