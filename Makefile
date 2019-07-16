@@ -6,7 +6,7 @@ SRCS = main.c parsing_and_flags.c print_float.c buffer.c str_calc.c libft/libft.
 OBJS = $(SRCS:.c=.o)
 LIBFT = ./libft/libft.a
 INCLUDE = ./ft_printf.h
-all: $(NAME)
+all: $(NAME) #ft_printf.a 
 
 $(NAME): $(LIBFT)
 	@gcc ./libft/libft.a $(SRCS) -g -o $(NAME)
@@ -17,7 +17,8 @@ g:
 ft_printf.a:
 	@gcc -c $(SRCS) ./libft/ft_atoi.c ./libft/ft_itoa.c ./libft/ft_strlen.c ./libft/ft_strcpy.c\
 	 ./libft/ft_utoa.c ./libft/ft_memalloc.c ./libft/ft_bzero.c ./libft/ft_memset.c \
-	 ./libft/ft_strdup.c -I $(INCLUDE)
+	 ./libft/ft_strdup.c ./libft/ft_catstr.c ./libft/ft_itoa_base_small.c \
+	 ./libft/ft_strnew.c -I $(INCLUDE)
 	@ar rc libftprintf.a ./*.o
 	@rm -f *.o
 

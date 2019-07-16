@@ -6,13 +6,13 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 05:11:44 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/10 05:15:47 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/16 21:53:59 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*keks(int l, long m, long nl, int n)
+static char	*keks(int l, long m, long nl)
 {
 	char	*str;
 	int		i;
@@ -20,8 +20,6 @@ static char	*keks(int l, long m, long nl, int n)
 	i = 0;
 	if (!(str = (char *)ft_memalloc(sizeof(char) * (l + 2))))
 		return (NULL);
-	if (n < 0)
-		str[i++] = '-';
 	while (m > 0)
 	{
 		str[i++] = (nl / m + '0');
@@ -46,5 +44,5 @@ char		*ft_utoa(unsigned int n)
 		m = m * 10;
 		l++;
 	}
-	return (keks(l, m, nl, n));
+	return (keks(l, m, nl));
 }

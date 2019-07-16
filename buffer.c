@@ -60,6 +60,7 @@ void	print_buf(t_buf *buf)
 		buf = buf->next;
 	}
 	write(1, str, l);
+	free(str);
 }
 
 void	free_all_buff(t_buf *start)
