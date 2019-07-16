@@ -111,20 +111,42 @@ void	i_flag(va_list vl, t_buf **buf, t_flags fl)
 	n = fl.width - (int)ft_strlen(str);
 	if (fl.plus && k >= 0)
 		n--;
-	if (n > 0 && !fl.minus)
-	{
-		if (fl.zero)
-			put_some_chars_to_buf(buf, '0', n);
+    if ((k < 0 || fl.plus) && fl.zero)
+    {
+        if (n > 0 && !fl.minus)
+        {
+            put_char_to_buf(buf, z);
+            if (fl.zero)
+                put_some_chars_to_buf(buf, '0', n);
+            else
+                put_some_chars_to_buf(buf, ' ', n);
+        }
+        else if (fl.space)
+            put_char_to_buf(buf, ' ');
+		if (k < 0)
+       		put_str_to_buf(buf, str + 1);
 		else
-			put_some_chars_to_buf(buf, ' ', n);
-	}
-	if (fl.plus && k >= 0)
-		put_char_to_buf(buf, z);
-	else if (fl.space)
-		put_char_to_buf(buf, ' ');
-	put_str_to_buf(buf, str);
-	if (n > 0 && fl.minus)
-		put_some_chars_to_buf(buf, ' ', n);
+			put_str_to_buf(buf, str);		
+        if (n > 0 && fl.minus)
+            put_some_chars_to_buf(buf, ' ', n);
+    }
+    else
+    {
+        if (n > 0 && !fl.minus)
+        {
+            if (fl.zero)
+                put_some_chars_to_buf(buf, '0', n);
+            else
+                put_some_chars_to_buf(buf, ' ', n);
+        }
+        if (fl.plus && k >= 0)
+            put_char_to_buf(buf, z);
+        else if (fl.space)
+            put_char_to_buf(buf, ' ');
+        put_str_to_buf(buf, str);
+        if (n > 0 && fl.minus)
+            put_some_chars_to_buf(buf, ' ', n);
+    }
 }
 
 void	c_flag(va_list vl, t_buf **buf, t_flags fl)
