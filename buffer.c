@@ -31,15 +31,6 @@ void	put_str_to_buf(t_buf **buf, char *str)
 	}
 }
 
-void	print_buf(t_buf *buf)
-{
-	while (buf)
-	{
-		write(1, &(buf->c), 1);
-		buf = buf->next;
-	}
-}
-
 int		returned_printf(t_buf *buf)
 {
 	int	i;
@@ -51,6 +42,24 @@ int		returned_printf(t_buf *buf)
 		buf = buf->next;
 	}
 	return (i);
+}
+
+void	print_buf(t_buf *buf)
+{
+	int		l;
+	char	*str;
+	int		i;
+
+	i = 0;
+	l = returned_printf(buf);
+	str = ft_strnew(sizeof(char) * (l + 1));
+	while (buf->next)
+	{
+		str[i] = buf->c;
+		i++;
+		buf = buf->next;
+	}
+	write(1, str, l);
 }
 
 void	free_all_buff(t_buf *start)
