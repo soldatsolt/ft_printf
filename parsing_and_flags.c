@@ -101,7 +101,7 @@ char	*make_str_with_precision_for_i(t_flags fl, int k)
 
 	str = ft_itoa(k);
 	if (fl.precision != -1 && !((k >= 0 && ft_strlen(str) > fl.precision) \
-	|| (k < 0 && ft_strlen(str) > fl.precision - 1)))
+	|| (k < 0 && ft_strlen(str) - 1 > fl.precision)))
 	{
 		i = 0;
 		s = ft_strnew(sizeof(char) * (fl.precision + 2));
