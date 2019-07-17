@@ -24,18 +24,10 @@ TEST : %d, -2147483647
 [OK]
 -------------------------------------
 TEST : %D, 0xff11ff11ff88
-ft_printf  --> 
-ret = 0
-printf     --> 280452758896520
-ret = 15
-[KO]
+[OK]
 -------------------------------------
 TEST : %D, 0
-ft_printf  --> 
-ret = 0
-printf     --> 0
-ret = 1
-[KO]
+[OK]
 -------------------------------------
 TEST : %i, (signed int)0xff11
 [OK]
@@ -56,11 +48,7 @@ TEST : % d, 0xff11ff
 [OK]
 -------------------------------------
 TEST : %ld, 0x44ff551100
-ft_printf  --> -11202304
-ret = 9
-printf     --> 296341541120
-ret = 12
-[KO]
+[OK]
 -------------------------------------
 TEST : %hhd, (char)-2
 [OK]
@@ -86,11 +74,7 @@ TEST : %hd, (short)0x1789ffff
 [OK]
 -------------------------------------
 TEST : %lli, (long long)0x11ff11ff11ff11ff
-ft_printf  --> 301928959
-ret = 9
-printf     --> 1296775004922253823
-ret = 19
-[KO]
+[OK]
 -------------------------------------
 TEST : %.12d, 1144
 [OK]
@@ -153,22 +137,18 @@ TEST : %00+10.4d, 0
 [OK]
 -------------------------------------
 TEST : %20.ld et %.4hhi !, 0x11ffaa147, (signed char)-8
-ft_printf  -->            536518983 et -0008 !
-ret = 31
-printf     -->           4831486279 et -0008 !
-ret = 31
-[KO]
+[OK]
 -------------------------------------
 TEST : % 20.12ld et % 05D% 4.8hi !, 0x11ffaa147, 24, (short)-2345
-ft_printf  -->          000536518983 et  00000024 !
-ret = 36
+ft_printf  -->          004831486279 et 000 24 -00002345 !
+ret = 43
 printf     -->         004831486279 et  0024-00002345 !
 ret = 40
 [KO]
 -------------------------------------
 TEST : toto%.0d et %+.i et  %   .0D !!!, 0, 0, 0
-ft_printf  --> toto0 et +0 et   !!!
-ret = 20
+ft_printf  --> toto0 et +0 et   0 !!!
+ret = 22
 printf     --> toto et + et    !!!
 ret = 19
 [KO]
@@ -187,11 +167,7 @@ TEST : %u, 1234
 [OK]
 -------------------------------------
 TEST : %u, -1001234
-ft_printf  --> -4293966062
-ret = 11
-printf     --> 4293966062
-ret = 10
-[KO]
+[OK]
 -------------------------------------
 TEST : %U, 231009999
 ft_printf  --> 
@@ -240,11 +216,7 @@ TEST : %.0u, 76543
 [OK]
 -------------------------------------
 TEST : %.u, -7
-ft_printf  --> -4294967289
-ret = 11
-printf     --> 4294967289
-ret = 10
-[KO]
+[OK]
 -------------------------------------
 TEST : %.u, 0
 ft_printf  --> 0
@@ -275,8 +247,8 @@ TEST : %-3u, 194
 [OK]
 -------------------------------------
 TEST : toto et %02u coco %-5lu mimi, 19, (unsigned long)-20
-ft_printf  --> toto et 19 coco -4294967276 mimi
-ret = 32
+ft_printf  --> toto et 19 coco 4294967276 mimi
+ret = 31
 printf     --> toto et 19 coco 18446744073709551596 mimi
 ret = 41
 [KO]
@@ -1232,24 +1204,24 @@ TEST : test %-12i et %--2.4s %24s !\n, 0, NULL, "coco"
 [OK]
 -------------------------------------
 TEST : %--.4u et %#O%#012O%1lc\n, -12, 0, 0, 95
-ft_printf  --> -4294967284 et 
-ret = 17
+ft_printf  --> 4294967284 et 
+ret = 16
 printf     --> 4294967284 et 0000000000000_
 
 ret = 29
 [KO]
 -------------------------------------
 TEST : %-+-12.7Dt%0 4i %04.2% et %lc titi, 125, 124, 256
-ft_printf  --> t0 125 000% et | titi
-ret = 21
+ft_printf  --> +0000125    t0 124 000% et iti
+ret = 33
 printf     --> +0000125    t 124 000%
 ret = -1
 [KO]
 -------------------------------------
 TEST : test%-8p %---32p %#5.3x%#024X, &ret, &tret, 0x25, 0
-ft_printf  --> test0x7fff4fc02824 0x7fff4fc02824                   
+ft_printf  --> test0x7fff55580824 0x7fff55580824                   
 ret = 52
-printf     --> test0x7fff4fc02824 0x7fff4fc02824                   0x025000000000000000000000000
+printf     --> test0x7fff55580824 0x7fff55580824                   0x025000000000000000000000000
 ret = 81
 [KO]
 -------------------------------------

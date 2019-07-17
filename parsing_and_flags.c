@@ -349,6 +349,8 @@ void	turbo_parser(va_list vl, t_buf **buf, const char *restrict *format)
 		s_flag(va_arg(vl, char *), buf, fl);
 	else if (**format == 'i' || **format == 'd')
 		pre_parce_for_i(vl, buf, fl);
+	else if (**format == 'D')
+		i_flag_l(vl, buf, fl);
 	else if (**format == 'u')
 		u_flag(vl, buf, fl);
 	else if (**format == 'c')

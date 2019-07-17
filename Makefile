@@ -15,10 +15,11 @@ g:
 	@gcc -g $(SRCS) -o $(NAME)
 
 ft_printf.a:
-	@gcc -c $(SRCS) ./libft/ft_atoi.c ./libft/ft_itoa.c ./libft/ft_strlen.c ./libft/ft_strcpy.c\
+	@gcc -c $(SRCS) ./libft/ft_atoi.c ./libft/ft_itoa.c ./libft/ft_strlen.c ./libft/ft_strcpy.c \
 	 ./libft/ft_utoa.c ./libft/ft_memalloc.c ./libft/ft_bzero.c ./libft/ft_memset.c \
 	 ./libft/ft_strdup.c ./libft/ft_catstr.c ./libft/ft_itoa_base_small.c \
-	 ./libft/ft_strnew.c -I $(INCLUDE)
+	 ./libft/ft_strnew.c ./libft/ft_itoa_h.c ./libft/ft_itoa_hh.c ./libft/ft_itoa_l.c \
+	 ./libft/ft_itoa_ll.c -I $(INCLUDE)
 	@ar rc libftprintf.a ./*.o
 	@rm -f *.o
 
