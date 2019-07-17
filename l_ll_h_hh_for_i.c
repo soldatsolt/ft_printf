@@ -8,7 +8,7 @@ char	*make_str_with_precision_for_hhi(t_flags fl, int8_t k)
 
 	str = ft_itoa_hh(k);
 	if (fl.precision != -1 && !((k >= 0 && ft_strlen(str) > fl.precision) \
-	|| (k < 0 && ft_strlen(str) > fl.precision - 1)))
+	|| (k < 0 && ft_strlen(str) - 1 > fl.precision)))
 	{
 		i = 0;
 		s = ft_strnew(sizeof(char) * (fl.precision + 2));
@@ -46,7 +46,7 @@ char	*make_str_with_precision_for_hi(t_flags fl, short k)
 
 	str = ft_itoa_h(k);
 	if (fl.precision != -1 && !((k >= 0 && ft_strlen(str) > fl.precision) \
-	|| (k < 0 && ft_strlen(str) > fl.precision - 1)))
+	|| (k < 0 && ft_strlen(str) - 1 > fl.precision)))
 	{
 		i = 0;
 		s = ft_strnew(sizeof(char) * (fl.precision + 2));
@@ -84,7 +84,7 @@ char	*make_str_with_precision_for_lli(t_flags fl, long long k)
 
 	str = ft_itoa_ll(k);
 	if (fl.precision != -1 && !((k >= 0 && ft_strlen(str) > fl.precision) \
-	|| (k < 0 && ft_strlen(str) > fl.precision - 1)))
+	|| (k < 0 && ft_strlen(str) - 1 > fl.precision)))
 	{
 		i = 0;
 		s = ft_strnew(sizeof(char) * (fl.precision + 2));
@@ -122,7 +122,7 @@ char	*make_str_with_precision_for_li(t_flags fl, long k)
 
 	str = ft_itoa_l(k);
 	if (fl.precision != -1 && !((k >= 0 && ft_strlen(str) > fl.precision) \
-	|| (k < 0 && ft_strlen(str) > fl.precision - 1)))
+	|| (k < 0 && ft_strlen(str) - 1> fl.precision)))
 	{
 		i = 0;
 		s = ft_strnew(sizeof(char) * (fl.precision + 2));
