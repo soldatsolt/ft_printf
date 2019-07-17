@@ -6,7 +6,7 @@ SRCS = main.c l_ll_h_hh_for_i.c parsing_and_flags.c print_float.c buffer.c str_c
 OBJS = $(SRCS:.c=.o)
 LIBFT = ./libft/libft.a
 INCLUDE = ./ft_printf.h
-all: $(NAME) #ft_printf.a 
+all: $(NAME) #ft_printf.a
 
 $(NAME): $(LIBFT)
 	@gcc ./libft/libft.a $(SRCS) -g -o $(NAME)
