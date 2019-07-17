@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/20 20:27:38 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/16 17:50:49 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/17 16:15:42 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,5 +103,9 @@ char			*ft_utoa(unsigned int n);
 char			*ft_itoa_base_big(int64_t n, int base);
 char			*ft_itoa_base_small(int64_t n, int base);
 char			*ft_catstr(const char *s1, char *s2);
+char			*ft_itoa_h(short n);
+char			*ft_itoa_hh(int8_t n);
+char			*ft_itoa_l(long n);
+char			*ft_itoa_ll(long long n);
 
 #endif

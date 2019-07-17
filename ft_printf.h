@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/05 10:18:18 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/16 14:45:55 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/17 16:27:02 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,5 +89,9 @@ void	ft_mantissa_str(char **man, char **tmp, t_double *dd);
 void	ft_strsum(char **man, char **tmp);
 void	ft_divstr(char **tmp);
 void	ft_put_precision(t_double *dd, t_buf **buf, t_flags *fl);
+void	i_flag_l(va_list vl, t_buf **buf, t_flags fl);
+void	i_flag_ll(va_list vl, t_buf **buf, t_flags fl);
+void	i_flag_h(va_list vl, t_buf **buf, t_flags fl);
+void	i_flag_hh(va_list vl, t_buf **buf, t_flags fl);
 
 #endif
