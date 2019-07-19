@@ -117,6 +117,8 @@ void	u_flag_l(va_list vl, t_buf **buf, t_flags fl)
     if (fl.precision != -1)
         fl.zero = 0;
 	k = va_arg(vl, unsigned long);
+	if (k == (unsigned long)0 && fl.precision == 0)
+		return;
 	str = make_str_with_precision_for_lu(fl, k);
 	n = fl.width - (int)ft_strlen(str);
 	if (n > 0 && !fl.minus)
@@ -140,6 +142,8 @@ void	u_flag_ll(va_list vl, t_buf **buf, t_flags fl)
     if (fl.precision != -1)
         fl.zero = 0;
 	k = va_arg(vl, unsigned long long);
+	if (k == (unsigned long long)0 && fl.precision == 0)
+		return;
 	str = make_str_with_precision_for_llu(fl, k);
 	n = fl.width - (int)ft_strlen(str);
 	if (n > 0 && !fl.minus)
@@ -163,6 +167,8 @@ void	u_flag_h(va_list vl, t_buf **buf, t_flags fl)
     if (fl.precision != -1)
         fl.zero = 0;
 	k = (unsigned short)va_arg(vl, unsigned int);
+	if (k == (unsigned short)0 && fl.precision == 0)
+		return;
 	str = make_str_with_precision_for_hu(fl, k);
 	n = fl.width - (int)ft_strlen(str);
 	if (n > 0 && !fl.minus)
@@ -186,6 +192,8 @@ void	u_flag_hh(va_list vl, t_buf **buf, t_flags fl)
     if (fl.precision != -1)
         fl.zero = 0;
 	k = (u_int8_t)va_arg(vl, unsigned int);
+	if (k == (u_int8_t)0 && fl.precision == 0)
+		return;
 	str = make_str_with_precision_for_hhu(fl, k);
 	n = fl.width - (int)ft_strlen(str);
 	if (n > 0 && !fl.minus)

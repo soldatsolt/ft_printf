@@ -1,7 +1,5 @@
 #include "ft_printf.h"
 
-
-
 void	s_flag(char *str, t_buf **buf, t_flags fl)
 {
 	int		n;
@@ -168,6 +166,8 @@ void	i_flag(va_list vl, t_buf **buf, t_flags fl)
     if (fl.precision != -1)
         fl.zero = 0;
 	k = va_arg(vl, int);
+	if (k == (int)0 && fl.precision == 0)
+		return;
 	z = (k >= 0) ? '+' : '-';
 	str = make_str_with_precision_for_i(fl, k);
 	n = fl.width - (int)ft_strlen(str);
@@ -237,6 +237,8 @@ void	u_flag(va_list vl, t_buf **buf, t_flags fl)
     if (fl.precision != -1)
         fl.zero = 0;
 	k = va_arg(vl, unsigned int);
+	if (k == (unsigned int)0 && fl.precision == 0)
+		return;
 	str = make_str_with_precision_for_u(fl, k);
 	n = fl.width - (int)ft_strlen(str);
 	if (n > 0 && !fl.minus)
