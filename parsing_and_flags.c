@@ -339,6 +339,20 @@ void	pre_parce_for_i(va_list vl, t_buf **buf, t_flags fl)
 		i_flag_hh(vl, buf, fl);
 }
 
+void	pre_parce_for_u(va_list vl, t_buf **buf, t_flags fl)
+{
+	if (fl.l == 0 && fl.h == 0)
+		u_flag(vl, buf, fl);
+	else if(fl.l == 1)
+		u_flag_l(vl, buf, fl);
+	else if(fl.l == 2)
+		u_flag_ll(vl, buf, fl);
+	else if(fl.h == 1)
+		u_flag_h(vl, buf, fl);
+	else if(fl.h == 2)
+		u_flag_hh(vl, buf, fl);
+}
+
 void	turbo_parser(va_list vl, t_buf **buf, const char *restrict *format)
 {
 	t_flags	fl;
@@ -352,7 +366,7 @@ void	turbo_parser(va_list vl, t_buf **buf, const char *restrict *format)
 	else if (**format == 'D')
 		i_flag_l(vl, buf, fl);
 	else if (**format == 'u')
-		u_flag(vl, buf, fl);
+		pre_parce_for_u(vl, buf, fl);
 	else if (**format == 'c')
 		c_flag(vl, buf, fl);
 	else if (**format == 'f')
