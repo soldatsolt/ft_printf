@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/20 13:50:47 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/20 14:12:37 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,15 @@ int		ft_printf(const char *restrict format, ...)
 	n = returned_printf(buf_start);
 	free_all_buff(buf_start);
 	return (n);
+}
+
+int main()
+{
+	int 		i = 123;
+
+	printf("+++!%#.20hho!+++\n", 10);
+	ft_printf("|||!%#.20hho!|||\n", 10);
+	printf("+++!%#.20hhx!+++\n", 0);
+	ft_printf("|||!%#.20hhx!|||\n", 0);
+	return (0);
 }

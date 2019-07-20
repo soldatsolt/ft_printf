@@ -6,7 +6,7 @@ SRCS = main.c preparce_for_flags.c all_flagsspec.c make_str_with_precision_for_a
 OBJS = $(SRCS:.c=.o)
 LIBFT = ./libft/libft.a
 INCLUDE = ./ft_printf.h
-all: ft_printf.a  # $(NAME)
+all: $(NAME)  #ft_printf.a 
 
 $(NAME): $(LIBFT)
 	@gcc ./libft/libft.a $(SRCS) -g -o $(NAME)
