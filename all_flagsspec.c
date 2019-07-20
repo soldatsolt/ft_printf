@@ -125,6 +125,8 @@ void	o_flag(va_list vl, t_buf **buf, t_flags fl)
 	char			*str;
 	int				n;
 	unsigned int	k;
+	char			*o;
+	char			*s;
 
     if (fl.precision != -1)
         fl.zero = 0;
@@ -132,7 +134,13 @@ void	o_flag(va_list vl, t_buf **buf, t_flags fl)
 	if (k == (unsigned int)0 && fl.precision == 0)
 		return ;
 	str = make_str_with_precision_for_o(fl, k);
-	n = fl.width - (int)ft_strlen(str);
+	if (fl.dash)
+	{
+		o = ft_strdup("00");
+		s = ft_strnew(ft_strlen(str) + ft_strlen(o) + 2);
+		s = ft_catstr(o, str);
+	}
+	n = fl.width - (int)ft_strlen(str + 1);
 	if (n > 0 && !fl.minus)
 	{
 		if (fl.zero)
@@ -140,7 +148,7 @@ void	o_flag(va_list vl, t_buf **buf, t_flags fl)
 		else
 			put_some_chars_to_buf(buf, ' ', n);
 	}
-	put_str_to_buf(buf, str);
+	put_str_to_buf(buf, s + 1);
 	if (n > 0 && fl.minus)
 		put_some_chars_to_buf(buf, ' ', n);
 }
@@ -161,7 +169,10 @@ void	x_flag(va_list vl, t_buf **buf, t_flags fl, char *(*f)(unsigned int, int))
 	if (fl.dash)
 	{
 		str = f(k ,16);
-		ox = make_ox_for_x(ox, &fl, (int)ft_strlen(str));
+		if (f == &ft_itoa_base_small)
+			ox = make_ox_for_x(ox, &fl, (int)ft_strlen(str));
+		else
+			ox = make_ox_for_X(ox, &fl, (int)ft_strlen(str));
 		s = ft_strnew(ft_strlen(str) + ft_strlen(ox) + 1);
 		s = ft_catstr(ox, str);
 		s_flag(str, buf, fl);

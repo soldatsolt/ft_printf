@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/05 10:18:18 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/20 09:07:37 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/20 13:04:31 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,6 +108,7 @@ void	x_flag_l(va_list vl, t_buf **buf, t_flags fl, char *(*f)(unsigned long, int
 char	*make_ox_for_p(char *ox, t_flags *fl);
 char	*make_ox_for_make_ox(char *ox, int n);
 char	*make_ox_for_x(char *ox, t_flags *fl, int l);
+char	*make_O_for_o(char *ox, t_flags *fl, int l);
 char	*make_str_with_precision_for_i(t_flags fl, int k);
 char	*make_str_with_precision_for_u(t_flags fl, unsigned int k);
 char	*make_str_with_precision_for_x(t_flags fl, unsigned int k, char *(*f)(unsigned int, int));
@@ -129,5 +130,6 @@ void	pre_parce_for_u(va_list vl, t_buf **buf, t_flags fl);
 void	pre_parce_for_o(va_list vl, t_buf **buf, t_flags fl);
 void	pre_parce_for_x(va_list vl, t_buf **buf, t_flags fl);
 void	pre_parce_for_X(va_list vl, t_buf **buf, t_flags fl);
+char	*make_ox_for_X(char *ox, t_flags *fl, int l);
 
 #endif
