@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/20 07:49:28 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/20 08:23:46 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,8 @@ int main()
 {
 	int 		i = 123;
 
-	printf("+++%05 ld+++\n", (long)8);
-	ft_printf("|||%05 ld|||\n", (long)8);
+	printf("+++%llu+++\n", (unsigned long long)-12345612220);
+	ft_printf("|||%llu|||\n", (unsigned long long)-12345612220);
 
 	return (0);
 }

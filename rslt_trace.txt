@@ -125,15 +125,11 @@ TEST : %00+10.4d, 0
 [OK]
 -------------------------------------
 TEST : %20.ld et %.4hhi !, 0x11ffaa147, (signed char)-8
-ft_printf  -->           4831486279 et -0000 !
-ret = 31
-printf     -->           4831486279 et -0008 !
-ret = 31
-[KO]
+[OK]
 -------------------------------------
 TEST : % 20.12ld et % 05D% 4.8hi !, 0x11ffaa147, 24, (short)-2345
-ft_printf  -->          004831486279 et 000 24 -00000234 !
-ret = 43
+ft_printf  -->         004831486279 et  0024 -00002345 !
+ret = 41
 printf     -->         004831486279 et  0024-00002345 !
 ret = 40
 [KO]
@@ -579,7 +575,7 @@ ret = 1
 [KO]
 -------------------------------------
 TEST : %lc, 0x4e6
-ft_printf  --> æ
+ft_printf  --> ï¿½
 ret = 1
 printf     --> Ó¦
 ret = 2
@@ -694,7 +690,7 @@ ret = 3
 [KO]
 -------------------------------------
 TEST : %8C et coco %C titi %lc, 3250, 0x11ffff, 'a'
-ft_printf  -->  et coco  titi ²
+ft_printf  -->  et coco  titi ï¿½
 ret = 16
 printf     -->      à²²
 ret = -1
@@ -717,7 +713,7 @@ ret = -1
 TEST : yo%2C%-12lc et %C titi %C tyty, 'u', 254, 256, 'a'
 ft_printf  --> you            et  titi  tyty
 ret = 29
-printf     --> yo uþ           
+printf     --> yo uï¿½           
 ret = -1
 [KO]
 -------------------------------------
@@ -783,7 +779,7 @@ ret = -1
 TEST : %S, s
 ft_printf  --> 
 ret = 0
-printf     --> aþb
+printf     --> aï¿½b
 ret = 3
 [KO]
 -------------------------------------
@@ -833,7 +829,7 @@ ret = -1
 TEST : %.2ls, s
 ft_printf  --> S
 ret = 1
-printf     --> Sþ
+printf     --> Sï¿½
 ret = 2
 [KO]
 -------------------------------------
@@ -871,7 +867,7 @@ ret = 12
 TEST : %-4S, s
 ft_printf  --> 
 ret = 0
-printf     --> aúb 
+printf     --> aï¿½b 
 ret = 4
 [KO]
 -------------------------------------
@@ -967,16 +963,16 @@ TEST : %--.4u et %#O%#012O%1lc\n, -12, 0, 0, 95
 [OK]
 -------------------------------------
 TEST : %-+-12.7Dt%0 4i %04.2% et %lc titi, 125, 124, 256
-ft_printf  --> +0000125    t0 124 000% et iti
-ret = 33
+ft_printf  --> +0000125    t 124 000% et ti
+ret = 32
 printf     --> +0000125    t 124 000%
 ret = -1
 [KO]
 -------------------------------------
 TEST : test%-8p %---32p %#5.3x%#024X, &ret, &tret, 0x25, 0
-ft_printf  --> test0x7fff5bff6794 0x7fff5bff6794                     025000000000000000000000000
+ft_printf  --> test0x7fff55829794 0x7fff55829794                     025000000000000000000000000
 ret = 81
-printf     --> test0x7fff5bff6794 0x7fff5bff6794                   0x025000000000000000000000000
+printf     --> test0x7fff55829794 0x7fff55829794                   0x025000000000000000000000000
 ret = 81
 [KO]
 -------------------------------------

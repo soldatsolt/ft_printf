@@ -422,6 +422,8 @@ void	preparcing(t_buf **buf, t_flags *fl, const char *restrict *format)
 			make_t_precision(fl, format);
 		if ((**format) == 'l' && fl->l < 2)
 			fl->l++;
+		if ((**format) == 'j' && fl->l < 1)
+			fl->l++;
 		if ((**format) == 'h' && !fl->l && fl->h < 2)
 			fl->h++;
 		(*format)++;
@@ -514,6 +516,8 @@ void	turbo_parser(va_list vl, t_buf **buf, const char *restrict *format)
 		i_flag_l(vl, buf, fl);
 	else if (**format == 'u')
 		pre_parce_for_u(vl, buf, fl);
+	else if (**format == 'U')
+		u_flag_l(vl, buf, fl);
 	else if (**format == 'c')
 		c_flag(vl, buf, fl);
 	else if (**format == 'f')
