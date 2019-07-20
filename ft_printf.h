@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/05 10:18:18 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/20 04:02:46 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/20 05:39:29 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,9 +101,9 @@ void	o_flag_l(va_list vl, t_buf **buf, t_flags fl);
 void	o_flag_ll(va_list vl, t_buf **buf, t_flags fl);
 void	o_flag_h(va_list vl, t_buf **buf, t_flags fl);
 void	o_flag_hh(va_list vl, t_buf **buf, t_flags fl);
-void	x_flag_hh(va_list vl, t_buf **buf, t_flags fl);
-void	x_flag_h(va_list vl, t_buf **buf, t_flags fl);
-void	x_flag_ll(va_list vl, t_buf **buf, t_flags fl);
-void	x_flag_l(va_list vl, t_buf **buf, t_flags fl);
+void	x_flag_hh(va_list vl, t_buf **buf, t_flags fl, char *(*f)(u_int8_t, int));
+void	x_flag_h(va_list vl, t_buf **buf, t_flags fl, char *(*f)(unsigned short, int));
+void	x_flag_ll(va_list vl, t_buf **buf, t_flags fl, char *(*f)(unsigned long long, int));
+void	x_flag_l(va_list vl, t_buf **buf, t_flags fl, char *(*f)(unsigned long, int));
 
 #endif

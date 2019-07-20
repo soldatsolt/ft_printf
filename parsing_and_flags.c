@@ -478,13 +478,13 @@ void	pre_parce_for_x(va_list vl, t_buf **buf, t_flags fl)
 	if (fl.l == 0 && fl.h == 0)
 		x_flag(vl, buf, fl, &(ft_itoa_base_small));
 	else if(fl.l == 1)
-		x_flag_l(vl, buf, fl);
+		x_flag_l(vl, buf, fl, &(ft_itoa_base_small_l));
 	else if(fl.l == 2)
-		x_flag_ll(vl, buf, fl);
+		x_flag_ll(vl, buf, fl, &(ft_itoa_base_small_ll));
 	else if(fl.h == 1)
-		x_flag_h(vl, buf, fl);
+		x_flag_h(vl, buf, fl, &(ft_itoa_base_small_h));
 	else if(fl.h == 2)
-		x_flag_hh(vl, buf, fl);
+		x_flag_hh(vl, buf, fl, &(ft_itoa_base_small_hh));
 }
 
 void	pre_parce_for_X(va_list vl, t_buf **buf, t_flags fl)
@@ -492,13 +492,13 @@ void	pre_parce_for_X(va_list vl, t_buf **buf, t_flags fl)
 	if (fl.l == 0 && fl.h == 0)
 		x_flag(vl, buf, fl, &(ft_itoa_base_big));
 	else if(fl.l == 1)
-		x_flag_l(vl, buf, fl);
+		x_flag_l(vl, buf, fl, &(ft_itoa_base_big_l));
 	else if(fl.l == 2)
-		x_flag_ll(vl, buf, fl);
+		x_flag_ll(vl, buf, fl, &(ft_itoa_base_big_ll));
 	else if(fl.h == 1)
-		x_flag_h(vl, buf, fl);
+		x_flag_h(vl, buf, fl, &(ft_itoa_base_big_h));
 	else if(fl.h == 2)
-		x_flag_hh(vl, buf, fl);
+		x_flag_hh(vl, buf, fl, &(ft_itoa_base_big_hh));
 }
 
 void	turbo_parser(va_list vl, t_buf **buf, const char *restrict *format)
