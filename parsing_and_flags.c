@@ -106,15 +106,13 @@ char	*make_str_with_precision_for_i(t_flags fl, int k)
 		if (k < 0)
 			s[i++] = '-';
 		while ((k >= 0) ? (i < fl.precision - ft_strlen(str)) : (i < \
-		fl.precision - ft_strlen(str) + 1))
+		fl.precision - ft_strlen(str) + 2))
 		{
 			s[i] = '0';
 			i++;
 		}
 		if (k < 0)
 		{
-			s[i] = '0';
-			i++;
 			s = ft_strcpy(&(s[i]), &str[1]);
 		}
 		else
