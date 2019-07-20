@@ -171,7 +171,7 @@ void	i_flag_l(va_list vl, t_buf **buf, t_flags fl)
             else
                 put_some_chars_to_buf(buf, ' ', n);
         }
-        else if (fl.space)
+        else if (fl.space && k >= 0)
             put_char_to_buf(buf, ' ');
 		if (k < 0 && (int)ft_strlen(str) < fl.width)
        		put_str_to_buf(buf, str + 1);
@@ -226,7 +226,7 @@ void	i_flag_ll(va_list vl, t_buf **buf, t_flags fl)
             else
                 put_some_chars_to_buf(buf, ' ', n);
         }
-        else if (fl.space)
+        else if (fl.space && k >= 0)
             put_char_to_buf(buf, ' ');
 		if (k < 0 && (int)ft_strlen(str) < fl.width)
        		put_str_to_buf(buf, str + 1);
@@ -281,7 +281,7 @@ void	i_flag_h(va_list vl, t_buf **buf, t_flags fl)
             else
                 put_some_chars_to_buf(buf, ' ', n);
         }
-        else if (fl.space)
+        else if (fl.space && k >= 0)
             put_char_to_buf(buf, ' ');
 		if (k < 0 && (int)ft_strlen(str) < fl.width)
        		put_str_to_buf(buf, str + 1);
@@ -336,7 +336,7 @@ void	i_flag_hh(va_list vl, t_buf **buf, t_flags fl)
             else
                 put_some_chars_to_buf(buf, ' ', n);
         }
-        else if (fl.space)
+        else if (fl.space && k >= 0)
             put_char_to_buf(buf, ' ');
 		if (k < 0 && (int)ft_strlen(str) < fl.width)
        		put_str_to_buf(buf, str + 1);

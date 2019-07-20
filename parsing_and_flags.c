@@ -235,8 +235,8 @@ void	i_flag(va_list vl, t_buf **buf, t_flags fl)
             else
                 put_some_chars_to_buf(buf, ' ', n);
         }
-        else if (fl.space)
-            put_char_to_buf(buf, ' ');
+        else if (fl.space && k >= 0)	//TODO:  мне не нравится, что тут елсиф
+            put_char_to_buf(buf, ' ');	//а не просто иф. они взаимоисключаемы?
 		if (k < 0 && (int)ft_strlen(str) < fl.width)
        		put_str_to_buf(buf, str + 1); // из-за +1 при отриц числе и флаге 0
 		else						// не выводится '-' TODO: mb mistake in if
