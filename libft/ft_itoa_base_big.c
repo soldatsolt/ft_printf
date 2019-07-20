@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 15:13:58 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/10 15:20:48 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/20 03:27:30 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static char	*keks(int base, u_int64_t m, u_int64_t nl, int n)
 	return (str);
 }
 
-char	*ft_itoa_base_big(int64_t n, int base)
+char	*ft_itoa_base_big(unsigned int n, int base)
 {
 	u_int64_t	m;
 	u_int64_t	nl;
@@ -43,13 +43,7 @@ char	*ft_itoa_base_big(int64_t n, int base)
 
 	m = 1;
 	l = 0;
-	if (n < 0)
-	{
-		nl = -n;
-		l++;
-	}
-	else
-		nl = n;
+	nl = n;
 	while (nl / (m * base) > 0)
 	{
 		m = m * base;

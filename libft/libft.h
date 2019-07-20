@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/20 20:27:38 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/20 00:52:37 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/20 03:32:55 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,8 +100,8 @@ int				get_next_line(const int fd, char **line);
 int				ft_atoi_base(const char *str, int str_base);
 char			*ft_strrev(char *str);
 char			*ft_utoa(unsigned int n);
-char			*ft_itoa_base_big(int64_t n, int base);
-char			*ft_itoa_base_small(int64_t n, int base);
+char			*ft_itoa_base_big(unsigned int n, int base);
+char			*ft_itoa_base_small(unsigned int n, int base);
 char			*ft_catstr(const char *s1, char *s2);
 char			*ft_itoa_h(short n);
 char			*ft_itoa_hh(int8_t n);
@@ -111,5 +111,9 @@ char			*ft_utoa_h(unsigned short n);
 char			*ft_utoa_hh(u_int8_t n);
 char			*ft_utoa_l(unsigned long n);
 char			*ft_utoa_ll(unsigned long long n);
+char			*ft_itoa_base_small_l(unsigned long n, int base);
+char			*ft_itoa_base_small_ll(unsigned long long n, int base);
+char			*ft_itoa_base_small_h(unsigned short n, int base);
+char			*ft_itoa_base_small_hh(u_int8_t n, int base);
 
 #endif

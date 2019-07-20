@@ -83,7 +83,7 @@ void	p_flag(va_list vl, t_buf **buf, t_flags fl)
 
 	ox = make_ox_for_p(ox, &fl);
 	ptr = (uint64_t)(va_arg(vl, void*));
-	s = ft_itoa_base_small(ptr, 16);
+	s = ft_itoa_base_small_ll(ptr, 16);
 	str = ft_strnew(ft_strlen(s) + ft_strlen(ox) + 1);
 	str = ft_catstr(ox, s);
 	s_flag(str, buf, fl);
@@ -156,6 +156,33 @@ char	*make_str_with_precision_for_u(t_flags fl, unsigned int k)
 	return (s);
 }
 
+char	*make_str_with_precision_for_o(t_flags fl, unsigned int k)
+{
+	char	*s;
+	int		i;
+	char	*str;
+
+	str = ft_itoa_base_small(k, 8);
+	if (fl.precision != -1 && (((int)ft_strlen(str) <= fl.precision)))
+	{
+		i = 0;
+		s = ft_strnew(sizeof(char) * (fl.precision + 1));
+		while (i < fl.precision - ft_strlen(str))
+		{
+			s[i] = '0';
+			i++;
+		}
+		s = ft_strcpy(&(s[i]), str);
+		s = s - i;
+		free(str);
+		str = NULL;
+		s[fl.precision] = '\0';
+	}
+	else
+		s = str;
+	return (s);
+}
+
 void	i_flag(va_list vl, t_buf **buf, t_flags fl)
 {
 	char	*str;
@@ -167,7 +194,7 @@ void	i_flag(va_list vl, t_buf **buf, t_flags fl)
         fl.zero = 0;
 	k = va_arg(vl, int);
 	if (k == (int)0 && fl.precision == 0)
-		return;
+		return ;
 	z = (k >= 0) ? '+' : '-';
 	str = make_str_with_precision_for_i(fl, k);
 	n = fl.width - (int)ft_strlen(str);
@@ -228,6 +255,31 @@ void	c_flag(va_list vl, t_buf **buf, t_flags fl)
 		put_some_chars_to_buf(buf, ' ', fl.width - 1);
 }
 
+void	o_flag(va_list vl, t_buf **buf, t_flags fl)
+{
+	char			*str;
+	int				n;
+	unsigned int	k;
+
+    if (fl.precision != -1)
+        fl.zero = 0;
+	k = va_arg(vl, unsigned int);
+	if (k == (unsigned int)0 && fl.precision == 0)
+		return ;
+	str = make_str_with_precision_for_o(fl, k);
+	n = fl.width - (int)ft_strlen(str);
+	if (n > 0 && !fl.minus)
+	{
+		if (fl.zero)
+			put_some_chars_to_buf(buf, '0', n);
+		else
+			put_some_chars_to_buf(buf, ' ', n);
+	}
+	put_str_to_buf(buf, str);
+	if (n > 0 && fl.minus)
+		put_some_chars_to_buf(buf, ' ', n);
+}
+
 void	u_flag(va_list vl, t_buf **buf, t_flags fl)
 {
 	char			*str;
@@ -238,7 +290,7 @@ void	u_flag(va_list vl, t_buf **buf, t_flags fl)
         fl.zero = 0;
 	k = va_arg(vl, unsigned int);
 	if (k == (unsigned int)0 && fl.precision == 0)
-		return;
+		return ;
 	str = make_str_with_precision_for_u(fl, k);
 	n = fl.width - (int)ft_strlen(str);
 	if (n > 0 && !fl.minus)
@@ -355,6 +407,20 @@ void	pre_parce_for_u(va_list vl, t_buf **buf, t_flags fl)
 		u_flag_hh(vl, buf, fl);
 }
 
+void	pre_parce_for_o(va_list vl, t_buf **buf, t_flags fl)
+{
+	if (fl.l == 0 && fl.h == 0)
+		o_flag(vl, buf, fl);
+	else if(fl.l == 1)
+		o_flag_l(vl, buf, fl);
+	else if(fl.l == 2)
+		o_flag_ll(vl, buf, fl);
+	else if(fl.h == 1)
+		o_flag_h(vl, buf, fl);
+	else if(fl.h == 2)
+		o_flag_hh(vl, buf, fl);
+}
+
 void	turbo_parser(va_list vl, t_buf **buf, const char *restrict *format)
 {
 	t_flags	fl;
@@ -375,5 +441,7 @@ void	turbo_parser(va_list vl, t_buf **buf, const char *restrict *format)
 		f_flag(vl, buf, fl);
 	else if (**format == 'p')
 		p_flag(vl, buf, fl);
+	else if (**format == 'o')
+		pre_parce_for_o(vl, buf, fl);
 	(*format)++;
 }

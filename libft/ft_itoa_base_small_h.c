@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_base_small.c                               :+:      :+:    :+:   */
+/*   ft_itoa_base_small_h.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/10 14:56:42 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/20 03:30:56 by kmills           ###   ########.fr       */
+/*   Created: 2019/07/20 03:28:39 by kmills            #+#    #+#             */
+/*   Updated: 2019/07/20 03:29:53 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static char	*keks(int base, u_int64_t m, u_int64_t nl, int n)
 	return (str);
 }
 
-char	*ft_itoa_base_small(unsigned int n, int base)
+char	*ft_itoa_base_small_h(unsigned short n, int base)
 {
 	u_int64_t	m;
 	u_int64_t	nl;
