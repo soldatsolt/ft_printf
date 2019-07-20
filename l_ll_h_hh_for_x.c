@@ -121,7 +121,7 @@ void	x_flag_l(va_list vl, t_buf **buf, t_flags fl, char *(*f)(unsigned long, int
 	k = va_arg(vl, unsigned long);
 	if (k == (unsigned long)0 && fl.precision == 0)
 		return ;
-	if (fl.dash)
+	if (fl.dash && k != 0)
 	{
 		str = f(k ,16);
 		if (f == &ft_itoa_base_small_l)
@@ -160,7 +160,7 @@ void	x_flag_ll(va_list vl, t_buf **buf, t_flags fl, char *(*f)(unsigned long lon
 	k = va_arg(vl, unsigned long long);
 	if (k == (unsigned long long)0 && fl.precision == 0)
 		return ;
-	if (fl.dash)
+	if (fl.dash && k != 0)
 	{
 		str = f(k ,16);
 		if (f == &ft_itoa_base_small_ll)
@@ -199,7 +199,7 @@ void	x_flag_h(va_list vl, t_buf **buf, t_flags fl, char *(*f)(unsigned short, in
 	k = (unsigned short)va_arg(vl, unsigned int);
 	if (k == (unsigned short)0 && fl.precision == 0)
 		return ;
-	if (fl.dash)
+	if (fl.dash && k != 0)
 	{
 		str = f(k ,16);
 		if (f == &ft_itoa_base_small_h)
@@ -238,7 +238,7 @@ void	x_flag_hh(va_list vl, t_buf **buf, t_flags fl, char *(*f)(u_int8_t, int))
 	k = (u_int8_t)va_arg(vl, unsigned int);
 	if (k == (u_int8_t)0 && fl.precision == 0)
 		return ;
-	if (fl.dash)
+	if (fl.dash && k != 0)
 	{
 		str = f(k ,16);
 		if (f == &ft_itoa_base_small_hh)
