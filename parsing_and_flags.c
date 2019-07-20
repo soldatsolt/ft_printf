@@ -74,6 +74,35 @@ char	*make_ox_for_p(char *ox, t_flags *fl)
 	return(ox);
 }
 
+char	*make_ox_for_x(char *ox, t_flags *fl, int l)
+{
+	int	n;
+
+	n = 0;
+	if ((fl->zero && fl->width > l + 2) || fl->precision > l)
+	{
+		if (fl->width - 2 > fl->precision && fl->precision == -1)
+		{
+			ox = ft_strnew(fl->width - (l - 1) + 1);
+			n = fl->width - l;
+		}
+		else
+		{
+			ox = ft_strnew(fl->precision - (l - 3) + 1);
+			n = fl->precision - (l - 2);
+		}
+		ox = make_ox_for_make_ox(ox, n);
+		if (fl->precision != -1)
+		{
+			fl->zero = 0;
+			fl->precision = -1;
+		}
+	}
+	else
+		ox = ft_strdup("0x");
+	return(ox);
+}
+
 void	p_flag(va_list vl, t_buf **buf, t_flags fl)
 {
 	u_int64_t	ptr;
@@ -88,8 +117,8 @@ void	p_flag(va_list vl, t_buf **buf, t_flags fl)
 	str = ft_catstr(ox, s);
 	s_flag(str, buf, fl);
 	// free(s); - фришить точно нужно, но он говорит, что s не замолочена или что-то вроде
-	free(str);
-}
+	free(str); // ПОТОМУ ЧТО s и str - одно и то же после ф-ии catstr! (фришить)
+}										//				нужно там значит, наверное
 
 char	*make_str_with_precision_for_i(t_flags fl, int k)
 {
@@ -311,12 +340,23 @@ void	x_flag(va_list vl, t_buf **buf, t_flags fl, char *(*f)(unsigned int, int))
 	char			*str;
 	int				n;
 	unsigned int	k;
+	char			*ox;
+	char			*s;
 
     if (fl.precision != -1)
         fl.zero = 0;
 	k = va_arg(vl, unsigned int);
 	if (k == (unsigned int)0 && fl.precision == 0)
 		return ;
+	if (fl.dash)
+	{
+		str = f(k ,16);
+		ox = make_ox_for_x(ox, &fl, (int)ft_strlen(str));
+		s = ft_strnew(ft_strlen(str) + ft_strlen(ox) + 1);
+		s = ft_catstr(ox, str);
+		s_flag(str, buf, fl);
+		return ;
+	}
 	str = make_str_with_precision_for_x(fl, k, f);
 	n = fl.width - (int)ft_strlen(str);
 	if (n > 0 && !fl.minus)
