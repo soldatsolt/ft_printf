@@ -239,9 +239,9 @@ void	i_flag(va_list vl, t_buf **buf, t_flags fl)
         }
         else if (fl.space)
             put_char_to_buf(buf, ' ');
-		if (k < 0)
-       		put_str_to_buf(buf, str + 1);
-		else
+		if (k < 0 && (int)ft_strlen(str) < fl.width)
+       		put_str_to_buf(buf, str + 1); // из-за +1 при отриц числе и флаге 0
+		else						// не выводится '-' TODO: mb mistake in if
 			put_str_to_buf(buf, str);		
         if (n > 0 && fl.minus)
             put_some_chars_to_buf(buf, ' ', n);

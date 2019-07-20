@@ -2,3 +2,5 @@
 ./ft_printf.dSYM/*
 ./brut_unit_test_MILLION/*
 ./unit_printf_test/*
+./libft/*.o
+./*.o
