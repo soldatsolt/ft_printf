@@ -25,6 +25,8 @@ void	make_t_precision(t_flags *fl, const char *restrict *format)
 {
 	(*format)++;
 	fl->precision = ft_atoi(*format);
+	if (fl->precision == -1)
+		fl->precision = 0;
 	while ((**format) >= '0' && (**format) <= '9')
 		(*format)++;
 	(*format)--;

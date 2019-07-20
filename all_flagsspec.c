@@ -83,7 +83,7 @@ void	i_flag(va_list vl, t_buf **buf, t_flags fl)
     }
     else
     {
-		if (fl.space)
+		if (fl.space && k >= 0)
 		{
         	put_char_to_buf(buf, ' ');
 			n--;
