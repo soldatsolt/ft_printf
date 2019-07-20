@@ -156,13 +156,13 @@ char	*make_str_with_precision_for_u(t_flags fl, unsigned int k)
 	return (s);
 }
 
-char	*make_str_with_precision_for_x(t_flags fl, unsigned int k)
+char	*make_str_with_precision_for_x(t_flags fl, unsigned int k, char *(*f)(unsigned int, int))
 {
 	char	*s;
 	int		i;
 	char	*str;
 
-	str = ft_itoa_base_small(k, 16);
+	str = f(k, 16);
 	if (fl.precision != -1 && (((int)ft_strlen(str) <= fl.precision)))
 	{
 		i = 0;
@@ -307,7 +307,7 @@ void	o_flag(va_list vl, t_buf **buf, t_flags fl)
 		put_some_chars_to_buf(buf, ' ', n);
 }
 
-void	x_flag(va_list vl, t_buf **buf, t_flags fl)
+void	x_flag(va_list vl, t_buf **buf, t_flags fl, char *(*f)(unsigned int, int))
 {
 	char			*str;
 	int				n;
@@ -318,7 +318,7 @@ void	x_flag(va_list vl, t_buf **buf, t_flags fl)
 	k = va_arg(vl, unsigned int);
 	if (k == (unsigned int)0 && fl.precision == 0)
 		return ;
-	str = make_str_with_precision_for_x(fl, k);
+	str = make_str_with_precision_for_x(fl, k, f);
 	n = fl.width - (int)ft_strlen(str);
 	if (n > 0 && !fl.minus)
 	{
@@ -476,7 +476,21 @@ void	pre_parce_for_o(va_list vl, t_buf **buf, t_flags fl)
 void	pre_parce_for_x(va_list vl, t_buf **buf, t_flags fl)
 {
 	if (fl.l == 0 && fl.h == 0)
-		x_flag(vl, buf, fl);
+		x_flag(vl, buf, fl, &(ft_itoa_base_small));
+	else if(fl.l == 1)
+		x_flag_l(vl, buf, fl);
+	else if(fl.l == 2)
+		x_flag_ll(vl, buf, fl);
+	else if(fl.h == 1)
+		x_flag_h(vl, buf, fl);
+	else if(fl.h == 2)
+		x_flag_hh(vl, buf, fl);
+}
+
+void	pre_parce_for_X(va_list vl, t_buf **buf, t_flags fl)
+{
+	if (fl.l == 0 && fl.h == 0)
+		x_flag(vl, buf, fl, &(ft_itoa_base_big));
 	else if(fl.l == 1)
 		x_flag_l(vl, buf, fl);
 	else if(fl.l == 2)
@@ -511,5 +525,7 @@ void	turbo_parser(va_list vl, t_buf **buf, const char *restrict *format)
 		pre_parce_for_o(vl, buf, fl);
 	else if (**format == 'x')
 		pre_parce_for_x(vl, buf, fl);
+	else if (**format == 'X')
+		pre_parce_for_X(vl, buf, fl);
 	(*format)++;
 }
