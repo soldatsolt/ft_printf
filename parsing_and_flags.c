@@ -523,6 +523,8 @@ void	turbo_parser(va_list vl, t_buf **buf, const char *restrict *format)
 		p_flag(vl, buf, fl);
 	else if (**format == 'o')
 		pre_parce_for_o(vl, buf, fl);
+	else if (**format == 'O')
+		o_flag_l(vl, buf, fl);
 	else if (**format == 'x')
 		pre_parce_for_x(vl, buf, fl);
 	else if (**format == 'X')
