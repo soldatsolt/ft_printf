@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/05 10:18:18 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/20 13:07:49 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/20 14:30:24 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,5 +131,6 @@ void	pre_parce_for_o(va_list vl, t_buf **buf, t_flags fl);
 void	pre_parce_for_x(va_list vl, t_buf **buf, t_flags fl);
 void	pre_parce_for_X(va_list vl, t_buf **buf, t_flags fl);
 char	*make_ox_for_X(char *ox, t_flags *fl, int l);
+char	*ft_cactostr(const char *s1, char *s2);
 
 #endif

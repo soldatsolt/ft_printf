@@ -120,12 +120,28 @@ void	c_flag(va_list vl, t_buf **buf, t_flags fl)
 		put_some_chars_to_buf(buf, ' ', fl.width - 1);
 }
 
+
+char	*ft_cactostr(const char *s1, char *s2)
+{
+	char	*s;
+
+	if (!s1)
+		return (s2);
+	s = ft_strdup(s2);
+	s2 = ft_strcpy(s2, s1);
+	s2 = ft_strcpy(s2 + ft_strlen(s1), s);
+	s2[ft_strlen(s1) + ft_strlen(s2) - 1] = '\0';
+	s2 -= ft_strlen(s1);
+	free(s);
+	s = NULL;
+	return (s2);
+}
+
 void	o_flag(va_list vl, t_buf **buf, t_flags fl)
 {
 	char			*str;
 	int				n;
 	unsigned int	k;
-	char			*o;
 	char			*s;
 
     if (fl.precision != -1)
@@ -134,13 +150,12 @@ void	o_flag(va_list vl, t_buf **buf, t_flags fl)
 	if (k == (unsigned int)0 && fl.precision == 0)
 		return ;
 	str = make_str_with_precision_for_o(fl, k);
-	if (fl.dash && k != 0)
+	if (fl.dash && k != 0 && str[0] != '0')
 	{
-		o = ft_strdup("00"); // ну вот этот костыль даёт о себе знать наверное
-		s = ft_strnew(ft_strlen(str) + ft_strlen(o) + 2);
-		s = ft_catstr(o, str);
+		s = ft_strnew(ft_strlen(str) + ft_strlen("0") + 2);
+		s = ft_cactostr("0", str);
 	}
-	n = fl.width - (int)ft_strlen((fl.dash && k != 0) ? (str + 1) : (str));
+	n = fl.width - (int)ft_strlen(str);
 	if (n > 0 && !fl.minus)
 	{
 		if (fl.zero)
@@ -148,7 +163,7 @@ void	o_flag(va_list vl, t_buf **buf, t_flags fl)
 		else
 			put_some_chars_to_buf(buf, ' ', n);
 	}
-	put_str_to_buf(buf, (fl.dash && k != 0) ? (str + 1) : (str));
+	put_str_to_buf(buf, str);
 	if (n > 0 && fl.minus)
 		put_some_chars_to_buf(buf, ' ', n);
 }
