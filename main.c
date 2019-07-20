@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/20 13:01:03 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/20 13:14:30 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,14 +50,4 @@ int		ft_printf(const char *restrict format, ...)
 	n = returned_printf(buf_start);
 	free_all_buff(buf_start);
 	return (n);
-}
-
-int main()
-{
-	int 		i = 123;
-
-	printf("+++%#X+++\n", 2555);
-	ft_printf("|||%#X|||\n", 2555);
-
-	return (0);
 }

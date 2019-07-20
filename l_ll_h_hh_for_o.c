@@ -128,7 +128,7 @@ void	o_flag_l(va_list vl, t_buf **buf, t_flags fl)
 		s = ft_strnew(ft_strlen(str) + ft_strlen(o) + 2);
 		s = ft_catstr(o, str);
 	}
-	n = fl.width - (int)ft_strlen(str + 1);
+	n = fl.width - (int)ft_strlen((fl.dash) ? (str + 1) : (str));
 	if (n > 0 && !fl.minus)
 	{
 		if (fl.zero)
@@ -136,7 +136,7 @@ void	o_flag_l(va_list vl, t_buf **buf, t_flags fl)
 		else
 			put_some_chars_to_buf(buf, ' ', n);
 	}
-	put_str_to_buf(buf, s + 1);
+	put_str_to_buf(buf, (fl.dash) ? (str + 1) : (str));
 	if (n > 0 && fl.minus)
 		put_some_chars_to_buf(buf, ' ', n);
 }
@@ -161,7 +161,7 @@ void	o_flag_ll(va_list vl, t_buf **buf, t_flags fl)
 		s = ft_strnew(ft_strlen(str) + ft_strlen(o) + 2);
 		s = ft_catstr(o, str);
 	}
-	n = fl.width - (int)ft_strlen(str + 1);
+	n = fl.width - (int)ft_strlen((fl.dash) ? (str + 1) : (str));
 	if (n > 0 && !fl.minus)
 	{
 		if (fl.zero)
@@ -169,7 +169,7 @@ void	o_flag_ll(va_list vl, t_buf **buf, t_flags fl)
 		else
 			put_some_chars_to_buf(buf, ' ', n);
 	}
-	put_str_to_buf(buf, s + 1);
+	put_str_to_buf(buf, (fl.dash) ? (str + 1) : (str));
 	if (n > 0 && fl.minus)
 		put_some_chars_to_buf(buf, ' ', n);
 }
@@ -194,7 +194,7 @@ void	o_flag_h(va_list vl, t_buf **buf, t_flags fl)
 		s = ft_strnew(ft_strlen(str) + ft_strlen(o) + 2);
 		s = ft_catstr(o, str);
 	}
-	n = fl.width - (int)ft_strlen(str + 1);
+	n = fl.width - (int)ft_strlen((fl.dash) ? (str + 1) : (str));
 	if (n > 0 && !fl.minus)
 	{
 		if (fl.zero)
@@ -202,7 +202,7 @@ void	o_flag_h(va_list vl, t_buf **buf, t_flags fl)
 		else
 			put_some_chars_to_buf(buf, ' ', n);
 	}
-	put_str_to_buf(buf, s + 1);
+	put_str_to_buf(buf, (fl.dash) ? (str + 1) : (str));
 	if (n > 0 && fl.minus)
 		put_some_chars_to_buf(buf, ' ', n);
 }
@@ -227,7 +227,7 @@ void	o_flag_hh(va_list vl, t_buf **buf, t_flags fl)
 		s = ft_strnew(ft_strlen(str) + ft_strlen(o) + 2);
 		s = ft_catstr(o, str);
 	}
-	n = fl.width - (int)ft_strlen(str + 1);
+	n = fl.width - (int)ft_strlen((fl.dash) ? (str + 1) : (str));
 	if (n > 0 && !fl.minus)
 	{
 		if (fl.zero)
@@ -235,7 +235,7 @@ void	o_flag_hh(va_list vl, t_buf **buf, t_flags fl)
 		else
 			put_some_chars_to_buf(buf, ' ', n);
 	}
-	put_str_to_buf(buf, s + 1);
+	put_str_to_buf(buf, (fl.dash) ? (str + 1) : (str));
 	if (n > 0 && fl.minus)
 		put_some_chars_to_buf(buf, ' ', n);
 }
