@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/20 20:27:38 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/20 03:32:55 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/20 03:55:54 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,5 +115,9 @@ char			*ft_itoa_base_small_l(unsigned long n, int base);
 char			*ft_itoa_base_small_ll(unsigned long long n, int base);
 char			*ft_itoa_base_small_h(unsigned short n, int base);
 char			*ft_itoa_base_small_hh(u_int8_t n, int base);
+char			*ft_itoa_base_big_h(unsigned short n, int base);
+char			*ft_itoa_base_big_l(unsigned long n, int base);
+char			*ft_itoa_base_big_ll(unsigned long long n, int base);
+char			*ft_itoa_base_big_hh(u_int8_t n, int base);
 
 #endif

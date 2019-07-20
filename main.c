@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/20 03:46:16 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/20 04:05:35 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,8 @@ int main()
 {
 	int 		i = 123;
 
-	printf("%p\n", &i);
-	ft_printf("%p\n", &i);
+	printf("%hhlx\n", 257);
+	ft_printf("%hhlx\n", 257);
 
 	return (0);
 }
