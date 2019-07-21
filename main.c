@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/22 02:28:22 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/22 02:49:12 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_printf2(va_list vl, t_buf **buf, const char *restrict format)
 		}
 		else if (*format == '%' && format[1] != '%')
 		{
-			format++; // теперь в ф-ии парсера сразу идёт флаг (без %)
+			format++;
 			turbo_parser(vl, buf, &format);
 		}
 		else
@@ -52,13 +52,9 @@ int		ft_printf(const char *restrict format, ...)
 	return (n);
 }
 
-int main()
+int		main(void)
 {
-	int 		i = 123;
-
-	printf("+++!%lX!+++\n", 9223372036854775807);
-	ft_printf("|||!%lX!|||\n", 9223372036854775807);
-	// printf("+++!%#.20x!+++\n", 0);
-	// ft_printf("|||!%#.20x!|||\n", 0);
+	printf("+++!%25.20lo!+++\n", 9223372036854775807);
+	ft_printf("|||!%25.20lo!|||\n", 9223372036854775807);
 	return (0);
 }

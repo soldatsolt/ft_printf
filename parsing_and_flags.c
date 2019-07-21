@@ -32,44 +32,46 @@ void	make_t_precision(t_flags *fl, const char *restrict *format)
 	(*format)--;
 }
 
+void	preparcing2(t_buf **buf, t_flags *fl, const char *restrict *format)
+{
+	if ((**format) == ' ')
+		fl->space = 1;
+	if ((**format) == '#')
+		fl->dash = 1;
+	if ((**format) == '-')
+		fl->minus = 1;
+	if ((**format) == '+')
+		fl->plus = 1;
+	if ((**format) == '0')
+		fl->zero = 1;
+	if ((**format) > '0' && (**format) <= '9')
+		make_t_width(fl, format);
+	if ((**format) == '.')
+		make_t_precision(fl, format);
+	if ((**format) == 'l' && fl->l < 2)
+		fl->l++;
+	if ((**format) == 'j' && fl->l < 1)
+		fl->l++;
+	if ((**format) == 'h' && !fl->l && fl->h < 2)
+		fl->h++;
+	(*format)++;
+}
+
 void	preparcing(t_buf **buf, t_flags *fl, const char *restrict *format)
 {
 	while ((**format) == ' ' || (**format) == '-' || (**format) == '+' || \
 	((**format) >= '0' && (**format) <= '9') || (**format) == '#' || \
 	(**format) == '.' || (**format) == 'h' || (**format) == 'l')
 	{
-		if ((**format) == ' ')
-			fl->space = 1;
-		if ((**format) == '#')
-			fl->dash = 1;
-		if ((**format) == '-')
-			fl->minus = 1;
-		if ((**format) == '+')
-			fl->plus = 1;
-		if ((**format) == '0')
-			fl->zero = 1;
-		if ((**format) > '0' && (**format) <= '9')
-			make_t_width(fl, format);
-		if ((**format) == '.')
-			make_t_precision(fl, format);
-		if ((**format) == 'l' && fl->l < 2)
-			fl->l++;
-		if ((**format) == 'j' && fl->l < 1)
-			fl->l++;
-		if ((**format) == 'h' && !fl->l && fl->h < 2)
-			fl->h++;
-		(*format)++;
+		preparcing2(buf, fl, format);
 	}
 	if ((**format) == '%')
 		percentage(buf, *fl);
 }
 
-void	turbo_parser(va_list vl, t_buf **buf, const char *restrict *format)
+void	turbo_parser2(va_list vl, t_buf **buf, const char *restrict *format, \
+t_flags fl)
 {
-	t_flags	fl;
-
-	make_t_flags0(&fl);
-	preparcing(buf, &fl, format);
 	if (**format == 's')
 		s_flag(va_arg(vl, char *), buf, fl);
 	else if (**format == 'i' || **format == 'd')
@@ -94,5 +96,14 @@ void	turbo_parser(va_list vl, t_buf **buf, const char *restrict *format)
 		pre_parce_for_x(vl, buf, fl);
 	else if (**format == 'X')
 		pre_parce_for_X(vl, buf, fl);
+}
+
+void	turbo_parser(va_list vl, t_buf **buf, const char *restrict *format)
+{
+	t_flags	fl;
+
+	make_t_flags0(&fl);
+	preparcing(buf, &fl, format);
+	turbo_parser2(vl, buf, format, fl);
 	(*format)++;
 }
