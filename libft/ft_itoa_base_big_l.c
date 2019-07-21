@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/20 03:51:21 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/20 05:51:22 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/22 02:34:41 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_itoa_base_big_l(unsigned long n, int base)
 	m = 1;
 	l = 0;
 	nl = n;
-	while (nl / (m * base) > 0)
+	while (((m * base) > 0) ? (nl / (m * base) > 0) : 0)
 	{
 		m = m * base;
 		l++;

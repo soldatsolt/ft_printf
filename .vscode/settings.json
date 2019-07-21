@@ -2,6 +2,7 @@
 	"C_Cpp.errorSquiggles": "Disabled",
 	"files.associations": {
 		"locale.h": "c",
-		"sstream": "c"
+		"sstream": "c",
+		"chrono": "c"
 	}
 }

@@ -30,8 +30,9 @@ fclean: clean
 
 re: fclean all
 
-$(LIBFT):
+lib:
 	@$(MAKE) -C ./libft re
+	@$(MAKE) -C ./libft clean
 
 git:
 	git add .
