@@ -95,7 +95,7 @@ t_flags fl)
 	else if (**format == 'x')
 		pre_parce_for_x(vl, buf, fl);
 	else if (**format == 'X')
-		pre_parce_for_X(vl, buf, fl);
+		pre_parce_for_xx(vl, buf, fl);
 }
 
 void	turbo_parser(va_list vl, t_buf **buf, const char *restrict *format)

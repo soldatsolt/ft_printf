@@ -24,6 +24,7 @@ void	s_flag(char *str, t_buf **buf, t_flags fl)
 		{
 			put_some_chars_to_buf(buf, ' ', n);
 		}
+		free(str);
 	}
 	else
 		s_flag("(null)", buf, fl); // тут тоже фришить нужно
@@ -44,6 +45,7 @@ void	p_flag(va_list vl, t_buf **buf, t_flags fl)
 	s_flag(str, buf, fl);
 	// free(s); - фришить точно нужно, но он говорит, что s не замолочена или что-то вроде
 	free(str); // ПОТОМУ ЧТО s и str - одно и то же после ф-ии catstr! (фришить)
+	free(ox);
 }										//				нужно там значит, наверное
 
 
