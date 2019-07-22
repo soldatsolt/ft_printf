@@ -123,14 +123,12 @@ char	*make_ox_for_X(char *ox, t_flags *fl, int l)
 			n = fl->precision - (l - 2);
 		}
 		ox = make_ox_for_make_oX(ox, n);
-		if (fl->precision != -1)
-		{
-			fl->zero = 0;
-			fl->precision = -1;
-		}
 	}
 	else
 		ox = ft_strdup("0X");
+	if (fl->precision != -1)
+		fl->zero = 0;
+	fl->precision = -1;
 	return(ox);
 }
 
@@ -152,13 +150,11 @@ char	*make_ox_for_x(char *ox, t_flags *fl, int l)
 			n = fl->precision - (l - 2);
 		}
 		ox = make_ox_for_make_ox(ox, n);
-		if (fl->precision != -1)
-		{
-			fl->zero = 0;
-			fl->precision = -1;
-		}
 	}
 	else
 		ox = ft_strdup("0x");
+	if (fl->precision != -1)
+		fl->zero = 0;
+	fl->precision = -1;
 	return(ox);
 }

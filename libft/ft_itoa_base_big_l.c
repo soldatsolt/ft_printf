@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/20 03:51:21 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/22 02:34:41 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/22 04:14:50 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ static char	*keks(int base, u_int64_t m, u_int64_t nl)
 		m = m / base;
 	}
 	str[i] = '\0';
+	free(abc);
 	return (str);
 }
 

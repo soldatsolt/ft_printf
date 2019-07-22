@@ -37,17 +37,16 @@ void	p_flag(va_list vl, t_buf **buf, t_flags fl)
 	char		*s;
 	char		*ox;
 
+	str = NULL;
 	ox = make_ox_for_p(ox, &fl);
 	ptr = (uint64_t)(va_arg(vl, void*));
 	s = ft_itoa_base_small_ll(ptr, 16);
-	str = ft_strnew(ft_strlen(s) + ft_strlen(ox) + 1);
 	str = ft_catstr(ox, s);
 	s_flag(str, buf, fl);
-	// free(s); - фришить точно нужно, но он говорит, что s не замолочена или что-то вроде
-	free(str); // ПОТОМУ ЧТО s и str - одно и то же после ф-ии catstr! (фришить)
+	free(str);
 	free(ox);
-}										//				нужно там значит, наверное
-
+	free(s);
+}
 
 void	i_flag(va_list vl, t_buf **buf, t_flags fl)
 {
@@ -103,6 +102,7 @@ void	i_flag(va_list vl, t_buf **buf, t_flags fl)
         if (n > 0 && fl.minus)
             put_some_chars_to_buf(buf, ' ', n);
     }
+	free(str);
 }
 
 void	c_flag(va_list vl, t_buf **buf, t_flags fl)
@@ -154,8 +154,17 @@ void	o_flag(va_list vl, t_buf **buf, t_flags fl)
 	str = make_str_with_precision_for_o(fl, k);
 	if (fl.dash && k != 0 && str[0] != '0')
 	{
-		s = ft_strnew(ft_strlen(str) + ft_strlen("0") + 2);
 		s = ft_cactostr("0", str);
+		if (fl.precision != -1)
+		{
+			fl.zero = 0;
+			fl.precision = -1;
+		}
+		free(str);
+		str = NULL;
+		str = s;
+		s_flag(s, buf, fl);
+		return ;
 	}
 	n = fl.width - (int)ft_strlen(str);
 	if (n > 0 && !fl.minus)
@@ -168,6 +177,7 @@ void	o_flag(va_list vl, t_buf **buf, t_flags fl)
 	put_str_to_buf(buf, str);
 	if (n > 0 && fl.minus)
 		put_some_chars_to_buf(buf, ' ', n);
+	free(str);
 }
 
 void	x_flag(va_list vl, t_buf **buf, t_flags fl, char *(*f)(unsigned int, int))
@@ -190,9 +200,11 @@ void	x_flag(va_list vl, t_buf **buf, t_flags fl, char *(*f)(unsigned int, int))
 			ox = make_ox_for_x(ox, &fl, (int)ft_strlen(str));
 		else
 			ox = make_ox_for_X(ox, &fl, (int)ft_strlen(str));
-		s = ft_strnew(ft_strlen(str) + ft_strlen(ox) + 1);
 		s = ft_catstr(ox, str);
-		s_flag(str, buf, fl);
+		s_flag(s, buf, fl);
+		free(str);
+		free(s);
+		free(ox);
 		return ;
 	}
 	str = make_str_with_precision_for_x(fl, k, f);
@@ -207,6 +219,7 @@ void	x_flag(va_list vl, t_buf **buf, t_flags fl, char *(*f)(unsigned int, int))
 	put_str_to_buf(buf, str);
 	if (n > 0 && fl.minus)
 		put_some_chars_to_buf(buf, ' ', n);
+	free(str);
 }
 
 void	u_flag(va_list vl, t_buf **buf, t_flags fl)
