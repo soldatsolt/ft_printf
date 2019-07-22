@@ -1,15 +1,16 @@
 cmake_minimum_required(VERSION 3.13)
-project(FTprintfFT C)
+project(Prinyf C)
 
 set(CMAKE_C_STANDARD 11)
 
 include_directories(.)
 include_directories(libft)
 
-add_executable(FTprintfFT
+add_executable(Prinyf
         libft/ft_atoi.c
         libft/ft_atoi_base.c
         libft/ft_bzero.c
+        libft/ft_catstr.c
         libft/ft_fibonacci.c
         libft/ft_is_sort.c
         libft/ft_isalnum.c
@@ -19,7 +20,19 @@ add_executable(FTprintfFT
         libft/ft_isprint.c
         libft/ft_itoa.c
         libft/ft_itoa_base_big.c
+        libft/ft_itoa_base_big_h.c
+        libft/ft_itoa_base_big_hh.c
+        libft/ft_itoa_base_big_l.c
+        libft/ft_itoa_base_big_ll.c
         libft/ft_itoa_base_small.c
+        libft/ft_itoa_base_small_h.c
+        libft/ft_itoa_base_small_hh.c
+        libft/ft_itoa_base_small_l.c
+        libft/ft_itoa_base_small_ll.c
+        libft/ft_itoa_h.c
+        libft/ft_itoa_hh.c
+        libft/ft_itoa_l.c
+        libft/ft_itoa_ll.c
         libft/ft_lstadd.c
         libft/ft_lstdel.c
         libft/ft_lstdelone.c
@@ -77,11 +90,26 @@ add_executable(FTprintfFT
         libft/ft_tolower.c
         libft/ft_toupper.c
         libft/ft_utoa.c
+        libft/ft_utoa_h.c
+        libft/ft_utoa_hh.c
+        libft/ft_utoa_l.c
+        libft/ft_utoa_ll.c
         libft/get_next_line.c
         libft/libft.h
+        all_flagsspec.c
         buffer.c
+        double_float.c
         ft_printf.h
+        l_ll_h_hh_for_i.c
+        l_ll_h_hh_for_o.c
+        l_ll_h_hh_for_u.c
+        l_ll_h_hh_for_x.c
+        long_double.c
         main.c
+        make_ox_for_any.c
+        make_str_with_precision_for_any.c
         parsing_and_flags.c
+        preparce_for_flags.c
         print_float.c
-        str_calc.c)
+        str_calc.c
+        stringmath.c)

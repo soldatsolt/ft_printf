@@ -54,12 +54,12 @@ int		ft_printf(const char *restrict format, ...)
 
 int		main(void)
 {
-	// printf("%s\n" ,ft_catstr("12345", "6789 10 11 12"));
-	printf("+++!%3.3lo%#3.3lo%#3.3x%#3.3X %.2s%p!+++\n", 12345, 12345, 12345, 12345, "QWE", "2");
-	ft_printf("|||!%3.3lo%#3.3lo%#3.3x%#3.3X %.2s%p!|||\n", 12345, 12345, 12345, 12345, "QWE", "2");
-	// printf("%p\n", "@");
-	// ft_printf("%p\n", "@");
-	// printf("%#3.3o\n", 12345);
-	// ft_printf("%#3.3o\n", 12345);
+	float f = 11.25111;
+	double w  = -0.2511111111111100000000000000;
+	long double lw = 1111111111111111111111111111111111111111111111111.251111111100000000000000;
+	printf   ("float -    %.100f\n", w);
+	ft_printf("ft_float - %.100f\n", w);
+	printf   ("float -    %.100Lf\n",lw);
+	ft_printf("ft_float - %.100Lf\n", lw);
 	return (0);
 }

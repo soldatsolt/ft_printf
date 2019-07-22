@@ -17,16 +17,20 @@
 
 typedef struct	s_double
 {
+	int 			size;
+	long double		lw;
+	unsigned char	sign;
 	double 			w;
 	int 			len;
 	int 			strlen;
 	unsigned char	*s;
 	char 			*str;
 	int 			i;
-	int 			pow;
+	long 			pow;
 	char 			c;
 	int 			exp;
 	char			*mantissa;
+	int 			dot;
 }				t_double;
 
 typedef struct	s_flags
@@ -40,6 +44,7 @@ typedef struct	s_flags
 	int			precision;
 	int			l;
 	int			h;
+	int 		L;
 }				t_flags;
 
 typedef struct	s_buf
@@ -77,17 +82,20 @@ void	turbo_parser(va_list vl, t_buf **buf, const char *restrict *format);
 void	f_flag(va_list vl, t_buf **buf, t_flags fl);
 int		ft_double_in_str(t_double *dd, t_flags *fl);
 void 	double_flag(va_list vl, t_buf **buf, t_flags *fl);
+void 	long_double_flag(va_list vl, t_buf **buf, t_flags *fl);
+void	ft_itoa_long_double(long double n, t_double *dd, t_flags *fl);
 void	double_minus(t_double *dd, t_buf **buf, t_flags *fl);
 void	double_just(t_double *dd, t_buf **buf, t_flags *fl);
 void	double_zero(t_double *dd, t_buf **buf, t_flags *fl);
 void	ft_itoa_double(double n, t_double *dd, t_flags *fl);
-int		ft_len_exp(double w);
+int		ft_len_exp_double(t_double *dd);
 void 	make_exp(t_double *dd);
 void	make_double_bits_str(t_double *dd);
 void	ft_exp_str(t_double *dd, char **man, char *tmp);
 void	ft_mantissa_str(char **man, char **tmp, t_double *dd);
 void	ft_strsum(char **man, char **tmp);
 void	ft_divstr(char **tmp);
+void	ft_mantissa_correct(char **man, t_flags *fl, t_double *dd);
 void	ft_put_precision(t_double *dd, t_buf **buf, t_flags *fl);
 void	i_flag_l(va_list vl, t_buf **buf, t_flags fl);
 void	i_flag_ll(va_list vl, t_buf **buf, t_flags fl);

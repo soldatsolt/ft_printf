@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/vbharbo/Documents/42/Prinyf/./libft/libft.h
+stdlib.h
+-
+unistd.h
+-
+string.h
+-
+stdio.h
+-
+fcntl.h
+-
+sys/types.h
+-
+sys/uio.h
+-
+unistd.h
+-
+stdarg.h
+-
+
+/Users/vbharbo/Documents/42/Prinyf/ft_printf.h
+./libft/libft.h
+/Users/vbharbo/Documents/42/Prinyf/./libft/libft.h
+
+/Users/vbharbo/Documents/42/Prinyf/main.c
+ft_printf.h
+/Users/vbharbo/Documents/42/Prinyf/ft_printf.h
+
