@@ -198,6 +198,7 @@ void	i_flag_l(va_list vl, t_buf **buf, t_flags fl)
         if (n > 0 && fl.minus)
             put_some_chars_to_buf(buf, ' ', n);
     }
+	free(str);
 }
 
 void	i_flag_ll(va_list vl, t_buf **buf, t_flags fl)
@@ -254,6 +255,7 @@ void	i_flag_ll(va_list vl, t_buf **buf, t_flags fl)
         if (n > 0 && fl.minus)
             put_some_chars_to_buf(buf, ' ', n);
     }
+	free(str);
 }
 
 void	i_flag_h(va_list vl, t_buf **buf, t_flags fl)
@@ -310,6 +312,7 @@ void	i_flag_h(va_list vl, t_buf **buf, t_flags fl)
         if (n > 0 && fl.minus)
             put_some_chars_to_buf(buf, ' ', n);
     }
+	free(str);
 }
 
 void	i_flag_hh(va_list vl, t_buf **buf, t_flags fl)
@@ -366,4 +369,5 @@ void	i_flag_hh(va_list vl, t_buf **buf, t_flags fl)
         if (n > 0 && fl.minus)
             put_some_chars_to_buf(buf, ' ', n);
     }
+	free(str);
 }

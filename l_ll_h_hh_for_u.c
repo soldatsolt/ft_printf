@@ -131,6 +131,7 @@ void	u_flag_l(va_list vl, t_buf **buf, t_flags fl)
 	put_str_to_buf(buf, str);
 	if (n > 0 && fl.minus)
 		put_some_chars_to_buf(buf, ' ', n);
+	free(str);
 }
 
 void	u_flag_ll(va_list vl, t_buf **buf, t_flags fl)
@@ -156,6 +157,7 @@ void	u_flag_ll(va_list vl, t_buf **buf, t_flags fl)
 	put_str_to_buf(buf, str);
 	if (n > 0 && fl.minus)
 		put_some_chars_to_buf(buf, ' ', n);
+	free(str);
 }
 
 void	u_flag_h(va_list vl, t_buf **buf, t_flags fl)
@@ -181,6 +183,7 @@ void	u_flag_h(va_list vl, t_buf **buf, t_flags fl)
 	put_str_to_buf(buf, str);
 	if (n > 0 && fl.minus)
 		put_some_chars_to_buf(buf, ' ', n);
+	free(str);
 }
 
 void	u_flag_hh(va_list vl, t_buf **buf, t_flags fl)
@@ -206,4 +209,5 @@ void	u_flag_hh(va_list vl, t_buf **buf, t_flags fl)
 	put_str_to_buf(buf, str);
 	if (n > 0 && fl.minus)
 		put_some_chars_to_buf(buf, ' ', n);
+	free(str);
 }

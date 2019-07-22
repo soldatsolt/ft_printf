@@ -122,23 +122,6 @@ void	c_flag(va_list vl, t_buf **buf, t_flags fl)
 		put_some_chars_to_buf(buf, ' ', fl.width - 1);
 }
 
-
-char	*ft_cactostr(const char *s1, char *s2)
-{
-	char	*s;
-
-	if (!s1)
-		return (s2);
-	s = ft_strdup(s2);
-	s2 = ft_strcpy(s2, s1);
-	s2 = ft_strcpy(s2 + ft_strlen(s1), s);
-	s2[ft_strlen(s1) + ft_strlen(s2) - 1] = '\0';
-	s2 -= ft_strlen(s1);
-	free(s);
-	s = NULL;
-	return (s2);
-}
-
 void	o_flag(va_list vl, t_buf **buf, t_flags fl)
 {
 	char			*str;
@@ -154,7 +137,7 @@ void	o_flag(va_list vl, t_buf **buf, t_flags fl)
 	str = make_str_with_precision_for_o(fl, k);
 	if (fl.dash && k != 0 && str[0] != '0')
 	{
-		s = ft_cactostr("0", str);
+		s = ft_catstr("0", str);
 		if (fl.precision != -1)
 		{
 			fl.zero = 0;
@@ -164,6 +147,7 @@ void	o_flag(va_list vl, t_buf **buf, t_flags fl)
 		str = NULL;
 		str = s;
 		s_flag(s, buf, fl);
+		free(str);
 		return ;
 	}
 	n = fl.width - (int)ft_strlen(str);
@@ -245,4 +229,5 @@ void	u_flag(va_list vl, t_buf **buf, t_flags fl)
 	put_str_to_buf(buf, str);
 	if (n > 0 && fl.minus)
 		put_some_chars_to_buf(buf, ' ', n);
+	free(str);
 }

@@ -123,8 +123,18 @@ void	o_flag_l(va_list vl, t_buf **buf, t_flags fl)
 	str = make_str_with_precision_for_lo(fl, k);
 	if (fl.dash && k != 0 && str[0] != '0')
 	{
-		s = ft_strnew(ft_strlen(str) + ft_strlen("0") + 2);
-		s = ft_cactostr("0", str);
+		s = ft_catstr("0", str);
+		if (fl.precision != -1)
+		{
+			fl.zero = 0;
+			fl.precision = -1;
+		}
+		free(str);
+		str = NULL;
+		str = s;
+		s_flag(s, buf, fl);
+		free(str);
+		return ;
 	}
 	n = fl.width - (int)ft_strlen(str);
 	if (n > 0 && !fl.minus)
@@ -137,6 +147,7 @@ void	o_flag_l(va_list vl, t_buf **buf, t_flags fl)
 	put_str_to_buf(buf, str);
 	if (n > 0 && fl.minus)
 		put_some_chars_to_buf(buf, ' ', n);
+	free(str);
 }
 
 void	o_flag_ll(va_list vl, t_buf **buf, t_flags fl)
@@ -154,8 +165,18 @@ void	o_flag_ll(va_list vl, t_buf **buf, t_flags fl)
 	str = make_str_with_precision_for_llo(fl, k);
 	if (fl.dash && k != 0 && str[0] != '0')
 	{
-		s = ft_strnew(ft_strlen(str) + ft_strlen("0") + 2);
-		s = ft_cactostr("0", str);
+		s = ft_catstr("0", str);
+		if (fl.precision != -1)
+		{
+			fl.zero = 0;
+			fl.precision = -1;
+		}
+		free(str);
+		str = NULL;
+		str = s;
+		s_flag(s, buf, fl);
+		free(str);
+		return ;
 	}
 	n = fl.width - (int)ft_strlen(str);
 	if (n > 0 && !fl.minus)
@@ -168,6 +189,7 @@ void	o_flag_ll(va_list vl, t_buf **buf, t_flags fl)
 	put_str_to_buf(buf, str);
 	if (n > 0 && fl.minus)
 		put_some_chars_to_buf(buf, ' ', n);
+	free(str);
 }
 
 void	o_flag_h(va_list vl, t_buf **buf, t_flags fl)
@@ -185,8 +207,18 @@ void	o_flag_h(va_list vl, t_buf **buf, t_flags fl)
 	str = make_str_with_precision_for_ho(fl, k);
 	if (fl.dash && k != 0 && str[0] != '0')
 	{
-		s = ft_strnew(ft_strlen(str) + ft_strlen("0") + 2);
-		s = ft_cactostr("0", str);
+		s = ft_catstr("0", str);
+		if (fl.precision != -1)
+		{
+			fl.zero = 0;
+			fl.precision = -1;
+		}
+		free(str);
+		str = NULL;
+		str = s;
+		s_flag(s, buf, fl);
+		free(str);
+		return ;
 	}
 	n = fl.width - (int)ft_strlen(str);
 	if (n > 0 && !fl.minus)
@@ -199,6 +231,7 @@ void	o_flag_h(va_list vl, t_buf **buf, t_flags fl)
 	put_str_to_buf(buf, str);
 	if (n > 0 && fl.minus)
 		put_some_chars_to_buf(buf, ' ', n);
+	free(str);
 }
 
 void	o_flag_hh(va_list vl, t_buf **buf, t_flags fl)
@@ -216,8 +249,18 @@ void	o_flag_hh(va_list vl, t_buf **buf, t_flags fl)
 	str = make_str_with_precision_for_hho(fl, k);
 	if (fl.dash && k != 0 && str[0] != '0')
 	{
-		s = ft_strnew(ft_strlen(str) + ft_strlen("0") + 2);
-		s = ft_cactostr("0", str);
+		s = ft_catstr("0", str);
+		if (fl.precision != -1)
+		{
+			fl.zero = 0;
+			fl.precision = -1;
+		}
+		free(str);
+		str = NULL;
+		str = s;
+		s_flag(s, buf, fl);
+		free(str);
+		return ;
 	}
 	n = fl.width - (int)ft_strlen(str);
 	if (n > 0 && !fl.minus)
@@ -230,4 +273,5 @@ void	o_flag_hh(va_list vl, t_buf **buf, t_flags fl)
 	put_str_to_buf(buf, str);
 	if (n > 0 && fl.minus)
 		put_some_chars_to_buf(buf, ' ', n);
+	free(str);
 }
