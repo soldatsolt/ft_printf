@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/vbharbo/Documents/42/Prinyf/./libft/libft.h
+/Users/vbharbo/Documents/42/Prinyf/libft/libft.h
 stdlib.h
 -
 unistd.h
@@ -26,11 +26,11 @@ unistd.h
 stdarg.h
 -
 
-/Users/vbharbo/Documents/42/Prinyf/ft_printf.h
-./libft/libft.h
-/Users/vbharbo/Documents/42/Prinyf/./libft/libft.h
+/Users/vbharbo/Documents/42/Prinyf/srcs/ft_printf.h
+../libft/libft.h
+/Users/vbharbo/Documents/42/Prinyf/libft/libft.h
 
-/Users/vbharbo/Documents/42/Prinyf/main.c
+/Users/vbharbo/Documents/42/Prinyf/srcs/main.c
 ft_printf.h
-/Users/vbharbo/Documents/42/Prinyf/ft_printf.h
+/Users/vbharbo/Documents/42/Prinyf/srcs/ft_printf.h
 

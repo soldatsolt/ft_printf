@@ -44,8 +44,8 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/vbharbo/Documents/42/Prinyf/."/>
 					<Add directory="/Users/vbharbo/Documents/42/Prinyf/libft"/>
+					<Add directory="/Users/vbharbo/Documents/42/Prinyf/srcs"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -67,8 +67,8 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/vbharbo/Documents/42/Prinyf/."/>
 					<Add directory="/Users/vbharbo/Documents/42/Prinyf/libft"/>
+					<Add directory="/Users/vbharbo/Documents/42/Prinyf/srcs"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -84,30 +84,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/all_flagsspec.c">
-			<Option target="Prinyf"/>
-		</Unit>
-		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/buffer.c">
-			<Option target="Prinyf"/>
-		</Unit>
-		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/double_float.c">
-			<Option target="Prinyf"/>
-		</Unit>
-		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/ft_printf.h">
-			<Option target="Prinyf"/>
-		</Unit>
-		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/l_ll_h_hh_for_i.c">
-			<Option target="Prinyf"/>
-		</Unit>
-		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/l_ll_h_hh_for_o.c">
-			<Option target="Prinyf"/>
-		</Unit>
-		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/l_ll_h_hh_for_u.c">
-			<Option target="Prinyf"/>
-		</Unit>
-		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/l_ll_h_hh_for_x.c">
-			<Option target="Prinyf"/>
-		</Unit>
 		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/libft/ft_atoi.c">
 			<Option target="Prinyf"/>
 		</Unit>
@@ -375,28 +351,61 @@
 		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/libft/libft.h">
 			<Option target="Prinyf"/>
 		</Unit>
-		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/long_double.c">
+		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/srcs/all_flagsspec.c">
 			<Option target="Prinyf"/>
 		</Unit>
-		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/main.c">
+		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/srcs/buffer.c">
 			<Option target="Prinyf"/>
 		</Unit>
-		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/make_ox_for_any.c">
+		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/srcs/double.c">
 			<Option target="Prinyf"/>
 		</Unit>
-		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/make_str_with_precision_for_any.c">
+		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/srcs/double_float.c">
 			<Option target="Prinyf"/>
 		</Unit>
-		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/parsing_and_flags.c">
+		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/srcs/ft_printf.h">
 			<Option target="Prinyf"/>
 		</Unit>
-		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/preparce_for_flags.c">
+		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/srcs/l_ll_h_hh_for_i.c">
 			<Option target="Prinyf"/>
 		</Unit>
-		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/print_float.c">
+		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/srcs/l_ll_h_hh_for_o.c">
 			<Option target="Prinyf"/>
 		</Unit>
-		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/str_calc.c">
+		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/srcs/l_ll_h_hh_for_u.c">
+			<Option target="Prinyf"/>
+		</Unit>
+		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/srcs/l_ll_h_hh_for_x.c">
+			<Option target="Prinyf"/>
+		</Unit>
+		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/srcs/long_double.c">
+			<Option target="Prinyf"/>
+		</Unit>
+		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/srcs/main.c">
+			<Option target="Prinyf"/>
+		</Unit>
+		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/srcs/make_ox_for_any.c">
+			<Option target="Prinyf"/>
+		</Unit>
+		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/srcs/make_str_with_precision_for_any.c">
+			<Option target="Prinyf"/>
+		</Unit>
+		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/srcs/none_infinity.c">
+			<Option target="Prinyf"/>
+		</Unit>
+		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/srcs/parsing_and_flags.c">
+			<Option target="Prinyf"/>
+		</Unit>
+		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/srcs/preparce_for_flags.c">
+			<Option target="Prinyf"/>
+		</Unit>
+		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/srcs/print_float.c">
+			<Option target="Prinyf"/>
+		</Unit>
+		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/srcs/str_calc.c">
+			<Option target="Prinyf"/>
+		</Unit>
+		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/srcs/str_calc_extra.c">
 			<Option target="Prinyf"/>
 		</Unit>
 		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/stringmath.c">

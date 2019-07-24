@@ -123,195 +123,6 @@ Prinyf/fast:
 	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/build
 .PHONY : Prinyf/fast
 
-all_flagsspec.o: all_flagsspec.c.o
-
-.PHONY : all_flagsspec.o
-
-# target to build an object file
-all_flagsspec.c.o:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/all_flagsspec.c.o
-.PHONY : all_flagsspec.c.o
-
-all_flagsspec.i: all_flagsspec.c.i
-
-.PHONY : all_flagsspec.i
-
-# target to preprocess a source file
-all_flagsspec.c.i:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/all_flagsspec.c.i
-.PHONY : all_flagsspec.c.i
-
-all_flagsspec.s: all_flagsspec.c.s
-
-.PHONY : all_flagsspec.s
-
-# target to generate assembly for a file
-all_flagsspec.c.s:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/all_flagsspec.c.s
-.PHONY : all_flagsspec.c.s
-
-buffer.o: buffer.c.o
-
-.PHONY : buffer.o
-
-# target to build an object file
-buffer.c.o:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/buffer.c.o
-.PHONY : buffer.c.o
-
-buffer.i: buffer.c.i
-
-.PHONY : buffer.i
-
-# target to preprocess a source file
-buffer.c.i:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/buffer.c.i
-.PHONY : buffer.c.i
-
-buffer.s: buffer.c.s
-
-.PHONY : buffer.s
-
-# target to generate assembly for a file
-buffer.c.s:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/buffer.c.s
-.PHONY : buffer.c.s
-
-double_float.o: double_float.c.o
-
-.PHONY : double_float.o
-
-# target to build an object file
-double_float.c.o:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/double_float.c.o
-.PHONY : double_float.c.o
-
-double_float.i: double_float.c.i
-
-.PHONY : double_float.i
-
-# target to preprocess a source file
-double_float.c.i:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/double_float.c.i
-.PHONY : double_float.c.i
-
-double_float.s: double_float.c.s
-
-.PHONY : double_float.s
-
-# target to generate assembly for a file
-double_float.c.s:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/double_float.c.s
-.PHONY : double_float.c.s
-
-l_ll_h_hh_for_i.o: l_ll_h_hh_for_i.c.o
-
-.PHONY : l_ll_h_hh_for_i.o
-
-# target to build an object file
-l_ll_h_hh_for_i.c.o:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/l_ll_h_hh_for_i.c.o
-.PHONY : l_ll_h_hh_for_i.c.o
-
-l_ll_h_hh_for_i.i: l_ll_h_hh_for_i.c.i
-
-.PHONY : l_ll_h_hh_for_i.i
-
-# target to preprocess a source file
-l_ll_h_hh_for_i.c.i:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/l_ll_h_hh_for_i.c.i
-.PHONY : l_ll_h_hh_for_i.c.i
-
-l_ll_h_hh_for_i.s: l_ll_h_hh_for_i.c.s
-
-.PHONY : l_ll_h_hh_for_i.s
-
-# target to generate assembly for a file
-l_ll_h_hh_for_i.c.s:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/l_ll_h_hh_for_i.c.s
-.PHONY : l_ll_h_hh_for_i.c.s
-
-l_ll_h_hh_for_o.o: l_ll_h_hh_for_o.c.o
-
-.PHONY : l_ll_h_hh_for_o.o
-
-# target to build an object file
-l_ll_h_hh_for_o.c.o:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/l_ll_h_hh_for_o.c.o
-.PHONY : l_ll_h_hh_for_o.c.o
-
-l_ll_h_hh_for_o.i: l_ll_h_hh_for_o.c.i
-
-.PHONY : l_ll_h_hh_for_o.i
-
-# target to preprocess a source file
-l_ll_h_hh_for_o.c.i:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/l_ll_h_hh_for_o.c.i
-.PHONY : l_ll_h_hh_for_o.c.i
-
-l_ll_h_hh_for_o.s: l_ll_h_hh_for_o.c.s
-
-.PHONY : l_ll_h_hh_for_o.s
-
-# target to generate assembly for a file
-l_ll_h_hh_for_o.c.s:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/l_ll_h_hh_for_o.c.s
-.PHONY : l_ll_h_hh_for_o.c.s
-
-l_ll_h_hh_for_u.o: l_ll_h_hh_for_u.c.o
-
-.PHONY : l_ll_h_hh_for_u.o
-
-# target to build an object file
-l_ll_h_hh_for_u.c.o:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/l_ll_h_hh_for_u.c.o
-.PHONY : l_ll_h_hh_for_u.c.o
-
-l_ll_h_hh_for_u.i: l_ll_h_hh_for_u.c.i
-
-.PHONY : l_ll_h_hh_for_u.i
-
-# target to preprocess a source file
-l_ll_h_hh_for_u.c.i:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/l_ll_h_hh_for_u.c.i
-.PHONY : l_ll_h_hh_for_u.c.i
-
-l_ll_h_hh_for_u.s: l_ll_h_hh_for_u.c.s
-
-.PHONY : l_ll_h_hh_for_u.s
-
-# target to generate assembly for a file
-l_ll_h_hh_for_u.c.s:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/l_ll_h_hh_for_u.c.s
-.PHONY : l_ll_h_hh_for_u.c.s
-
-l_ll_h_hh_for_x.o: l_ll_h_hh_for_x.c.o
-
-.PHONY : l_ll_h_hh_for_x.o
-
-# target to build an object file
-l_ll_h_hh_for_x.c.o:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/l_ll_h_hh_for_x.c.o
-.PHONY : l_ll_h_hh_for_x.c.o
-
-l_ll_h_hh_for_x.i: l_ll_h_hh_for_x.c.i
-
-.PHONY : l_ll_h_hh_for_x.i
-
-# target to preprocess a source file
-l_ll_h_hh_for_x.c.i:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/l_ll_h_hh_for_x.c.i
-.PHONY : l_ll_h_hh_for_x.c.i
-
-l_ll_h_hh_for_x.s: l_ll_h_hh_for_x.c.s
-
-.PHONY : l_ll_h_hh_for_x.s
-
-# target to generate assembly for a file
-l_ll_h_hh_for_x.c.s:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/l_ll_h_hh_for_x.c.s
-.PHONY : l_ll_h_hh_for_x.c.s
-
 libft/ft_atoi.o: libft/ft_atoi.c.o
 
 .PHONY : libft/ft_atoi.o
@@ -2688,221 +2499,491 @@ libft/get_next_line.c.s:
 	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/libft/get_next_line.c.s
 .PHONY : libft/get_next_line.c.s
 
-long_double.o: long_double.c.o
+srcs/all_flagsspec.o: srcs/all_flagsspec.c.o
 
-.PHONY : long_double.o
-
-# target to build an object file
-long_double.c.o:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/long_double.c.o
-.PHONY : long_double.c.o
-
-long_double.i: long_double.c.i
-
-.PHONY : long_double.i
-
-# target to preprocess a source file
-long_double.c.i:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/long_double.c.i
-.PHONY : long_double.c.i
-
-long_double.s: long_double.c.s
-
-.PHONY : long_double.s
-
-# target to generate assembly for a file
-long_double.c.s:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/long_double.c.s
-.PHONY : long_double.c.s
-
-main.o: main.c.o
-
-.PHONY : main.o
+.PHONY : srcs/all_flagsspec.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/main.c.o
-.PHONY : main.c.o
+srcs/all_flagsspec.c.o:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/all_flagsspec.c.o
+.PHONY : srcs/all_flagsspec.c.o
 
-main.i: main.c.i
+srcs/all_flagsspec.i: srcs/all_flagsspec.c.i
 
-.PHONY : main.i
+.PHONY : srcs/all_flagsspec.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/main.c.i
-.PHONY : main.c.i
+srcs/all_flagsspec.c.i:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/all_flagsspec.c.i
+.PHONY : srcs/all_flagsspec.c.i
 
-main.s: main.c.s
+srcs/all_flagsspec.s: srcs/all_flagsspec.c.s
 
-.PHONY : main.s
+.PHONY : srcs/all_flagsspec.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/main.c.s
-.PHONY : main.c.s
+srcs/all_flagsspec.c.s:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/all_flagsspec.c.s
+.PHONY : srcs/all_flagsspec.c.s
 
-make_ox_for_any.o: make_ox_for_any.c.o
+srcs/buffer.o: srcs/buffer.c.o
 
-.PHONY : make_ox_for_any.o
+.PHONY : srcs/buffer.o
 
 # target to build an object file
-make_ox_for_any.c.o:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/make_ox_for_any.c.o
-.PHONY : make_ox_for_any.c.o
+srcs/buffer.c.o:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/buffer.c.o
+.PHONY : srcs/buffer.c.o
 
-make_ox_for_any.i: make_ox_for_any.c.i
+srcs/buffer.i: srcs/buffer.c.i
 
-.PHONY : make_ox_for_any.i
+.PHONY : srcs/buffer.i
 
 # target to preprocess a source file
-make_ox_for_any.c.i:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/make_ox_for_any.c.i
-.PHONY : make_ox_for_any.c.i
+srcs/buffer.c.i:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/buffer.c.i
+.PHONY : srcs/buffer.c.i
 
-make_ox_for_any.s: make_ox_for_any.c.s
+srcs/buffer.s: srcs/buffer.c.s
 
-.PHONY : make_ox_for_any.s
+.PHONY : srcs/buffer.s
 
 # target to generate assembly for a file
-make_ox_for_any.c.s:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/make_ox_for_any.c.s
-.PHONY : make_ox_for_any.c.s
+srcs/buffer.c.s:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/buffer.c.s
+.PHONY : srcs/buffer.c.s
 
-make_str_with_precision_for_any.o: make_str_with_precision_for_any.c.o
+srcs/double.o: srcs/double.c.o
 
-.PHONY : make_str_with_precision_for_any.o
+.PHONY : srcs/double.o
 
 # target to build an object file
-make_str_with_precision_for_any.c.o:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/make_str_with_precision_for_any.c.o
-.PHONY : make_str_with_precision_for_any.c.o
+srcs/double.c.o:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/double.c.o
+.PHONY : srcs/double.c.o
 
-make_str_with_precision_for_any.i: make_str_with_precision_for_any.c.i
+srcs/double.i: srcs/double.c.i
 
-.PHONY : make_str_with_precision_for_any.i
+.PHONY : srcs/double.i
 
 # target to preprocess a source file
-make_str_with_precision_for_any.c.i:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/make_str_with_precision_for_any.c.i
-.PHONY : make_str_with_precision_for_any.c.i
+srcs/double.c.i:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/double.c.i
+.PHONY : srcs/double.c.i
 
-make_str_with_precision_for_any.s: make_str_with_precision_for_any.c.s
+srcs/double.s: srcs/double.c.s
 
-.PHONY : make_str_with_precision_for_any.s
+.PHONY : srcs/double.s
 
 # target to generate assembly for a file
-make_str_with_precision_for_any.c.s:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/make_str_with_precision_for_any.c.s
-.PHONY : make_str_with_precision_for_any.c.s
+srcs/double.c.s:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/double.c.s
+.PHONY : srcs/double.c.s
 
-parsing_and_flags.o: parsing_and_flags.c.o
+srcs/double_float.o: srcs/double_float.c.o
 
-.PHONY : parsing_and_flags.o
+.PHONY : srcs/double_float.o
 
 # target to build an object file
-parsing_and_flags.c.o:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/parsing_and_flags.c.o
-.PHONY : parsing_and_flags.c.o
+srcs/double_float.c.o:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/double_float.c.o
+.PHONY : srcs/double_float.c.o
 
-parsing_and_flags.i: parsing_and_flags.c.i
+srcs/double_float.i: srcs/double_float.c.i
 
-.PHONY : parsing_and_flags.i
+.PHONY : srcs/double_float.i
 
 # target to preprocess a source file
-parsing_and_flags.c.i:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/parsing_and_flags.c.i
-.PHONY : parsing_and_flags.c.i
+srcs/double_float.c.i:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/double_float.c.i
+.PHONY : srcs/double_float.c.i
 
-parsing_and_flags.s: parsing_and_flags.c.s
+srcs/double_float.s: srcs/double_float.c.s
 
-.PHONY : parsing_and_flags.s
+.PHONY : srcs/double_float.s
 
 # target to generate assembly for a file
-parsing_and_flags.c.s:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/parsing_and_flags.c.s
-.PHONY : parsing_and_flags.c.s
+srcs/double_float.c.s:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/double_float.c.s
+.PHONY : srcs/double_float.c.s
 
-preparce_for_flags.o: preparce_for_flags.c.o
+srcs/l_ll_h_hh_for_i.o: srcs/l_ll_h_hh_for_i.c.o
 
-.PHONY : preparce_for_flags.o
+.PHONY : srcs/l_ll_h_hh_for_i.o
 
 # target to build an object file
-preparce_for_flags.c.o:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/preparce_for_flags.c.o
-.PHONY : preparce_for_flags.c.o
+srcs/l_ll_h_hh_for_i.c.o:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_i.c.o
+.PHONY : srcs/l_ll_h_hh_for_i.c.o
 
-preparce_for_flags.i: preparce_for_flags.c.i
+srcs/l_ll_h_hh_for_i.i: srcs/l_ll_h_hh_for_i.c.i
 
-.PHONY : preparce_for_flags.i
+.PHONY : srcs/l_ll_h_hh_for_i.i
 
 # target to preprocess a source file
-preparce_for_flags.c.i:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/preparce_for_flags.c.i
-.PHONY : preparce_for_flags.c.i
+srcs/l_ll_h_hh_for_i.c.i:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_i.c.i
+.PHONY : srcs/l_ll_h_hh_for_i.c.i
 
-preparce_for_flags.s: preparce_for_flags.c.s
+srcs/l_ll_h_hh_for_i.s: srcs/l_ll_h_hh_for_i.c.s
 
-.PHONY : preparce_for_flags.s
+.PHONY : srcs/l_ll_h_hh_for_i.s
 
 # target to generate assembly for a file
-preparce_for_flags.c.s:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/preparce_for_flags.c.s
-.PHONY : preparce_for_flags.c.s
+srcs/l_ll_h_hh_for_i.c.s:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_i.c.s
+.PHONY : srcs/l_ll_h_hh_for_i.c.s
 
-print_float.o: print_float.c.o
+srcs/l_ll_h_hh_for_o.o: srcs/l_ll_h_hh_for_o.c.o
 
-.PHONY : print_float.o
+.PHONY : srcs/l_ll_h_hh_for_o.o
 
 # target to build an object file
-print_float.c.o:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/print_float.c.o
-.PHONY : print_float.c.o
+srcs/l_ll_h_hh_for_o.c.o:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_o.c.o
+.PHONY : srcs/l_ll_h_hh_for_o.c.o
 
-print_float.i: print_float.c.i
+srcs/l_ll_h_hh_for_o.i: srcs/l_ll_h_hh_for_o.c.i
 
-.PHONY : print_float.i
+.PHONY : srcs/l_ll_h_hh_for_o.i
 
 # target to preprocess a source file
-print_float.c.i:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/print_float.c.i
-.PHONY : print_float.c.i
+srcs/l_ll_h_hh_for_o.c.i:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_o.c.i
+.PHONY : srcs/l_ll_h_hh_for_o.c.i
 
-print_float.s: print_float.c.s
+srcs/l_ll_h_hh_for_o.s: srcs/l_ll_h_hh_for_o.c.s
 
-.PHONY : print_float.s
+.PHONY : srcs/l_ll_h_hh_for_o.s
 
 # target to generate assembly for a file
-print_float.c.s:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/print_float.c.s
-.PHONY : print_float.c.s
+srcs/l_ll_h_hh_for_o.c.s:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_o.c.s
+.PHONY : srcs/l_ll_h_hh_for_o.c.s
 
-str_calc.o: str_calc.c.o
+srcs/l_ll_h_hh_for_u.o: srcs/l_ll_h_hh_for_u.c.o
 
-.PHONY : str_calc.o
+.PHONY : srcs/l_ll_h_hh_for_u.o
 
 # target to build an object file
-str_calc.c.o:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/str_calc.c.o
-.PHONY : str_calc.c.o
+srcs/l_ll_h_hh_for_u.c.o:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_u.c.o
+.PHONY : srcs/l_ll_h_hh_for_u.c.o
 
-str_calc.i: str_calc.c.i
+srcs/l_ll_h_hh_for_u.i: srcs/l_ll_h_hh_for_u.c.i
 
-.PHONY : str_calc.i
+.PHONY : srcs/l_ll_h_hh_for_u.i
 
 # target to preprocess a source file
-str_calc.c.i:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/str_calc.c.i
-.PHONY : str_calc.c.i
+srcs/l_ll_h_hh_for_u.c.i:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_u.c.i
+.PHONY : srcs/l_ll_h_hh_for_u.c.i
 
-str_calc.s: str_calc.c.s
+srcs/l_ll_h_hh_for_u.s: srcs/l_ll_h_hh_for_u.c.s
 
-.PHONY : str_calc.s
+.PHONY : srcs/l_ll_h_hh_for_u.s
 
 # target to generate assembly for a file
-str_calc.c.s:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/str_calc.c.s
-.PHONY : str_calc.c.s
+srcs/l_ll_h_hh_for_u.c.s:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_u.c.s
+.PHONY : srcs/l_ll_h_hh_for_u.c.s
+
+srcs/l_ll_h_hh_for_x.o: srcs/l_ll_h_hh_for_x.c.o
+
+.PHONY : srcs/l_ll_h_hh_for_x.o
+
+# target to build an object file
+srcs/l_ll_h_hh_for_x.c.o:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_x.c.o
+.PHONY : srcs/l_ll_h_hh_for_x.c.o
+
+srcs/l_ll_h_hh_for_x.i: srcs/l_ll_h_hh_for_x.c.i
+
+.PHONY : srcs/l_ll_h_hh_for_x.i
+
+# target to preprocess a source file
+srcs/l_ll_h_hh_for_x.c.i:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_x.c.i
+.PHONY : srcs/l_ll_h_hh_for_x.c.i
+
+srcs/l_ll_h_hh_for_x.s: srcs/l_ll_h_hh_for_x.c.s
+
+.PHONY : srcs/l_ll_h_hh_for_x.s
+
+# target to generate assembly for a file
+srcs/l_ll_h_hh_for_x.c.s:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_x.c.s
+.PHONY : srcs/l_ll_h_hh_for_x.c.s
+
+srcs/long_double.o: srcs/long_double.c.o
+
+.PHONY : srcs/long_double.o
+
+# target to build an object file
+srcs/long_double.c.o:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/long_double.c.o
+.PHONY : srcs/long_double.c.o
+
+srcs/long_double.i: srcs/long_double.c.i
+
+.PHONY : srcs/long_double.i
+
+# target to preprocess a source file
+srcs/long_double.c.i:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/long_double.c.i
+.PHONY : srcs/long_double.c.i
+
+srcs/long_double.s: srcs/long_double.c.s
+
+.PHONY : srcs/long_double.s
+
+# target to generate assembly for a file
+srcs/long_double.c.s:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/long_double.c.s
+.PHONY : srcs/long_double.c.s
+
+srcs/main.o: srcs/main.c.o
+
+.PHONY : srcs/main.o
+
+# target to build an object file
+srcs/main.c.o:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/main.c.o
+.PHONY : srcs/main.c.o
+
+srcs/main.i: srcs/main.c.i
+
+.PHONY : srcs/main.i
+
+# target to preprocess a source file
+srcs/main.c.i:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/main.c.i
+.PHONY : srcs/main.c.i
+
+srcs/main.s: srcs/main.c.s
+
+.PHONY : srcs/main.s
+
+# target to generate assembly for a file
+srcs/main.c.s:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/main.c.s
+.PHONY : srcs/main.c.s
+
+srcs/make_ox_for_any.o: srcs/make_ox_for_any.c.o
+
+.PHONY : srcs/make_ox_for_any.o
+
+# target to build an object file
+srcs/make_ox_for_any.c.o:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/make_ox_for_any.c.o
+.PHONY : srcs/make_ox_for_any.c.o
+
+srcs/make_ox_for_any.i: srcs/make_ox_for_any.c.i
+
+.PHONY : srcs/make_ox_for_any.i
+
+# target to preprocess a source file
+srcs/make_ox_for_any.c.i:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/make_ox_for_any.c.i
+.PHONY : srcs/make_ox_for_any.c.i
+
+srcs/make_ox_for_any.s: srcs/make_ox_for_any.c.s
+
+.PHONY : srcs/make_ox_for_any.s
+
+# target to generate assembly for a file
+srcs/make_ox_for_any.c.s:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/make_ox_for_any.c.s
+.PHONY : srcs/make_ox_for_any.c.s
+
+srcs/make_str_with_precision_for_any.o: srcs/make_str_with_precision_for_any.c.o
+
+.PHONY : srcs/make_str_with_precision_for_any.o
+
+# target to build an object file
+srcs/make_str_with_precision_for_any.c.o:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/make_str_with_precision_for_any.c.o
+.PHONY : srcs/make_str_with_precision_for_any.c.o
+
+srcs/make_str_with_precision_for_any.i: srcs/make_str_with_precision_for_any.c.i
+
+.PHONY : srcs/make_str_with_precision_for_any.i
+
+# target to preprocess a source file
+srcs/make_str_with_precision_for_any.c.i:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/make_str_with_precision_for_any.c.i
+.PHONY : srcs/make_str_with_precision_for_any.c.i
+
+srcs/make_str_with_precision_for_any.s: srcs/make_str_with_precision_for_any.c.s
+
+.PHONY : srcs/make_str_with_precision_for_any.s
+
+# target to generate assembly for a file
+srcs/make_str_with_precision_for_any.c.s:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/make_str_with_precision_for_any.c.s
+.PHONY : srcs/make_str_with_precision_for_any.c.s
+
+srcs/none_infinity.o: srcs/none_infinity.c.o
+
+.PHONY : srcs/none_infinity.o
+
+# target to build an object file
+srcs/none_infinity.c.o:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/none_infinity.c.o
+.PHONY : srcs/none_infinity.c.o
+
+srcs/none_infinity.i: srcs/none_infinity.c.i
+
+.PHONY : srcs/none_infinity.i
+
+# target to preprocess a source file
+srcs/none_infinity.c.i:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/none_infinity.c.i
+.PHONY : srcs/none_infinity.c.i
+
+srcs/none_infinity.s: srcs/none_infinity.c.s
+
+.PHONY : srcs/none_infinity.s
+
+# target to generate assembly for a file
+srcs/none_infinity.c.s:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/none_infinity.c.s
+.PHONY : srcs/none_infinity.c.s
+
+srcs/parsing_and_flags.o: srcs/parsing_and_flags.c.o
+
+.PHONY : srcs/parsing_and_flags.o
+
+# target to build an object file
+srcs/parsing_and_flags.c.o:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/parsing_and_flags.c.o
+.PHONY : srcs/parsing_and_flags.c.o
+
+srcs/parsing_and_flags.i: srcs/parsing_and_flags.c.i
+
+.PHONY : srcs/parsing_and_flags.i
+
+# target to preprocess a source file
+srcs/parsing_and_flags.c.i:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/parsing_and_flags.c.i
+.PHONY : srcs/parsing_and_flags.c.i
+
+srcs/parsing_and_flags.s: srcs/parsing_and_flags.c.s
+
+.PHONY : srcs/parsing_and_flags.s
+
+# target to generate assembly for a file
+srcs/parsing_and_flags.c.s:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/parsing_and_flags.c.s
+.PHONY : srcs/parsing_and_flags.c.s
+
+srcs/preparce_for_flags.o: srcs/preparce_for_flags.c.o
+
+.PHONY : srcs/preparce_for_flags.o
+
+# target to build an object file
+srcs/preparce_for_flags.c.o:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/preparce_for_flags.c.o
+.PHONY : srcs/preparce_for_flags.c.o
+
+srcs/preparce_for_flags.i: srcs/preparce_for_flags.c.i
+
+.PHONY : srcs/preparce_for_flags.i
+
+# target to preprocess a source file
+srcs/preparce_for_flags.c.i:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/preparce_for_flags.c.i
+.PHONY : srcs/preparce_for_flags.c.i
+
+srcs/preparce_for_flags.s: srcs/preparce_for_flags.c.s
+
+.PHONY : srcs/preparce_for_flags.s
+
+# target to generate assembly for a file
+srcs/preparce_for_flags.c.s:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/preparce_for_flags.c.s
+.PHONY : srcs/preparce_for_flags.c.s
+
+srcs/print_float.o: srcs/print_float.c.o
+
+.PHONY : srcs/print_float.o
+
+# target to build an object file
+srcs/print_float.c.o:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/print_float.c.o
+.PHONY : srcs/print_float.c.o
+
+srcs/print_float.i: srcs/print_float.c.i
+
+.PHONY : srcs/print_float.i
+
+# target to preprocess a source file
+srcs/print_float.c.i:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/print_float.c.i
+.PHONY : srcs/print_float.c.i
+
+srcs/print_float.s: srcs/print_float.c.s
+
+.PHONY : srcs/print_float.s
+
+# target to generate assembly for a file
+srcs/print_float.c.s:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/print_float.c.s
+.PHONY : srcs/print_float.c.s
+
+srcs/str_calc.o: srcs/str_calc.c.o
+
+.PHONY : srcs/str_calc.o
+
+# target to build an object file
+srcs/str_calc.c.o:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/str_calc.c.o
+.PHONY : srcs/str_calc.c.o
+
+srcs/str_calc.i: srcs/str_calc.c.i
+
+.PHONY : srcs/str_calc.i
+
+# target to preprocess a source file
+srcs/str_calc.c.i:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/str_calc.c.i
+.PHONY : srcs/str_calc.c.i
+
+srcs/str_calc.s: srcs/str_calc.c.s
+
+.PHONY : srcs/str_calc.s
+
+# target to generate assembly for a file
+srcs/str_calc.c.s:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/str_calc.c.s
+.PHONY : srcs/str_calc.c.s
+
+srcs/str_calc_extra.o: srcs/str_calc_extra.c.o
+
+.PHONY : srcs/str_calc_extra.o
+
+# target to build an object file
+srcs/str_calc_extra.c.o:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/str_calc_extra.c.o
+.PHONY : srcs/str_calc_extra.c.o
+
+srcs/str_calc_extra.i: srcs/str_calc_extra.c.i
+
+.PHONY : srcs/str_calc_extra.i
+
+# target to preprocess a source file
+srcs/str_calc_extra.c.i:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/str_calc_extra.c.i
+.PHONY : srcs/str_calc_extra.c.i
+
+srcs/str_calc_extra.s: srcs/str_calc_extra.c.s
+
+.PHONY : srcs/str_calc_extra.s
+
+# target to generate assembly for a file
+srcs/str_calc_extra.c.s:
+	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/str_calc_extra.c.s
+.PHONY : srcs/str_calc_extra.c.s
 
 stringmath.o: stringmath.c.o
 
@@ -2940,27 +3021,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Prinyf"
-	@echo "... all_flagsspec.o"
-	@echo "... all_flagsspec.i"
-	@echo "... all_flagsspec.s"
-	@echo "... buffer.o"
-	@echo "... buffer.i"
-	@echo "... buffer.s"
-	@echo "... double_float.o"
-	@echo "... double_float.i"
-	@echo "... double_float.s"
-	@echo "... l_ll_h_hh_for_i.o"
-	@echo "... l_ll_h_hh_for_i.i"
-	@echo "... l_ll_h_hh_for_i.s"
-	@echo "... l_ll_h_hh_for_o.o"
-	@echo "... l_ll_h_hh_for_o.i"
-	@echo "... l_ll_h_hh_for_o.s"
-	@echo "... l_ll_h_hh_for_u.o"
-	@echo "... l_ll_h_hh_for_u.i"
-	@echo "... l_ll_h_hh_for_u.s"
-	@echo "... l_ll_h_hh_for_x.o"
-	@echo "... l_ll_h_hh_for_x.i"
-	@echo "... l_ll_h_hh_for_x.s"
 	@echo "... libft/ft_atoi.o"
 	@echo "... libft/ft_atoi.i"
 	@echo "... libft/ft_atoi.s"
@@ -3225,30 +3285,60 @@ help:
 	@echo "... libft/get_next_line.o"
 	@echo "... libft/get_next_line.i"
 	@echo "... libft/get_next_line.s"
-	@echo "... long_double.o"
-	@echo "... long_double.i"
-	@echo "... long_double.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... make_ox_for_any.o"
-	@echo "... make_ox_for_any.i"
-	@echo "... make_ox_for_any.s"
-	@echo "... make_str_with_precision_for_any.o"
-	@echo "... make_str_with_precision_for_any.i"
-	@echo "... make_str_with_precision_for_any.s"
-	@echo "... parsing_and_flags.o"
-	@echo "... parsing_and_flags.i"
-	@echo "... parsing_and_flags.s"
-	@echo "... preparce_for_flags.o"
-	@echo "... preparce_for_flags.i"
-	@echo "... preparce_for_flags.s"
-	@echo "... print_float.o"
-	@echo "... print_float.i"
-	@echo "... print_float.s"
-	@echo "... str_calc.o"
-	@echo "... str_calc.i"
-	@echo "... str_calc.s"
+	@echo "... srcs/all_flagsspec.o"
+	@echo "... srcs/all_flagsspec.i"
+	@echo "... srcs/all_flagsspec.s"
+	@echo "... srcs/buffer.o"
+	@echo "... srcs/buffer.i"
+	@echo "... srcs/buffer.s"
+	@echo "... srcs/double.o"
+	@echo "... srcs/double.i"
+	@echo "... srcs/double.s"
+	@echo "... srcs/double_float.o"
+	@echo "... srcs/double_float.i"
+	@echo "... srcs/double_float.s"
+	@echo "... srcs/l_ll_h_hh_for_i.o"
+	@echo "... srcs/l_ll_h_hh_for_i.i"
+	@echo "... srcs/l_ll_h_hh_for_i.s"
+	@echo "... srcs/l_ll_h_hh_for_o.o"
+	@echo "... srcs/l_ll_h_hh_for_o.i"
+	@echo "... srcs/l_ll_h_hh_for_o.s"
+	@echo "... srcs/l_ll_h_hh_for_u.o"
+	@echo "... srcs/l_ll_h_hh_for_u.i"
+	@echo "... srcs/l_ll_h_hh_for_u.s"
+	@echo "... srcs/l_ll_h_hh_for_x.o"
+	@echo "... srcs/l_ll_h_hh_for_x.i"
+	@echo "... srcs/l_ll_h_hh_for_x.s"
+	@echo "... srcs/long_double.o"
+	@echo "... srcs/long_double.i"
+	@echo "... srcs/long_double.s"
+	@echo "... srcs/main.o"
+	@echo "... srcs/main.i"
+	@echo "... srcs/main.s"
+	@echo "... srcs/make_ox_for_any.o"
+	@echo "... srcs/make_ox_for_any.i"
+	@echo "... srcs/make_ox_for_any.s"
+	@echo "... srcs/make_str_with_precision_for_any.o"
+	@echo "... srcs/make_str_with_precision_for_any.i"
+	@echo "... srcs/make_str_with_precision_for_any.s"
+	@echo "... srcs/none_infinity.o"
+	@echo "... srcs/none_infinity.i"
+	@echo "... srcs/none_infinity.s"
+	@echo "... srcs/parsing_and_flags.o"
+	@echo "... srcs/parsing_and_flags.i"
+	@echo "... srcs/parsing_and_flags.s"
+	@echo "... srcs/preparce_for_flags.o"
+	@echo "... srcs/preparce_for_flags.i"
+	@echo "... srcs/preparce_for_flags.s"
+	@echo "... srcs/print_float.o"
+	@echo "... srcs/print_float.i"
+	@echo "... srcs/print_float.s"
+	@echo "... srcs/str_calc.o"
+	@echo "... srcs/str_calc.i"
+	@echo "... srcs/str_calc.s"
+	@echo "... srcs/str_calc_extra.o"
+	@echo "... srcs/str_calc_extra.i"
+	@echo "... srcs/str_calc_extra.s"
 	@echo "... stringmath.o"
 	@echo "... stringmath.i"
 	@echo "... stringmath.s"

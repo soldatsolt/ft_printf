@@ -55,11 +55,22 @@ int		ft_printf(const char *restrict format, ...)
 int		main(void)
 {
 	float f = 11.25111;
-	double w  = -0.2511111111111100000000000000;
+	double w;
 	long double lw = 1111111111111111111111111111111111111111111111111.251111111100000000000000;
-	printf   ("float -    %.100f\n", w);
-	ft_printf("ft_float - %.100f\n", w);
+	printf   ("float -    %.100f\n", f);
+	ft_printf("ft_float - %.100f\n", f);
 	printf   ("float -    %.100Lf\n",lw);
 	ft_printf("ft_float - %.100Lf\n", lw);
+	w = -0.0;
+	if (w == -0.0 && w == 0.0)
+		printf("\n\n\n\n\n\nhello\n\n\n\n\n");
+	f = (float) (0.0 / 0.0);
+	w = 0.0 / 0.0;
+	lw = 0.0 / 0.0;
+	if (f != f && w != w && lw != lw)
+	{
+		printf("% #10.40f\n", f);
+		ft_printf("% #10.40f\n", f);
+	}
 	return (0);
 }

@@ -4,13 +4,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/vbharbo/Documents/42/Prinyf/all_flagsspec.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/all_flagsspec.c.o"
-  "/Users/vbharbo/Documents/42/Prinyf/buffer.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/buffer.c.o"
-  "/Users/vbharbo/Documents/42/Prinyf/double_float.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/double_float.c.o"
-  "/Users/vbharbo/Documents/42/Prinyf/l_ll_h_hh_for_i.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/l_ll_h_hh_for_i.c.o"
-  "/Users/vbharbo/Documents/42/Prinyf/l_ll_h_hh_for_o.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/l_ll_h_hh_for_o.c.o"
-  "/Users/vbharbo/Documents/42/Prinyf/l_ll_h_hh_for_u.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/l_ll_h_hh_for_u.c.o"
-  "/Users/vbharbo/Documents/42/Prinyf/l_ll_h_hh_for_x.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/l_ll_h_hh_for_x.c.o"
   "/Users/vbharbo/Documents/42/Prinyf/libft/ft_atoi.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_atoi.c.o"
   "/Users/vbharbo/Documents/42/Prinyf/libft/ft_atoi_base.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_atoi_base.c.o"
   "/Users/vbharbo/Documents/42/Prinyf/libft/ft_bzero.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_bzero.c.o"
@@ -99,22 +92,32 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/vbharbo/Documents/42/Prinyf/libft/ft_utoa_l.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_utoa_l.c.o"
   "/Users/vbharbo/Documents/42/Prinyf/libft/ft_utoa_ll.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_utoa_ll.c.o"
   "/Users/vbharbo/Documents/42/Prinyf/libft/get_next_line.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/get_next_line.c.o"
-  "/Users/vbharbo/Documents/42/Prinyf/long_double.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/long_double.c.o"
-  "/Users/vbharbo/Documents/42/Prinyf/main.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/main.c.o"
-  "/Users/vbharbo/Documents/42/Prinyf/make_ox_for_any.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/make_ox_for_any.c.o"
-  "/Users/vbharbo/Documents/42/Prinyf/make_str_with_precision_for_any.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/make_str_with_precision_for_any.c.o"
-  "/Users/vbharbo/Documents/42/Prinyf/parsing_and_flags.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/parsing_and_flags.c.o"
-  "/Users/vbharbo/Documents/42/Prinyf/preparce_for_flags.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/preparce_for_flags.c.o"
-  "/Users/vbharbo/Documents/42/Prinyf/print_float.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/print_float.c.o"
-  "/Users/vbharbo/Documents/42/Prinyf/str_calc.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/str_calc.c.o"
+  "/Users/vbharbo/Documents/42/Prinyf/srcs/all_flagsspec.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/all_flagsspec.c.o"
+  "/Users/vbharbo/Documents/42/Prinyf/srcs/buffer.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/buffer.c.o"
+  "/Users/vbharbo/Documents/42/Prinyf/srcs/double.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/double.c.o"
+  "/Users/vbharbo/Documents/42/Prinyf/srcs/double_float.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/double_float.c.o"
+  "/Users/vbharbo/Documents/42/Prinyf/srcs/l_ll_h_hh_for_i.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_i.c.o"
+  "/Users/vbharbo/Documents/42/Prinyf/srcs/l_ll_h_hh_for_o.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_o.c.o"
+  "/Users/vbharbo/Documents/42/Prinyf/srcs/l_ll_h_hh_for_u.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_u.c.o"
+  "/Users/vbharbo/Documents/42/Prinyf/srcs/l_ll_h_hh_for_x.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_x.c.o"
+  "/Users/vbharbo/Documents/42/Prinyf/srcs/long_double.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/long_double.c.o"
+  "/Users/vbharbo/Documents/42/Prinyf/srcs/main.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/main.c.o"
+  "/Users/vbharbo/Documents/42/Prinyf/srcs/make_ox_for_any.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/make_ox_for_any.c.o"
+  "/Users/vbharbo/Documents/42/Prinyf/srcs/make_str_with_precision_for_any.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/make_str_with_precision_for_any.c.o"
+  "/Users/vbharbo/Documents/42/Prinyf/srcs/none_infinity.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/none_infinity.c.o"
+  "/Users/vbharbo/Documents/42/Prinyf/srcs/parsing_and_flags.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/parsing_and_flags.c.o"
+  "/Users/vbharbo/Documents/42/Prinyf/srcs/preparce_for_flags.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/preparce_for_flags.c.o"
+  "/Users/vbharbo/Documents/42/Prinyf/srcs/print_float.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/print_float.c.o"
+  "/Users/vbharbo/Documents/42/Prinyf/srcs/str_calc.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/str_calc.c.o"
+  "/Users/vbharbo/Documents/42/Prinyf/srcs/str_calc_extra.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/str_calc_extra.c.o"
   "/Users/vbharbo/Documents/42/Prinyf/stringmath.c" "/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles/Prinyf.dir/stringmath.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
-  "../."
   "../libft"
+  "../srcs"
   )
 
 # Targets to which this target links.

@@ -3,8 +3,8 @@ project(Prinyf C)
 
 set(CMAKE_C_STANDARD 11)
 
-include_directories(.)
 include_directories(libft)
+include_directories(srcs)
 
 add_executable(Prinyf
         libft/ft_atoi.c
@@ -96,20 +96,23 @@ add_executable(Prinyf
         libft/ft_utoa_ll.c
         libft/get_next_line.c
         libft/libft.h
-        all_flagsspec.c
-        buffer.c
-        double_float.c
-        ft_printf.h
-        l_ll_h_hh_for_i.c
-        l_ll_h_hh_for_o.c
-        l_ll_h_hh_for_u.c
-        l_ll_h_hh_for_x.c
-        long_double.c
-        main.c
-        make_ox_for_any.c
-        make_str_with_precision_for_any.c
-        parsing_and_flags.c
-        preparce_for_flags.c
-        print_float.c
-        str_calc.c
+        srcs/all_flagsspec.c
+        srcs/buffer.c
+        srcs/double.c
+        srcs/double_float.c
+        srcs/ft_printf.h
+        srcs/l_ll_h_hh_for_i.c
+        srcs/l_ll_h_hh_for_o.c
+        srcs/l_ll_h_hh_for_u.c
+        srcs/l_ll_h_hh_for_x.c
+        srcs/long_double.c
+        srcs/main.c
+        srcs/make_ox_for_any.c
+        srcs/make_str_with_precision_for_any.c
+        srcs/none_infinity.c
+        srcs/parsing_and_flags.c
+        srcs/preparce_for_flags.c
+        srcs/print_float.c
+        srcs/str_calc.c
+        srcs/str_calc_extra.c
         stringmath.c)

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "srcs/ft_printf.h"
 
 int		find_dot(char *s1, char *s2)
 {

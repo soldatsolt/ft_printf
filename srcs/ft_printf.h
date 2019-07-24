@@ -12,7 +12,7 @@
 
 #ifndef FT_PRINT_H
 # define FT_PRINT_H
-# include "./libft/libft.h"
+# include "../libft/libft.h"
 
 
 typedef struct	s_double
@@ -81,13 +81,13 @@ void	put_some_chars_to_buf(t_buf **buf, char c, int n);
 void	turbo_parser(va_list vl, t_buf **buf, const char *restrict *format);
 void	f_flag(va_list vl, t_buf **buf, t_flags fl);
 int		ft_double_in_str(t_double *dd, t_flags *fl);
-void 	double_flag(va_list vl, t_buf **buf, t_flags *fl);
+void 	double_flag(va_list vl, t_buf **buf, t_flags fl);
 void 	long_double_flag(va_list vl, t_buf **buf, t_flags *fl);
 void	ft_itoa_long_double(long double n, t_double *dd, t_flags *fl);
 void	double_minus(t_double *dd, t_buf **buf, t_flags *fl);
 void	double_just(t_double *dd, t_buf **buf, t_flags *fl);
 void	double_zero(t_double *dd, t_buf **buf, t_flags *fl);
-void	ft_itoa_double(double n, t_double *dd, t_flags *fl);
+int		ft_itoa_double(double n, t_double *dd, t_flags *fl);
 int		ft_len_exp_double(t_double *dd);
 void 	make_exp(t_double *dd);
 void	make_double_bits_str(t_double *dd);
@@ -139,5 +139,7 @@ void	pre_parce_for_o(va_list vl, t_buf **buf, t_flags fl);
 void	pre_parce_for_x(va_list vl, t_buf **buf, t_flags fl);
 void	pre_parce_for_xx(va_list vl, t_buf **buf, t_flags fl);
 char	*make_ox_for_X(char *ox, t_flags *fl, int l);
+void	ft_none(t_buf **buf, t_flags fl);
+void	ft_step_mantissa(char **man, t_double *dd);
 
 #endif

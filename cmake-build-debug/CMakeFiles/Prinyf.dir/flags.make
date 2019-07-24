@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu11
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/vbharbo/Documents/42/Prinyf/. -I/Users/vbharbo/Documents/42/Prinyf/libft 
+C_INCLUDES = -I/Users/vbharbo/Documents/42/Prinyf/libft -I/Users/vbharbo/Documents/42/Prinyf/srcs 
 
