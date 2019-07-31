@@ -21,13 +21,11 @@ void	s_flag(char *str, t_buf **buf, t_flags fl)
 		}
 		put_str_to_buf(buf, str);
 		if (n > 0 && fl.minus)
-		{
 			put_some_chars_to_buf(buf, ' ', n);
-		}
 		free(str);
 	}
 	else
-		s_flag("(null)", buf, fl); // тут тоже фришить нужно
+		s_flag("(null)", buf, fl);
 }
 
 void	p_flag(va_list vl, t_buf **buf, t_flags fl)
@@ -46,6 +44,11 @@ void	p_flag(va_list vl, t_buf **buf, t_flags fl)
 	free(str);
 	free(ox);
 	free(s);
+}
+
+void	i_flag1()
+{
+
 }
 
 void	i_flag(va_list vl, t_buf **buf, t_flags fl)
@@ -76,8 +79,8 @@ void	i_flag(va_list vl, t_buf **buf, t_flags fl)
                 put_some_chars_to_buf(buf, ' ', n);
         }
 		if (k < 0 && (int)ft_strlen(str) < fl.width)
-       		put_str_to_buf(buf, str + 1); // из-за +1 при отриц числе и флаге 0
-		else						// не выводится '-' TODO: mb mistake in if
+       		put_str_to_buf(buf, str + 1);
+		else
 			put_str_to_buf(buf, str);		
         if (n > 0 && fl.minus)
             put_some_chars_to_buf(buf, ' ', n);

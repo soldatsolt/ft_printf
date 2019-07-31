@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/22 05:42:56 by kmills           ###   ########.fr       */
+/*   Updated: 2019/07/31 19:44:07 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,23 +54,9 @@ int		ft_printf(const char *restrict format, ...)
 
 int		main(void)
 {
-	float f = 11.25111;
-	double w;
-	long double lw = 1111111111111111111111111111111111111111111111111.251111111100000000000000;
-	printf   ("float -    %.100f\n", f);
-	ft_printf("ft_float - %.100f\n", f);
-	printf   ("float -    %.100Lf\n",lw);
-	ft_printf("ft_float - %.100Lf\n", lw);
-	w = -0.0;
-	if (w == -0.0 && w == 0.0)
-		printf("\n\n\n\n\n\nhello\n\n\n\n\n");
-	f = (float) (0.0 / 0.0);
-	w = 0.0 / 0.0;
-	lw = 0.0 / 0.0;
-	if (f != f && w != w && lw != lw)
-	{
-		printf("% #10.40f\n", f);
-		ft_printf("% #10.40f\n", f);
-	}
+	printf("+++!%+f!+++\n", -0.0);
+	ft_printf("|||!%+f!|||\n", -0.0);
+	char c;
+	c = 's';
 	return (0);
 }
