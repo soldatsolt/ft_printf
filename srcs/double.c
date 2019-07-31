@@ -78,15 +78,28 @@ int		ft_itoa_double(double n, t_double *dd, t_flags *fl)
 	return (0);
 }
 
+void	double_just_zero(t_buf **buf, t_flags fl)
+{
+	put_str_to_buf(buf, "0.0"); // ВОТ ЗДЕСЬ ТЕБЕ ДЕЛАТЬ ФОРМАТИРОВАНИЕ
+}
+
 void 	double_flag(va_list vl, t_buf **buf, t_flags fl)
 {
 	t_double	dd;
+	double		d;
 
+	d = va_arg(vl, double);
+	if (d == 0.0 || (float)d == 0.0 || (long double)d == 0.0)
+	{
+		double_just_zero(buf, fl);
+		return;
+	}
 	dd.size = 65;
 	dd.dot = 12;
 	if (fl.precision == -1)
 		fl.precision = 6;
-	if (ft_itoa_double(va_arg(vl, double), &dd, &fl))
+	
+	if (ft_itoa_double(d, &dd, &fl))
 	{
 		ft_none(buf, fl);
 		return ;
