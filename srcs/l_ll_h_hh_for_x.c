@@ -11,7 +11,7 @@ char	*make_str_with_precision_for_hhx(t_flags fl, u_int8_t k, char *(*f)(u_int8_
 	{
 		i = 0;
 		s = ft_strnew(sizeof(char) * (fl.precision + 1));
-		while (i < fl.precision - ft_strlen(str))
+		while (i < fl.precision - (int)ft_strlen(str))
 		{
 			s[i] = '0';
 			i++;
@@ -38,7 +38,7 @@ char	*make_str_with_precision_for_hx(t_flags fl, unsigned short k, char *(*f)(un
 	{
 		i = 0;
 		s = ft_strnew(sizeof(char) * (fl.precision + 1));
-		while (i < fl.precision - ft_strlen(str))
+		while (i < fl.precision - (int)ft_strlen(str))
 		{
 			s[i] = '0';
 			i++;
@@ -65,7 +65,7 @@ char	*make_str_with_precision_for_llx(t_flags fl, unsigned long long k, char *(*
 	{
 		i = 0;
 		s = ft_strnew(sizeof(char) * (fl.precision + 1));
-		while (i < fl.precision - ft_strlen(str))
+		while (i < fl.precision - (int)ft_strlen(str))
 		{
 			s[i] = '0';
 			i++;
@@ -92,7 +92,7 @@ char	*make_str_with_precision_for_lx(t_flags fl, unsigned long k, char *(*f)(uns
 	{
 		i = 0;
 		s = ft_strnew(sizeof(char) * (fl.precision + 1));
-		while (i < fl.precision - ft_strlen(str))
+		while (i < fl.precision - (int)ft_strlen(str))
 		{
 			s[i] = '0';
 			i++;
@@ -116,6 +116,7 @@ void	x_flag_l(va_list vl, t_buf **buf, t_flags fl, char *(*f)(unsigned long, int
 	char			*ox;
 	char			*s;
 
+	ox = NULL;
     if (fl.precision != -1)
         fl.zero = 0;
 	k = va_arg(vl, unsigned long);
@@ -158,6 +159,7 @@ void	x_flag_ll(va_list vl, t_buf **buf, t_flags fl, char *(*f)(unsigned long lon
 	char			*ox;
 	char			*s;
 
+	ox = NULL;
     if (fl.precision != -1)
         fl.zero = 0;
 	k = va_arg(vl, unsigned long long);
@@ -200,6 +202,7 @@ void	x_flag_h(va_list vl, t_buf **buf, t_flags fl, char *(*f)(unsigned short, in
 	char			*ox;
 	char			*s;
 
+	ox = NULL;
     if (fl.precision != -1)
         fl.zero = 0;
 	k = (unsigned short)va_arg(vl, unsigned int);
@@ -242,6 +245,7 @@ void	x_flag_hh(va_list vl, t_buf **buf, t_flags fl, char *(*f)(u_int8_t, int))
 	char			*ox;
 	char			*s;
 
+	ox = NULL;
     if (fl.precision != -1)
         fl.zero = 0;
 	k = (u_int8_t)va_arg(vl, unsigned int);

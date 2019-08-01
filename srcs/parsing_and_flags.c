@@ -33,7 +33,7 @@ void	make_t_precision(t_flags *fl, const char *restrict *format)
 	(*format)--;
 }
 
-void	preparcing2(t_buf **buf, t_flags *fl, const char *restrict *format)
+void	preparcing2(t_flags *fl, const char *restrict *format)
 {
 	if ((**format) == ' ')
 		fl->space = 1;
@@ -66,7 +66,7 @@ void	preparcing(t_buf **buf, t_flags *fl, const char *restrict *format)
 	((**format) >= '0' && (**format) <= '9') || (**format) == '#' || \
 	(**format) == '.' || (**format) == 'h' || (**format) == 'l' || (**format) == 'L')
 	{
-		preparcing2(buf, fl, format);
+		preparcing2(fl, format);
 	}
 	if ((**format) == '%')
 		percentage(buf, *fl);

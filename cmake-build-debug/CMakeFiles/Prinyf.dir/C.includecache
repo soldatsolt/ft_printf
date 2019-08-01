@@ -26,11 +26,19 @@ unistd.h
 stdarg.h
 -
 
+/Users/vbharbo/Documents/42/Prinyf/srcs/all_flagsspec.c
+ft_printf.h
+/Users/vbharbo/Documents/42/Prinyf/srcs/ft_printf.h
+
 /Users/vbharbo/Documents/42/Prinyf/srcs/ft_printf.h
 ../libft/libft.h
 /Users/vbharbo/Documents/42/Prinyf/libft/libft.h
 
 /Users/vbharbo/Documents/42/Prinyf/srcs/main.c
+ft_printf.h
+/Users/vbharbo/Documents/42/Prinyf/srcs/ft_printf.h
+
+/Users/vbharbo/Documents/42/Prinyf/srcs/make_str_with_precision_for_any.c
 ft_printf.h
 /Users/vbharbo/Documents/42/Prinyf/srcs/ft_printf.h
 

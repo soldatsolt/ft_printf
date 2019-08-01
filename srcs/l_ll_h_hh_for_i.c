@@ -7,15 +7,15 @@ char	*make_str_with_precision_for_hhi(t_flags fl, int8_t k)
 	char	*str;
 
 	str = ft_itoa_hh(k);
-	if (fl.precision != -1 && !((k >= 0 && ft_strlen(str) > fl.precision) \
-	|| (k < 0 && ft_strlen(str) - 1 > fl.precision)))
+	if (fl.precision != -1 && !((k >= 0 && (int)ft_strlen(str) > fl.precision) \
+	|| (k < 0 && (int)ft_strlen(str) - 1 > fl.precision)))
 	{
 		i = 0;
 		s = ft_strnew(sizeof(char) * (fl.precision + 2));
 		if (k < 0)
 			s[i++] = '-';
-		while ((k >= 0) ? (i < fl.precision - ft_strlen(str)) : (i < \
-		fl.precision - ft_strlen(str) + 2))
+		while ((k >= 0) ? (i < fl.precision - (int)ft_strlen(str)) : (i < \
+		fl.precision - (int)ft_strlen(str) + 2))
 		{
 			s[i] = '0';
 			i++;
@@ -43,15 +43,15 @@ char	*make_str_with_precision_for_hi(t_flags fl, short k)
 	char	*str;
 
 	str = ft_itoa_h(k);
-	if (fl.precision != -1 && !((k >= 0 && ft_strlen(str) > fl.precision) \
-	|| (k < 0 && ft_strlen(str) - 1 > fl.precision)))
+	if (fl.precision != -1 && !((k >= 0 && (int)ft_strlen(str) > fl.precision) \
+	|| (k < 0 && (int)ft_strlen(str) - 1 > fl.precision)))
 	{
 		i = 0;
 		s = ft_strnew(sizeof(char) * (fl.precision + 2));
 		if (k < 0)
 			s[i++] = '-';
-		while ((k >= 0) ? (i < fl.precision - ft_strlen(str)) : (i < \
-		fl.precision - ft_strlen(str) + 2))
+		while ((k >= 0) ? (i < fl.precision - (int)ft_strlen(str)) : (i < \
+		fl.precision - (int)ft_strlen(str) + 2))
 		{
 			s[i] = '0';
 			i++;
@@ -79,15 +79,15 @@ char	*make_str_with_precision_for_lli(t_flags fl, long long k)
 	char	*str;
 
 	str = ft_itoa_ll(k);
-	if (fl.precision != -1 && !((k >= 0 && ft_strlen(str) > fl.precision) \
-	|| (k < 0 && ft_strlen(str) - 1 > fl.precision)))
+	if (fl.precision != -1 && !((k >= 0 && (int)ft_strlen(str) > fl.precision) \
+	|| (k < 0 && (int)ft_strlen(str) - 1 > fl.precision)))
 	{
 		i = 0;
 		s = ft_strnew(sizeof(char) * (fl.precision + 2));
 		if (k < 0)
 			s[i++] = '-';
-		while ((k >= 0) ? (i < fl.precision - ft_strlen(str)) : (i < \
-		fl.precision - ft_strlen(str) + 2))
+		while ((k >= 0) ? (i < fl.precision - (int)ft_strlen(str)) : (i < \
+		fl.precision - (int)ft_strlen(str) + 2))
 		{
 			s[i] = '0';
 			i++;
@@ -115,15 +115,15 @@ char	*make_str_with_precision_for_li(t_flags fl, long k)
 	char	*str;
 
 	str = ft_itoa_l(k);
-	if (fl.precision != -1 && !((k >= 0 && ft_strlen(str) > fl.precision) \
-	|| (k < 0 && ft_strlen(str) - 1> fl.precision)))
+	if (fl.precision != -1 && !((k >= 0 && (int)ft_strlen(str) > fl.precision) \
+	|| (k < 0 && (int)ft_strlen(str) - 1> fl.precision)))
 	{
 		i = 0;
 		s = ft_strnew(sizeof(char) * (fl.precision + 2));
 		if (k < 0)
 			s[i++] = '-';
-		while ((k >= 0) ? (i < fl.precision - ft_strlen(str)) : (i < \
-		fl.precision - ft_strlen(str) + 2))
+		while ((k >= 0) ? (i < fl.precision - (int)ft_strlen(str)) : (i < \
+		fl.precision - (int)ft_strlen(str) + 2))
 		{
 			s[i] = '0';
 			i++;
@@ -156,7 +156,7 @@ void	i_flag_l(va_list vl, t_buf **buf, t_flags fl)
 	k = va_arg(vl, long);
 	if (k == (long)0 && fl.precision == 0)
 		return ;
-	z = (k >= 0) ? '+' : '-';
+	z = (char) ((k >= 0) ? '+' : '-');
 	str = make_str_with_precision_for_li(fl, k);
 	n = fl.width - (int)ft_strlen(str);
 	if (fl.plus && k >= 0)
@@ -213,7 +213,7 @@ void	i_flag_ll(va_list vl, t_buf **buf, t_flags fl)
 	k = va_arg(vl, long long);
 	if (k == (long long)0 && fl.precision == 0)
 		return ;
-	z = (k >= 0) ? '+' : '-';
+	z = (char) ((k >= 0) ? '+' : '-');
 	str = make_str_with_precision_for_lli(fl, k);
 	n = fl.width - (int)ft_strlen(str);
 	if (fl.plus && k >= 0)
@@ -270,7 +270,7 @@ void	i_flag_h(va_list vl, t_buf **buf, t_flags fl)
 	k = (short)va_arg(vl, int);
 	if (k == (short)0 && fl.precision == 0)
 		return ;
-	z = (k >= 0) ? '+' : '-';
+	z = (char) ((k >= 0) ? '+' : '-');
 	str = make_str_with_precision_for_hi(fl, k);
 	n = fl.width - (int)ft_strlen(str);
 	if (fl.plus && k >= 0)
@@ -327,7 +327,7 @@ void	i_flag_hh(va_list vl, t_buf **buf, t_flags fl)
 	k = (int8_t)va_arg(vl, int);
 	if (k == (int8_t)0 && fl.precision == 0)
 		return ;
-	z = (k >= 0) ? '+' : '-';
+	z = (char) ((k >= 0) ? '+' : '-');
 	str = make_str_with_precision_for_hhi(fl, k);
 	n = fl.width - (int)ft_strlen(str);
 	if (fl.plus && k >= 0)

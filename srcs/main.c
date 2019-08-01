@@ -52,7 +52,6 @@ int		ft_printf(const char *restrict format, ...)
 	return (n);
 }
 
-<<<<<<< HEAD
 //int		main(void)
 //{
 //	float f = 6.0 / 0.0;
@@ -64,11 +63,10 @@ int		ft_printf(const char *restrict format, ...)
 //	ft_printf("ft_float - |% 10Lf\n", lw);
 //	return (0);
 //}
-=======
-int		main(void)
-{
-	ft_printf("%#020x\n", 24);
-	printf("%#020x\n", 24);
-	return (0);
-}
->>>>>>> ba9f72d581e3d17d24c5a676874e7e68cb1e5947
+//
+//int		main(void)
+//{
+//	ft_printf("%#020x\n", 24);
+//	printf("%#020x\n", 24);
+//	return (0);
+//}

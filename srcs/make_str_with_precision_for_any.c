@@ -7,15 +7,15 @@ char	*make_str_with_precision_for_i(t_flags fl, int k)
 	char	*str;
 
 	str = ft_itoa(k);
-	if (fl.precision != -1 && !((k >= 0 && ft_strlen(str) > fl.precision) \
-	|| (k < 0 && ft_strlen(str) - 1 > fl.precision)))
+	if (fl.precision != -1 && !((k >= 0 && (int)ft_strlen(str) > fl.precision) \
+	|| (k < 0 && (int)ft_strlen(str) - 1 > fl.precision)))
 	{
 		i = 0;
 		s = ft_strnew(sizeof(char) * (fl.precision + 2));
 		if (k < 0)
 			s[i++] = '-';
-		while ((k >= 0) ? (i < fl.precision - ft_strlen(str)) : (i < \
-		fl.precision - ft_strlen(str) + 2))
+		while ((k >= 0) ? (i < fl.precision - (int)ft_strlen(str)) : (i < \
+		fl.precision - (int)ft_strlen(str) + 2))
 		{
 			s[i] = '0';
 			i++;
@@ -47,7 +47,7 @@ char	*make_str_with_precision_for_u(t_flags fl, unsigned int k)
 	{
 		i = 0;
 		s = ft_strnew(sizeof(char) * (fl.precision + 1));
-		while (i < fl.precision - ft_strlen(str))
+		while (i < fl.precision - (int)ft_strlen(str))
 		{
 			s[i] = '0';
 			i++;
@@ -74,7 +74,7 @@ char	*make_str_with_precision_for_x(t_flags fl, unsigned int k, char *(*f)(unsig
 	{
 		i = 0;
 		s = ft_strnew(sizeof(char) * (fl.precision + 1));
-		while (i < fl.precision - ft_strlen(str))
+		while (i < fl.precision - (int)ft_strlen(str))
 		{
 			s[i] = '0';
 			i++;
@@ -101,7 +101,7 @@ char	*make_str_with_precision_for_o(t_flags fl, unsigned int k)
 	{
 		i = 0;
 		s = ft_strnew(sizeof(char) * (fl.precision + 1));
-		while (i < fl.precision - ft_strlen(str))
+		while (i < fl.precision - (int)ft_strlen(str))
 		{
 			s[i] = '0';
 			i++;

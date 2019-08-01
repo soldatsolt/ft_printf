@@ -38,7 +38,7 @@ OBJS = main.o \
        double.o \
        none_infinity.o \
        str_calc_extra.o \
-       libft/libft.a
+       ./libft/libft.a
 
 LIBFT = ./libft/libft.a
 INCLUDE = ./ft_printf.h

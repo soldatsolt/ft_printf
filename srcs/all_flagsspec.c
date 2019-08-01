@@ -36,6 +36,7 @@ void	p_flag(va_list vl, t_buf **buf, t_flags fl)
 	char		*ox;
 
 	str = NULL;
+	ox = NULL;
 	ox = make_ox_for_p(ox, &fl);
 	ptr = (uint64_t)(va_arg(vl, void*));
 	s = ft_itoa_base_small_ll(ptr, 16);
@@ -51,7 +52,7 @@ void	i_flag1(t_buf **buf, t_flags fl, char *str, int k)
 	int		n;
 	char	z;
 
-	z = (k >= 0) ? '+' : '-';
+	z = (char) ((k >= 0) ? '+' : '-');
 	n = fl.width - (int)ft_strlen(str);
 	if (fl.plus && k >= 0)
 		n--;
@@ -76,7 +77,7 @@ void	i_flag2(t_buf **buf, t_flags fl, char *str, int k)
 	int		n;
 	char	z;
 
-	z = (k >= 0) ? '+' : '-';
+	z = (char) ((k >= 0) ? '+' : '-');
 	n = fl.width - (int)ft_strlen(str);
 	if (fl.space && k >= 0)
 	{
@@ -109,7 +110,7 @@ void	i_flag(va_list vl, t_buf **buf, t_flags fl)
 	k = va_arg(vl, int);
 	if (k == (int)0 && fl.precision == 0)
 		return ;
-	z = (k >= 0) ? '+' : '-';
+	z = (char) ((k >= 0) ? '+' : '-');
 	str = make_str_with_precision_for_i(fl, k);
 	n = fl.width - (int)ft_strlen(str);
 	if (fl.plus && k >= 0)
@@ -151,7 +152,6 @@ void	o_flag1(t_flags fl, t_buf **buf, char *s, char *str)
 	str = s;
 	s_flag(s, buf, fl);
 	free(str);
-	return ;
 }
 
 void	o_flag(va_list vl, t_buf **buf, t_flags fl)
@@ -161,6 +161,7 @@ void	o_flag(va_list vl, t_buf **buf, t_flags fl)
 	unsigned int	k;
 	char			*s;
 
+	s = NULL;
 	if (fl.precision != -1)
 		fl.zero = 0;
 	k = va_arg(vl, unsigned int);
@@ -190,6 +191,7 @@ unsigned int k)
 	char	*s;
 	char	*ox;
 
+	ox = NULL;
 	str = f(k, 16);
 	if (f == &ft_itoa_base_small)
 		ox = make_ox_for_x(ox, &fl, (int)ft_strlen(str));
@@ -200,7 +202,6 @@ unsigned int k)
 	free(str);
 	free(s);
 	free(ox);
-	return ;
 }
 
 void	x_flag(va_list vl, t_buf **buf, t_flags fl, char *(*f)\

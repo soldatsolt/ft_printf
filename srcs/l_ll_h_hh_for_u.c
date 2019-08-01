@@ -11,7 +11,7 @@ char	*make_str_with_precision_for_hhu(t_flags fl, u_int8_t k)
 	{
 		i = 0;
 		s = ft_strnew(sizeof(char) * (fl.precision + 1));
-		while (i < fl.precision - ft_strlen(str))
+		while (i < fl.precision - (int)ft_strlen(str))
 		{
 			s[i] = '0';
 			i++;
@@ -38,7 +38,7 @@ char	*make_str_with_precision_for_hu(t_flags fl, unsigned short k)
 	{
 		i = 0;
 		s = ft_strnew(sizeof(char) * (fl.precision + 1));
-		while (i < fl.precision - ft_strlen(str))
+		while (i < fl.precision - (int)ft_strlen(str))
 		{
 			s[i] = '0';
 			i++;
@@ -65,7 +65,7 @@ char	*make_str_with_precision_for_llu(t_flags fl, unsigned long long k)
 	{
 		i = 0;
 		s = ft_strnew(sizeof(char) * (fl.precision + 1));
-		while (i < fl.precision - ft_strlen(str))
+		while (i < fl.precision - (int)ft_strlen(str))
 		{
 			s[i] = '0';
 			i++;
@@ -92,7 +92,7 @@ char	*make_str_with_precision_for_lu(t_flags fl, unsigned long k)
 	{
 		i = 0;
 		s = ft_strnew(sizeof(char) * (fl.precision + 1));
-		while (i < fl.precision - ft_strlen(str))
+		while (i < fl.precision - (int)ft_strlen(str))
 		{
 			s[i] = '0';
 			i++;
