@@ -9,9 +9,13 @@ int		main(void)
 	float f = 6.0 / 0.0;
 	double w;
 	long double lw = -10.0 / 0.0;
+	printf("%s\n");
+	ft_printf("%s\n");
 	printf   ("float -    |%+100f\n", f);
 	ft_printf("ft_float - |%+100f\n", f);
 	printf   ("float -    |% 10Lf\n",lw);
 	ft_printf("ft_float - |% 10Lf\n", lw);
+	printf("%s\n");
+	ft_printf("%s\n");
 	return (0);
 }

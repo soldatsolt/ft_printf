@@ -142,5 +142,6 @@ char	*make_ox_for_X(char *ox, t_flags *fl, int l);
 void	ft_step_mantissa(char **man, t_double *dd);
 int 	ft_double_exception(double n, t_buf **buf, t_flags fl);
 int 	ft_long_double_exception(long double n, t_buf **buf, t_flags fl);
+void	ft_free_dd(t_double *dd);
 
 #endif

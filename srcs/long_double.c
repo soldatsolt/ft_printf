@@ -99,4 +99,5 @@ void 	long_double_flag(va_list vl, t_buf **buf, t_flags fl)
 		double_zero(&dd, buf, &fl);
 	else
 		double_just(&dd, buf, &fl);
+	ft_free_dd(&dd);
 }

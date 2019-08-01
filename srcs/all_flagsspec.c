@@ -38,7 +38,7 @@ void	p_flag(va_list vl, t_buf **buf, t_flags fl)
 	str = NULL;
 	ox = NULL;
 	ox = make_ox_for_p(ox, &fl);
-	ptr = (uint64_t)(va_arg(vl, void*));
+	ptr = (u_int64_t)(va_arg(vl, void*));
 	s = ft_itoa_base_small_ll(ptr, 16);
 	str = ft_catstr(ox, s);
 	s_flag(str, buf, fl);

@@ -20,6 +20,7 @@ SRCS = $(SRC)main.c \
        $(SRC)double.c \
        $(SRC)none_infinity.c \
        $(SRC)str_calc_extra.c \
+       $(SRC)free_dd.c
 
 OBJS = main.o \
        preparce_for_flags.o \
@@ -38,6 +39,7 @@ OBJS = main.o \
        double.o \
        none_infinity.o \
        str_calc_extra.o \
+       free_dd.o \
        ./libft/libft.a
 
 LIBFT = ./libft/libft.a
@@ -46,7 +48,7 @@ all: $(NAME)  #ft_printf.a
 
 $(NAME):
 	make -C libft/ fclean && make -C libft/
-	gcc $(FLAGS) -c $(SRCS)
+	gcc -c $(SRCS)
 	ar rcs libftprintf.a $(OBJS)
 
 clean:
