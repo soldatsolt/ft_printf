@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/22 05:42:56 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/01 06:06:13 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ int		ft_printf(const char *restrict format, ...)
 	return (n);
 }
 
+<<<<<<< HEAD
 //int		main(void)
 //{
 //	float f = 6.0 / 0.0;
@@ -63,3 +64,11 @@ int		ft_printf(const char *restrict format, ...)
 //	ft_printf("ft_float - |% 10Lf\n", lw);
 //	return (0);
 //}
+=======
+int		main(void)
+{
+	ft_printf("%#020x\n", 24);
+	printf("%#020x\n", 24);
+	return (0);
+}
+>>>>>>> ba9f72d581e3d17d24c5a676874e7e68cb1e5947

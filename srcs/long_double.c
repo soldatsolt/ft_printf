@@ -76,6 +76,7 @@ void	ft_itoa_long_double(long double n, t_double *dd, t_flags *fl)
 		exit(1);
 }
 
+<<<<<<< HEAD
 void 	long_double_flag(va_list vl, t_buf **buf, t_flags fl)
 {
 	t_double	dd;
@@ -84,6 +85,24 @@ void 	long_double_flag(va_list vl, t_buf **buf, t_flags fl)
 	lv2 = va_arg(vl, long double);
 	if (ft_long_double_exception(lv2, buf, fl))
 		return ;
+=======
+void	double_just_long_zero(t_buf **buf, t_flags *fl)
+{
+	put_str_to_buf(buf, "0.0"); // ВОТ ЗДЕСЬ ТЕБЕ ДЕЛАТЬ ФОРМАТИРОВАНИЕ
+}
+
+void 	long_double_flag(va_list vl, t_buf **buf, t_flags *fl)
+{
+	t_double	dd;
+	long double	d;
+
+	d = va_arg(vl, long double);
+	if (d == 0.0 || (float)d == 0.0 || (long double)d == 0.0)
+	{
+		double_just_long_zero(buf, fl);
+		return;
+	}
+>>>>>>> ba9f72d581e3d17d24c5a676874e7e68cb1e5947
 	dd.size = 81;
 	dd.dot = 17;
 	if (fl.precision == -1)
