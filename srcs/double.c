@@ -45,12 +45,7 @@ int		ft_len_exp_double(t_double *dd)
 	int len;
 
 	if (dd->w < 0)
-	{
 		dd->w *= -1;
-		dd->sign = 1;
-	}
-	else
-		dd->sign = 0;
 	len = 1;
 	while (dd->w >= 10.0)
 	{
@@ -62,10 +57,9 @@ int		ft_len_exp_double(t_double *dd)
 
 int		ft_itoa_double(double n, t_double *dd, t_flags *fl)
 {
-	if (n != n)
-		return (1);
 	dd->w = n;
 	make_double_bits_str(dd);
+	dd->sign = (unsigned char) ((dd->s[0] == '1') ? 1 : 0);
 	dd->len = ft_len_exp_double(dd);
 	make_exp(dd);
 	fl->width = (dd->len + fl->precision >= fl->width) ? 0 : fl->width - dd->len - fl->precision;
@@ -81,16 +75,16 @@ int		ft_itoa_double(double n, t_double *dd, t_flags *fl)
 void 	double_flag(va_list vl, t_buf **buf, t_flags fl)
 {
 	t_double	dd;
+	double		v2;
 
+	v2 = va_arg(vl, double);
+	if (ft_double_exception(v2, buf, fl))
+		return ;
 	dd.size = 65;
 	dd.dot = 12;
 	if (fl.precision == -1)
 		fl.precision = 6;
-	if (ft_itoa_double(va_arg(vl, double), &dd, &fl))
-	{
-		ft_none(buf, fl);
-		return ;
-	}
+	ft_itoa_double(v2, &dd, &fl);
 	if ((fl.dash && fl.precision == 0) || fl.precision > 0)
 		fl.width--;
 	if (fl.plus || fl.space || dd.w < 0)

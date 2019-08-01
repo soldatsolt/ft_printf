@@ -1240,22 +1240,9 @@ CMakeFiles/Prinyf.dir/srcs/double.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Prinyf.dir/srcs/double.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vbharbo/Documents/42/Prinyf/srcs/double.c -o CMakeFiles/Prinyf.dir/srcs/double.c.s
 
-CMakeFiles/Prinyf.dir/srcs/double_float.c.o: CMakeFiles/Prinyf.dir/flags.make
-CMakeFiles/Prinyf.dir/srcs/double_float.c.o: ../srcs/double_float.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building C object CMakeFiles/Prinyf.dir/srcs/double_float.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Prinyf.dir/srcs/double_float.c.o   -c /Users/vbharbo/Documents/42/Prinyf/srcs/double_float.c
-
-CMakeFiles/Prinyf.dir/srcs/double_float.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Prinyf.dir/srcs/double_float.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vbharbo/Documents/42/Prinyf/srcs/double_float.c > CMakeFiles/Prinyf.dir/srcs/double_float.c.i
-
-CMakeFiles/Prinyf.dir/srcs/double_float.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Prinyf.dir/srcs/double_float.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vbharbo/Documents/42/Prinyf/srcs/double_float.c -o CMakeFiles/Prinyf.dir/srcs/double_float.c.s
-
 CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_i.c.o: CMakeFiles/Prinyf.dir/flags.make
 CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_i.c.o: ../srcs/l_ll_h_hh_for_i.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building C object CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_i.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building C object CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_i.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_i.c.o   -c /Users/vbharbo/Documents/42/Prinyf/srcs/l_ll_h_hh_for_i.c
 
 CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_i.c.i: cmake_force
@@ -1268,7 +1255,7 @@ CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_i.c.s: cmake_force
 
 CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_o.c.o: CMakeFiles/Prinyf.dir/flags.make
 CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_o.c.o: ../srcs/l_ll_h_hh_for_o.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building C object CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_o.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building C object CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_o.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_o.c.o   -c /Users/vbharbo/Documents/42/Prinyf/srcs/l_ll_h_hh_for_o.c
 
 CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_o.c.i: cmake_force
@@ -1281,7 +1268,7 @@ CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_o.c.s: cmake_force
 
 CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_u.c.o: CMakeFiles/Prinyf.dir/flags.make
 CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_u.c.o: ../srcs/l_ll_h_hh_for_u.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building C object CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_u.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building C object CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_u.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_u.c.o   -c /Users/vbharbo/Documents/42/Prinyf/srcs/l_ll_h_hh_for_u.c
 
 CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_u.c.i: cmake_force
@@ -1294,7 +1281,7 @@ CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_u.c.s: cmake_force
 
 CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_x.c.o: CMakeFiles/Prinyf.dir/flags.make
 CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_x.c.o: ../srcs/l_ll_h_hh_for_x.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building C object CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_x.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building C object CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_x.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_x.c.o   -c /Users/vbharbo/Documents/42/Prinyf/srcs/l_ll_h_hh_for_x.c
 
 CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_x.c.i: cmake_force
@@ -1307,7 +1294,7 @@ CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_x.c.s: cmake_force
 
 CMakeFiles/Prinyf.dir/srcs/long_double.c.o: CMakeFiles/Prinyf.dir/flags.make
 CMakeFiles/Prinyf.dir/srcs/long_double.c.o: ../srcs/long_double.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building C object CMakeFiles/Prinyf.dir/srcs/long_double.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building C object CMakeFiles/Prinyf.dir/srcs/long_double.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Prinyf.dir/srcs/long_double.c.o   -c /Users/vbharbo/Documents/42/Prinyf/srcs/long_double.c
 
 CMakeFiles/Prinyf.dir/srcs/long_double.c.i: cmake_force
@@ -1320,7 +1307,7 @@ CMakeFiles/Prinyf.dir/srcs/long_double.c.s: cmake_force
 
 CMakeFiles/Prinyf.dir/srcs/main.c.o: CMakeFiles/Prinyf.dir/flags.make
 CMakeFiles/Prinyf.dir/srcs/main.c.o: ../srcs/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building C object CMakeFiles/Prinyf.dir/srcs/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building C object CMakeFiles/Prinyf.dir/srcs/main.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Prinyf.dir/srcs/main.c.o   -c /Users/vbharbo/Documents/42/Prinyf/srcs/main.c
 
 CMakeFiles/Prinyf.dir/srcs/main.c.i: cmake_force
@@ -1333,7 +1320,7 @@ CMakeFiles/Prinyf.dir/srcs/main.c.s: cmake_force
 
 CMakeFiles/Prinyf.dir/srcs/make_ox_for_any.c.o: CMakeFiles/Prinyf.dir/flags.make
 CMakeFiles/Prinyf.dir/srcs/make_ox_for_any.c.o: ../srcs/make_ox_for_any.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building C object CMakeFiles/Prinyf.dir/srcs/make_ox_for_any.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building C object CMakeFiles/Prinyf.dir/srcs/make_ox_for_any.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Prinyf.dir/srcs/make_ox_for_any.c.o   -c /Users/vbharbo/Documents/42/Prinyf/srcs/make_ox_for_any.c
 
 CMakeFiles/Prinyf.dir/srcs/make_ox_for_any.c.i: cmake_force
@@ -1346,7 +1333,7 @@ CMakeFiles/Prinyf.dir/srcs/make_ox_for_any.c.s: cmake_force
 
 CMakeFiles/Prinyf.dir/srcs/make_str_with_precision_for_any.c.o: CMakeFiles/Prinyf.dir/flags.make
 CMakeFiles/Prinyf.dir/srcs/make_str_with_precision_for_any.c.o: ../srcs/make_str_with_precision_for_any.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building C object CMakeFiles/Prinyf.dir/srcs/make_str_with_precision_for_any.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building C object CMakeFiles/Prinyf.dir/srcs/make_str_with_precision_for_any.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Prinyf.dir/srcs/make_str_with_precision_for_any.c.o   -c /Users/vbharbo/Documents/42/Prinyf/srcs/make_str_with_precision_for_any.c
 
 CMakeFiles/Prinyf.dir/srcs/make_str_with_precision_for_any.c.i: cmake_force
@@ -1359,7 +1346,7 @@ CMakeFiles/Prinyf.dir/srcs/make_str_with_precision_for_any.c.s: cmake_force
 
 CMakeFiles/Prinyf.dir/srcs/none_infinity.c.o: CMakeFiles/Prinyf.dir/flags.make
 CMakeFiles/Prinyf.dir/srcs/none_infinity.c.o: ../srcs/none_infinity.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building C object CMakeFiles/Prinyf.dir/srcs/none_infinity.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building C object CMakeFiles/Prinyf.dir/srcs/none_infinity.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Prinyf.dir/srcs/none_infinity.c.o   -c /Users/vbharbo/Documents/42/Prinyf/srcs/none_infinity.c
 
 CMakeFiles/Prinyf.dir/srcs/none_infinity.c.i: cmake_force
@@ -1372,7 +1359,7 @@ CMakeFiles/Prinyf.dir/srcs/none_infinity.c.s: cmake_force
 
 CMakeFiles/Prinyf.dir/srcs/parsing_and_flags.c.o: CMakeFiles/Prinyf.dir/flags.make
 CMakeFiles/Prinyf.dir/srcs/parsing_and_flags.c.o: ../srcs/parsing_and_flags.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building C object CMakeFiles/Prinyf.dir/srcs/parsing_and_flags.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building C object CMakeFiles/Prinyf.dir/srcs/parsing_and_flags.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Prinyf.dir/srcs/parsing_and_flags.c.o   -c /Users/vbharbo/Documents/42/Prinyf/srcs/parsing_and_flags.c
 
 CMakeFiles/Prinyf.dir/srcs/parsing_and_flags.c.i: cmake_force
@@ -1385,7 +1372,7 @@ CMakeFiles/Prinyf.dir/srcs/parsing_and_flags.c.s: cmake_force
 
 CMakeFiles/Prinyf.dir/srcs/preparce_for_flags.c.o: CMakeFiles/Prinyf.dir/flags.make
 CMakeFiles/Prinyf.dir/srcs/preparce_for_flags.c.o: ../srcs/preparce_for_flags.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building C object CMakeFiles/Prinyf.dir/srcs/preparce_for_flags.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building C object CMakeFiles/Prinyf.dir/srcs/preparce_for_flags.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Prinyf.dir/srcs/preparce_for_flags.c.o   -c /Users/vbharbo/Documents/42/Prinyf/srcs/preparce_for_flags.c
 
 CMakeFiles/Prinyf.dir/srcs/preparce_for_flags.c.i: cmake_force
@@ -1398,7 +1385,7 @@ CMakeFiles/Prinyf.dir/srcs/preparce_for_flags.c.s: cmake_force
 
 CMakeFiles/Prinyf.dir/srcs/print_float.c.o: CMakeFiles/Prinyf.dir/flags.make
 CMakeFiles/Prinyf.dir/srcs/print_float.c.o: ../srcs/print_float.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building C object CMakeFiles/Prinyf.dir/srcs/print_float.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building C object CMakeFiles/Prinyf.dir/srcs/print_float.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Prinyf.dir/srcs/print_float.c.o   -c /Users/vbharbo/Documents/42/Prinyf/srcs/print_float.c
 
 CMakeFiles/Prinyf.dir/srcs/print_float.c.i: cmake_force
@@ -1411,7 +1398,7 @@ CMakeFiles/Prinyf.dir/srcs/print_float.c.s: cmake_force
 
 CMakeFiles/Prinyf.dir/srcs/str_calc.c.o: CMakeFiles/Prinyf.dir/flags.make
 CMakeFiles/Prinyf.dir/srcs/str_calc.c.o: ../srcs/str_calc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building C object CMakeFiles/Prinyf.dir/srcs/str_calc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building C object CMakeFiles/Prinyf.dir/srcs/str_calc.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Prinyf.dir/srcs/str_calc.c.o   -c /Users/vbharbo/Documents/42/Prinyf/srcs/str_calc.c
 
 CMakeFiles/Prinyf.dir/srcs/str_calc.c.i: cmake_force
@@ -1424,7 +1411,7 @@ CMakeFiles/Prinyf.dir/srcs/str_calc.c.s: cmake_force
 
 CMakeFiles/Prinyf.dir/srcs/str_calc_extra.c.o: CMakeFiles/Prinyf.dir/flags.make
 CMakeFiles/Prinyf.dir/srcs/str_calc_extra.c.o: ../srcs/str_calc_extra.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building C object CMakeFiles/Prinyf.dir/srcs/str_calc_extra.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building C object CMakeFiles/Prinyf.dir/srcs/str_calc_extra.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Prinyf.dir/srcs/str_calc_extra.c.o   -c /Users/vbharbo/Documents/42/Prinyf/srcs/str_calc_extra.c
 
 CMakeFiles/Prinyf.dir/srcs/str_calc_extra.c.i: cmake_force
@@ -1437,7 +1424,7 @@ CMakeFiles/Prinyf.dir/srcs/str_calc_extra.c.s: cmake_force
 
 CMakeFiles/Prinyf.dir/stringmath.c.o: CMakeFiles/Prinyf.dir/flags.make
 CMakeFiles/Prinyf.dir/stringmath.c.o: ../stringmath.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building C object CMakeFiles/Prinyf.dir/stringmath.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building C object CMakeFiles/Prinyf.dir/stringmath.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Prinyf.dir/stringmath.c.o   -c /Users/vbharbo/Documents/42/Prinyf/stringmath.c
 
 CMakeFiles/Prinyf.dir/stringmath.c.i: cmake_force
@@ -1541,7 +1528,6 @@ Prinyf_OBJECTS = \
 "CMakeFiles/Prinyf.dir/srcs/all_flagsspec.c.o" \
 "CMakeFiles/Prinyf.dir/srcs/buffer.c.o" \
 "CMakeFiles/Prinyf.dir/srcs/double.c.o" \
-"CMakeFiles/Prinyf.dir/srcs/double_float.c.o" \
 "CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_i.c.o" \
 "CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_o.c.o" \
 "CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_u.c.o" \
@@ -1652,7 +1638,6 @@ Prinyf: CMakeFiles/Prinyf.dir/libft/get_next_line.c.o
 Prinyf: CMakeFiles/Prinyf.dir/srcs/all_flagsspec.c.o
 Prinyf: CMakeFiles/Prinyf.dir/srcs/buffer.c.o
 Prinyf: CMakeFiles/Prinyf.dir/srcs/double.c.o
-Prinyf: CMakeFiles/Prinyf.dir/srcs/double_float.c.o
 Prinyf: CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_i.c.o
 Prinyf: CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_o.c.o
 Prinyf: CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_u.c.o
@@ -1670,7 +1655,7 @@ Prinyf: CMakeFiles/Prinyf.dir/srcs/str_calc_extra.c.o
 Prinyf: CMakeFiles/Prinyf.dir/stringmath.c.o
 Prinyf: CMakeFiles/Prinyf.dir/build.make
 Prinyf: CMakeFiles/Prinyf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Linking C executable Prinyf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/vbharbo/Documents/42/Prinyf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Linking C executable Prinyf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Prinyf.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

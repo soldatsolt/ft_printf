@@ -276,10 +276,6 @@ CMakeFiles/Prinyf.dir/srcs/double.c.o: ../libft/libft.h
 CMakeFiles/Prinyf.dir/srcs/double.c.o: ../srcs/double.c
 CMakeFiles/Prinyf.dir/srcs/double.c.o: ../srcs/ft_printf.h
 
-CMakeFiles/Prinyf.dir/srcs/double_float.c.o: ../libft/libft.h
-CMakeFiles/Prinyf.dir/srcs/double_float.c.o: ../srcs/double_float.c
-CMakeFiles/Prinyf.dir/srcs/double_float.c.o: ../srcs/ft_printf.h
-
 CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_i.c.o: ../libft/libft.h
 CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_i.c.o: ../srcs/ft_printf.h
 CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_i.c.o: ../srcs/l_ll_h_hh_for_i.c

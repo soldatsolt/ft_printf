@@ -2,9 +2,8 @@
 
 t_buf	*create_buf(void)
 {
-	t_buf	*buf;
+	t_buf	*buf = NULL;
 
-	buf = NULL;
 	if (!(buf = (t_buf *)malloc(sizeof(t_buf))))
 		exit(1);
 	buf->next = NULL;

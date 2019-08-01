@@ -90,7 +90,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/Prinyf.dir/srcs/all_flagsspec.c.o"
   "CMakeFiles/Prinyf.dir/srcs/buffer.c.o"
   "CMakeFiles/Prinyf.dir/srcs/double.c.o"
-  "CMakeFiles/Prinyf.dir/srcs/double_float.c.o"
   "CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_i.c.o"
   "CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_o.c.o"
   "CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_u.c.o"

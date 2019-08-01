@@ -76,23 +76,27 @@ void	ft_itoa_long_double(long double n, t_double *dd, t_flags *fl)
 		exit(1);
 }
 
-void 	long_double_flag(va_list vl, t_buf **buf, t_flags *fl)
+void 	long_double_flag(va_list vl, t_buf **buf, t_flags fl)
 {
 	t_double	dd;
+	long double	lv2;
 
+	lv2 = va_arg(vl, long double);
+	if (ft_long_double_exception(lv2, buf, fl))
+		return ;
 	dd.size = 81;
 	dd.dot = 17;
-	if (fl->precision == -1)
-		fl->precision = 6;
-	ft_itoa_long_double(va_arg(vl, long double), &dd, fl);
-	if ((fl->dash && fl->precision == 0) || fl->precision > 0)
-		fl->width--;
-	if (fl->plus || fl->space || dd.w < 0)
-		fl->width--;
-	if (fl->minus)
-		double_minus(&dd, buf, fl);
-	else if (fl->zero)
-		double_zero(&dd, buf, fl);
+	if (fl.precision == -1)
+		fl.precision = 6;
+	ft_itoa_long_double(lv2, &dd, &fl);
+	if ((fl.dash && fl.precision == 0) || fl.precision > 0)
+		fl.width--;
+	if (fl.plus || fl.space || dd.w < 0)
+		fl.width--;
+	if (fl.minus)
+		double_minus(&dd, buf, &fl);
+	else if (fl.zero)
+		double_zero(&dd, buf, &fl);
 	else
-		double_just(&dd, buf, fl);
+		double_just(&dd, buf, &fl);
 }

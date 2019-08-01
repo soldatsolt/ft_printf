@@ -99,7 +99,6 @@ add_executable(Prinyf
         srcs/all_flagsspec.c
         srcs/buffer.c
         srcs/double.c
-        srcs/double_float.c
         srcs/ft_printf.h
         srcs/l_ll_h_hh_for_i.c
         srcs/l_ll_h_hh_for_o.c

@@ -360,9 +360,6 @@
 		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/srcs/double.c">
 			<Option target="Prinyf"/>
 		</Unit>
-		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/srcs/double_float.c">
-			<Option target="Prinyf"/>
-		</Unit>
 		<Unit filename="/Users/vbharbo/Documents/42/Prinyf/srcs/ft_printf.h">
 			<Option target="Prinyf"/>
 		</Unit>

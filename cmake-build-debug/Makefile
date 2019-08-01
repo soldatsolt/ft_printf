@@ -2580,33 +2580,6 @@ srcs/double.c.s:
 	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/double.c.s
 .PHONY : srcs/double.c.s
 
-srcs/double_float.o: srcs/double_float.c.o
-
-.PHONY : srcs/double_float.o
-
-# target to build an object file
-srcs/double_float.c.o:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/double_float.c.o
-.PHONY : srcs/double_float.c.o
-
-srcs/double_float.i: srcs/double_float.c.i
-
-.PHONY : srcs/double_float.i
-
-# target to preprocess a source file
-srcs/double_float.c.i:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/double_float.c.i
-.PHONY : srcs/double_float.c.i
-
-srcs/double_float.s: srcs/double_float.c.s
-
-.PHONY : srcs/double_float.s
-
-# target to generate assembly for a file
-srcs/double_float.c.s:
-	$(MAKE) -f CMakeFiles/Prinyf.dir/build.make CMakeFiles/Prinyf.dir/srcs/double_float.c.s
-.PHONY : srcs/double_float.c.s
-
 srcs/l_ll_h_hh_for_i.o: srcs/l_ll_h_hh_for_i.c.o
 
 .PHONY : srcs/l_ll_h_hh_for_i.o
@@ -3294,9 +3267,6 @@ help:
 	@echo "... srcs/double.o"
 	@echo "... srcs/double.i"
 	@echo "... srcs/double.s"
-	@echo "... srcs/double_float.o"
-	@echo "... srcs/double_float.i"
-	@echo "... srcs/double_float.s"
 	@echo "... srcs/l_ll_h_hh_for_i.o"
 	@echo "... srcs/l_ll_h_hh_for_i.i"
 	@echo "... srcs/l_ll_h_hh_for_i.s"

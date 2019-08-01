@@ -70,7 +70,7 @@ void	double_minus(t_double *dd, t_buf **buf, t_flags *fl)
 void	f_flag(va_list vl, t_buf **buf, t_flags fl)
 {
 	if (fl.L)
-		long_double_flag(vl, buf, &fl);
+		long_double_flag(vl, buf, fl);
 	else
 		double_flag(vl, buf, fl);
 }
