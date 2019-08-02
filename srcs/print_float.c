@@ -1,6 +1,4 @@
-
 #include "ft_printf.h"
-
 
 void	ft_put_precision(t_double *dd, t_buf **buf, t_flags *fl)
 {

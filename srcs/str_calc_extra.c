@@ -9,7 +9,7 @@ void	ft_step_mantissa(char **man, t_double *dd)
 	int	i;
 
 	i = (int)ft_strlen(man[0]) + 1;
-	while(--i >= 0)
+	while (--i >= 0)
 		man[0][i] = man[0][i - 1];
 	man[0][0] = '0';
 	dd->dot++;
@@ -38,7 +38,7 @@ void	ft_strsum(char **man, char **tmp)
 	static int	ten;
 
 	i = -1;
-	while	(tmp[0][++i])
+	while (tmp[0][++i])
 		if (man[0][i] == '\0')
 			man[0][i] = '0';
 	while (--i >= 0)

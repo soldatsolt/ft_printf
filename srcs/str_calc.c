@@ -1,10 +1,9 @@
 //
 // Created by Verlie Bharbo on 2019-07-12.
 //
-
 #include "ft_printf.h"
 
-void	ft_mantissa_str(char **man, char **tmp, t_double *dd)
+void		ft_mantissa_str(char **man, char **tmp, t_double *dd)
 {
 	man[0][dd->dot - 1] = '1';
 	tmp[0][dd->dot] = '5';
@@ -16,7 +15,7 @@ void	ft_mantissa_str(char **man, char **tmp, t_double *dd)
 	}
 }
 
-void	ft_exp_str(t_double *dd, char **man, char *tmp)
+void		ft_exp_str(t_double *dd, char **man, char *tmp)
 {
 	if (tmp)
 	{
@@ -27,7 +26,7 @@ void	ft_exp_str(t_double *dd, char **man, char *tmp)
 		while (dd->exp-- > 0)
 		{
 			tmp = strdup(man[0]);
-			ft_strsum(&man[0],&tmp);
+			ft_strsum(&man[0], &tmp);
 			if (man[0][0] != '0')
 				ft_step_mantissa(&man[0], dd);
 			free(tmp);
@@ -45,7 +44,7 @@ void	ft_exp_str(t_double *dd, char **man, char *tmp)
 	}
 }
 
-static int ft_only_zero_mantissa(const char *man)
+static int	ft_only_zero_mantissa(const char *man)
 {
 	int i;
 
@@ -63,13 +62,13 @@ static int ft_only_zero_mantissa(const char *man)
 	return (0);
 }
 
-void	ft_mantissa_correct(char **man, t_flags *fl, t_double *dd)
+void		ft_mantissa_correct(char **man, t_flags *fl, t_double *dd)
 {
 	int i;
 
 	if (man[0][0] != '0')
 		ft_step_mantissa(&man[0], dd);
-	i = (fl->precision > 0) ? dd->dot + fl->precision - 1: dd->dot;
+	i = (fl->precision > 0) ? dd->dot + fl->precision - 1 : dd->dot;
 	if (ft_only_zero_mantissa(&man[0][i + 1]))
 		man[0][i]++;
 	while (i)
@@ -83,7 +82,7 @@ void	ft_mantissa_correct(char **man, t_flags *fl, t_double *dd)
 	}
 }
 
-int		ft_double_in_str(t_double *dd, t_flags *fl)
+int			ft_double_in_str(t_double *dd, t_flags *fl)
 {
 	char	*man;
 	char	*tmp;
@@ -98,7 +97,7 @@ int		ft_double_in_str(t_double *dd, t_flags *fl)
 		man[dd->i] = '0';
 		tmp[dd->i] = '0';
 	}
-	ft_mantissa_str( &man, &tmp, dd);
+	ft_mantissa_str(&man, &tmp, dd);
 	ft_exp_str(dd, &man, tmp);
 	ft_mantissa_correct(&man, fl, dd);
 	dd->mantissa = man;

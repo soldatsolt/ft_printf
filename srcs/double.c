@@ -18,7 +18,8 @@ void	make_double_bits_str(t_double *dd)
 		dd->i = 0;
 		while (dd->i < 8)
 		{
-			dd->s[8 * (7 - ic) + dd->i] = (char)((c[ic] & (128 >> dd->i)) ? '1' : '0');
+			dd->s[8 * (7 - ic) + dd->i] = \
+			(char)((c[ic] & (128 >> dd->i)) ? '1' : '0');
 			dd->i++;
 		}
 		ic--;
@@ -26,7 +27,7 @@ void	make_double_bits_str(t_double *dd)
 	dd->s[64] = '\0';
 }
 
-void 	make_exp(t_double *dd)
+void	make_exp(t_double *dd)
 {
 	dd->exp = 0;
 	dd->i = 12;
@@ -59,10 +60,11 @@ int		ft_itoa_double(double n, t_double *dd, t_flags *fl)
 {
 	dd->w = n;
 	make_double_bits_str(dd);
-	dd->sign = (unsigned char) ((dd->s[0] == '1') ? 1 : 0);
+	dd->sign = (unsigned char)((dd->s[0] == '1') ? 1 : 0);
 	dd->len = ft_len_exp_double(dd);
 	make_exp(dd);
-	fl->width = (dd->len + fl->precision >= fl->width) ? 0 : fl->width - dd->len - fl->precision;
+	fl->width = (dd->len + fl->precision >= fl->width) ? 0 : \
+	fl->width - dd->len - fl->precision;
 	dd->strlen = dd->len + fl->width + fl->precision + 1;
 	if (!(dd->str = (char*)malloc(sizeof(char) * (dd->strlen + 1))))
 		exit(1);
@@ -72,7 +74,7 @@ int		ft_itoa_double(double n, t_double *dd, t_flags *fl)
 	return (0);
 }
 
-void 	double_flag(va_list vl, t_buf **buf, t_flags fl)
+void	double_flag(va_list vl, t_buf **buf, t_flags fl)
 {
 	t_double	dd;
 	double		v2;

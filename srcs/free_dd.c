@@ -1,5 +1,3 @@
-
-
 #include "ft_printf.h"
 
 void	ft_free_dd(t_double *dd)
