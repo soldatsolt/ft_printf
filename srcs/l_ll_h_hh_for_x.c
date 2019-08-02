@@ -108,33 +108,38 @@ char	*make_str_with_precision_for_lx(t_flags fl, unsigned long k, char *(*f)(uns
 	return (s);
 }
 
+void	x_flag1_l(t_buf **buf, t_flags fl, char *(*f)(unsigned long, int), \
+unsigned long k)
+{
+	char	*str;
+	char	*s;
+	char	*ox;
+
+	ox = NULL;
+	str = f(k, 16);
+	if (f == &ft_itoa_base_small_l)
+		ox = make_ox_for_x(ox, &fl, (int)ft_strlen(str));
+	else
+		ox = make_ox_for_X(ox, &fl, (int)ft_strlen(str));
+	s = ft_catstr(ox, str);
+	s_flag(s, buf, fl);
+	free(str);
+	free(s);
+	free(ox);
+}
+
 void	x_flag_l(va_list vl, t_buf **buf, t_flags fl, char *(*f)(unsigned long, int))
 {
 	char			*str;
 	int				n;
 	unsigned long	k;
-	char			*ox;
-	char			*s;
 
-	ox = NULL;
 	fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
 	k = va_arg(vl, unsigned long);
 	if (k == (unsigned long)0 && fl.precision == 0)
 		return ;
 	if (fl.dash && k != 0)
-	{
-		str = f(k ,16);
-		if (f == &ft_itoa_base_small_l)
-			ox = make_ox_for_x(ox, &fl, (int)ft_strlen(str));
-		else
-			ox = make_ox_for_X(ox, &fl, (int)ft_strlen(str));
-		s = ft_catstr(ox, str);
-		s_flag(s, buf, fl);
-		free(str);
-		free(s);
-		free(ox);
-		return ;
-	}
+		return (x_flag1_l(buf, fl, f, k));
 	str = make_str_with_precision_for_lx(fl, k, f);
 	n = fl.width - (int)ft_strlen(str);
 	if (n > 0 && !fl.minus)
@@ -150,33 +155,38 @@ void	x_flag_l(va_list vl, t_buf **buf, t_flags fl, char *(*f)(unsigned long, int
 	free(str);
 }
 
+void	x_flag1_ll(t_buf **buf, t_flags fl, char *(*f)(unsigned long \
+long, int), unsigned long long k)
+{
+	char	*str;
+	char	*s;
+	char	*ox;
+
+	ox = NULL;
+	str = f(k, 16);
+	if (f == &ft_itoa_base_small_ll)
+		ox = make_ox_for_x(ox, &fl, (int)ft_strlen(str));
+	else
+		ox = make_ox_for_X(ox, &fl, (int)ft_strlen(str));
+	s = ft_catstr(ox, str);
+	s_flag(s, buf, fl);
+	free(str);
+	free(s);
+	free(ox);
+}
+
 void	x_flag_ll(va_list vl, t_buf **buf, t_flags fl, char *(*f)(unsigned long long, int))
 {
 	char				*str;
 	int					n;
 	unsigned long long	k;
-	char			*ox;
-	char			*s;
 
-	ox = NULL;
     fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
     k = va_arg(vl, unsigned long long);
 	if (k == (unsigned long long)0 && fl.precision == 0)
 		return ;
 	if (fl.dash && k != 0)
-	{
-		str = f(k ,16);
-		if (f == &ft_itoa_base_small_ll)
-			ox = make_ox_for_x(ox, &fl, (int)ft_strlen(str));
-		else
-			ox = make_ox_for_X(ox, &fl, (int)ft_strlen(str));
-		s = ft_catstr(ox, str);
-		s_flag(s, buf, fl);
-		free(str);
-		free(s);
-		free(ox);
-		return ;
-	}
+		return (x_flag1_ll(buf, fl, f, k));
 	str = make_str_with_precision_for_llx(fl, k, f);
 	n = fl.width - (int)ft_strlen(str);
 	if (n > 0 && !fl.minus)
@@ -192,33 +202,38 @@ void	x_flag_ll(va_list vl, t_buf **buf, t_flags fl, char *(*f)(unsigned long lon
 	free(str);
 }
 
+void	x_flag1_h(t_buf **buf, t_flags fl, char *(*f)(unsigned short, int), \
+unsigned short k)
+{
+	char	*str;
+	char	*s;
+	char	*ox;
+
+	ox = NULL;
+	str = f(k, 16);
+	if (f == &ft_itoa_base_small_h)
+		ox = make_ox_for_x(ox, &fl, (int)ft_strlen(str));
+	else
+		ox = make_ox_for_X(ox, &fl, (int)ft_strlen(str));
+	s = ft_catstr(ox, str);
+	s_flag(s, buf, fl);
+	free(str);
+	free(s);
+	free(ox);
+}
+
 void	x_flag_h(va_list vl, t_buf **buf, t_flags fl, char *(*f)(unsigned short, int))
 {
 	char			*str;
 	int				n;
 	unsigned short	k;
-	char			*ox;
-	char			*s;
 
-	ox = NULL;
     fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
     k = (unsigned short)va_arg(vl, unsigned int);
 	if (k == (unsigned short)0 && fl.precision == 0)
 		return ;
 	if (fl.dash && k != 0)
-	{
-		str = f(k ,16);
-		if (f == &ft_itoa_base_small_h)
-			ox = make_ox_for_x(ox, &fl, (int)ft_strlen(str));
-		else
-			ox = make_ox_for_X(ox, &fl, (int)ft_strlen(str));
-		s = ft_catstr(ox, str);
-		s_flag(s, buf, fl);
-		free(str);
-		free(s);
-		free(ox);
-		return ;
-	}
+		return (x_flag1_h(buf, fl, f, k));
 	str = make_str_with_precision_for_hx(fl, k, f);
 	n = fl.width - (int)ft_strlen(str);
 	if (n > 0 && !fl.minus)
@@ -234,33 +249,38 @@ void	x_flag_h(va_list vl, t_buf **buf, t_flags fl, char *(*f)(unsigned short, in
 	free(str);
 }
 
+void	x_flag1_hh(t_buf **buf, t_flags fl, char *(*f)(u_int8_t, int), \
+u_int8_t k)
+{
+	char	*str;
+	char	*s;
+	char	*ox;
+
+	ox = NULL;
+	str = f(k, 16);
+	if (f == &ft_itoa_base_small_hh)
+		ox = make_ox_for_x(ox, &fl, (int)ft_strlen(str));
+	else
+		ox = make_ox_for_X(ox, &fl, (int)ft_strlen(str));
+	s = ft_catstr(ox, str);
+	s_flag(s, buf, fl);
+	free(str);
+	free(s);
+	free(ox);
+}
+
 void	x_flag_hh(va_list vl, t_buf **buf, t_flags fl, char *(*f)(u_int8_t, int))
 {
 	char		*str;
 	int			n;
 	u_int8_t	k;
-	char			*ox;
-	char			*s;
 
-	ox = NULL;
     fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
 	k = (u_int8_t)va_arg(vl, unsigned int);
 	if (k == (u_int8_t)0 && fl.precision == 0)
 		return ;
 	if (fl.dash && k != 0)
-	{
-		str = f(k ,16);
-		if (f == &ft_itoa_base_small_hh)
-			ox = make_ox_for_x(ox, &fl, (int)ft_strlen(str));
-		else
-			ox = make_ox_for_X(ox, &fl, (int)ft_strlen(str));
-		s = ft_catstr(ox, str);
-		s_flag(s, buf, fl);
-		free(str);
-		free(s);
-		free(ox);
-		return ;
-	}
+		return (x_flag1_hh(buf, fl, f, k));
 	str = make_str_with_precision_for_hhx(fl, k, f);
 	n = fl.width - (int)ft_strlen(str);
 	if (n > 0 && !fl.minus)
