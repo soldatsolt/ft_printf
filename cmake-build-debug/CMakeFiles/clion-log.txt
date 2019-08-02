@@ -1,4 +1,11 @@
-/Users/vbharbo/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/vbharbo/Documents/42/Prinyf
+/home/dmitry/Общедоступные/clion-2019.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/home/dmitry/Рабочий стол/printf"
+-- The C compiler identification is GNU 7.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/vbharbo/Documents/42/Prinyf/cmake-build-debug
+-- Build files have been written to: /home/dmitry/Рабочий стол/printf/cmake-build-debug

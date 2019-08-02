@@ -117,8 +117,7 @@ void	x_flag_l(va_list vl, t_buf **buf, t_flags fl, char *(*f)(unsigned long, int
 	char			*s;
 
 	ox = NULL;
-    if (fl.precision != -1)
-        fl.zero = 0;
+	fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
 	k = va_arg(vl, unsigned long);
 	if (k == (unsigned long)0 && fl.precision == 0)
 		return ;
@@ -160,9 +159,8 @@ void	x_flag_ll(va_list vl, t_buf **buf, t_flags fl, char *(*f)(unsigned long lon
 	char			*s;
 
 	ox = NULL;
-    if (fl.precision != -1)
-        fl.zero = 0;
-	k = va_arg(vl, unsigned long long);
+    fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
+    k = va_arg(vl, unsigned long long);
 	if (k == (unsigned long long)0 && fl.precision == 0)
 		return ;
 	if (fl.dash && k != 0)
@@ -203,9 +201,8 @@ void	x_flag_h(va_list vl, t_buf **buf, t_flags fl, char *(*f)(unsigned short, in
 	char			*s;
 
 	ox = NULL;
-    if (fl.precision != -1)
-        fl.zero = 0;
-	k = (unsigned short)va_arg(vl, unsigned int);
+    fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
+    k = (unsigned short)va_arg(vl, unsigned int);
 	if (k == (unsigned short)0 && fl.precision == 0)
 		return ;
 	if (fl.dash && k != 0)
@@ -246,8 +243,7 @@ void	x_flag_hh(va_list vl, t_buf **buf, t_flags fl, char *(*f)(u_int8_t, int))
 	char			*s;
 
 	ox = NULL;
-    if (fl.precision != -1)
-        fl.zero = 0;
+    fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
 	k = (u_int8_t)va_arg(vl, unsigned int);
 	if (k == (u_int8_t)0 && fl.precision == 0)
 		return ;

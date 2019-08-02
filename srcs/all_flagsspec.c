@@ -103,14 +103,12 @@ void	i_flag(va_list vl, t_buf **buf, t_flags fl)
 	char	*str;
 	int		n;
 	int		k;
-	char	z;
 
 	if (fl.precision != -1)
 		fl.zero = 0;
 	k = va_arg(vl, int);
 	if (k == (int)0 && fl.precision == 0)
 		return ;
-	z = (char) ((k >= 0) ? '+' : '-');
 	str = make_str_with_precision_for_i(fl, k);
 	n = fl.width - (int)ft_strlen(str);
 	if (fl.plus && k >= 0)

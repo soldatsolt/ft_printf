@@ -114,8 +114,7 @@ void	u_flag_l(va_list vl, t_buf **buf, t_flags fl)
 	int				n;
 	unsigned long	k;
 
-    if (fl.precision != -1)
-        fl.zero = 0;
+    fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
 	k = va_arg(vl, unsigned long);
 	if (k == (unsigned long)0 && fl.precision == 0)
 		return ;
@@ -140,8 +139,7 @@ void	u_flag_ll(va_list vl, t_buf **buf, t_flags fl)
 	int					n;
 	unsigned long long	k;
 
-    if (fl.precision != -1)
-        fl.zero = 0;
+    fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
 	k = va_arg(vl, unsigned long long);
 	if (k == (unsigned long long)0 && fl.precision == 0)
 		return ;
@@ -166,8 +164,7 @@ void	u_flag_h(va_list vl, t_buf **buf, t_flags fl)
 	int				n;
 	unsigned short	k;
 
-    if (fl.precision != -1)
-        fl.zero = 0;
+    fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
 	k = (unsigned short)va_arg(vl, unsigned int);
 	if (k == (unsigned short)0 && fl.precision == 0)
 		return ;
@@ -192,8 +189,7 @@ void	u_flag_hh(va_list vl, t_buf **buf, t_flags fl)
 	int			n;
 	u_int8_t	k;
 
-    if (fl.precision != -1)
-        fl.zero = 0;
+    fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
 	k = (u_int8_t)va_arg(vl, unsigned int);
 	if (k == (u_int8_t)0 && fl.precision == 0)
 		return ;

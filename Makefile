@@ -1,6 +1,7 @@
 NAME = ft_printf
 MAKE = make
 SRC = ./srcs/
+LIB = ./libft/
 override G += 
 FLAGS = -Wall -Wextra -Werror
 SRCS = $(SRC)main.c \
@@ -20,7 +21,36 @@ SRCS = $(SRC)main.c \
        $(SRC)double.c \
        $(SRC)none_infinity.c \
        $(SRC)str_calc_extra.c \
-       $(SRC)free_dd.c
+       $(SRC)free_dd.c \
+       $(LIB)ft_strlen.c \
+       $(LIB)ft_strnew.c \
+       $(LIB)ft_strcpy.c \
+       $(LIB)ft_bzero.c \
+       $(LIB)ft_itoa_base_small_hh.c \
+       $(LIB)ft_itoa_base_small_h.c \
+       $(LIB)ft_itoa_base_small_ll.c \
+       $(LIB)ft_itoa_base_small_l.c \
+       $(LIB)ft_catstr.c \
+       $(LIB)ft_itoa_hh.c \
+       $(LIB)ft_itoa_h.c \
+       $(LIB)ft_itoa_ll.c \
+       $(LIB)ft_itoa_l.c \
+       $(LIB)ft_atoi.c \
+       $(LIB)ft_memset.c \
+       $(LIB)ft_itoa_base_small.c \
+       $(LIB)ft_itoa_base_big.c \
+       $(LIB)ft_itoa_base_big_l.c \
+       $(LIB)ft_itoa_base_big_ll.c \
+       $(LIB)ft_itoa_base_big_h.c \
+       $(LIB)ft_itoa_base_big_hh.c \
+       $(LIB)ft_strdup.c \
+       $(LIB)ft_itoa.c \
+       $(LIB)ft_utoa.c \
+       $(LIB)ft_memalloc.c \
+       $(LIB)ft_utoa_l.c \
+       $(LIB)ft_utoa_ll.c \
+       $(LIB)ft_utoa_h.c \
+       $(LIB)ft_utoa_hh.c
 
 OBJS = main.o \
        preparce_for_flags.o \
@@ -40,15 +70,41 @@ OBJS = main.o \
        none_infinity.o \
        str_calc_extra.o \
        free_dd.o \
-       ./libft/libft.a
+       ft_strlen.o \
+       ft_strnew.o \
+       ft_strcpy.o \
+       ft_bzero.o \
+       ft_itoa_base_small_hh.o \
+       ft_itoa_base_small_h.o \
+       ft_itoa_base_small_ll.o \
+       ft_itoa_base_small_l.o \
+       ft_catstr.o \
+       ft_itoa_hh.o \
+       ft_itoa_h.o \
+       ft_itoa_ll.o \
+       ft_itoa_l.o \
+       ft_atoi.o \
+       ft_memset.o \
+       ft_itoa_base_small.o \
+       ft_itoa_base_big.o \
+       ft_itoa_base_big_l.o \
+       ft_itoa_base_big_ll.o \
+       ft_itoa_base_big_h.o \
+       ft_itoa_base_big_hh.o \
+       ft_strdup.o \
+       ft_itoa.o \
+       ft_utoa.o \
+       ft_memalloc.o \
+       ft_utoa_l.o \
+       ft_utoa_ll.o \
+       ft_utoa_h.o \
+       ft_utoa_hh.o
 
-LIBFT = ./libft/libft.a
-INCLUDE = ./ft_printf.h
-all: $(NAME)  #ft_printf.a 
+all: $(NAME)
 
 $(NAME):
-	make -C libft/ fclean && make -C libft/
-	gcc -c $(SRCS)
+	make -C libft/ fclean
+	gcc $(FLAGS) -c $(SRCS)
 	ar rcs libftprintf.a $(OBJS)
 
 clean:
@@ -60,15 +116,3 @@ fclean: clean
 	@rm -f libftprintf.a
 
 re: fclean all
-
-lib:
-	@$(MAKE) -C ./libft re
-	@$(MAKE) -C ./libft clean
-
-git:
-	git add .
-	git commit -am "$(G)"
-	git push
-
-rerun: re
-	@./ft_printf

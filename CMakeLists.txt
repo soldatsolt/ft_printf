@@ -1,12 +1,12 @@
-cmake_minimum_required(VERSION 3.13)
-project(Prinyf C)
+cmake_minimum_required(VERSION 3.14)
+project(printf C)
 
 set(CMAKE_C_STANDARD 11)
 
 include_directories(libft)
 include_directories(srcs)
 
-add_executable(Prinyf
+add_executable(printf
         libft/ft_atoi.c
         libft/ft_atoi_base.c
         libft/ft_bzero.c
@@ -99,6 +99,7 @@ add_executable(Prinyf
         srcs/all_flagsspec.c
         srcs/buffer.c
         srcs/double.c
+        srcs/free_dd.c
         srcs/ft_printf.h
         srcs/l_ll_h_hh_for_i.c
         srcs/l_ll_h_hh_for_o.c
@@ -114,4 +115,5 @@ add_executable(Prinyf
         srcs/print_float.c
         srcs/str_calc.c
         srcs/str_calc_extra.c
+        mane.c
         stringmath.c)

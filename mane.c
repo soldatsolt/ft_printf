@@ -11,8 +11,8 @@ int		main(void)
 	long double lw = -10.0 / 0.0;
 	printf("%s\n");
 	ft_printf("%s\n");
-	printf   ("float -    |%+100f\n", f);
-	ft_printf("ft_float - |%+100f\n", f);
+	printf   ("float -    |%+100f| %i % i %+i\n", f, -2, 1, 1);
+	ft_printf("ft_float - |%+100f| %i % i %+i\n", f, -2, 1, 1);
 	printf   ("float -    |% 10Lf\n",lw);
 	ft_printf("ft_float - |% 10Lf\n", lw);
 	printf("%s\n");
