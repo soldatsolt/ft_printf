@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/03 01:55:02 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/03 02:08:07 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int		ft_printf(const char *restrict format, ...)
 
 int		main(void)
 {
-	printf   ("float -    |%+.10li\n", (long)0);
-	ft_printf("ft_float - |%+.10li\n", (long)0);
+	printf   ("float -    |%#lx\n", (long)43);
+	ft_printf("ft_float - |%#lx\n", (long)43);
 	return (0);
 }

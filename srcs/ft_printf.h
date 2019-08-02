@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/05 10:18:18 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/22 05:37:38 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/03 02:06:33 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -143,5 +143,6 @@ void	ft_step_mantissa(char **man, t_double *dd);
 int 	ft_double_exception(double n, t_buf **buf, t_flags fl);
 int 	ft_long_double_exception(long double n, t_buf **buf, t_flags fl);
 void	ft_free_dd(t_double *dd);
+void	o_flag1(t_flags fl, t_buf **buf, char *s, char *str);
 
 #endif
