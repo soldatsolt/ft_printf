@@ -193,7 +193,7 @@ unsigned int k)
 	if (f == &ft_itoa_base_small)
 		ox = make_ox_for_x(ox, &fl, (int)ft_strlen(str));
 	else
-		ox = make_ox_for_X(ox, &fl, (int)ft_strlen(str));
+		ox = make_ox_for_xx(ox, &fl, (int)ft_strlen(str));
 	s = ft_catstr(ox, str);
 	s_flag(s, buf, fl);
 	free(str);

@@ -124,7 +124,7 @@ unsigned long k)
 	if (f == &ft_itoa_base_small_l)
 		ox = make_ox_for_x(ox, &fl, (int)ft_strlen(str));
 	else
-		ox = make_ox_for_X(ox, &fl, (int)ft_strlen(str));
+		ox = make_ox_for_xx(ox, &fl, (int)ft_strlen(str));
 	s = ft_catstr(ox, str);
 	s_flag(s, buf, fl);
 	free(str);
@@ -172,7 +172,7 @@ long, int), unsigned long long k)
 	if (f == &ft_itoa_base_small_ll)
 		ox = make_ox_for_x(ox, &fl, (int)ft_strlen(str));
 	else
-		ox = make_ox_for_X(ox, &fl, (int)ft_strlen(str));
+		ox = make_ox_for_xx(ox, &fl, (int)ft_strlen(str));
 	s = ft_catstr(ox, str);
 	s_flag(s, buf, fl);
 	free(str);
@@ -220,7 +220,7 @@ unsigned short k)
 	if (f == &ft_itoa_base_small_h)
 		ox = make_ox_for_x(ox, &fl, (int)ft_strlen(str));
 	else
-		ox = make_ox_for_X(ox, &fl, (int)ft_strlen(str));
+		ox = make_ox_for_xx(ox, &fl, (int)ft_strlen(str));
 	s = ft_catstr(ox, str);
 	s_flag(s, buf, fl);
 	free(str);
@@ -268,7 +268,7 @@ u_int8_t k)
 	if (f == &ft_itoa_base_small_hh)
 		ox = make_ox_for_x(ox, &fl, (int)ft_strlen(str));
 	else
-		ox = make_ox_for_X(ox, &fl, (int)ft_strlen(str));
+		ox = make_ox_for_xx(ox, &fl, (int)ft_strlen(str));
 	s = ft_catstr(ox, str);
 	s_flag(s, buf, fl);
 	free(str);

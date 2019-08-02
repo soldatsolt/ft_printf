@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/05 10:18:18 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/03 02:06:33 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/03 02:39:19 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -138,7 +138,7 @@ void	pre_parce_for_u(va_list vl, t_buf **buf, t_flags fl);
 void	pre_parce_for_o(va_list vl, t_buf **buf, t_flags fl);
 void	pre_parce_for_x(va_list vl, t_buf **buf, t_flags fl);
 void	pre_parce_for_xx(va_list vl, t_buf **buf, t_flags fl);
-char	*make_ox_for_X(char *ox, t_flags *fl, int l);
+char	*make_ox_for_xx(char *ox, t_flags *fl, int l);
 void	ft_step_mantissa(char **man, t_double *dd);
 int 	ft_double_exception(double n, t_buf **buf, t_flags fl);
 int 	ft_long_double_exception(long double n, t_buf **buf, t_flags fl);

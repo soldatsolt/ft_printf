@@ -16,7 +16,7 @@ char	*make_ox_for_make_ox(char *ox, int n)
 	return(ox);
 }
 
-char	*make_ox_for_make_oX(char *ox, int n)
+char	*make_ox_for_make_oxx(char *ox, int n)
 {
 	int	i;
 
@@ -105,7 +105,7 @@ char	*make_O_for_o(char *ox, t_flags *fl, int l)
 	return(ox);
 }
 
-char	*make_ox_for_X(char *ox, t_flags *fl, int l)
+char	*make_ox_for_xx(char *ox, t_flags *fl, int l)
 {
 	int	n;
 
@@ -122,7 +122,7 @@ char	*make_ox_for_X(char *ox, t_flags *fl, int l)
 			ox = ft_strnew(fl->precision - (l - 3) + 1);
 			n = fl->precision - (l - 2);
 		}
-		ox = make_ox_for_make_oX(ox, n);
+		ox = make_ox_for_make_oxx(ox, n);
 	}
 	else
 		ox = ft_strdup("0X");

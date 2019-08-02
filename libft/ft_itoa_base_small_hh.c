@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/20 03:28:40 by kmills            #+#    #+#             */
-/*   Updated: 2019/07/22 04:14:37 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/03 02:40:02 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static char	*keks(int base, u_int64_t m, u_int64_t nl)
 	return (str);
 }
 
-char	*ft_itoa_base_small_hh(u_int8_t n, int base)
+char		*ft_itoa_base_small_hh(u_int8_t n, int base)
 {
 	u_int64_t	m;
 	u_int64_t	nl;
