@@ -52,7 +52,7 @@ void	i_flag1(t_buf **buf, t_flags fl, char *str, int k)
 	int		n;
 	char	z;
 
-	z = (char) ((k >= 0) ? '+' : '-');
+	z = (char)((k >= 0) ? '+' : '-');
 	n = fl.width - (int)ft_strlen(str);
 	if (fl.plus && k >= 0)
 		n--;
@@ -77,7 +77,7 @@ void	i_flag2(t_buf **buf, t_flags fl, char *str, int k)
 	int		n;
 	char	z;
 
-	z = (char) ((k >= 0) ? '+' : '-');
+	z = (char)((k >= 0) ? '+' : '-');
 	n = fl.width - (int)ft_strlen(str);
 	if (fl.space && k >= 0)
 	{
@@ -159,7 +159,6 @@ void	o_flag(va_list vl, t_buf **buf, t_flags fl)
 	unsigned int	k;
 	char			*s;
 
-	s = NULL;
 	if (fl.precision != -1)
 		fl.zero = 0;
 	k = va_arg(vl, unsigned int);

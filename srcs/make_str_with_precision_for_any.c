@@ -1,4 +1,4 @@
-# include "ft_printf.h"
+#include "ft_printf.h"
 
 char	*make_str_with_precision_for_i(t_flags fl, int k)
 {
@@ -16,16 +16,8 @@ char	*make_str_with_precision_for_i(t_flags fl, int k)
 			s[i++] = '-';
 		while ((k >= 0) ? (i < fl.precision - (int)ft_strlen(str)) : (i < \
 		fl.precision - (int)ft_strlen(str) + 2))
-		{
-			s[i] = '0';
-			i++;
-		}
-		if (k < 0)
-		{
-			s = ft_strcpy(&(s[i]), &str[1]);
-		}
-		else
-			s = ft_strcpy(&(s[i]), str);
+			s[i++] = '0';
+		s = ((k < 0) ? ft_strcpy(&(s[i]), &str[1]) : ft_strcpy(&(s[i]), str));
 		s = s - i;
 		free(str);
 		str = NULL;
@@ -63,7 +55,8 @@ char	*make_str_with_precision_for_u(t_flags fl, unsigned int k)
 	return (s);
 }
 
-char	*make_str_with_precision_for_x(t_flags fl, unsigned int k, char *(*f)(unsigned int, int))
+char	*make_str_with_precision_for_x(t_flags fl, unsigned int k, \
+char *(*f)(unsigned int, int))
 {
 	char	*s;
 	int		i;

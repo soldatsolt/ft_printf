@@ -111,6 +111,19 @@ clean:
 	@rm -f *.o
 	@$(MAKE) -C ./libft clean
 
+git:
+	git add .
+	git commit -am "$(G)"
+	git push
+
+lib:
+	@$(MAKE) -C ./libft re
+	@$(MAKE) -C ./libft clean
+
+rerun:
+	@gcc $(SRCS) -g -o ft_printf
+	./ft_printf
+
 fclean: clean
 	@rm -f $(NAME)
 	@rm -f libftprintf.a
