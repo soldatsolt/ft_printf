@@ -1,6 +1,7 @@
 #include "ft_printf.h"
 
-char	*make_str_with_precision_for_hhx(t_flags fl, u_int8_t k, char *(*f)(u_int8_t, int))
+char	*make_str_with_precision_for_hhx(t_flags fl, \
+u_int8_t k, char *(*f)(u_int8_t, int))
 {
 	char	*s;
 	int		i;
@@ -27,7 +28,8 @@ char	*make_str_with_precision_for_hhx(t_flags fl, u_int8_t k, char *(*f)(u_int8_
 	return (s);
 }
 
-char	*make_str_with_precision_for_hx(t_flags fl, unsigned short k, char *(*f)(unsigned short, int))
+char	*make_str_with_precision_for_hx(t_flags fl, \
+unsigned short k, char *(*f)(unsigned short, int))
 {
 	char	*s;
 	int		i;
@@ -54,7 +56,8 @@ char	*make_str_with_precision_for_hx(t_flags fl, unsigned short k, char *(*f)(un
 	return (s);
 }
 
-char	*make_str_with_precision_for_llx(t_flags fl, unsigned long long k, char *(*f)(unsigned long long, int))
+char	*make_str_with_precision_for_llx(t_flags fl, unsigned long long k, \
+char *(*f)(unsigned long long, int))
 {
 	char	*s;
 	int		i;
@@ -81,7 +84,8 @@ char	*make_str_with_precision_for_llx(t_flags fl, unsigned long long k, char *(*
 	return (s);
 }
 
-char	*make_str_with_precision_for_lx(t_flags fl, unsigned long k, char *(*f)(unsigned long, int))
+char	*make_str_with_precision_for_lx(t_flags fl, unsigned long k, \
+char *(*f)(unsigned long, int))
 {
 	char	*s;
 	int		i;
@@ -128,7 +132,8 @@ unsigned long k)
 	free(ox);
 }
 
-void	x_flag_l(va_list vl, t_buf **buf, t_flags fl, char *(*f)(unsigned long, int))
+void	x_flag_l(va_list vl, t_buf **buf, t_flags fl, \
+char *(*f)(unsigned long, int))
 {
 	char			*str;
 	int				n;
@@ -175,14 +180,15 @@ long, int), unsigned long long k)
 	free(ox);
 }
 
-void	x_flag_ll(va_list vl, t_buf **buf, t_flags fl, char *(*f)(unsigned long long, int))
+void	x_flag_ll(va_list vl, t_buf **buf, t_flags fl, \
+char *(*f)(unsigned long long, int))
 {
 	char				*str;
 	int					n;
 	unsigned long long	k;
 
-    fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
-    k = va_arg(vl, unsigned long long);
+	fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
+	k = va_arg(vl, unsigned long long);
 	if (k == (unsigned long long)0 && fl.precision == 0)
 		return ;
 	if (fl.dash && k != 0)
@@ -222,14 +228,15 @@ unsigned short k)
 	free(ox);
 }
 
-void	x_flag_h(va_list vl, t_buf **buf, t_flags fl, char *(*f)(unsigned short, int))
+void	x_flag_h(va_list vl, t_buf **buf, t_flags fl, \
+char *(*f)(unsigned short, int))
 {
 	char			*str;
 	int				n;
 	unsigned short	k;
 
-    fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
-    k = (unsigned short)va_arg(vl, unsigned int);
+	fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
+	k = (unsigned short)va_arg(vl, unsigned int);
 	if (k == (unsigned short)0 && fl.precision == 0)
 		return ;
 	if (fl.dash && k != 0)
@@ -269,13 +276,14 @@ u_int8_t k)
 	free(ox);
 }
 
-void	x_flag_hh(va_list vl, t_buf **buf, t_flags fl, char *(*f)(u_int8_t, int))
+void	x_flag_hh(va_list vl, t_buf **buf, t_flags fl, \
+char *(*f)(u_int8_t, int))
 {
 	char		*str;
 	int			n;
 	u_int8_t	k;
 
-    fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
+	fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
 	k = (u_int8_t)va_arg(vl, unsigned int);
 	if (k == (u_int8_t)0 && fl.precision == 0)
 		return ;
