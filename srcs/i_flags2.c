@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 18:30:07 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/05 18:30:08 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/05 19:56:15 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	i_flag2(t_buf **buf, t_flags fl, char *str, int k)
 
 	z = (char)((k >= 0) ? '+' : '-');
 	n = fl.width - (int)ft_strlen(str);
+	n = ((fl.plus && k >= 0) ? (n - 1) : n);
 	if (fl.space && k >= 0)
 	{
 		put_char_to_buf(buf, ' ');
@@ -45,6 +46,7 @@ void	i_flag2_l(t_buf **buf, t_flags fl, char *str, long k)
 
 	z = (char)((k >= 0) ? '+' : '-');
 	n = fl.width - (int)ft_strlen(str);
+	n = ((fl.plus && k >= 0) ? (n - 1) : n);
 	if (fl.space && k >= 0)
 	{
 		put_char_to_buf(buf, ' ');
@@ -71,6 +73,7 @@ void	i_flag2_ll(t_buf **buf, t_flags fl, char *str, long long k)
 
 	z = (char)((k >= 0) ? '+' : '-');
 	n = fl.width - (int)ft_strlen(str);
+	n = ((fl.plus && k >= 0) ? (n - 1) : n);
 	if (fl.space && k >= 0)
 	{
 		put_char_to_buf(buf, ' ');
@@ -97,6 +100,7 @@ void	i_flag2_h(t_buf **buf, t_flags fl, char *str, short k)
 
 	z = (char)((k >= 0) ? '+' : '-');
 	n = fl.width - (int)ft_strlen(str);
+	n = ((fl.plus && k >= 0) ? (n - 1) : n);
 	if (fl.space && k >= 0)
 	{
 		put_char_to_buf(buf, ' ');
@@ -123,6 +127,7 @@ void	i_flag2_hh(t_buf **buf, t_flags fl, char *str, int8_t k)
 
 	z = (char)((k >= 0) ? '+' : '-');
 	n = fl.width - (int)ft_strlen(str);
+	n = ((fl.plus && k >= 0) ? (n - 1) : n);
 	if (fl.space && k >= 0)
 	{
 		put_char_to_buf(buf, ' ');
