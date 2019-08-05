@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 18:31:13 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/05 18:31:13 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/05 20:04:58 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void		ft_exp_str(t_double *dd, char **man, char *tmp)
 	if (dd->exp > 0)
 		while (dd->exp-- > 0)
 		{
-			tmp = strdup(man[0]);
+			tmp = ft_strdup(man[0]);
 			ft_strsum(&man[0], &tmp);
 			if (man[0][0] != '0')
 				ft_step_mantissa(&man[0], dd);
