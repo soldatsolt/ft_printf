@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 18:31:07 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/05 18:31:07 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/05 19:08:30 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ void	double_minus(t_double *dd, t_buf **buf, t_flags *fl)
 
 void	f_flag(va_list vl, t_buf **buf, t_flags fl)
 {
-	if (fl.L)
+	if (fl.ll)
 		long_double_flag(vl, buf, fl);
 	else
 		double_flag(vl, buf, fl);

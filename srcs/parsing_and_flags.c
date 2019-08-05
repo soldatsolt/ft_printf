@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 18:30:21 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/05 18:30:22 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/05 19:08:32 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	make_t_flags0(t_flags *fl)
 	fl->precision = -1;
 	fl->h = 0;
 	fl->l = 0;
-	fl->L = 0;
+	fl->ll = 0;
 }
 
 void	make_t_width(t_flags *fl, const char *restrict *format)
@@ -68,7 +68,7 @@ void	preparcing2(t_flags *fl, const char *restrict *format)
 	if ((**format) == 'h' && !fl->l && fl->h < 2)
 		fl->h++;
 	if ((**format) == 'L' && !fl->l && fl->h < 2)
-		fl->L++;
+		fl->ll++;
 	(*format)++;
 }
 
