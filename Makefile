@@ -16,6 +16,7 @@ SRCS = $(SRC)main.c \
        $(SRC)parsing_and_flags.c \
        $(SRC)print_float.c \
        $(SRC)buffer.c \
+	   $(SRC)buffer2.c \
        $(SRC)str_calc.c \
        $(SRC)long_double.c \
        $(SRC)double.c \
@@ -72,6 +73,7 @@ OBJS = main.o \
        parsing_and_flags.o \
        print_float.o \
        buffer.o \
+	   buffer2.o \
        str_calc.o \
        long_double.o \
        double.o \
