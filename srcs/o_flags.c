@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 18:29:55 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/05 18:41:39 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/05 19:00:25 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,7 @@ void	o_flag(va_list vl, t_buf **buf, t_flags fl)
 	char			*s;
 
 	s = NULL;
-	if (fl.precision != -1)
-		fl.zero = 0;
+	fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
 	k = va_arg(vl, unsigned int);
 	if (k == (unsigned int)0 && fl.precision == 0)
 		return ;

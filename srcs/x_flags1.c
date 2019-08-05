@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 18:31:23 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/05 18:32:56 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/05 18:57:35 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,8 +92,8 @@ unsigned short k)
 	free(ox);
 }
 
-void	x_flag1_hh(t_buf **buf, t_flags fl, char *(*f)(u_int8_t, int), \
-u_int8_t k)
+void	x_flag1_hh(t_buf **buf, t_flags fl, char *(*f)(unsigned char, int), \
+unsigned char k)
 {
 	char	*str;
 	char	*s;

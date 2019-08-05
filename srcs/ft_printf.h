@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/05 10:18:18 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/05 18:25:50 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/05 18:59:11 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 # include "../libft/libft.h"
 
 
-typedef struct	s_double
+typedef struct		s_double
 {
 	int 			size;
 	long double		lw;
@@ -31,44 +31,35 @@ typedef struct	s_double
 	int 			exp;
 	char			*mantissa;
 	int 			dot;
-}				t_double;
+}					t_double;
 
-typedef struct	s_flags
+typedef struct		s_flags
 {
-	int			dash;
-	int			minus;
-	int			plus;
-	int			space;
-	int			zero;
-	int			width;
-	int			precision;
-	int			l;
-	int			h;
-	int 		L;
-}				t_flags;
+	int				dash;
+	int				minus;
+	int				plus;
+	int				space;
+	int				zero;
+	int				width;
+	int				precision;
+	int				l;
+	int				h;
+	int 			L;
+}					t_flags;
 
-typedef struct	s_buf
+typedef struct		s_buf
 {
 	char			c;
 	struct s_buf	*next;
-}				t_buf;
+}					t_buf;
 
-typedef struct	s_tofree
+typedef struct		s_tofree
 {
 	void			*data;
 	struct s_tofree	*next;
-}				t_tofree;
+}					t_tofree;
 
-char	*strplus(char *s1, char *s2);
 int		ft_printf(const char *restrict format, ...);
-char	*charumn(char c1, char c2);
-char	*strminus(char *s1, char *s2);
-int		srav_nums(char *str1, char *str2);
-void	replace_strings(char **str1, char **str2);
-char	*des(int step);
-char	*partumn(char *str1, char c2);
-char	*umno(char *s1, char *s2);
-char	*umwn2(char *s1);
 t_buf	*create_buf();
 void	put_char_to_buf(t_buf **buf, char c);
 void	print_buf(t_buf *buf);
@@ -110,7 +101,7 @@ void	o_flag_ll(va_list vl, t_buf **buf, t_flags fl);
 void	o_flag_h(va_list vl, t_buf **buf, t_flags fl);
 void	o_flag_hh(va_list vl, t_buf **buf, t_flags fl);
 void	x_flag_hh(va_list vl, t_buf **buf, t_flags fl, char *(*f)\
-(u_int8_t, int));
+(unsigned char, int));
 void	x_flag_h(va_list vl, t_buf **buf, t_flags fl, char *(*f)\
 (unsigned short, int));
 void	x_flag_ll(va_list vl, t_buf **buf, t_flags fl, char *(*f)\
@@ -152,19 +143,19 @@ void	o_flag1(t_flags fl, t_buf **buf, char *s, char *str);
 char	*make_str_with_precision_for_lu(t_flags fl, unsigned long k);
 char	*make_str_with_precision_for_llu(t_flags fl, unsigned long long k);
 char	*make_str_with_precision_for_hu(t_flags fl, unsigned short k);
-char	*make_str_with_precision_for_hhu(t_flags fl, u_int8_t k);
+char	*make_str_with_precision_for_hhu(t_flags fl, unsigned char k);
 void	x_flag1(t_buf **buf, t_flags fl, char *(*f)(unsigned int, int), \
 unsigned int k);
 char	*make_str_with_precision_for_hhx(t_flags fl, \
-u_int8_t k, char *(*f)(u_int8_t, int));
+unsigned char k, char *(*f)(unsigned char, int));
 char	*make_str_with_precision_for_hx(t_flags fl, \
 unsigned short k, char *(*f)(unsigned short, int));
 char	*make_str_with_precision_for_llx(t_flags fl, unsigned long long k, \
 char *(*f)(unsigned long long, int));
 char	*make_str_with_precision_for_lx(t_flags fl, unsigned long k, \
 char *(*f)(unsigned long, int));
-void	x_flag1_hh(t_buf **buf, t_flags fl, char *(*f)(u_int8_t, int), \
-u_int8_t k);
+void	x_flag1_hh(t_buf **buf, t_flags fl, char *(*f)(unsigned char, int), \
+unsigned char k);
 void	x_flag1_h(t_buf **buf, t_flags fl, char *(*f)(unsigned short, int), \
 unsigned short k);
 void	x_flag1_ll(t_buf **buf, t_flags fl, char *(*f)(unsigned long \
@@ -189,7 +180,7 @@ char	*make_str_with_precision_for_hi(t_flags fl, short k);
 char	*make_str_with_precision_for_hhi(t_flags fl, int8_t k);
 void	i_flag2(t_buf **buf, t_flags fl, char *str, int k);
 void	i_flag1(t_buf **buf, t_flags fl, char *str, int k);
-char	*make_str_with_precision_for_hho(t_flags fl, u_int8_t k);
+char	*make_str_with_precision_for_hho(t_flags fl, unsigned char k);
 char	*make_str_with_precision_for_ho(t_flags fl, unsigned short k);
 char	*make_str_with_precision_for_llo(t_flags fl, unsigned long long k);
 char	*make_str_with_precision_for_lo(t_flags fl, unsigned long k);

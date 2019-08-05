@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/05 18:35:47 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/05 18:48:35 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,8 +93,8 @@ void	turbo_parser(va_list vl, t_buf **buf, const char *restrict *format)
 
 int		main(void)
 {
-	printf   ("float -    |%#llx\n", (long long)255 * 256);
-	ft_printf("ft_float - |%#llx\n", (long long)255 * 256);
+	printf   ("float -    |%lf\n", (double)42.0);
+	ft_printf("ft_float - |%lf\n", (double)42.0);
 	return (0);
 }
 

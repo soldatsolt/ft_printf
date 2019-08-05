@@ -6,13 +6,13 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 18:31:18 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/05 18:41:46 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/05 18:56:58 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	x_flag(va_list vl, t_buf **buf, t_flags fl, 
+void	x_flag(va_list vl, t_buf **buf, t_flags fl,
 char *(*f)(unsigned int, int))
 {
 	char			*str;
@@ -41,8 +41,8 @@ char *(*f)(unsigned int, int))
 	free(str);
 }
 
-void	x_flag_hh(va_list vl, t_buf **buf, t_flags fl, 
-char *(*f)(u_int8_t, int))
+void	x_flag_hh(va_list vl, t_buf **buf, t_flags fl,
+char *(*f)(unsigned char, int))
 {
 	char		*str;
 	int			n;
@@ -69,7 +69,7 @@ char *(*f)(u_int8_t, int))
 	free(str);
 }
 
-void	x_flag_h(va_list vl, t_buf **buf, t_flags fl, 
+void	x_flag_h(va_list vl, t_buf **buf, t_flags fl,
 char *(*f)(unsigned short, int))
 {
 	char			*str;
@@ -97,7 +97,7 @@ char *(*f)(unsigned short, int))
 	free(str);
 }
 
-void	x_flag_ll(va_list vl, t_buf **buf, t_flags fl, 
+void	x_flag_ll(va_list vl, t_buf **buf, t_flags fl,
 char *(*f)(unsigned long long, int))
 {
 	char				*str;
@@ -125,7 +125,7 @@ char *(*f)(unsigned long long, int))
 	free(str);
 }
 
-void	x_flag_l(va_list vl, t_buf **buf, t_flags fl, 
+void	x_flag_l(va_list vl, t_buf **buf, t_flags fl,
 char *(*f)(unsigned long, int))
 {
 	char			*str;
