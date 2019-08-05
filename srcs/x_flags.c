@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 18:31:18 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/05 22:19:47 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/05 23:21:28 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ char *(*f)(unsigned long long, int))
 
 	fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
 	k = va_arg(vl, unsigned long long);
-	if (k == (unsigned long long)0 && fl.precision == 0 && !fl.dash && !fl.width)
+	if (k == 0 && fl.precision == 0 && !fl.dash && !fl.width)
 		return ;
 	if (fl.dash && k != 0)
 		return (x_flag1_ll(buf, fl, f, k));

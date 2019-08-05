@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 18:31:03 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/05 22:27:32 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/05 23:30:32 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,9 @@ char	*make_str_with_precision_for_i(t_flags fl, int k)
 	if (fl.precision != -1 && !((k >= 0 && (int)ft_strlen(str) > fl.precision) \
 	|| (k < 0 && (int)ft_strlen(str) - 1 > fl.precision)))
 	{
-		i = 0;
+		i = ((k < 0) ? 1 : 0);
 		s = ft_strnew(sizeof(char) * (fl.precision + 2));
-		if (k < 0)
-			s[i++] = '-';
+		s[0] = '-';
 		while ((k >= 0) ? (i < fl.precision - (int)ft_strlen(str)) : (i < \
 		fl.precision - (int)ft_strlen(str) + 2))
 			s[i++] = '0';

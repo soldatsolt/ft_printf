@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 18:30:19 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/05 22:14:45 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/05 23:30:58 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,9 @@ char	*make_str_with_precision_for_hhi(t_flags fl, int8_t k)
 	if (fl.precision != -1 && !((k >= 0 && (int)ft_strlen(str) > fl.precision) \
 	|| (k < 0 && (int)ft_strlen(str) - 1 > fl.precision)))
 	{
-		i = 0;
+		i = ((k < 0) ? 1 : 0);
 		s = ft_strnew(sizeof(char) * (fl.precision + 2));
-		if (k < 0)
-			s[i++] = '-';
+		s[0] = '-';
 		while ((k >= 0) ? (i < fl.precision - (int)ft_strlen(str)) : (i < \
 		fl.precision - (int)ft_strlen(str) + 2))
 			s[i++] = '0';
@@ -54,10 +53,9 @@ char	*make_str_with_precision_for_hi(t_flags fl, short k)
 	if (fl.precision != -1 && !((k >= 0 && (int)ft_strlen(str) > fl.precision) \
 	|| (k < 0 && (int)ft_strlen(str) - 1 > fl.precision)))
 	{
-		i = 0;
+		i = ((k < 0) ? 1 : 0);
 		s = ft_strnew(sizeof(char) * (fl.precision + 2));
-		if (k < 0)
-			s[i++] = '-';
+		s[0] = '-';
 		while ((k >= 0) ? (i < fl.precision - (int)ft_strlen(str)) : (i < \
 		fl.precision - (int)ft_strlen(str) + 2))
 			s[i++] = '0';
@@ -84,10 +82,9 @@ char	*make_str_with_precision_for_lli(t_flags fl, long long k)
 	if (fl.precision != -1 && !((k >= 0 && (int)ft_strlen(str) > fl.precision) \
 	|| (k < 0 && (int)ft_strlen(str) - 1 > fl.precision)))
 	{
-		i = 0;
+		i = ((k < 0) ? 1 : 0);
 		s = ft_strnew(sizeof(char) * (fl.precision + 2));
-		if (k < 0)
-			s[i++] = '-';
+		s[0] = '-';
 		while ((k >= 0) ? (i < fl.precision - (int)ft_strlen(str)) : (i < \
 		fl.precision - (int)ft_strlen(str) + 2))
 			s[i++] = '0';
@@ -114,10 +111,9 @@ char	*make_str_with_precision_for_li(t_flags fl, long k)
 	if (fl.precision != -1 && !((k >= 0 && (int)ft_strlen(str) > fl.precision) \
 	|| (k < 0 && (int)ft_strlen(str) - 1 > fl.precision)))
 	{
-		i = 0;
+		i = ((k < 0) ? 1 : 0);
 		s = ft_strnew(sizeof(char) * (fl.precision + 2));
-		if (k < 0)
-			s[i++] = '-';
+		s[0] = '-';
 		while ((k >= 0) ? (i < fl.precision - (int)ft_strlen(str)) : (i < \
 		fl.precision - (int)ft_strlen(str) + 2))
 			s[i++] = '0';

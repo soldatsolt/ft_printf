@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 18:31:15 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/05 22:20:22 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/05 23:22:01 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,8 @@ void	u_flag_ll(va_list vl, t_buf **buf, t_flags fl)
 
 	fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
 	k = va_arg(vl, unsigned long long);
-	if (k == (unsigned long long)0 && fl.precision == 0 && !fl.dash && !fl.width)
+	if (k == (unsigned long long)0 &&
+	fl.precision == 0 && !fl.dash && !fl.width)
 		return ;
 	str = make_str_with_precision_for_llu(fl, k);
 	n = fl.width - (int)ft_strlen(str);
