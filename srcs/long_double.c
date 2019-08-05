@@ -1,7 +1,3 @@
-//
-// Created by Verlie Bharbo on 2019-07-22.
-//
-
 #include "ft_printf.h"
 
 void	make_long_double_bits_str(t_double *dd)

@@ -22,6 +22,9 @@ SRCS = $(SRC)main.c \
        $(SRC)none_infinity.c \
        $(SRC)str_calc_extra.c \
        $(SRC)free_dd.c \
+       $(SRC)u_flags.c	\
+	   $(SRC)x_flags.c \
+	   $(SRC)x_flags1.c \
        $(LIB)ft_strlen.c \
        $(LIB)ft_strnew.c \
        $(LIB)ft_strcpy.c \
@@ -70,6 +73,9 @@ OBJS = main.o \
        none_infinity.o \
        str_calc_extra.o \
        free_dd.o \
+	   u_flags.o \
+	   x_flags.o \
+	   x_flags1.o \
        ft_strlen.o \
        ft_strnew.o \
        ft_strcpy.o \

@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/03 02:48:13 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/05 18:02:17 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,49 @@ int		ft_printf(const char *restrict format, ...)
 	return (n);
 }
 
+void	turbo_parser2(va_list vl, t_buf **buf, const char *restrict *format, \
+t_flags fl)
+{
+	if (**format == 's')
+		s_flag(va_arg(vl, char *), buf, fl);
+	else if (**format == 'i' || **format == 'd')
+		pre_parce_for_i(vl, buf, fl);
+	else if (**format == 'D')
+		i_flag_l(vl, buf, fl);
+	else if (**format == 'u')
+		pre_parce_for_u(vl, buf, fl);
+	else if (**format == 'U')
+		u_flag_l(vl, buf, fl);
+	else if (**format == 'c')
+		c_flag(vl, buf, fl);
+	else if (**format == 'f')
+		f_flag(vl, buf, fl);
+	else if (**format == 'p')
+		p_flag(vl, buf, fl);
+	else if (**format == 'o')
+		pre_parce_for_o(vl, buf, fl);
+	else if (**format == 'O')
+		o_flag_l(vl, buf, fl);
+	else if (**format == 'x')
+		pre_parce_for_x(vl, buf, fl);
+	else if (**format == 'X')
+		pre_parce_for_xx(vl, buf, fl);
+}
+
+void	turbo_parser(va_list vl, t_buf **buf, const char *restrict *format)
+{
+	t_flags	fl;
+
+	make_t_flags0(&fl);
+	preparcing(buf, &fl, format);
+	turbo_parser2(vl, buf, format, fl);
+	(*format)++;
+}
+
 int		main(void)
 {
-	printf   ("float -    |%#lx\n", (long)43);
-	ft_printf("ft_float - |%#lx\n", (long)43);
+	printf   ("float -    |%lf\n", (double)42.0);
+	ft_printf("ft_float - |%lf\n", (double)42.0);
 	return (0);
 }
+

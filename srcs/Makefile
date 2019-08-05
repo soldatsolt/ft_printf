@@ -20,6 +20,7 @@ SRCS = $(SRC)main.c \
        $(SRC)double.c \
        $(SRC)none_infinity.c \
        $(SRC)str_calc_extra.c \
+	   $(SRC)u_flags.c			\
        libft/libft.a
 
 OBJS = $(SRCS:.c=.o)

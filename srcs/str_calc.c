@@ -1,6 +1,3 @@
-//
-// Created by Verlie Bharbo on 2019-07-12.
-//
 #include "ft_printf.h"
 
 void		ft_mantissa_str(char **man, char **tmp, t_double *dd)
@@ -53,7 +50,8 @@ static int	ft_only_zero_mantissa(const char *man)
 		return (1);
 	else if (man[0] == '5')
 	{
-		while (man[++i] == '0');
+		while (man[++i] == '0')
+			;
 		if (man[i] == '\0')
 			return (0);
 		else

@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/05 10:18:18 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/03 02:39:19 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/05 18:10:10 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,24 +109,29 @@ void	o_flag_l(va_list vl, t_buf **buf, t_flags fl);
 void	o_flag_ll(va_list vl, t_buf **buf, t_flags fl);
 void	o_flag_h(va_list vl, t_buf **buf, t_flags fl);
 void	o_flag_hh(va_list vl, t_buf **buf, t_flags fl);
-void	x_flag_hh(va_list vl, t_buf **buf, t_flags fl, char *(*f)(u_int8_t, int));
-void	x_flag_h(va_list vl, t_buf **buf, t_flags fl, char *(*f)(unsigned short, int));
-void	x_flag_ll(va_list vl, t_buf **buf, t_flags fl, char *(*f)(unsigned long long, int));
-void	x_flag_l(va_list vl, t_buf **buf, t_flags fl, char *(*f)(unsigned long, int));
+void	x_flag_hh(va_list vl, t_buf **buf, t_flags fl, char *(*f)\
+(u_int8_t, int));
+void	x_flag_h(va_list vl, t_buf **buf, t_flags fl, char *(*f)\
+(unsigned short, int));
+void	x_flag_ll(va_list vl, t_buf **buf, t_flags fl, char *(*f)\
+(unsigned long long, int));
+void	x_flag_l(va_list vl, t_buf **buf, t_flags fl, char *(*f)\
+(unsigned long, int));
 char	*make_ox_for_p(char *ox, t_flags *fl);
 char	*make_ox_for_make_ox(char *ox, int n);
 char	*make_ox_for_x(char *ox, t_flags *fl, int l);
-char	*make_O_for_o(char *ox, t_flags *fl, int l);
 char	*make_str_with_precision_for_i(t_flags fl, int k);
 char	*make_str_with_precision_for_u(t_flags fl, unsigned int k);
-char	*make_str_with_precision_for_x(t_flags fl, unsigned int k, char *(*f)(unsigned int, int));
+char	*make_str_with_precision_for_x(t_flags fl, unsigned int k, \
+char *(*f)(unsigned int, int));
 char	*make_str_with_precision_for_o(t_flags fl, unsigned int k);
 void	s_flag(char *str, t_buf **buf, t_flags fl);
 void	p_flag(va_list vl, t_buf **buf, t_flags fl);
 void	i_flag(va_list vl, t_buf **buf, t_flags fl);
 void	c_flag(va_list vl, t_buf **buf, t_flags fl);
 void	o_flag(va_list vl, t_buf **buf, t_flags fl);
-void	x_flag(va_list vl, t_buf **buf, t_flags fl, char *(*f)(unsigned int, int));
+void	x_flag(va_list vl, t_buf **buf, t_flags fl, \
+char *(*f)(unsigned int, int));
 void	u_flag(va_list vl, t_buf **buf, t_flags fl);
 void	make_t_flags0(t_flags *fl);
 void	make_t_width(t_flags *fl, const char *restrict *format);
@@ -144,5 +149,27 @@ int 	ft_double_exception(double n, t_buf **buf, t_flags fl);
 int 	ft_long_double_exception(long double n, t_buf **buf, t_flags fl);
 void	ft_free_dd(t_double *dd);
 void	o_flag1(t_flags fl, t_buf **buf, char *s, char *str);
+char	*make_str_with_precision_for_lu(t_flags fl, unsigned long k);
+char	*make_str_with_precision_for_llu(t_flags fl, unsigned long long k);
+char	*make_str_with_precision_for_hu(t_flags fl, unsigned short k);
+char	*make_str_with_precision_for_hhu(t_flags fl, u_int8_t k);
+void	x_flag1(t_buf **buf, t_flags fl, char *(*f)(unsigned int, int), \
+unsigned int k);
+char	*make_str_with_precision_for_hhx(t_flags fl, \
+u_int8_t k, char *(*f)(u_int8_t, int));
+char	*make_str_with_precision_for_hx(t_flags fl, \
+unsigned short k, char *(*f)(unsigned short, int));
+char	*make_str_with_precision_for_llx(t_flags fl, unsigned long long k, \
+char *(*f)(unsigned long long, int));
+char	*make_str_with_precision_for_lx(t_flags fl, unsigned long k, \
+char *(*f)(unsigned long, int));
+void	x_flag1_hh(t_buf **buf, t_flags fl, char *(*f)(u_int8_t, int), \
+u_int8_t k);
+void	x_flag1_h(t_buf **buf, t_flags fl, char *(*f)(unsigned short, int), \
+unsigned short k);
+void	x_flag1_ll(t_buf **buf, t_flags fl, char *(*f)(unsigned long \
+long, int), unsigned long long k);
+void	x_flag1_l(t_buf **buf, t_flags fl, char *(*f)(unsigned long, int), \
+unsigned long k);
 
 #endif

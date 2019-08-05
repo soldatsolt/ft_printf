@@ -13,7 +13,7 @@ char	*make_ox_for_make_ox(char *ox, int n)
 		i++;
 	}
 	ox[i] = '\0';
-	return(ox);
+	return (ox);
 }
 
 char	*make_ox_for_make_oxx(char *ox, int n)
@@ -29,7 +29,7 @@ char	*make_ox_for_make_oxx(char *ox, int n)
 		i++;
 	}
 	ox[i] = '\0';
-	return(ox);
+	return (ox);
 }
 
 char	*make_ox_for_p(char *ox, t_flags *fl)
@@ -58,51 +58,7 @@ char	*make_ox_for_p(char *ox, t_flags *fl)
 	}
 	else
 		ox = ft_strdup("0x");
-	return(ox);
-}
-
-char	*make_O_for_make_o(char *ox, int n)
-{
-	int	i;
-
-	i = 1;
-	ox[0] = '0';
-	while (i < n)
-	{
-		ox[i] = '0';
-		i++;
-	}
-	ox[i] = '\0';
-	return(ox);
-}
-
-char	*make_O_for_o(char *ox, t_flags *fl, int l)
-{
-	int	n;
-
-	n = 0;
-	if ((fl->zero && fl->width > l + 2) || fl->precision > l)
-	{
-		if (fl->width - 2 > fl->precision && fl->precision == -1)
-		{
-			ox = ft_strnew(fl->width - (l - 1) + 1);
-			n = fl->width - l;
-		}
-		else
-		{
-			ox = ft_strnew(fl->precision - (l - 3) + 1);
-			n = fl->precision - (l - 2);
-		}
-		ox = make_ox_for_make_ox(ox, n);
-		if (fl->precision != -1)
-		{
-			fl->zero = 0;
-			fl->precision = -1;
-		}
-	}
-	else
-		ox = ft_strdup("0");
-	return(ox);
+	return (ox);
 }
 
 char	*make_ox_for_xx(char *ox, t_flags *fl, int l)
@@ -129,7 +85,7 @@ char	*make_ox_for_xx(char *ox, t_flags *fl, int l)
 	if (fl->precision != -1)
 		fl->zero = 0;
 	fl->precision = -1;
-	return(ox);
+	return (ox);
 }
 
 char	*make_ox_for_x(char *ox, t_flags *fl, int l)
@@ -156,5 +112,5 @@ char	*make_ox_for_x(char *ox, t_flags *fl, int l)
 	if (fl->precision != -1)
 		fl->zero = 0;
 	fl->precision = -1;
-	return(ox);
+	return (ox);
 }
