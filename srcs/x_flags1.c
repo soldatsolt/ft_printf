@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   x_flags1.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/08/05 18:31:23 by kmills            #+#    #+#             */
+/*   Updated: 2019/08/05 18:32:56 by kmills           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 void	x_flag1(t_buf **buf, t_flags fl, char *(*f)(unsigned int, int), \
@@ -79,7 +91,6 @@ unsigned short k)
 	free(s);
 	free(ox);
 }
-
 
 void	x_flag1_hh(t_buf **buf, t_flags fl, char *(*f)(u_int8_t, int), \
 u_int8_t k)

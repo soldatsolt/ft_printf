@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   o_flags.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/08/05 18:29:55 by kmills            #+#    #+#             */
+/*   Updated: 2019/08/05 18:41:39 by kmills           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 void	o_flag(va_list vl, t_buf **buf, t_flags fl)
@@ -7,6 +19,7 @@ void	o_flag(va_list vl, t_buf **buf, t_flags fl)
 	unsigned int	k;
 	char			*s;
 
+	s = NULL;
 	if (fl.precision != -1)
 		fl.zero = 0;
 	k = va_arg(vl, unsigned int);
@@ -36,6 +49,7 @@ void	o_flag_l(va_list vl, t_buf **buf, t_flags fl)
 	unsigned long	k;
 	char			*s;
 
+	s = NULL;
 	fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
 	k = va_arg(vl, unsigned long);
 	if (k == (unsigned long)0 && fl.precision == 0)
@@ -64,6 +78,7 @@ void	o_flag_ll(va_list vl, t_buf **buf, t_flags fl)
 	unsigned long long	k;
 	char				*s;
 
+	s = NULL;
 	fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
 	k = va_arg(vl, unsigned long long);
 	if (k == (unsigned long long)0 && fl.precision == 0)
@@ -92,6 +107,7 @@ void	o_flag_h(va_list vl, t_buf **buf, t_flags fl)
 	unsigned short	k;
 	char			*s;
 
+	s = NULL;
 	fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
 	k = (unsigned short)va_arg(vl, unsigned int);
 	if (k == (unsigned short)0 && fl.precision == 0)
@@ -120,6 +136,7 @@ void	o_flag_hh(va_list vl, t_buf **buf, t_flags fl)
 	u_int8_t	k;
 	char		*s;
 
+	s = NULL;
 	fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
 	k = (u_int8_t)va_arg(vl, unsigned int);
 	if (k == (u_int8_t)0 && fl.precision == 0)

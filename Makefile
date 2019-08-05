@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: kmills <kmills@student.42.fr>              +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/08/05 18:30:11 by kmills            #+#    #+#              #
+#    Updated: 2019/08/05 18:39:32 by kmills           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = ft_printf
 MAKE = make
 SRC = ./srcs/
@@ -139,7 +151,7 @@ lib:
 	@$(MAKE) -C ./libft clean
 
 rerun:
-	@gcc $(SRCS) -g -o ft_printf
+	@gcc $(SRCS) -g -Wall -Wextra -Werror -o ft_printf
 	./ft_printf
 
 fclean: clean
