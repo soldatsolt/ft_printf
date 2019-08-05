@@ -24,6 +24,11 @@ SRCS = $(SRC)main.c \
        $(SRC)free_dd.c \
        $(SRC)u_flags.c	\
 	   $(SRC)x_flags.c \
+	   $(SRC)i_flags1.c \
+	   $(SRC)i_flags.c \
+	   $(SRC)i_flags2.c \
+	   $(SRC)o_flags1.c \
+	   $(SRC)o_flags.c \
 	   $(SRC)x_flags1.c \
        $(LIB)ft_strlen.c \
        $(LIB)ft_strnew.c \
@@ -76,6 +81,11 @@ OBJS = main.o \
 	   u_flags.o \
 	   x_flags.o \
 	   x_flags1.o \
+	   i_flags1.o \
+	   i_flags.o \
+	   i_flags2.o \
+	   o_flags1.o \
+	   o_flags.o \
        ft_strlen.o \
        ft_strnew.o \
        ft_strcpy.o \

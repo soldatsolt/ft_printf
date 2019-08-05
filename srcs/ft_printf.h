@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/05 10:18:18 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/05 18:10:10 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/05 18:25:50 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -171,5 +171,27 @@ void	x_flag1_ll(t_buf **buf, t_flags fl, char *(*f)(unsigned long \
 long, int), unsigned long long k);
 void	x_flag1_l(t_buf **buf, t_flags fl, char *(*f)(unsigned long, int), \
 unsigned long k);
+void	i_flag_hh(va_list vl, t_buf **buf, t_flags fl);
+void	i_flag2_hh(t_buf **buf, t_flags fl, char *str, int8_t k);
+void	i_flag1_hh(t_buf **buf, t_flags fl, char *str, int8_t k);
+void	i_flag_h(va_list vl, t_buf **buf, t_flags fl);
+void	i_flag2_h(t_buf **buf, t_flags fl, char *str, short k);
+void	i_flag1_h(t_buf **buf, t_flags fl, char *str, short k);
+void	i_flag_ll(va_list vl, t_buf **buf, t_flags fl);
+void	i_flag2_ll(t_buf **buf, t_flags fl, char *str, long long k);
+void	i_flag1_ll(t_buf **buf, t_flags fl, char *str, long long k);
+void	i_flag_l(va_list vl, t_buf **buf, t_flags fl);
+void	i_flag2_l(t_buf **buf, t_flags fl, char *str, long k);
+void	i_flag1_l(t_buf **buf, t_flags fl, char *str, long k);
+char	*make_str_with_precision_for_li(t_flags fl, long k);
+char	*make_str_with_precision_for_lli(t_flags fl, long long k);
+char	*make_str_with_precision_for_hi(t_flags fl, short k);
+char	*make_str_with_precision_for_hhi(t_flags fl, int8_t k);
+void	i_flag2(t_buf **buf, t_flags fl, char *str, int k);
+void	i_flag1(t_buf **buf, t_flags fl, char *str, int k);
+char	*make_str_with_precision_for_hho(t_flags fl, u_int8_t k);
+char	*make_str_with_precision_for_ho(t_flags fl, unsigned short k);
+char	*make_str_with_precision_for_llo(t_flags fl, unsigned long long k);
+char	*make_str_with_precision_for_lo(t_flags fl, unsigned long k);
 
 #endif
