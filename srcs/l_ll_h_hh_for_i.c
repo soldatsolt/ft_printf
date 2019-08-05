@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 18:30:19 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/05 18:30:19 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/05 22:14:45 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*make_str_with_precision_for_hhi(t_flags fl, int8_t k)
 	int		i;
 	char	*str;
 
+	if (fl.precision == 0 && k == 0)
+		return (ft_strdup(""));
 	str = ft_itoa_hh(k);
 	if (fl.precision != -1 && !((k >= 0 && (int)ft_strlen(str) > fl.precision) \
 	|| (k < 0 && (int)ft_strlen(str) - 1 > fl.precision)))
@@ -46,6 +48,8 @@ char	*make_str_with_precision_for_hi(t_flags fl, short k)
 	int		i;
 	char	*str;
 
+	if (fl.precision == 0 && k == 0)
+		return (ft_strdup(""));
 	str = ft_itoa_h(k);
 	if (fl.precision != -1 && !((k >= 0 && (int)ft_strlen(str) > fl.precision) \
 	|| (k < 0 && (int)ft_strlen(str) - 1 > fl.precision)))
@@ -74,6 +78,8 @@ char	*make_str_with_precision_for_lli(t_flags fl, long long k)
 	int		i;
 	char	*str;
 
+	if (fl.precision == 0 && k == 0)
+		return (ft_strdup(""));
 	str = ft_itoa_ll(k);
 	if (fl.precision != -1 && !((k >= 0 && (int)ft_strlen(str) > fl.precision) \
 	|| (k < 0 && (int)ft_strlen(str) - 1 > fl.precision)))
@@ -102,6 +108,8 @@ char	*make_str_with_precision_for_li(t_flags fl, long k)
 	int		i;
 	char	*str;
 
+	if (fl.precision == 0 && k == 0)
+		return (ft_strdup(""));
 	str = ft_itoa_l(k);
 	if (fl.precision != -1 && !((k >= 0 && (int)ft_strlen(str) > fl.precision) \
 	|| (k < 0 && (int)ft_strlen(str) - 1 > fl.precision)))

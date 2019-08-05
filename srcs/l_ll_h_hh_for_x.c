@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 18:30:48 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/05 18:30:48 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/05 22:15:32 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ u_int8_t k, char *(*f)(u_int8_t, int))
 	int		i;
 	char	*str;
 
+	if (fl.precision == 0 && k == 0)
+		return (ft_strdup(""));
 	str = f(k, 16);
 	if (fl.precision != -1 && (((int)ft_strlen(str) <= fl.precision)))
 	{
@@ -47,6 +49,8 @@ unsigned short k, char *(*f)(unsigned short, int))
 	int		i;
 	char	*str;
 
+	if (fl.precision == 0 && k == 0)
+		return (ft_strdup(""));
 	str = f(k, 16);
 	if (fl.precision != -1 && (((int)ft_strlen(str) <= fl.precision)))
 	{
@@ -75,6 +79,8 @@ char *(*f)(unsigned long long, int))
 	int		i;
 	char	*str;
 
+	if (fl.precision == 0 && k == 0)
+		return (ft_strdup(""));
 	str = f(k, 16);
 	if (fl.precision != -1 && (((int)ft_strlen(str) <= fl.precision)))
 	{
@@ -103,6 +109,8 @@ char *(*f)(unsigned long, int))
 	int		i;
 	char	*str;
 
+	if (fl.precision == 0 && k == 0)
+		return (ft_strdup(""));
 	str = f(k, 16);
 	if (fl.precision != -1 && (((int)ft_strlen(str) <= fl.precision)))
 	{

@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 18:30:52 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/05 18:30:54 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/05 22:15:06 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*make_str_with_precision_for_hhu(t_flags fl, u_int8_t k)
 	int		i;
 	char	*str;
 
+	if (fl.precision == 0 && k == 0)
+		return (ft_strdup(""));
 	str = ft_utoa_hh(k);
 	if (fl.precision != -1 && (((int)ft_strlen(str) <= fl.precision)))
 	{
@@ -45,6 +47,8 @@ char	*make_str_with_precision_for_hu(t_flags fl, unsigned short k)
 	int		i;
 	char	*str;
 
+	if (fl.precision == 0 && k == 0)
+		return (ft_strdup(""));
 	str = ft_utoa_h(k);
 	if (fl.precision != -1 && (((int)ft_strlen(str) <= fl.precision)))
 	{
@@ -72,6 +76,8 @@ char	*make_str_with_precision_for_llu(t_flags fl, unsigned long long k)
 	int		i;
 	char	*str;
 
+	if (fl.precision == 0 && k == 0)
+		return (ft_strdup(""));
 	str = ft_utoa_ll(k);
 	if (fl.precision != -1 && (((int)ft_strlen(str) <= fl.precision)))
 	{
@@ -99,6 +105,8 @@ char	*make_str_with_precision_for_lu(t_flags fl, unsigned long k)
 	int		i;
 	char	*str;
 
+	if (fl.precision == 0 && k == 0)
+		return (ft_strdup(""));
 	str = ft_utoa_l(k);
 	if (fl.precision != -1 && (((int)ft_strlen(str) <= fl.precision)))
 	{

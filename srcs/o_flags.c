@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 18:29:55 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/05 19:00:25 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/05 22:05:35 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	o_flag(va_list vl, t_buf **buf, t_flags fl)
 	s = NULL;
 	fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
 	k = va_arg(vl, unsigned int);
-	if (k == (unsigned int)0 && fl.precision == 0)
+	if (k == (unsigned int)0 && fl.precision == 0 && !fl.dash && !fl.width)
 		return ;
 	str = make_str_with_precision_for_o(fl, k);
 	if (fl.dash && k != 0 && str[0] != '0')
@@ -51,7 +51,7 @@ void	o_flag_l(va_list vl, t_buf **buf, t_flags fl)
 	s = NULL;
 	fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
 	k = va_arg(vl, unsigned long);
-	if (k == (unsigned long)0 && fl.precision == 0)
+	if (k == (unsigned long)0 && fl.precision == 0 && !fl.dash)
 		return ;
 	str = make_str_with_precision_for_lo(fl, k);
 	if (fl.dash && k != 0 && str[0] != '0')
@@ -80,7 +80,7 @@ void	o_flag_ll(va_list vl, t_buf **buf, t_flags fl)
 	s = NULL;
 	fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
 	k = va_arg(vl, unsigned long long);
-	if (k == (unsigned long long)0 && fl.precision == 0)
+	if (k == (unsigned long long)0 && fl.precision == 0 && !fl.dash)
 		return ;
 	str = make_str_with_precision_for_llo(fl, k);
 	if (fl.dash && k != 0 && str[0] != '0')
@@ -109,7 +109,7 @@ void	o_flag_h(va_list vl, t_buf **buf, t_flags fl)
 	s = NULL;
 	fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
 	k = (unsigned short)va_arg(vl, unsigned int);
-	if (k == (unsigned short)0 && fl.precision == 0)
+	if (k == (unsigned short)0 && fl.precision == 0 && !fl.dash)
 		return ;
 	str = make_str_with_precision_for_ho(fl, k);
 	if (fl.dash && k != 0 && str[0] != '0')
@@ -138,7 +138,7 @@ void	o_flag_hh(va_list vl, t_buf **buf, t_flags fl)
 	s = NULL;
 	fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
 	k = (u_int8_t)va_arg(vl, unsigned int);
-	if (k == (u_int8_t)0 && fl.precision == 0)
+	if (k == (u_int8_t)0 && fl.precision == 0 && !fl.dash)
 		return ;
 	str = make_str_with_precision_for_hho(fl, k);
 	if (fl.dash && k != 0 && str[0] != '0')

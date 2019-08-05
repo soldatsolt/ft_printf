@@ -6,11 +6,25 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/05 19:56:22 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/05 22:39:47 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+void	make_t_flags0(t_flags *fl)
+{
+	fl->dash = 0;
+	fl->minus = 0;
+	fl->plus = 0;
+	fl->space = 0;
+	fl->zero = 0;
+	fl->width = 0;
+	fl->precision = -1;
+	fl->h = 0;
+	fl->l = 0;
+	fl->ll = 0;
+}
 
 void	ft_printf2(va_list vl, t_buf **buf, const char *restrict format)
 {

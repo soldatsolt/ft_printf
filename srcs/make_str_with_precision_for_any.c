@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 18:31:03 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/05 18:31:03 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/05 22:27:32 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*make_str_with_precision_for_i(t_flags fl, int k)
 	int		i;
 	char	*str;
 
+	if (fl.precision == 0 && k == 0)
+		return (ft_strdup(""));
 	str = ft_itoa(k);
 	if (fl.precision != -1 && !((k >= 0 && (int)ft_strlen(str) > fl.precision) \
 	|| (k < 0 && (int)ft_strlen(str) - 1 > fl.precision)))
@@ -46,6 +48,8 @@ char	*make_str_with_precision_for_u(t_flags fl, unsigned int k)
 	int		i;
 	char	*str;
 
+	if (fl.precision == 0 && k == 0)
+		return (ft_strdup(""));
 	str = ft_utoa(k);
 	if (fl.precision != -1 && (((int)ft_strlen(str) <= fl.precision)))
 	{
@@ -74,6 +78,8 @@ char *(*f)(unsigned int, int))
 	int		i;
 	char	*str;
 
+	if (fl.precision == 0 && k == 0)
+		return (ft_strdup(""));
 	str = f(k, 16);
 	if (fl.precision != -1 && (((int)ft_strlen(str) <= fl.precision)))
 	{
@@ -101,6 +107,8 @@ char	*make_str_with_precision_for_o(t_flags fl, unsigned int k)
 	int		i;
 	char	*str;
 
+	if (fl.precision == 0 && k == 0 && !fl.dash)
+		return (ft_strdup(""));
 	str = ft_itoa_base_small(k, 8);
 	if (fl.precision != -1 && (((int)ft_strlen(str) <= fl.precision)))
 	{

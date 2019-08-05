@@ -6,25 +6,11 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 18:30:21 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/05 19:08:32 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/05 22:40:49 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-void	make_t_flags0(t_flags *fl)
-{
-	fl->dash = 0;
-	fl->minus = 0;
-	fl->plus = 0;
-	fl->space = 0;
-	fl->zero = 0;
-	fl->width = 0;
-	fl->precision = -1;
-	fl->h = 0;
-	fl->l = 0;
-	fl->ll = 0;
-}
 
 void	make_t_width(t_flags *fl, const char *restrict *format)
 {
@@ -45,17 +31,23 @@ void	make_t_precision(t_flags *fl, const char *restrict *format)
 	(*format)--;
 }
 
-void	preparcing2(t_flags *fl, const char *restrict *format)
+void	preparcing3(t_flags *fl, const char *restrict *format)
 {
-	if ((**format) == ' ')
+	if ((**format) == ' ' && !fl->plus)
 		fl->space = 1;
 	if ((**format) == '#')
 		fl->dash = 1;
 	if ((**format) == '-')
+	{
 		fl->minus = 1;
+		fl->zero = 0;
+	}
 	if ((**format) == '+')
+	{
 		fl->plus = 1;
-	if ((**format) == '0')
+		fl->space = 0;
+	}
+	if ((**format) == '0' && !fl->minus)
 		fl->zero = 1;
 	if ((**format) > '0' && (**format) <= '9')
 		make_t_width(fl, format);
@@ -65,6 +57,11 @@ void	preparcing2(t_flags *fl, const char *restrict *format)
 		fl->l++;
 	if ((**format) == 'j' && fl->l < 1)
 		fl->l++;
+}
+
+void	preparcing2(t_flags *fl, const char *restrict *format)
+{
+	preparcing3(fl, format);
 	if ((**format) == 'h' && !fl->l && fl->h < 2)
 		fl->h++;
 	if ((**format) == 'L' && !fl->l && fl->h < 2)
