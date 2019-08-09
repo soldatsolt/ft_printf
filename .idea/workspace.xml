@@ -35,160 +35,63 @@
   <component name="ChangeListManager">
     <list default="true" id="f9775e77-2528-4cc7-b03f-a91e40c9ea78" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WdoubleW" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/all_flagsspec.o" beforeDir="false" afterPath="$PROJECT_DIR$/all_flagsspec.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.2/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.2/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/C.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_atoi.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_atoi_base.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_bzero.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_catstr.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_fibonacci.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_is_sort.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_isalnum.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_isalpha.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_isascii.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_isdigit.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_isprint.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_itoa.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_itoa_base_big.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_itoa_base_big_h.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_itoa_base_big_hh.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_itoa_base_big_l.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_itoa_base_big_ll.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_itoa_base_small.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_itoa_base_small_h.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_itoa_base_small_hh.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_itoa_base_small_l.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_itoa_base_small_ll.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_itoa_h.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_itoa_hh.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_itoa_l.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_itoa_ll.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_lstadd.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_lstdel.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_lstdelone.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_lstiter.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_lstmap.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_lstnew.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_memalloc.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_memccpy.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_memchr.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_memcmp.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_memcpy.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_memdel.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_memmove.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_memset.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_putchar.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_putchar_fd.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_putendl.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_putendl_fd.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_putnbr.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_putnbr_fd.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_putstr.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_putstr_fd.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_recursive_factorial.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_recursive_power.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_sqrt.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_strcat.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_strchr.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_strchr_n.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_strclr.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_strcmp.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_strcpy.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_strdel.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_strdup.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_strequ.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_striter.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_striteri.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_strjoin.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_strlcat.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_strlen.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_strmap.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_strmapi.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_strncat.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_strncmp.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_strncpy.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_strnequ.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_strnew.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_strnstr.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_strrchr.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_strrejoin.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_strrev.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_strsplit.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_strstr.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_strsub.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_strtrim.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_tolower.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_toupper.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_utoa.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_utoa_h.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_utoa_hh.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_utoa_l.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/ft_utoa_ll.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/libft/get_next_line.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/all_flagsspec.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/buffer.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/double.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_i.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_o.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_u.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/l_ll_h_hh_for_x.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/long_double.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/main.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/make_ox_for_any.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/make_str_with_precision_for_any.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/none_infinity.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/parsing_and_flags.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/preparce_for_flags.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/print_float.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/str_calc.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/srcs/str_calc_extra.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Prinyf.dir/stringmath.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/100" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/83" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/90" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/92" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/l_ll_h_hh_for_i.o" beforeDir="false" afterPath="$PROJECT_DIR$/l_ll_h_hh_for_i.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/l_ll_h_hh_for_o.o" beforeDir="false" afterPath="$PROJECT_DIR$/l_ll_h_hh_for_o.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/l_ll_h_hh_for_u.o" beforeDir="false" afterPath="$PROJECT_DIR$/l_ll_h_hh_for_u.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/l_ll_h_hh_for_x.o" beforeDir="false" afterPath="$PROJECT_DIR$/l_ll_h_hh_for_x.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libftprintf.a" beforeDir="false" afterPath="$PROJECT_DIR$/libftprintf.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_flagsspec.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/buffer.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/buffer2.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/double.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/free_dd.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_atoi.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_bzero.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_catstr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_itoa.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_itoa_base_big.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_itoa_base_big_h.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_itoa_base_big_hh.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_itoa_base_big_l.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_itoa_base_big_ll.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_itoa_base_small.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_itoa_base_small_h.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_itoa_base_small_hh.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_itoa_base_small_l.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_itoa_base_small_ll.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_itoa_h.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_itoa_hh.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_itoa_l.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_itoa_ll.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_memalloc.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_memset.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_strcpy.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_strdup.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_strlen.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_strnew.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_utoa.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_utoa_h.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_utoa_hh.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_utoa_l.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ft_utoa_ll.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/i_flags.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/i_flags1.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/i_flags2.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/l_ll_h_hh_for_i.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/l_ll_h_hh_for_o.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/l_ll_h_hh_for_u.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/l_ll_h_hh_for_x.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/long_double.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/make_ox_for_any.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/make_str_with_precision_for_any.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mane.c" beforeDir="false" afterPath="$PROJECT_DIR$/mane.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mitmit" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/all_flagsspec.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/all_flagsspec.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/l_ll_h_hh_for_i.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/l_ll_h_hh_for_i.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/l_ll_h_hh_for_o.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/l_ll_h_hh_for_o.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/l_ll_h_hh_for_u.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/l_ll_h_hh_for_u.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/l_ll_h_hh_for_x.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/l_ll_h_hh_for_x.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strcalc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/none_infinity.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/o_flags.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/o_flags1.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/parsing_and_flags.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/preparce_for_flags.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/print_float.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/str_calc.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/str_calc_extra.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/u_flags.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/x_flags.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/x_flags1.o" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -203,10 +106,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="2560" />
-    <option name="height" value="1440" />
   </component>
   <component name="ProjectId" id="1OsTHfYCtYs58FZU9LHHUZn0SYB" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -223,6 +122,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -278,7 +178,8 @@
       <workItem from="1563979686374" duration="580000" />
       <workItem from="1563980279887" duration="143000" />
       <workItem from="1564670721010" duration="7980000" />
-      <workItem from="1564765224139" duration="2751000" />
+      <workItem from="1564765224139" duration="5275000" />
+      <workItem from="1565360053454" duration="591000" />
     </task>
     <servers />
   </component>
@@ -290,7 +191,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
