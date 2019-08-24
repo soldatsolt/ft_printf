@@ -111,9 +111,11 @@ void	turbo_parser(va_list vl, t_buf **buf, const char *restrict *format)
 
 int main()
 {
-	ft_printf("%05p\n", 0);
-	printf("%05p\n", 0);
-	ft_printf("%.5p\n", 0);
-	printf("%.5p\n", 0);
+	ft_printf("%015p\n", "s");
+	printf("%015p\n", "s");
+	ft_printf("%20.15p\n", "s");
+	   printf("%20.15p\n", "s");
+	ft_printf("%-020.5p|\n", "s");
+	printf("%-020.5p|\n", "s");
 	return  (0);
 }
