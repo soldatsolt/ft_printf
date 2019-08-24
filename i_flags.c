@@ -39,11 +39,13 @@ void	i_flag_hh(va_list vl, t_buf **buf, t_flags fl)
 	char	*str;
 	int		n;
 	int8_t	k;
+	char	z;
 
 	fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
 	k = (int8_t)va_arg(vl, int);
 	if (k == (int8_t)0 && fl.precision == 0 && !fl.dash && !fl.width)
 		return ;
+	z = (char)((k >= 0) ? '+' : '-');
 	str = make_str_with_precision_for_hhi(fl, k);
 	n = fl.width - (int)ft_strlen(str);
 	if (fl.plus && k >= 0)
@@ -60,11 +62,13 @@ void	i_flag_h(va_list vl, t_buf **buf, t_flags fl)
 	char	*str;
 	int		n;
 	short	k;
+	char	z;
 
 	fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
 	k = (short)va_arg(vl, int);
 	if (k == (short)0 && fl.precision == 0 && !fl.dash && !fl.width)
 		return ;
+	z = (char)((k >= 0) ? '+' : '-');
 	str = make_str_with_precision_for_hi(fl, k);
 	n = fl.width - (int)ft_strlen(str);
 	if (fl.plus && k >= 0)
@@ -81,11 +85,13 @@ void	i_flag_ll(va_list vl, t_buf **buf, t_flags fl)
 	char		*str;
 	int			n;
 	long long	k;
+	char		z;
 
 	fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
 	k = va_arg(vl, long long);
 	if (k == (long long)0 && fl.precision == 0 && !fl.dash && !fl.width)
 		return ;
+	z = (char)((k >= 0) ? '+' : '-');
 	str = make_str_with_precision_for_lli(fl, k);
 	n = fl.width - (int)ft_strlen(str);
 	if (fl.plus && k >= 0)
@@ -102,11 +108,13 @@ void	i_flag_l(va_list vl, t_buf **buf, t_flags fl)
 	char	*str;
 	int		n;
 	long	k;
+	char	z;
 
 	fl.zero = (-1 != fl.precision) ? 0 : fl.zero;
 	k = va_arg(vl, long);
 	if (k == (long)0 && fl.precision == 0 && !fl.dash && !fl.width)
 		return ;
+	z = (char)((k >= 0) ? '+' : '-');
 	str = make_str_with_precision_for_li(fl, k);
 	n = fl.width - (int)ft_strlen(str);
 	if (fl.plus && k >= 0)

@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 18:30:00 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/05 19:56:09 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/24 18:02:38 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,7 +121,7 @@ void	i_flag1(t_buf **buf, t_flags fl, char *str, int k)
 	n = fl.width - (int)ft_strlen(str);
 	if (fl.plus && k >= 0)
 		n--;
-	if (n > 0 && !fl.minus)
+	if (k >= 0 && !fl.minus)
 	{
 		put_char_to_buf(buf, z);
 		if (fl.zero)
@@ -130,7 +130,11 @@ void	i_flag1(t_buf **buf, t_flags fl, char *str, int k)
 			put_some_chars_to_buf(buf, ' ', n);
 	}
 	if (k < 0 && (int)ft_strlen(str) < fl.width)
+	{
+		put_char_to_buf(buf, z);
+		put_some_chars_to_buf(buf, '0', ((n >= 0) ? n : 0));
 		put_str_to_buf(buf, str + 1);
+	}
 	else
 		put_str_to_buf(buf, str);
 	if (n > 0 && fl.minus)

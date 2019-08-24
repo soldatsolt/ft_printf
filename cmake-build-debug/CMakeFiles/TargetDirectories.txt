@@ -1,3 +1,0 @@
-/home/dmitry/Рабочий стол/printf/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/dmitry/Рабочий стол/printf/cmake-build-debug/CMakeFiles/printf.dir
-/home/dmitry/Рабочий стол/printf/cmake-build-debug/CMakeFiles/edit_cache.dir

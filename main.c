@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/05 23:31:39 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/24 18:33:06 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,10 @@ void	ft_printf2(va_list vl, t_buf **buf, const char *restrict format)
 		{
 			put_char_to_buf(buf, '%');
 			format += 2;
+		}
+		else if (*format == '%' && !format[1])
+		{
+			break ;
 		}
 		else if (*format == '%' && format[1] != '%')
 		{
@@ -103,4 +107,13 @@ void	turbo_parser(va_list vl, t_buf **buf, const char *restrict *format)
 	preparcing(buf, &fl, format);
 	turbo_parser2(vl, buf, format, fl);
 	(*format)++;
+}
+
+int main()
+{
+	ft_printf("%05p\n", 0);
+	printf("%05p\n", 0);
+	ft_printf("%.5p\n", 0);
+	printf("%.5p\n", 0);
+	return  (0);
 }

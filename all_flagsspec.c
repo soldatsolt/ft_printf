@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 18:31:44 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/05 18:31:45 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/24 18:32:59 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,13 @@ void	p_flag(va_list vl, t_buf **buf, t_flags fl)
 	ptr = (u_int64_t)(va_arg(vl, void*));
 	s = ft_itoa_base_small_ll(ptr, 16);
 	str = ft_catstr(ox, s);
-	s_flag(str, buf, fl);
+	if (!fl.precision && !ptr)
+	{
+		fl.precision = -1;
+		s_flag("0x", buf, fl);
+	}
+	else
+		s_flag(str, buf, fl);
 	free(str);
 	free(ox);
 	free(s);
