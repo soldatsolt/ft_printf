@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 18:31:44 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/24 18:32:59 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/24 20:57:04 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,21 +40,17 @@ void	s_flag(char *str, t_buf **buf, t_flags fl)
 		s_flag("(null)", buf, fl);
 }
 
-static void	print_p(char *str, t_buf **buf, t_flags fl)
+void	print_p(char *str, t_buf **buf, t_flags fl)
 {
 	int len;
 
 	len = (int)ft_strlen(str);
 	if (fl.minus)
-	{
-		put_str_to_buf(buf, "0x");
-		put_some_chars_to_buf(buf, '0', fl.precision - len);
-		put_str_to_buf(buf, str);
-		put_some_chars_to_buf(buf, ' ', fl.width - 2 - ((fl.precision > len) ? fl.precision : len));
-	}
+		print_p_if_fl_minus(str, buf, fl, len);
 	else if (fl.precision >= 0)
 	{
-		put_some_chars_to_buf(buf, ' ', fl.width - 2 - ((fl.precision > len) ? fl.precision : len));
+		put_some_chars_to_buf(buf, ' ', fl.width - 2 - \
+		((fl.precision > len) ? fl.precision : len));
 		put_str_to_buf(buf, "0x");
 		put_some_chars_to_buf(buf, '0', fl.precision - len);
 		put_str_to_buf(buf, str);
@@ -78,14 +74,10 @@ void	p_flag(va_list vl, t_buf **buf, t_flags fl)
 	u_int64_t	ptr;
 	char		*str;
 	char		*s;
-	//char		*ox;
 
 	str = NULL;
-	//ox = NULL;
-	//ox = make_ox_for_p(ox, &fl);
 	ptr = (u_int64_t)(va_arg(vl, void*));
 	s = ft_itoa_base_small_ll(ptr, 16);
-	//str = ft_catstr(ox, s);
 	if (!fl.precision && !ptr)
 	{
 		fl.precision = -1;
@@ -94,7 +86,6 @@ void	p_flag(va_list vl, t_buf **buf, t_flags fl)
 	else
 		print_p(s, buf, fl);
 	free(str);
-	//free(ox);
 	free(s);
 }
 

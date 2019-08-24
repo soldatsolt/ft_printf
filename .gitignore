@@ -3,4 +3,5 @@
 ./brut_unit_test_MILLION/*
 ./unit_printf_test/*
 ./libft/*.o
-./*.o
+./*.opft/
+./cmake-build-debug/*

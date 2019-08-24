@@ -6,11 +6,20 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 18:31:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/05 18:31:28 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/24 20:56:31 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+void	print_p_if_fl_minus(char *str, t_buf **buf, t_flags fl, int len)
+{
+	put_str_to_buf(buf, "0x");
+	put_some_chars_to_buf(buf, '0', fl.precision - len);
+	put_str_to_buf(buf, str);
+	put_some_chars_to_buf(buf, ' ', fl.width - 2 - \
+	((fl.precision > len) ? fl.precision : len));
+}
 
 void	ft_free_dd(t_double *dd)
 {

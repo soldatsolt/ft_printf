@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/05 10:18:18 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/24 16:43:35 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/24 21:00:03 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -196,5 +196,7 @@ char				*make_str_with_precision_for_llo
 (t_flags fl, unsigned long long k);
 char				*make_str_with_precision_for_lo
 (t_flags fl, unsigned long k);
+void				print_p_if_fl_minus(char *str, t_buf **buf, t_flags fl, 
+int len);
 
 #endif
