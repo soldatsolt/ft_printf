@@ -109,3 +109,10 @@ void	turbo_parser(va_list vl, t_buf **buf, const char *restrict *format)
 	if (*format[0])
 		(*format)++;
 }
+
+int main()
+{
+	printf("%5.0f|\n", -7.3);
+	ft_printf("%5.0f|\n", -7.3);
+	return 0;
+}

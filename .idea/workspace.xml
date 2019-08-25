@@ -35,10 +35,13 @@
   <component name="ChangeListManager">
     <list default="true" id="f9775e77-2528-4cc7-b03f-a91e40c9ea78" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/prf.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/prf.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/prf.dir/double.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/prf.dir/double.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/prf.dir/long_double.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/prf.dir/long_double.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/prf.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/prf.dir/main.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/prf.dir/print_float.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/prf.dir/print_float.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/prf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/prf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/double.c" beforeDir="false" afterPath="$PROJECT_DIR$/double.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/long_double.c" beforeDir="false" afterPath="$PROJECT_DIR$/long_double.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/print_float.c" beforeDir="false" afterPath="$PROJECT_DIR$/print_float.c" afterDir="false" />
     </list>
@@ -137,7 +140,7 @@
       <workItem from="1564765224139" duration="5275000" />
       <workItem from="1565360053454" duration="591000" />
       <workItem from="1566664570135" duration="2934000" />
-      <workItem from="1566744686609" duration="1051000" />
+      <workItem from="1566744686609" duration="2204000" />
     </task>
     <servers />
   </component>

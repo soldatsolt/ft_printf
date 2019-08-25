@@ -100,7 +100,7 @@ void	long_double_flag(va_list vl, t_buf **buf, t_flags fl)
 	ft_itoa_long_double(lv2, &dd, &fl);
 	if ((fl.dash && fl.precision == 0) || fl.precision > 0)
 		fl.width--;
-	if (fl.plus || fl.space || dd.w < 0)
+	if (fl.plus || fl.space || dd.sign)
 		fl.width--;
 	if (fl.minus)
 		double_minus(&dd, buf, &fl);
