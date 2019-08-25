@@ -33,4 +33,6 @@ stdarg.h
 /home/dmitry/Рабочий стол/printf/prf/main.c
 ft_printf.h
 /home/dmitry/Рабочий стол/printf/prf/ft_printf.h
+float.h
+-
 

@@ -97,9 +97,9 @@ int			ft_double_in_str(t_double *dd, t_flags *fl)
 	char	*man;
 	char	*tmp;
 
-	if (!(man = ft_strnew(3000)))
+	if (!(man = ft_strnew(20000)))
 		return (0);
-	if (!(tmp = ft_strnew(3000)))
+	if (!(tmp = ft_strnew(20000)))
 		return (0);
 	dd->i = -1;
 	while (++dd->i < dd->dot)
