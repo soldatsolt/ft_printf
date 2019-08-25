@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="prf"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/dmitry/Рабочий стол/printf/prf/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dmitry/Рабочий\ стол/printf/prf/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dmitry/Рабочий\ стол/printf/prf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dmitry/Рабочий\ стол/printf/prf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dmitry/Рабочий\ стол/printf/prf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/dmitry/Рабочий стол/printf/prf/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dmitry/Рабочий\ стол/printf/prf/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dmitry/Рабочий\ стол/printf/prf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dmitry/Рабочий\ стол/printf/prf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dmitry/Рабочий\ стол/printf/prf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="prf">
+				<Option output="/home/dmitry/Рабочий стол/printf/prf/cmake-build-debug/prf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/dmitry/Рабочий стол/printf/prf/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/dmitry/Рабочий стол/printf/prf/."/>
+					<Add directory="/home/dmitry/Рабочий стол/printf/prf/libft"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dmitry/Рабочий\ стол/printf/prf/cmake-build-debug/Makefile&quot;  VERBOSE=1 prf"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dmitry/Рабочий\ стол/printf/prf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dmitry/Рабочий\ стол/printf/prf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dmitry/Рабочий\ стол/printf/prf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="prf/fast">
+				<Option output="/home/dmitry/Рабочий стол/printf/prf/cmake-build-debug/prf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/dmitry/Рабочий стол/printf/prf/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/dmitry/Рабочий стол/printf/prf/."/>
+					<Add directory="/home/dmitry/Рабочий стол/printf/prf/libft"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dmitry/Рабочий\ стол/printf/prf/cmake-build-debug/Makefile&quot;  VERBOSE=1 prf/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dmitry/Рабочий\ стол/printf/prf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dmitry/Рабочий\ стол/printf/prf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dmitry/Рабочий\ стол/printf/prf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/dmitry/Рабочий стол/printf/prf/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dmitry/Рабочий\ стол/printf/prf/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dmitry/Рабочий\ стол/printf/prf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dmitry/Рабочий\ стол/printf/prf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dmitry/Рабочий\ стол/printf/prf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/all_flagsspec.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/buffer.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/buffer2.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/double.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/free_dd.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/ft_printf.h">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/i_flags.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/i_flags1.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/i_flags2.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/l_ll_h_hh_for_i.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/l_ll_h_hh_for_o.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/l_ll_h_hh_for_u.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/l_ll_h_hh_for_x.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_atoi.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_atoi_base.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_bzero.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_catstr.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_fibonacci.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_is_sort.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_isalnum.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_isalpha.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_isascii.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_isdigit.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_isprint.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_itoa.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_itoa_base_big.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_itoa_base_big_h.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_itoa_base_big_hh.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_itoa_base_big_l.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_itoa_base_big_ll.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_itoa_base_small.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_itoa_base_small_h.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_itoa_base_small_hh.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_itoa_base_small_l.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_itoa_base_small_ll.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_itoa_h.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_itoa_hh.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_itoa_l.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_itoa_ll.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_lstadd.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_lstdel.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_lstdelone.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_lstiter.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_lstmap.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_lstnew.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_memalloc.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_memccpy.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_memchr.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_memcmp.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_memcpy.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_memdel.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_memmove.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_memset.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_putchar.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_putchar_fd.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_putendl.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_putendl_fd.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_putnbr.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_putnbr_fd.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_putstr.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_putstr_fd.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_recursive_factorial.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_recursive_power.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_sqrt.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_strcat.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_strchr.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_strchr_n.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_strclr.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_strcmp.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_strcpy.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_strdel.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_strdup.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_strequ.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_striter.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_striteri.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_strjoin.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_strlcat.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_strlen.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_strmap.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_strmapi.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_strncat.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_strncmp.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_strncpy.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_strnequ.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_strnew.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_strnstr.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_strrchr.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_strrejoin.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_strrev.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_strsplit.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_strstr.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_strsub.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_strtrim.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_tolower.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_toupper.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_utoa.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_utoa_h.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_utoa_hh.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_utoa_l.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/ft_utoa_ll.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/get_next_line.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/libft/libft.h">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/long_double.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/main.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/make_ox_for_any.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/make_str_with_precision_for_any.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/none_infinity.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/o_flags.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/o_flags1.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/parsing_and_flags.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/preparce_for_flags.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/print_float.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/str_calc.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/str_calc_extra.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/u_flags.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/x_flags.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/x_flags1.c">
+			<Option target="prf"/>
+		</Unit>
+		<Unit filename="/home/dmitry/Рабочий стол/printf/prf/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

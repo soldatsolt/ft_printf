@@ -78,10 +78,10 @@ void		ft_mantissa_correct(char **man, t_flags *fl, t_double *dd)
 
 	if (man[0][0] != '0')
 		ft_step_mantissa(&man[0], dd);
-	i = (fl->precision > 0) ? dd->dot + fl->precision - 1 : dd->dot;
+	i = (fl->precision > 0) ? dd->dot + fl->precision - 1 : dd->dot - 1;
 	if (ft_only_zero_mantissa(&man[0][i + 1]))
 		man[0][i]++;
-	while (i)
+	while (i > 0)
 	{
 		if (man[0][i] > '9')
 		{

@@ -1,3 +1,3 @@
-/Users/vbharbo/Documents/42/printf/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/vbharbo/Documents/42/printf/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/vbharbo/Documents/42/printf/cmake-build-debug/CMakeFiles/printf.dir
+/home/dmitry/Рабочий стол/printf/prf/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/dmitry/Рабочий стол/printf/prf/cmake-build-debug/CMakeFiles/prf.dir
+/home/dmitry/Рабочий стол/printf/prf/cmake-build-debug/CMakeFiles/edit_cache.dir

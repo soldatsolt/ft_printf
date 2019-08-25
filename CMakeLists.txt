@@ -1,12 +1,12 @@
-cmake_minimum_required(VERSION 3.13)
-project(printf C)
+cmake_minimum_required(VERSION 3.14)
+project(prf C)
 
 set(CMAKE_C_STANDARD 11)
 
 include_directories(.)
 include_directories(libft)
 
-add_executable(printf
+add_executable(prf
         libft/ft_atoi.c
         libft/ft_atoi_base.c
         libft/ft_bzero.c
