@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 18:30:34 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/05 22:20:52 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/25 17:15:17 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,13 @@ void	i_flag(va_list vl, t_buf **buf, t_flags fl)
 	if (fl.precision != -1)
 		fl.zero = 0;
 	k = va_arg(vl, int);
-	if (k == (int)0 && fl.precision == 0 && !fl.dash && !fl.width)
+	if (k == (int)0 && fl.precision == 0 && !fl.dash && !fl.width && !fl.plus)
 		return ;
+	if (k == (int)0 && fl.precision == 0 && !fl.dash && !fl.width && fl.plus)
+	{
+		put_char_to_buf(buf, '+');
+		return ;
+	}
 	str = make_str_with_precision_for_i(fl, k);
 	n = fl.width - (int)ft_strlen(str);
 	if (fl.plus && k >= 0)
