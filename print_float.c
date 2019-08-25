@@ -23,7 +23,10 @@ void	ft_put_precision(t_double *dd, t_buf **buf, t_flags *fl)
 void	double_zero(t_double *dd, t_buf **buf, t_flags *fl)
 {
 	if (dd->sign)
+	{
+		fl->width--;
 		put_char_to_buf(buf, '-');
+	}
 	else if (fl->plus)
 		put_char_to_buf(buf, '+');
 	else if (fl->space)
@@ -42,6 +45,8 @@ void	double_zero(t_double *dd, t_buf **buf, t_flags *fl)
 
 void	double_just(t_double *dd, t_buf **buf, t_flags *fl)
 {
+	if (dd->sign)
+		fl->width--;
 	while (fl->width-- > 0)
 		put_char_to_buf(buf, ' ');
 	if (dd->sign)
@@ -63,7 +68,10 @@ void	double_just(t_double *dd, t_buf **buf, t_flags *fl)
 void	double_minus(t_double *dd, t_buf **buf, t_flags *fl)
 {
 	if (dd->sign)
+	{
+		fl->width--;
 		put_char_to_buf(buf, '-');
+	}
 	else if (fl->plus)
 		put_char_to_buf(buf, '+');
 	else if (fl->space)
@@ -76,7 +84,7 @@ void	double_minus(t_double *dd, t_buf **buf, t_flags *fl)
 	if ((fl->dash && !fl->precision) || fl->precision)
 		put_char_to_buf(buf, '.');
 	ft_put_precision(dd, buf, fl);
-	while (fl->width--)
+	while (fl->width-- > 0)
 		put_char_to_buf(buf, ' ');
 }
 
