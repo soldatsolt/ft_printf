@@ -196,7 +196,7 @@ char				*make_str_with_precision_for_llo
 (t_flags fl, unsigned long long k);
 char				*make_str_with_precision_for_lo
 (t_flags fl, unsigned long k);
-void				print_p_if_fl_minus(char *str, t_buf **buf, t_flags fl, 
+void				print_p_if_fl_minus(char *str, t_buf **buf, t_flags fl, \
 int len);
 
 #endif

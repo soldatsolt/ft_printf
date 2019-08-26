@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 18:31:07 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/05 19:08:30 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/25 19:37:44 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,6 @@ void	double_minus(t_double *dd, t_buf **buf, t_flags *fl)
 	if (dd->sign)
 		put_char_to_buf(buf, '-');
 	else if (fl->plus)
-
 		put_char_to_buf(buf, '+');
 	else if (fl->space)
 		put_char_to_buf(buf, ' ');

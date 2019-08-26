@@ -6,7 +6,7 @@
 /*   By: kmills <kmills@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/28 07:26:28 by kmills            #+#    #+#             */
-/*   Updated: 2019/08/25 17:20:09 by kmills           ###   ########.fr       */
+/*   Updated: 2019/08/26 00:38:02 by kmills           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,4 +109,11 @@ void	turbo_parser(va_list vl, t_buf **buf, const char *restrict *format)
 	turbo_parser2(vl, buf, format, fl);
 	if (*format[0])
 		(*format)++;
+}
+
+int main()
+{
+	ft_printf("%.3Lf\n", LDBL_MIN);
+	printf("%.3Lf\n", LDBL_MIN);
+	return (0);
 }
